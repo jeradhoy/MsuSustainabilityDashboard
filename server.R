@@ -3,37 +3,81 @@ library(rsconnect)
 library(dygraphs)
 library(highcharter)
 
-randomData <- data.frame(seq(to=2016, length=150), runif(150, 100, 150),
-		runif(150, 50, 80),
-		runif(150, 70, 110),
-		runif(150, 110, 130))
+# get
+hcopts <- getOption("highcharter.options")
+# explore
+hcopts
+# override
+hcopts$lang$thousandsSep <- ","
+# update
+options(highcharter.options = hcopts)
+
+energyData <- read.csv("./Data/msuUtilites2010-2015.csv")
+#names(energyData)
+#strsplit(names(energyData), ".", fixed=T)
+energyTimeSeries <- ts(energyData[,-c(1,2)], frequency=12, start=c(2010, 1))
+#head(energyTimeSeries)
+#colnames(energyTimeSeries)
+#hchart(energyTimeSeries[,1]) %>%
+#	  hc_title(text = "MSU Energy Usage in Kilowatts per Month")
+
+#energyTimeSeries[,5]
+#
+##### Energy Expendetures
+#highchart(type="stock") %>%
+#	hc_title(text = "MSU Expenditure on Electricity, Gas, and Water/Sewer") %>%
+#	hc_legend(enabled=T) %>%
+#	hc_add_series_ts(name="Electricity", ts=energyTimeSeries[,5], showInLegend=T) %>%
+#	hc_add_series_ts(name="Gas", ts=energyTimeSeries[,6]) %>%
+#	hc_add_series_ts(name="Water/Sewer", ts=energyTimeSeries[,7]) %>%
+#	hc_tooltip(valuePrefix="$")
+#
+##### Electricity and Natural Gas Usage
+#highchart(type="stock") %>%
+#	hc_title(text = "MSU Electricity and Natural Gas Usage") %>%
+#	hc_legend(enabled=T) %>%
+#	hc_yAxis(
+#		list(
+#			 title = list(text= "Electricity (KWH)"),
+#			 align = "left",
+#			 showFirstLabel=F,
+#			 showLastLabel=F,
+#			 labels = list(format = "{value} KWH"),
+#			 opposite=T
+#			 ),
+#		list(
+#			 title = list(text= "Natural Gas (DKT)"),
+#			 align = "right",
+#			 showFirstLabel=F,
+#			 showLastLabel=F,
+#			 labels = list(format = "{value} DKT")
+#			 )
+#		) %>%
+#	hc_add_series_ts(name="Natural Gas", ts=energyTimeSeries[,3], yAxis=1) %>%
+#	hc_add_series_ts(name="Electricity", ts=energyTimeSeries[,2])  %>%
+#	hc_rangeSelector()
+#
+#hchart(energyTimeSeries[,5:7]) %>%
+#	  hc_title(text = "MSU Energy Usage in Kilowatts per Month") %>%
+#	hc_legend(align = "left", verticalAlign = "top", layout = "vertical", x = 0, y = 100)
+#
+
+
 
 shinyServer(function(input, output) {
 
-  output$distPlot <- renderPlot({
+  output$energyExpend <- renderHighchart({
 
-    #hist(x, breaks = bins, col = 'darkgray', border = 'white')
-	
-	plot(input$years[1]:input$years[2], randomData[input$years[1]:input$years[2]-1949, 2], type="l", col="blue")
-	lines(input$years[1]:input$years[2], randomData[input$years[1]:input$years[2]-1949, 5], type="l", col="red")
+	highchart(type="stock") %>%
+		hc_title(text = "MSU Expenditure on Electricity, Gas, and Water/Sewer") %>%
+		hc_legend(enabled=T) %>%
+		hc_rangeSelector(inputEnabled=F) %>%
+		hc_add_series_ts(name="Electricity", ts=energyTimeSeries[,5], showInLegend=T) %>%
+		hc_add_series_ts(name="Gas", ts=energyTimeSeries[,6]) %>%
+		hc_add_series_ts(name="Water/Sewer", ts=energyTimeSeries[,7]) %>%
+		hc_tooltip(valuePrefix="$")
 
   })
-
-  output$dyg1 <- renderDygraph({
-	  dygraph(randomData, main="Electricity and Natural Gas Usage") %>% dyRangeSelector()
-  })
-
-  output$high1 <- renderHighchart({
-
-	  rownames(randomData) <- randomData[,1]
-	  randomData <- as.ts(randomData[,-1], start=1867)
-
-	#highchart(type = "stock") %>% 
-	hchart(randomData) %>%
-	  hc_title(text = "Monthly Deaths from Lung Diseases in the UK") %>% 
-	  hc_subtitle(text = "Deaths from bronchitis, emphysema and asthma")
-	  #hc_add_series_ts(fdeaths, name = "Female") %>%
-	  #hc_add_series_ts(mdeaths, name = "Male")
-	  })
 
 })
+
