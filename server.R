@@ -16,13 +16,7 @@ energyData <- read.csv("./Data/msuUtilites2010-2015.csv")
 #names(energyData)
 #strsplit(names(energyData), ".", fixed=T)
 energyTimeSeries <- ts(energyData[,-c(1,2)], frequency=12, start=c(2010, 1))
-#head(energyTimeSeries)
-#colnames(energyTimeSeries)
-#hchart(energyTimeSeries[,1]) %>%
-#	  hc_title(text = "MSU Energy Usage in Kilowatts per Month")
 
-#energyTimeSeries[,5]
-#
 ##### Energy Expendetures
 #highchart(type="stock") %>%
 #	hc_title(text = "MSU Expenditure on Electricity, Gas, and Water/Sewer") %>%
@@ -62,6 +56,25 @@ energyTimeSeries <- ts(energyData[,-c(1,2)], frequency=12, start=c(2010, 1))
 #	hc_legend(align = "left", verticalAlign = "top", layout = "vertical", x = 0, y = 100)
 #
 
+######  Waste Data  ##### 
+waste <- read.csv("Data/waste.csv")
+waste$recycle <- waste$recycle/2000
+waste$landfill <- waste$landfill/2000
+waste$compost <- waste$compost/2000
+wastetimeseries <- ts(waste[,-c(1, 2)], frequency=12, start=c(2008, 7))
+
+CAP2020 <- (3933386*.75)/(2000*12)
+CAP2030 <- (3933386*.5)/(2000*12)
+CAP2040 <- (3933386*.35)/(2000*12)
+CAP2050 <- (3933386*.2)/(2000*12)
+
+
+
+  ### Percapita Waste ###
+  pcwaste <- read.csv("Data/percapita.csv")
+  pcwaste$pcrecycle <- as.numeric(pcwaste$recycling)/as.numeric(pcwaste$fallpop)
+  pcwaste$pcwaste <- as.numeric(pcwaste$waste)/as.numeric(pcwaste$fallpop)
+  
 
 
 shinyServer(function(input, output) {
@@ -77,6 +90,37 @@ shinyServer(function(input, output) {
 		hc_add_series_ts(name="Water/Sewer", ts=energyTimeSeries[,7]) %>%
 		hc_tooltip(valuePrefix="$")
 
+  })
+
+  output$MSUwaste  <- renderHighchart({
+	  highchart(type="stock") %>%
+		  hc_title(text = "MSU Waste") %>%
+		  hc_legend(enabled=T) %>%
+		  hc_rangeSelector(inputEnabled=F) %>%
+		  hc_add_series_ts(name="Landfill", ts=wastetimeseries[,2], showInLegend=T, color= "black") %>%
+		  hc_add_series_ts(name="Recycle", ts=wastetimeseries[,1], color= "green") %>%
+		  hc_add_series_ts(name="Compost", ts=wastetimeseries[,3], color= "orange") %>%
+		  hc_tooltip(valueSuffix="lbs") %>%
+		  hc_yAxis(title = list(text = "Tons of Waste"),
+				   opposite = TRUE,
+				   plotLines = (list(
+					 list(label = list(text = "2030 CAP Goal"),
+						  color = "red",
+						  width = 2,
+						  dashStyle= "shortdash",
+						  value = CAP2030)))) 
+
+  })
+
+  output$PerCapitaWaste <- renderHighchart({
+
+	  highchart() %>%
+		hc_title(text = "MSU Per Capita Waste") %>%
+		hc_legend(enabled=T) %>%
+		hc_xAxis(pcwaste[,1]) %>%
+		hc_add_series(name="Landfill", data=pcwaste[,6], showInLegend=T, color= "black") %>%
+		hc_add_series(name="Recycle", data= pcwaste[,5], color= "green") %>%
+		hc_tooltip(valueSuffix="lbs")
   })
 
 })

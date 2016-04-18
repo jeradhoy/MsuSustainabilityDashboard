@@ -19,7 +19,13 @@ shinyUI(navbarPage("MSU SNow",
 
 				   ), 
 
-			  tabPanel("Waste", icon=icon("trash")), 
+			  tabPanel("Waste", icon=icon("trash"),
+				   tags$p(""),
+				   highchartOutput("MSUwaste"),
+				   tags$p(""),
+				   highchartOutput("PerCapitaWaste")
+					   
+					   ), 
 			  tabPanel("Climate", icon=icon("sun-o"),
 					   HTML("Climate Action plan")), 
 			  tabPanel("Water", icon=icon("tint")),
