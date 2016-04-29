@@ -4,3 +4,7 @@
 .Ruserdata
 *.swp
 *.swo
+*.sw*
+*.rds
+/rsconnect
+.httr-oauth

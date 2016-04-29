@@ -1,9 +1,12 @@
+############ server.R #############
+##All options and processing that are cheap and can be done each time app launches goes here, otherwise put in global.R
 library(shiny)
 library(rsconnect)
-library(dygraphs)
 library(highcharter)
+library(devtools)
+library(googlesheets)
 
-# get
+# get highchart options
 hcopts <- getOption("highcharter.options")
 # explore
 hcopts
@@ -12,116 +15,135 @@ hcopts$lang$thousandsSep <- ","
 # update
 options(highcharter.options = hcopts)
 
-energyData <- read.csv("./Data/msuUtilites2010-2015.csv")
-#names(energyData)
-#strsplit(names(energyData), ".", fixed=T)
-energyTimeSeries <- ts(energyData[,-c(1,2)], frequency=12, start=c(2010, 1))
-
-##### Energy Expendetures
-#highchart(type="stock") %>%
-#	hc_title(text = "MSU Expenditure on Electricity, Gas, and Water/Sewer") %>%
-#	hc_legend(enabled=T) %>%
-#	hc_add_series_ts(name="Electricity", ts=energyTimeSeries[,5], showInLegend=T) %>%
-#	hc_add_series_ts(name="Gas", ts=energyTimeSeries[,6]) %>%
-#	hc_add_series_ts(name="Water/Sewer", ts=energyTimeSeries[,7]) %>%
-#	hc_tooltip(valuePrefix="$")
-#
-##### Electricity and Natural Gas Usage
-#highchart(type="stock") %>%
-#	hc_title(text = "MSU Electricity and Natural Gas Usage") %>%
-#	hc_legend(enabled=T) %>%
-#	hc_yAxis(
-#		list(
-#			 title = list(text= "Electricity (KWH)"),
-#			 align = "left",
-#			 showFirstLabel=F,
-#			 showLastLabel=F,
-#			 labels = list(format = "{value} KWH"),
-#			 opposite=T
-#			 ),
-#		list(
-#			 title = list(text= "Natural Gas (DKT)"),
-#			 align = "right",
-#			 showFirstLabel=F,
-#			 showLastLabel=F,
-#			 labels = list(format = "{value} DKT")
-#			 )
-#		) %>%
-#	hc_add_series_ts(name="Natural Gas", ts=energyTimeSeries[,3], yAxis=1) %>%
-#	hc_add_series_ts(name="Electricity", ts=energyTimeSeries[,2])  %>%
-#	hc_rangeSelector()
-#
-#hchart(energyTimeSeries[,5:7]) %>%
-#	  hc_title(text = "MSU Energy Usage in Kilowatts per Month") %>%
-#	hc_legend(align = "left", verticalAlign = "top", layout = "vertical", x = 0, y = 100)
-#
-
-######  Waste Data  ##### 
-waste <- read.csv("Data/waste.csv")
-waste$recycle <- waste$recycle/2000
-waste$landfill <- waste$landfill/2000
-waste$compost <- waste$compost/2000
-wastetimeseries <- ts(waste[,-c(1, 2)], frequency=12, start=c(2008, 7))
-
-CAP2020 <- (3933386*.75)/(2000*12)
-CAP2030 <- (3933386*.5)/(2000*12)
-CAP2040 <- (3933386*.35)/(2000*12)
-CAP2050 <- (3933386*.2)/(2000*12)
+wasteCAP2020 <- (3933386*.75)/(2000*12)
+wasteCAP2030 <- (3933386*.5)/(2000*12)
+wasteCAP2040 <- (3933386*.35)/(2000*12)
+wasteCAP2050 <- (3933386*.2)/(2000*12)
 
 
-
-  ### Percapita Waste ###
-  pcwaste <- read.csv("Data/percapita.csv")
-  pcwaste$pcrecycle <- as.numeric(pcwaste$recycling)/as.numeric(pcwaste$fallpop)
-  pcwaste$pcwaste <- as.numeric(pcwaste$waste)/as.numeric(pcwaste$fallpop)
-  
-
-
+######## START Shiny Server ###################
 shinyServer(function(input, output) {
-
+ 
+  ### Output the energyExpend highchart, to be called in the ui.R
   output$energyExpend <- renderHighchart({
+    
+    highchart(type="stock") %>%
+      hc_title(text = "MSU Expenditure on Electricity and Gas") %>%
+      hc_legend(enabled=T) %>%
+      hc_rangeSelector(inputEnabled=F) %>%
+      hc_yAxis(title = list(text = "Expenditures in Dollars"),
+               opposite= FALSE) %>% 
+      hc_add_series_ts(name="Electricity", ts=energyTimeSeries[,3], showInLegend=T, color="yellow") %>%
+      #hc_add_series_ts(name="Electricity Trend", ts=energyTrends[,5], showInLegend=F, color="blue") %>%
+      hc_add_series_ts(name="Gas", ts=energyTimeSeries[,4], color="red") %>%
+      hc_tooltip(valuePrefix="$") %>%
+	  hc_exporting(enabled=T)
 
+    
+  })
+
+  output$energyUsage <- renderHighchart({
+    
 	highchart(type="stock") %>%
-		hc_title(text = "MSU Expenditure on Electricity, Gas, and Water/Sewer") %>%
-		hc_legend(enabled=T) %>%
-		hc_rangeSelector(inputEnabled=F) %>%
-		hc_add_series_ts(name="Electricity", ts=energyTimeSeries[,5], showInLegend=T) %>%
-		hc_add_series_ts(name="Gas", ts=energyTimeSeries[,6]) %>%
-		hc_add_series_ts(name="Water/Sewer", ts=energyTimeSeries[,7]) %>%
-		hc_tooltip(valuePrefix="$")
-
+	  hc_title(text = "MSU Electricity and Gas Usage in Kilowatt Hours") %>%
+	  hc_legend(enabled=T) %>%
+      hc_yAxis(title = list(text = "Usage in KWH"),
+               opposite= FALSE) %>% 
+      hc_add_series_ts(name="Electricity", ts=energyTimeSeries[,1], showInLegend=T, color="yellow") %>%
+      #hc_add_series_ts(name="Electricity Trend", ts=energyTrends[,5], showInLegend=F, color="blue") %>%
+      hc_add_series_ts(name="Gas", ts=energyTimeSeries[,2], color="red") %>%
+      hc_tooltip(valueSuffix=" KWH") 
+  })
+  
+  output$PercentEnergy <- renderHighchart({
+    
+      highchart(type="stock") %>%
+        hc_title(text = "Percent of Total MSU Energy Use") %>%
+        hc_legend(enabled=T) %>%
+        hc_rangeSelector(inputEnabled=F) %>%
+        hc_yAxis(title = list(text = "% of Total Energy"),
+                 opposite=FALSE)%>% 
+        hc_plotOptions(area=list(stacking="percent")) %>%
+        hc_add_series_ts(name="Electricity", ts=energyTimeSeries[,1], color= "yellow", type="area") %>%
+        hc_add_series_ts(name="Natural Gas", ts=energyTimeSeries[,2], color= "red", type="area") %>%
+        hc_tooltip(valueSuffix=" KWH")   
+    
   })
 
   output$MSUwaste  <- renderHighchart({
-	  highchart(type="stock") %>%
-		  hc_title(text = "MSU Waste") %>%
-		  hc_legend(enabled=T) %>%
-		  hc_rangeSelector(inputEnabled=F) %>%
-		  hc_add_series_ts(name="Landfill", ts=wastetimeseries[,2], showInLegend=T, color= "black") %>%
-		  hc_add_series_ts(name="Recycle", ts=wastetimeseries[,1], color= "green") %>%
-		  hc_add_series_ts(name="Compost", ts=wastetimeseries[,3], color= "orange") %>%
-		  hc_tooltip(valueSuffix="lbs") %>%
-		  hc_yAxis(title = list(text = "Tons of Waste"),
-				   opposite = TRUE,
-				   plotLines = (list(
-					 list(label = list(text = "2030 CAP Goal"),
-						  color = "red",
-						  width = 2,
-						  dashStyle= "shortdash",
-						  value = CAP2030)))) 
+    
+    highchart(type="stock") %>%
+      hc_title(text = "MSU Waste") %>%
+      hc_legend(enabled=T) %>%
+      hc_rangeSelector(inputEnabled=F) %>%
+      hc_yAxis(title = list(text = "Waste in Tons"),
+               plotLines = (list(
+                 list(label = list(text = "2020 CAP Goal",style=list(color="purple")),
+                      color = "purple",
+                      width = 1.5,
+                      dashStyle= "longdash",
+                      value = wasteCAP2020,
+                      floating= T),
+                 list(label = list(text = "2030 CAP Goal",  style=list(color="purple")),
+                      color = "purple",
+                      width = 1.5,
+                      dashStyle= "longdash",
+                      value = wasteCAP2030),
+                 list(label = list(text = "2040 CAP Goal", style=list(color="purple")),
+                      color = "purple",
+                      width = 1.5,
 
+                      dashStyle= "longdash",
+                      value = wasteCAP2040),
+                 list(label = list(text = "2050 CAP Goal", style=list(color="purple")),
+                      color = "purple",
+                      width = 1.5,
+                      dashStyle= "longdash",
+                      value = wasteCAP2050))),
+               opposite= FALSE)%>% 
+      hc_add_series_ts(name="Landfill", ts=wastetimeseries[,2], showInLegend=T, color= "black", type="line") %>%
+      hc_add_series_ts(name="Recycle", ts=wastetimeseries[,1], color= "green", type="line") %>%
+      hc_add_series_ts(name="Compost", ts=wastetimeseries[,3], color= "orange", type="line") %>%
+      hc_add_series_ts(name="Waste Fit", ts=wastefit, color="purple", type="line", showInLegend=F)%>%
+      hc_tooltip(valueSuffix=" tons") 
+      
   })
-
+  
+  output$PercentWaste <- renderHighchart({
+    
+      highchart(type="stock") %>%
+        hc_title(text = "Percent of Total MSU Waste") %>%
+        hc_legend(enabled=T) %>%
+        hc_rangeSelector(inputEnabled=F) %>%
+        hc_yAxis(title = list(text = "% of Total Waste"),
+                 opposite=FALSE)%>% 
+        hc_plotOptions(area=list(stacking="percent")) %>%
+        hc_add_series_ts(name="Compost", ts=wastetimeseries[,3], color= "orange", type="area") %>%
+        hc_add_series_ts(name="Recycle", ts=wastetimeseries[,1], color= "green", type="area") %>%
+        hc_add_series_ts(name="Landfill", ts=wastetimeseries[,2], showInLegend=T, color= "black", type="area") %>%
+        hc_tooltip(valueSuffix=" tons")   
+    
+  })
+  
   output$PerCapitaWaste <- renderHighchart({
-
-	  highchart() %>%
-		hc_title(text = "MSU Per Capita Waste") %>%
-		hc_legend(enabled=T) %>%
-		hc_xAxis(pcwaste[,1]) %>%
-		hc_add_series(name="Landfill", data=pcwaste[,6], showInLegend=T, color= "black") %>%
-		hc_add_series(name="Recycle", data= pcwaste[,5], color= "green") %>%
-		hc_tooltip(valueSuffix="lbs")
+    
+    highchart() %>%
+      hc_title(text = "Per Capita Waste") %>%
+      hc_legend(enabled=T, reversed=T) %>%
+      hc_xAxis(categories= pcwaste$FY, title=list(text="Fiscal Year")) %>%
+      hc_yAxis(title=list(text="Pounds Per Person (lbs)"),
+               opposite=FALSE)%>%
+      #hc_plotOptions(column=list(stacking="normal")) %>%
+      hc_add_series(name="Compost", data=pcwaste[,8], color= "orange", type="column") %>%
+      hc_add_series(name="Recycle", data= pcwaste[,6], color= "green", type = "column") %>%
+      hc_add_series(name="Landfill", data=pcwaste[,7], showInLegend=T, color= "black", type="column") %>%
+      hc_tooltip(valueSuffix="lbs")
   })
-
+  
 })
+
+
+### To Do
+###write up descriptions to go on the website
+### per capita for 2006
 
