@@ -5,6 +5,9 @@
 library(googlesheets)
 library(dplyr)
 
+#####ToDo
+# 1. Make it so it will try to load from sheets, and if not, default to Data/ files
+
 ####DECLARE ANY FUNCTIONS FOR APPJ
 #Get trend timeseries for plotting
 getTrendSeries <- function(timeSeries, startTs=c(2010, 1)){
@@ -35,8 +38,11 @@ waste <- as.data.frame(gs_key("1tvUR6YME_ytO5yS8bWzC6T559hvJH4DJ_OtZGYyccR0") %>
 #Process energy data, convert to time series, convert dkt to kwh, calculate energy trends
 energyTimeSeries <- ts(energyData[,-c(1,2,3,6,9,10,11)], frequency=12, start=c(2010, 1))
 energyTimeSeries[,2] <- round(energyTimeSeries[,2]/0.0034129563407)
-names(energyTimeSeries) <- c("elecKWH", "gasKWH", "elecExpend", "gasExpend")
+colnames(energyTimeSeries) <- c("elecKWH", "gasKWH", "elecExpend", "gasExpend")
 energyTrends <- getTrendSeries(energyTimeSeries)
+pcEnergy <- round(aggregate(energyTimeSeries, nfrequency=1, FUN=sum)/pcwaste[5:10,2],2)
+
+energyTarget <- ts(aggregate(energyTimeSeries, nfrequency=1, FUN=mean)*1.0025, frequency=1, start=c(2011, 1))
 
 ######  Waste Data  ##### 
 waste$recycle <- as.numeric(format(round(waste$recycle/2000, 2), nsmall=2))

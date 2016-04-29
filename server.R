@@ -23,17 +23,36 @@ wasteCAP2050 <- (3933386*.2)/(2000*12)
 
 ######## START Shiny Server ###################
 shinyServer(function(input, output) {
+
+	########### Energy Charts ################
+  output$energyUsage <- renderHighchart({
+    
+	highchart(type="stock") %>%
+	  hc_title(useHTML=T, text = "<b>MSU Electricity and Gas Usage in Kilowatt Hours</b>") %>%
+	  hc_legend(enabled=T) %>%
+      hc_rangeSelector(inputEnabled=F) %>%
+      hc_yAxis(title = list(text = "Usage in KWH"),
+               opposite= FALSE) %>% 
+      hc_add_series_ts(name="Electricity", ts=energyTimeSeries[,1], showInLegend=T, color="blue") %>%
+      #hc_add_series_ts(name="Electricity Trend", ts=energyTrends[,1], showInLegend=F, color="blue") %>%
+      hc_add_series_ts(name="Electricity Trend", ts=energyTrends[,1], showInLegend=T, color="blue", visible=F) %>%
+      hc_add_series_ts(name="Electricity Target", ts=energyTarget[,1], showInLegend=T, color="blue",dashStyle="dot", visible=F) %>%
+      hc_add_series_ts(name="Gas", ts=energyTimeSeries[,2], color="red") %>%
+      hc_add_series_ts(name="Gas Trend", ts=energyTrends[,2], showInLegend=T, color="red", visible=F) %>%
+      hc_add_series_ts(name="Gas Target", ts=energyTarget[,2], showInLegend=T, color="red", dashStyle="dot", visible=F) %>%
+      hc_tooltip(valueSuffix=" KWH") 
+  })
  
   ### Output the energyExpend highchart, to be called in the ui.R
   output$energyExpend <- renderHighchart({
     
     highchart(type="stock") %>%
-      hc_title(text = "MSU Expenditure on Electricity and Gas") %>%
+      hc_title(useHTML=T, text = "<b>MSU Expenditure on Electricity and Gas</b>") %>%
       hc_legend(enabled=T) %>%
       hc_rangeSelector(inputEnabled=F) %>%
       hc_yAxis(title = list(text = "Expenditures in Dollars"),
                opposite= FALSE) %>% 
-      hc_add_series_ts(name="Electricity", ts=energyTimeSeries[,3], showInLegend=T, color="yellow") %>%
+      hc_add_series_ts(name="Electricity", ts=energyTimeSeries[,3], showInLegend=T, color="blue") %>%
       #hc_add_series_ts(name="Electricity Trend", ts=energyTrends[,5], showInLegend=F, color="blue") %>%
       hc_add_series_ts(name="Gas", ts=energyTimeSeries[,4], color="red") %>%
       hc_tooltip(valuePrefix="$") %>%
@@ -42,23 +61,11 @@ shinyServer(function(input, output) {
     
   })
 
-  output$energyUsage <- renderHighchart({
-    
-	highchart(type="stock") %>%
-	  hc_title(text = "MSU Electricity and Gas Usage in Kilowatt Hours") %>%
-	  hc_legend(enabled=T) %>%
-      hc_yAxis(title = list(text = "Usage in KWH"),
-               opposite= FALSE) %>% 
-      hc_add_series_ts(name="Electricity", ts=energyTimeSeries[,1], showInLegend=T, color="yellow") %>%
-      #hc_add_series_ts(name="Electricity Trend", ts=energyTrends[,5], showInLegend=F, color="blue") %>%
-      hc_add_series_ts(name="Gas", ts=energyTimeSeries[,2], color="red") %>%
-      hc_tooltip(valueSuffix=" KWH") 
-  })
   
   output$PercentEnergy <- renderHighchart({
     
       highchart(type="stock") %>%
-        hc_title(text = "Percent of Total MSU Energy Use") %>%
+        hc_title(useHTML=T, text = "<b>Percent of Total MSU Energy Use</b>") %>%
         hc_legend(enabled=T) %>%
         hc_rangeSelector(inputEnabled=F) %>%
         hc_yAxis(title = list(text = "% of Total Energy"),
@@ -70,10 +77,41 @@ shinyServer(function(input, output) {
     
   })
 
+
+
+  output$PerCapitaEnergy <- renderHighchart({
+    
+    highchart() %>%
+      hc_title(useHTML=T, text = "<b>Annual Per Capita Energy Use</b>") %>%
+      hc_legend(enabled=T, reversed=T) %>%
+      #hc_xAxis(categories= pcwaste$FY, title=list(text="Fiscal Year")) %>%
+      hc_yAxis(title=list(text="Energy Use Per Capita (KWH)"),
+               opposite=FALSE)%>%
+      #hc_plotOptions(column=list(stacking="normal")) %>%
+      hc_add_series(name="Electricity", data=pcEnergy[,1], color= "blue", type="column") %>%
+      hc_add_series(name="Natural Gas", data= pcEnergy[,2], color= "red", type = "column") %>%
+      hc_tooltip(valueSuffix=" KWH")
+  })
+
+  output$PerCapitaEnergyExpend <- renderHighchart({
+    
+    highchart() %>%
+      hc_title(useHTML=T, text = "<b>Annual Per Capita Energy Expenditure</b>") %>%
+      hc_legend(enabled=T, reversed=T) %>%
+      #hc_xAxis(categories= pcwaste$FY, title=list(text="Fiscal Year")) %>%
+      hc_yAxis(title=list(text="Energy Expediture Per Capita (dollars)"),
+               opposite=FALSE)%>%
+      #hc_plotOptions(column=list(stacking="normal")) %>%
+      hc_add_series(name="Electricity", data=pcEnergy[,3], color= "blue", type="column") %>%
+      hc_add_series(name="Natural Gas", data= pcEnergy[,4], color= "red", type = "column") %>%
+      hc_tooltip(valuePrefix="$")
+  })
+
+  ############ Waste Charts ##################
   output$MSUwaste  <- renderHighchart({
     
     highchart(type="stock") %>%
-      hc_title(text = "MSU Waste") %>%
+      hc_title(useHTML=T, text = "<b>MSU Waste</b>") %>%
       hc_legend(enabled=T) %>%
       hc_rangeSelector(inputEnabled=F) %>%
       hc_yAxis(title = list(text = "Waste in Tons"),
@@ -112,7 +150,7 @@ shinyServer(function(input, output) {
   output$PercentWaste <- renderHighchart({
     
       highchart(type="stock") %>%
-        hc_title(text = "Percent of Total MSU Waste") %>%
+        hc_title(useHTML=T, text = "<b>Percent of Total MSU Waste</b>") %>%
         hc_legend(enabled=T) %>%
         hc_rangeSelector(inputEnabled=F) %>%
         hc_yAxis(title = list(text = "% of Total Waste"),
@@ -128,7 +166,7 @@ shinyServer(function(input, output) {
   output$PerCapitaWaste <- renderHighchart({
     
     highchart() %>%
-      hc_title(text = "Per Capita Waste") %>%
+      hc_title(useHTML=T, text = "<b>Per Capita Waste</b>") %>%
       hc_legend(enabled=T, reversed=T) %>%
       hc_xAxis(categories= pcwaste$FY, title=list(text="Fiscal Year")) %>%
       hc_yAxis(title=list(text="Pounds Per Person (lbs)"),
