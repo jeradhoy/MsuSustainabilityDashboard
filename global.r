@@ -10,7 +10,7 @@ library(dplyr)
 
 ####DECLARE ANY FUNCTIONS FOR APPJ
 #Get trend timeseries for plotting
-getTrendSeries <- function(timeSeries, startTs=c(2010, 1)){
+getTrendSeries <- function(timeSeries, startTs=c(2005, 1)){
 	ts(as.data.frame(lapply(timeSeries, function(timeSeries){
 		fit <- lm(timeSeries ~ c(1:length(timeSeries)))
 		seq(from=coef(fit)[1], by=coef(fit)[2], length.out=length(timeSeries))
@@ -30,16 +30,16 @@ getTrendSeries <- function(timeSeries, startTs=c(2010, 1)){
 
 ##Read in data from google sheets
 gs_auth(token = "shiny_app_token.rds")
-energyData <- as.data.frame(gs_key("1YoH8dFB0dSZVp_1vQkWkF0S7OtzwGKW9q3-BYQvEB-Y") %>% gs_read())
+energyData <- as.data.frame(gs_title("energyMsu2005-2015") %>% gs_read())
 pcwaste <- as.data.frame(gs_key("1Bc57m-hnk5-QFphaFbUzFzjJa8nh0HN1Wf_TQocEC4Q") %>% gs_read())
 waste <- as.data.frame(gs_key("1tvUR6YME_ytO5yS8bWzC6T559hvJH4DJ_OtZGYyccR0") %>% gs_read())
 
 
 #Process energy data, convert to time series, convert dkt to kwh, calculate energy trends
-energyTimeSeries <- ts(energyData[,-c(1,2,3,6,9,10,11)], frequency=12, start=c(2010, 1))
-energyTimeSeries[,2] <- round(energyTimeSeries[,2]/0.0034129563407)
-colnames(energyTimeSeries) <- c("elecKWH", "gasKWH", "elecExpend", "gasExpend")
-energyTrends <- getTrendSeries(energyTimeSeries)
+energyTimeSeries <- ts(energyData[,-c(1,2,3,6,9,10,11)], frequency=12, start=c(2005, 1)) #Convert to time series
+energyTimeSeries[,2] <- round(energyTimeSeries[,2]/0.0034129563407) #Convert DKT to KWH
+colnames(energyTimeSeries) <- c("elecKWH", "gasKWH", "elecExpend", "gasExpend") #
+energyTrends <- getTrendSeries(energyTimeSeries, startTs=c(2005, 1))
 pcEnergy <- round(aggregate(energyTimeSeries, nfrequency=1, FUN=sum)/pcwaste[5:10,2],2)
 
 energyTarget <- ts(aggregate(energyTimeSeries, nfrequency=1, FUN=mean)*1.0025, frequency=1, start=c(2011, 1))
@@ -57,5 +57,3 @@ pcwaste$pcwaste <- as.numeric(format(round(pcwaste$waste/pcwaste$fallpop, 2), ns
 pcwaste$pccompost <- as.numeric(format(round(pcwaste$compost/pcwaste$fallpop, 2), nsmall=2))
 
 wastefit <- getTrendSeries(wastetimeseries[,2], startTs = c(2006, 1))
-
-
