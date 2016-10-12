@@ -26,7 +26,7 @@ getTrendSeries <- function(timeSeries, startTs=c(2005, 1)){
 # saveRDS(shiny_token, "shiny_app_token.rds")
 
 ## if you version control your app, don't forget to ignore the token file!
-## e.g., put it into .gitignore
+# e.g., put it into .gitignore
 
 ##Read in data from google sheets
 gs_auth(token = "shiny_app_token.rds")
@@ -57,3 +57,7 @@ pcwaste$pcwaste <- as.numeric(format(round(pcwaste$waste/pcwaste$fallpop, 2), ns
 pcwaste$pccompost <- as.numeric(format(round(pcwaste$compost/pcwaste$fallpop, 2), nsmall=2))
 
 wastefit <- getTrendSeries(wastetimeseries[,2], startTs = c(2006, 1))
+
+
+
+leedBuildings <- read.csv("leedBuildings.csv")
