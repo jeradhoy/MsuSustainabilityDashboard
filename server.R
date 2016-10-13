@@ -38,10 +38,11 @@ shinyServer(function(input, output) {
     
 
 	highchart(type="stock") %>%
-	  hc_title(useHTML=T, text = "<b>MSU Electricity and Gas Usage in Kilowatt Hours</b>") %>%
+	  hc_title(useHTML=T, text = c("<b>MSU Electricity and Gas Usage in Kilowatt Hours</b>", 
+	                               "<b>MSU Electricity and Gass Usage in Dollars</b>")[as.numeric(input$usageOrExpendRadio)+1]) %>%
 	  hc_legend(enabled=T) %>%
       hc_rangeSelector(inputEnabled=F) %>%
-      hc_yAxis(title = list(text = "Usage in KWH"),
+      hc_yAxis(title = list(text = c("Usage in KWH","Expenditure in Dollars")[as.numeric(input$usageOrExpendRadio)+1]),
                opposite= FALSE) %>% 
       hc_add_series_ts(name="Electricity", ts=energyTimeSeries[,1+2*as.numeric(input$usageOrExpendRadio)], showInLegend=T, color="gold", visible=input$elec) %>%
       #hc_add_series_ts(name="Electricity Trend", ts=energyTrends[,1], showInLegend=F, color="blue") %>%
@@ -126,19 +127,15 @@ shinyServer(function(input, output) {
 
   output$leedBuildingMap <- renderLeaflet({
     leaflet(data=leedBuildings) %>%
+      
       addProviderTiles("Esri.WorldTopoMap",
         options = providerTileOptions(noWrap = TRUE)
       ) %>%
       addMarkers(~Lon, ~Lat)
-  })
-  
-  output$buildingMap <- renderLeaflet({
-    leaflet(data=buildings) %>%
-      #addProviderTiles("Esri.WorldImagery",
-        #options = providerTileOptions(noWrap = TRUE)
-      #) %>%
-      addPolygons(
-        stroke = FALSE, fillOpacity = 0.5, smoothFactor = 0.5, color = "blue")
+      #set initial bounds 
+      #setView( lat= ~mean(Lat),lng= ~mean(Lon), zoom=13)
+    #setMaxBounds(~min(Lon), ~min(Lat), ~max(Lon), ~max(Lat))
+   
   })
 
   
