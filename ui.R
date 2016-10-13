@@ -108,7 +108,7 @@ shinyUI(navbarPage(title="MSU Sustainability Dashboard", fluid=T, selected="Gree
 	  fluidRow(
 	    column(12,
 	   div(class="outerMap",
-      tags$style(type = "text/css", "div.outerMap {position: fixed; top: 47px; left: 0; right: 0; bottom: 0; overflow: hidden; padding: 10}"),
+      tags$style(type = "text/css", "div.outerMap {position: fixed; top: 47px; left: 0; right: 0; bottom: 0; overflow: hidden; padding: 0}"),
     		leafletOutput("leedBuildingMap", width="100%", height="100%")
 	   )
       )
