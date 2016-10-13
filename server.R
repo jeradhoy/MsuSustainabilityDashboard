@@ -7,6 +7,7 @@ library(devtools)
 library(googlesheets)
 library(rgdal)
 library(leaflet)
+library(htmltools)
 
 # get highchart options
 hcopts <- getOption("highcharter.options")
@@ -167,17 +168,14 @@ shinyServer(function(input, output) {
   })
 
   output$leedBuildingMap <- renderLeaflet({
-    leaflet(data=leedBuildings) %>%
-      
+    leaflet() %>%
       addProviderTiles("Esri.WorldTopoMap",
         options = providerTileOptions(noWrap = TRUE)
       ) %>%
-      addMarkers(~Lon, ~Lat)
-      #set initial bounds 
-      #setView( lat= ~mean(Lat),lng= ~mean(Lon), zoom=13)
-    #setMaxBounds(~min(Lon), ~min(Lat), ~max(Lon), ~max(Lat))
-   
-  })
-
-  
+      addMarkers(data=leedBuildings, ~Lon, ~Lat, popup = ~paste0("<h3>", Building, " : ", LeedCert, "</h3>", "<p> Info </p>",
+                                                                 '<a href="http://www.usgbc.org/leed"><p>Leed Certification Info</a>'," - ",
+                                                                  '<a href="', ProjectLink, '">Project Info</p></a>')
+                 )                 
+                 
+      })
 })

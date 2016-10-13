@@ -1,5 +1,6 @@
-"Building","LeedCert","Lat","Lon"
-"Jabs Hall","gold",45.669018,-111.048721
-"Gaines Hall","silver",45.665611,-111.050498
-"Cooley Lab","gold",45.667618,-111.051448
-"Yellowstone Hall","silver",45.665501,-111.056359
+"Building","LeedCert","Lat","Lon","ProjectLink"
+"Jabs Hall","LEED Gold",45.669018,-111.048721,"http://www.usgbc.org/projects/jabs-hall"
+"Gaines Hall","LEED Silver",45.665611,-111.050498,"http://www.usgbc.org/projects/msu-gaines-hall-renovation"
+"Cooley Lab","LEED Gold",45.667618,-111.051448,"http://www.usgbc.org/projects/msu-cooley-lab-renovation"
+"Yellowstone Hall","LEED Silver",45.665501,-111.056359,"http://www.usgbc.org/projects/yellowstone-hall"
+"Gallatin Hall","LEED Gold",45.667102,-111.055097,"http://www.usgbc.org/projects/gallatin-hall-1"
