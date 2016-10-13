@@ -190,7 +190,7 @@ shinyServer(function(input, output) {
 
   output$leedBuildingMap <- renderLeaflet({
     leaflet(data=leedBuildings) %>%
-      addProviderTiles("Esri.WorldImagery",
+      addProviderTiles("Esri.WorldTopoMap",
         options = providerTileOptions(noWrap = TRUE)
       ) %>%
       addMarkers(~Lon, ~Lat)

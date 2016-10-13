@@ -6,10 +6,12 @@ library(leaflet)
 library(shinythemes)
 
 # Define UI for dataset viewer application
-shinyUI(navbarPage(title="MSU Sustainability Dashboard", fluid=T, selected="Energy", 
+shinyUI(navbarPage(title="MSU Sustainability Dashboard", fluid=T, selected="Green Building", 
   inverse=T, #For dark top
   collapsible = T,
   theme=shinytheme("cerulean"),
+  includeCSS("styles.css"),
+  
   
 	tabPanel("Info", icon=icon("info")),
   
@@ -40,13 +42,17 @@ shinyUI(navbarPage(title="MSU Sustainability Dashboard", fluid=T, selected="Ener
   		  ),
       mainPanel(
 
-		highchartOutput("energyUsage", height="500px", width="100%"),
-		verbatimTextOutput("energyDebug")
-		#highchartOutput("energyExpend", height="500px")
-		#highchartOutput("PerCapitaEnergy", height="500px"),
-		#highchartOutput("PerCapitaEnergyExpend", height="500px")
-		#highchartOutput("PercentEnergy", height="500px")
-  		)
+        tabsetPanel(
+          tabPanel("Line Plot",
+        		highchartOutput("energyUsage", height="500px", width="100%"),
+        		verbatimTextOutput("energyDebug")
+        		#highchartOutput("energyExpend", height="500px")
+        		#highchartOutput("PerCapitaEnergy", height="500px"),
+        		#highchartOutput("PerCapitaEnergyExpend", height="500px")
+        		#highchartOutput("PercentEnergy", height="500px")
+          		)
+        )
+      )
 		)
 	), 
 	
@@ -99,10 +105,14 @@ shinyUI(navbarPage(title="MSU Sustainability Dashboard", fluid=T, selected="Ener
 	#tabPanel("Food", icon=icon("cutlery")),
   
 	tabPanel("Green Building", icon=icon("home"),
+	  fluidRow(
+	    column(12,
 	   div(class="outerMap",
-      tags$style(type = "text/css", "div.outerMap {position: fixed; top: 47px; left: 0; right: 0; bottom: 0; overflow: hidden; padding: 0}"),
-      		leafletOutput("leedBuildingMap", width="100%", height = "100%")
-	       )
+      tags$style(type = "text/css", "div.outerMap {position: fixed; top: 47px; left: 0; right: 0; bottom: 0; overflow: hidden; padding: 10}"),
+    		leafletOutput("leedBuildingMap", width="100%", height="100%")
+	   )
+      )
+	  )
 	),
     navbarMenu("About",
         tabPanel("About"),
