@@ -28,12 +28,27 @@ getTrendSeries <- function(timeSeries, startTs=c(2005, 1)){
 ## if you version control your app, don't forget to ignore the token file!
 # e.g., put it into .gitignore
 
-##Read in data from google sheets
-gs_auth(token = "shiny_app_token.rds")
-energyData <- as.data.frame(gs_title("energyMsu2005-2015") %>% gs_read())
-pcwaste <- as.data.frame(gs_key("1Bc57m-hnk5-QFphaFbUzFzjJa8nh0HN1Wf_TQocEC4Q") %>% gs_read())
-waste <- as.data.frame(gs_key("1tvUR6YME_ytO5yS8bWzC6T559hvJH4DJ_OtZGYyccR0") %>% gs_read())
+getFromGoogleSheets <- F
 
+if(getFromGoogleSheets){
+  
+  ##Read in data from google sheets
+  gs_auth(token = "shiny_app_token.rds")
+  
+  allDataSheet <- gs_title("allData")
+  
+  energyData <- as.data.frame(allDataSheet %>% gs_read(ws = "Energy"))
+  pcwaste <- as.data.frame(allDataSheet %>% gs_read(ws = "PerCapita"))
+  waste <- as.data.frame(allDataSheet %>% gs_read(ws = "Waste"))
+  leedBuildings <- as.data.frame(allDataSheet %>% gs_read(ws = "Leed"))
+  
+} else {
+  
+  energyData <- read.csv(file = "./data/energyData.csv", stringsAsFactors = F)
+  pcwaste <- read.csv(file = "./data/pcwaste.csv", stringsAsFactors = F)
+  waste <- read.csv(file = "./data/waste.csv", stringsAsFactors = F)
+  leedBuildings <- read.csv(file = "./data/leedBuildings.csv", stringsAsFactors = F)
+}
 
 #Process energy data, convert to time series, convert dkt to kwh, calculate energy trends
 energyTimeSeries <- ts(energyData[,-c(1,2,3,6,9,10,11)], frequency=12, start=c(2005, 1)) #Convert to time series
@@ -57,7 +72,3 @@ pcwaste$pcwaste <- as.numeric(format(round(pcwaste$waste/pcwaste$fallpop, 2), ns
 pcwaste$pccompost <- as.numeric(format(round(pcwaste$compost/pcwaste$fallpop, 2), nsmall=2))
 
 wastefit <- getTrendSeries(wastetimeseries[,2], startTs = c(2006, 1))
-
-
-
-leedBuildings <- read.csv("leedBuildings.csv")
