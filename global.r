@@ -51,9 +51,18 @@ if(getFromGoogleSheets){
 }
 
 #Process energy data, convert to time series, convert dkt to kwh, calculate energy trends
+energyTimeSeries <- ts(energyData[,-c(1,2,3,6,9)], frequency=12, start=c(2005, 1)) #Convert to time series
+energyTimeSeries[,2] <- round(energyTimeSeries[,2]/0.0034129563407) #Convert DKT to KWH
+colnames(energyTimeSeries) <- c("elecKWH", "gasKWH", "elecExpend", "gasExpend") #
+
+waterSewerTimeSeries <- ts(energyData[,c(6,9)], frequency=12, start=c(2005, 1)) #Convert to time series
+colnames(waterSewerTimeSeries) <- c("waterMCF", "waterSewerExpend") #
+
 energyTimeSeries <- ts(energyData[,-c(1,2,3,6,9,10,11)], frequency=12, start=c(2005, 1)) #Convert to time series
 energyTimeSeries[,2] <- round(energyTimeSeries[,2]/0.0034129563407) #Convert DKT to KWH
 colnames(energyTimeSeries) <- c("elecKWH", "gasKWH", "elecExpend", "gasExpend") #
+
+
 energyTrends <- getTrendSeries(energyTimeSeries, startTs=c(2005, 1))
 pcEnergy <- round(aggregate(energyTimeSeries, nfrequency=1, FUN=sum)/pcwaste[5:10,2],2)
 
