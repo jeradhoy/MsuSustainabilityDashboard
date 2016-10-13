@@ -162,7 +162,7 @@ shinyServer(function(input, output) {
     	  hc_legend(enabled=T) %>%
           hc_rangeSelector(inputEnabled=F) %>%
           hc_yAxis(title = list(text = "Expenditure in Dollars"), opposite=F) %>% 
-          hc_add_series_ts(name="Water/Sewer", ts=waterSewerTimeSeries[,1], showInLegend=T, color="blue", visible=T) %>%
+          hc_add_series_ts(name="Water/Sewer", ts=waterSewerTimeSeries[,2], showInLegend=T, color="blue", visible=T) %>%
           hc_tooltip(valuePrefix="$")
     }
   })
