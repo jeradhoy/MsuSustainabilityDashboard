@@ -151,7 +151,7 @@ shinyServer(function(input, output) {
     	  hc_title(useHTML=T, text = "<b>MSU Water Usage in Million Cubic Feet per Month</b>") %>%
     	  hc_legend(enabled=T) %>%
           hc_rangeSelector(inputEnabled=F) %>%
-          hc_yAxis(title = list(text = "Usage in Million Cubic Feet (MCF)")) %>% 
+          hc_yAxis(title = list(text = "Usage in Million Cubic Feet (MCF)"), opposite=F) %>% 
           hc_add_series_ts(name="Water", ts=waterSewerTimeSeries[,1], showInLegend=T, color="blue", visible=T) %>%
           hc_tooltip(valueSuffix=" MCF") 
       
@@ -161,7 +161,7 @@ shinyServer(function(input, output) {
     	  hc_title(useHTML=T, text = "<b>MSU Water/Sewer Expenditure in Dollars</b>") %>%
     	  hc_legend(enabled=T) %>%
           hc_rangeSelector(inputEnabled=F) %>%
-          hc_yAxis(title = list(text = "Expenditure in Dollars")) %>% 
+          hc_yAxis(title = list(text = "Expenditure in Dollars"), opposite=F) %>% 
           hc_add_series_ts(name="Water/Sewer", ts=waterSewerTimeSeries[,1], showInLegend=T, color="blue", visible=T) %>%
           hc_tooltip(valuePrefix="$")
     }
