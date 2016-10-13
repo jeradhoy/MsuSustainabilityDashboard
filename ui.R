@@ -13,7 +13,9 @@ shinyUI(navbarPage(title="MSU Sustainability Dashboard", fluid=T, selected="Gree
   includeCSS("styles.css"),
   
   
-	tabPanel("Info", icon=icon("info")),
+	tabPanel("Info", icon=icon("info"),
+	   "This web app was developed in collaboration with Sustainability Now, the MSU Office of Sustainability, and MSU Facilities Services"
+	 ),
   
 	tabPanel("Energy", icon=icon("bolt"),
 	  tags$h1("Energy"),
@@ -78,12 +80,8 @@ shinyUI(navbarPage(title="MSU Sustainability Dashboard", fluid=T, selected="Gree
     		#Radio Button: Choose Total or Per capita
     		radioButtons("totalOrPercapitaRadioWaste", label = h5("Total or Per Capita"),
     			choices = list("Total" = 1, "Per Capita" = 2), 
-    			selected = 1),
-    		
-    		#Radio Button: Plot type
-    		radioButtons("wastePlotType", label = h5("Plot Type"),
-    			choices = list("Line Chart" = 1, "Area Chart" = 2), 
     			selected = 1)
+    		
 		  ),
 		  
       mainPanel(
