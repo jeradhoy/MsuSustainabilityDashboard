@@ -34,7 +34,7 @@ shinyUI(navbarPage(title="MSU Sustainability Dashboard", fluid=T, selected="Gree
     
     		#Radio Button: Choose Usage or expenditure
     		radioButtons("usageOrExpendRadio", label = h5("Usage or Expenditure"),
-    			choices = list("Usage" = 0, "Expediture" = 1), 
+    			choices = list("Usage" = 0, "Expenditure" = 1), 
     			selected = 0),
     
     		#Radio Button: Choose Total or Per capita
@@ -86,10 +86,10 @@ shinyUI(navbarPage(title="MSU Sustainability Dashboard", fluid=T, selected="Gree
 		  
       mainPanel(
           tabsetPanel(
-              tabPanel("Line Plot",
-        		highchartOutput("MSUwaste", height="500px")),
               tabPanel("Area Plot",
-        		highchartOutput("PercentWaste", height="500px"))
+        		highchartOutput("PercentWaste", height="500px")),
+              tabPanel("Line Plot",
+        		highchartOutput("MSUwaste", height="500px"))
     		#highchartOutput("PerCapitaWaste", height="500px")
           )
       )
@@ -99,10 +99,34 @@ shinyUI(navbarPage(title="MSU Sustainability Dashboard", fluid=T, selected="Gree
 	tabPanel("Climate", icon=icon("sun-o"),
 		HTML("Climate Action plan")), 
   
-	tabPanel("Water", icon=icon("tint")),
+	tabPanel("Water", icon=icon("tint"),
+		  sidebarLayout(
+		    sidebarPanel(
+    
+    		#Radio Button: Choose Usage or expenditure
+    		radioButtons("waterUsage", label = h5("Usage or Expenditure"),
+    			choices = list("Usage" = 0, "Expenditure" = 1), 
+    			selected = 0),
+    
+    		#Radio Button: Choose Total or Per capita
+    		radioButtons("waterPerCap", label = h5("Total or Per Capita"),
+    			choices = list("Total" = 1, "Per Capita" = 2), 
+    			selected = 1)
+  		  ),
+      mainPanel(
+
+        tabsetPanel(
+          tabPanel("Line Plot",
+        		highchartOutput("waterSewer", height="500px", width="100%")
+        		#verbatimTextOutput("energyDebug")
+          		)
+        )
+      )
+		)
+	  ),
 	#tabPanel("Food", icon=icon("cutlery")),
   
-	tabPanel("Green Building", icon=icon("home"),
+	tabPanel("Green Building & Landscaping", icon=icon("home"),
 	  fluidRow(
 	    column(12,
 	   div(class="outerMap",

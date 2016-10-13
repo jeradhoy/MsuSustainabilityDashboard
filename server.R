@@ -22,6 +22,10 @@ wasteCAP2030 <- (3933386*.5)/(2000*12)
 wasteCAP2040 <- (3933386*.35)/(2000*12)
 wasteCAP2050 <- (3933386*.2)/(2000*12)
 
+hcoptslang <- getOption("highcharter.lang")
+hcoptslang$thousandsSep <- ","
+options(highcharter.lang = hcoptslang)
+
 ######## START Shiny Server ###################
 shinyServer(function(input, output) {
 
@@ -37,21 +41,34 @@ shinyServer(function(input, output) {
   output$energyUsage <- renderHighchart({
     
 
-	highchart(type="stock") %>%
-	  hc_title(useHTML=T, text = c("<b>MSU Electricity and Gas Usage in Kilowatt Hours</b>", 
-	                               "<b>MSU Electricity and Gass Usage in Dollars</b>")[as.numeric(input$usageOrExpendRadio)+1]) %>%
-	  hc_legend(enabled=T) %>%
-      hc_rangeSelector(inputEnabled=F) %>%
-      hc_yAxis(title = list(text = c("Usage in KWH","Expenditure in Dollars")[as.numeric(input$usageOrExpendRadio)+1]),
-               opposite= FALSE) %>% 
-      hc_add_series_ts(name="Electricity", ts=energyTimeSeries[,1+2*as.numeric(input$usageOrExpendRadio)], showInLegend=T, color="gold", visible=input$elec) %>%
-      #hc_add_series_ts(name="Electricity Trend", ts=energyTrends[,1], showInLegend=F, color="blue") %>%
-      #hc_add_series_ts(name="Electricity Trend", ts=energyTrends[,1], showInLegend=T, color="blue", visible=F) %>%
-      #hc_add_series_ts(name="Electricity Target", ts=energyTarget[,1], showInLegend=T, color="blue",dashStyle="dot", visible=F) %>%
-      hc_add_series_ts(name="Gas", ts=energyTimeSeries[,2+2*as.numeric(input$usageOrExpendRadio)], color="darkorange", visible=input$gas) %>%
-      #hc_add_series_ts(name="Gas Trend", ts=energyTrends[,2], showInLegend=T, color="red", visible=F) %>%
-      #hc_add_series_ts(name="Gas Target", ts=energyTarget[,2], showInLegend=T, color="red", dashStyle="dot", visible=F) %>%
-      hc_tooltip(valueSuffix=" KWH") 
+    if(input$usageOrExpendRadio == "0"){
+    	highchart(type="stock") %>%
+    	  hc_title(useHTML=T, text = "<b>MSU Electricity and Gas Usage in Kilowatt Hours</b>") %>%
+    	  hc_legend(enabled=T) %>%
+          hc_rangeSelector(inputEnabled=F) %>%
+          hc_yAxis(title = list(text = "Usage in KWH"),
+                   opposite= FALSE) %>% 
+          hc_add_series_ts(name="Electricity", ts=energyTimeSeries[,1], showInLegend=T, color="gold", visible=input$elec) %>%
+          #hc_add_series_ts(name="Electricity Target", ts=energyTarget[,1], showInLegend=T, color="blue",dashStyle="dot", visible=F) %>%
+          hc_add_series_ts(name="Gas", ts=energyTimeSeries[,2], color="darkorange", visible=input$gas) %>%
+          #hc_add_series_ts(name="Gas Target", ts=energyTarget[,2], showInLegend=T, color="red", dashStyle="dot", visible=F) %>%
+          hc_tooltip(valueSuffix=" KWH") 
+      
+    } else {
+      
+    	highchart(type="stock") %>%
+    	  hc_title(useHTML=T, text = "<b>MSU Electricity and Gass Usage in Dollars</b>") %>%
+    	  hc_legend(enabled=T) %>%
+          hc_rangeSelector(inputEnabled=F) %>%
+          hc_yAxis(title = list(text = "Expenditure in Dollars"),
+                   opposite= FALSE) %>% 
+          hc_add_series_ts(name="Electricity", ts=energyTimeSeries[,3], showInLegend=T, color="gold", visible=input$elec) %>%
+          #hc_add_series_ts(name="Electricity Target", ts=energyTarget[,1], showInLegend=T, color="blue",dashStyle="dot", visible=F) %>%
+          hc_add_series_ts(name="Gas", ts=energyTimeSeries[,4], color="darkorange", visible=input$gas) %>%
+          #hc_add_series_ts(name="Gas Target", ts=energyTarget[,2], showInLegend=T, color="red", dashStyle="dot", visible=F) %>%
+          hc_tooltip(valuePrefix="$") 
+      
+    }
   })
  
 
@@ -124,6 +141,30 @@ shinyServer(function(input, output) {
       hc_tooltip(valueSuffix="lbs")
   })
 
+  ########### Water Charts ################
+  output$waterSewer <- renderHighchart({
+    
+
+    if(input$waterUsage == "0"){
+    	highchart(type="stock") %>%
+    	  hc_title(useHTML=T, text = "<b>MSU Water Usage in Million Cubic Feet per Month</b>") %>%
+    	  hc_legend(enabled=T) %>%
+          hc_rangeSelector(inputEnabled=F) %>%
+          hc_yAxis(title = list(text = "Usage in Million Cubic Feet (MCF)")) %>% 
+          hc_add_series_ts(name="Water", ts=waterSewerTimeSeries[,1], showInLegend=T, color="blue", visible=T) %>%
+          hc_tooltip(valueSuffix=" MCF") 
+      
+    } else {
+      
+    	highchart(type="stock") %>%
+    	  hc_title(useHTML=T, text = "<b>MSU Water/Sewer Expenditure in Dollars</b>") %>%
+    	  hc_legend(enabled=T) %>%
+          hc_rangeSelector(inputEnabled=F) %>%
+          hc_yAxis(title = list(text = "Expenditure in Dollars")) %>% 
+          hc_add_series_ts(name="Water/Sewer", ts=waterSewerTimeSeries[,1], showInLegend=T, color="blue", visible=T) %>%
+          hc_tooltip(valuePrefix="$")
+    }
+  })
 
   output$leedBuildingMap <- renderLeaflet({
     leaflet(data=leedBuildings) %>%
