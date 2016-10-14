@@ -6,140 +6,162 @@ library(leaflet)
 library(shinythemes)
 
 # Define UI for dataset viewer application
-shinyUI(navbarPage(title="MSU Sustainability Dashboard", fluid=T, selected="Green Building", 
+shinyUI(navbarPage(id="main", title="MSU Sustainability Dashboard",
+  fluid=T,
+  position="static-top",
+  selected="tab0",
   inverse=T, #For dark top
   collapsible = T,
   theme=shinytheme("cerulean"),
   includeCSS("styles.css"),
-  
-  
-	tabPanel("Info", icon=icon("info"),
-	   "This web app was developed in collaboration with Sustainability Now, the MSU Office of Sustainability, and MSU Facilities Services"
-	 ),
-  
-	tabPanel("Energy", icon=icon("bolt"),
-	  tags$h1("Energy"),
-			 
-  		tags$p("For electricity and natural gas usage, MSU's Climate Action Plan aims to hold these parameters constant with ideally a negative growth trend but a maximum of ",
-        tags$b("0.25% growth per year"),
-        ". To put this in perspective, in 2009 electricity consumption was growing at a rate of 1.6% and natural gas was growing at a rate of 1.3%."),
-  		tags$p("In 2009, purchased electricity accounted for 27% MSU’s net emissions and was responsible for 20,564 MT of CO2 equivalents. Combusting fossil fuels such as gas and coal accounted for an additional 27% of emissions and was responsible for 21,099 MT of CO2 equivalents. The average Montanan in 2013 caused about 31.3 MT of energy-related CO2 emissions, while the national average was 16.7 MT of CO2 equivalent."),
 
-		  sidebarLayout(
-		    sidebarPanel(
-		    #tags$h3("Options"),
-    		#Checkbox Group Input: Choose Electriciy or naturalgas or both
-    		checkboxInput("elec", label = "Electricity", value = TRUE),
-    		checkboxInput("gas", label = "Natural Gas", value = TRUE),
-    
-    		#Radio Button: Choose Usage or expenditure
-    		radioButtons("usageOrExpendRadio", label = h5("Usage or Expenditure"),
-    			choices = list("Usage" = 0, "Expenditure" = 1), 
-    			selected = 0),
-    
-    		#Radio Button: Choose Total or Per capita
-    		radioButtons("totalOrPercapitaRadio", label = h5("Total or Per Capita"),
-    			choices = list("Total" = 1, "Per Capita" = 2), 
-    			selected = 1)
-  		  ),
+  #Start first tab, Info
+  tabPanel(title = "Home", value="tab0", icon=icon("home"),
+    tags$div(align="center",
+      tags$h1("Montana State University Sustainability Dashboard"),
+      tags$p("click on an icon to explore metrics, or ",
+        actionLink(inputId="openTab6", label="learn about the Sustustainability Dashboard")),
+      fluidRow(
+        actionButton("openTab1", width="30%", HTML('<h2>Energy</h2><img src="http://www.prchecker.info/free-icons/128x128/wind_energy_128_px.png">')),
+        actionButton("openTab2", width="30%", HTML('<h2>Waste</h2><img src="http://www.prchecker.info/free-icons/128x128/wind_energy_128_px.png">'))
+      ),
+      fluidRow(
+        actionButton("openTab3", width="30%", HTML('<h2>Climate</h2><img src="http://www.prchecker.info/free-icons/128x128/wind_energy_128_px.png">')),
+        actionButton("openTab4", width="30%", HTML('<h2>Water</h2><img src="http://www.prchecker.info/free-icons/128x128/wind_energy_128_px.png">')),
+        actionButton("openTab5", width="30%", HTML('<h2>Green Building and Landscaping</h2><img src="http://www.prchecker.info/free-icons/128x128/wind_energy_128_px.png">'))
+      ),
+      verbatimTextOutput("energyDebug")
+    )
+  ),
+
+  ########### Energy ################
+  tabPanel(title = "Energy", value="tab1", icon=icon("bolt"),
+    tags$h1("Energy"),
+    tags$p("For electricity and natural gas usage, MSU's Climate Action Plan aims to hold these parameters constant with ideally a negative growth trend but a maximum of ",
+      tags$b("0.25% growth per year"),
+      ". To put this in perspective, in 2009 electricity consumption was growing at a rate of 1.6% and natural gas was growing at a rate of 1.3%."),
+    tags$p("In 2009, purchased electricity accounted for 27% MSU’s net emissions and was responsible for 20,564 MT of CO2 equivalents. Combusting fossil fuels such as gas and coal accounted for an additional 27% of emissions and was responsible for 21,099 MT of CO2 equivalents. The average Montanan in 2013 caused about 31.3 MT of energy-related CO2 emissions, while the national average was 16.7 MT of CO2 equivalent."),
+
+    sidebarLayout(
+      sidebarPanel(
+
+        #tags$h3("Options"),
+        #Checkbox Group Input: Choose Electriciy or naturalgas or both
+        checkboxInput("elec", label = "Electricity", value = TRUE),
+        checkboxInput("gas", label = "Natural Gas", value = TRUE),
+
+        #Radio Button: Choose Usage or expenditure
+        radioButtons("usageOrExpendRadio", label = h5("Usage or Expenditure"),
+        choices = list("Usage" = 0, "Expenditure" = 1),
+        selected = 0),
+
+        #Radio Button: Choose Total or Per capita
+        radioButtons("totalOrPercapitaRadio", label = h5("Total or Per Capita"),
+        choices = list("Total" = 1, "Per Capita" = 2),
+        selected = 1)
+      ),
+
       mainPanel(
-
         tabsetPanel(
           tabPanel("Line Plot",
-        		highchartOutput("energyUsage", height="500px", width="100%"),
-        		verbatimTextOutput("energyDebug")
-        		#highchartOutput("energyExpend", height="500px")
-        		#highchartOutput("PerCapitaEnergy", height="500px"),
-        		#highchartOutput("PerCapitaEnergyExpend", height="500px")
-        		#highchartOutput("PercentEnergy", height="500px")
-          		)
-        )
-      )
-		)
-	), 
-	
-	
-	tabPanel("Waste", icon=icon("trash"),
-		tags$p("In 2009, Montana State University published its first Climate Action Plan (CAP).
-		This document outlines goals and objectives for reducing MSU's climate impact. 
-		Baseline data for 2009 found that solid waste accounted for 3% of MSU's net 
-		emissions totaling 2,132 MT of carbon dioxide equivalents per year."), 
-		tags$p("The Waste 
-		Reduction goals are as follows: reduce the total weight of waste to ", 
-      tags$b("25% of 2009 levels by 2020, 50% by 2030, 65% by 2040, and 80% by 2050."),
-  		"In order to meet these goals, MSU started a recycling program in 2009, started recycling E-waste in 2012, and is currently developing a composting program. 
-		It will require envolvement from the whole student body and falculty to reach these ambitious goals."),
-    sidebarLayout(
-	    sidebarPanel(
-  	    #tags$h3("Options"),
-    		#Checkbox Group Input: Choose Electriciy or naturalgas or both
-    		checkboxInput("landfill", label = "Landfill", value = TRUE),
-    		checkboxInput("recycle", label = "Recycling", value = TRUE),
-    		checkboxInput("compost", label = "Compost", value = TRUE),
-    
-    		#Radio Button: Choose Total or Per capita
-    		radioButtons("totalOrPercapitaRadioWaste", label = h5("Total or Per Capita"),
-    			choices = list("Total" = 1, "Per Capita" = 2), 
-    			selected = 1)
-    		
-		  ),
-		  
-      mainPanel(
-          tabsetPanel(
-              tabPanel("Area Plot",
-        		highchartOutput("PercentWaste", height="500px")),
-              tabPanel("Line Plot",
-        		highchartOutput("MSUwaste", height="500px"))
-    		#highchartOutput("PerCapitaWaste", height="500px")
+
+            highchartOutput("energyUsage", width="100%")
+            #verbatimTextOutput("energyDebug")
+
           )
+        )
       )
     )
-	), 
+  ),
 
-	tabPanel("Climate", icon=icon("sun-o"),
-		HTML("Climate Action plan")), 
-  
-	tabPanel("Water", icon=icon("tint"),
-		  sidebarLayout(
-		    sidebarPanel(
-    
-    		#Radio Button: Choose Usage or expenditure
-    		radioButtons("waterUsage", label = h5("Usage or Expenditure"),
-    			choices = list("Usage" = 0, "Expenditure" = 1), 
-    			selected = 0),
-    
-    		#Radio Button: Choose Total or Per capita
-    		radioButtons("waterPerCap", label = h5("Total or Per Capita"),
-    			choices = list("Total" = 1, "Per Capita" = 2), 
-    			selected = 1)
-  		  ),
+
+  ########### Waste ################
+  tabPanel(title = "Waste", value="tab2", icon=icon("trash"),
+
+    tags$h1("Waste"),
+    tags$p("In 2009, Montana State University published its first Climate Action Plan (CAP).
+    This document outlines goals and objectives for reducing MSU's climate impact.
+    Baseline data for 2009 found that solid waste accounted for 3% of MSU's net
+    emissions totaling 2,132 MT of carbon dioxide equivalents per year."),
+
+    tags$p("The Waste Reduction goals are as follows: reduce the total weight of waste to ",
+      tags$b("25% of 2009 levels by 2020, 50% by 2030, 65% by 2040, and 80% by 2050."),
+    "In order to meet these goals, MSU started a recycling program in 2009, started recycling E-waste in 2012, and is currently developing a composting program.
+  It will require envolvement from the whole student body and falculty to reach these ambitious goals."),
+    sidebarLayout(
+      sidebarPanel(
+        #tags$h3("options"),
+        #Radio Button: Choose Total or Per capita
+        radioButtons("totalOrPercapitaRadioWaste",
+          label = h5("Total or Per Capita"),
+          choices = list("Total" = 1, "Per Capita" = 2),
+          selected = 1)
+    ),
+
+      mainPanel(
+        tabsetPanel(
+          tabPanel("Area Plot",
+            highchartOutput("PercentWaste")),
+          tabPanel("Line Plot",
+            highchartOutput("MSUwaste"))
+        )
+      )
+    )
+  ),
+
+  ########### Climate ################
+  tabPanel(title = "Climate", value="tab3", icon=icon("sun-o"),
+    tags$h1("Climate and Greenhouse Gas Emissions"),
+    HTML("Climate Action plan")
+  ),
+
+  ########### Water ################
+  tabPanel(title = "Water", value="tab4", icon=icon("tint"),
+    tags$h1("Water"),
+    sidebarLayout(
+      sidebarPanel(
+
+        #Radio Button: Choose Usage or expenditure
+        radioButtons("waterUsage", label = h5("Usage or Expenditure"),
+          choices = list("Usage" = 0, "Expenditure" = 1),
+          selected = 0),
+
+        #Radio Button: Choose Total or Per capita
+        radioButtons("waterPerCap", label = h5("Total or Per Capita"),
+          choices = list("Total" = 1, "Per Capita" = 2),
+          selected = 1)
+      ),
+
       mainPanel(
 
         tabsetPanel(
           tabPanel("Line Plot",
-        		highchartOutput("waterSewer", height="500px", width="100%")
-        		#verbatimTextOutput("energyDebug")
-          		)
+
+            highchartOutput("waterSewer", width="100%")
+            #verbatimTextOutput("energyDebug")
+
+          )
         )
       )
-		)
-	  ),
-	#tabPanel("Food", icon=icon("cutlery")),
-  
-	tabPanel("Green Building & Landscaping", icon=icon("home"),
-	  fluidRow(
-	    column(12,
-	   div(class="outerMap",
-      tags$style(type = "text/css", "div.outerMap {position: fixed; top: 47px; left: 0; right: 0; bottom: 0; overflow: hidden; padding: 0}"),
-    		leafletOutput("leedBuildingMap", width="100%", height="100%")
-	   )
-      )
-	  )
-	),
+  )
+  ),
+
+ #tabPanel(title = "Food", value="tabFood", icon=icon("cutlery")),
+
+  ########### Leed ################
+  tabPanel(title = "Green Building & Landscaping", value="tab5", icon=icon("home"),
+    div(class="outerMap",
+      tags$style(type = "text/css",
+        "div.outerMap {position: fixed; top: 48px; left: 0; right: 0; bottom: 0; overflow: hidden; padding: 0}"),
+      leafletOutput("leedBuildingMap", width="100%", height="100%")
+    )
+  ),
+
+  ########### About ################
     navbarMenu("About",
-        tabPanel("About"),
-        tabPanel("Data Sources"),
-        tabPanel("Contribute!")
-            
+        tabPanel("About", value="tab6",
+          tags$h3("This web app was developed in collaboration with Sustainability Now, the MSU Office of Sustainability, and MSU Facilities Services")
+          ),
+        tabPanel("Data Sources")
     )
 ))

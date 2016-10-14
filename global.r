@@ -5,9 +5,6 @@
 library(googlesheets)
 library(dplyr)
 
-#####ToDo
-# 1. Make it so it will try to load from sheets, and if not, default to Data/ files
-
 ####DECLARE ANY FUNCTIONS FOR APPJ
 #Get trend timeseries for plotting
 getTrendSeries <- function(timeSeries, startTs=c(2005, 1)){
@@ -31,19 +28,19 @@ getTrendSeries <- function(timeSeries, startTs=c(2005, 1)){
 getFromGoogleSheets <- F
 
 if(getFromGoogleSheets){
-  
+
   ##Read in data from google sheets
   gs_auth(token = "shiny_app_token.rds")
-  
+
   allDataSheet <- gs_title("allData")
-  
+
   energyData <- as.data.frame(allDataSheet %>% gs_read(ws = "Energy"))
   pcwaste <- as.data.frame(allDataSheet %>% gs_read(ws = "PerCapita"))
   waste <- as.data.frame(allDataSheet %>% gs_read(ws = "Waste"))
   leedBuildings <- as.data.frame(allDataSheet %>% gs_read(ws = "Leed"))
-  
+
 } else {
-  
+
   energyData <- read.csv(file = "./data/energyData.csv", stringsAsFactors = F)
   pcwaste <- read.csv(file = "./data/pcwaste.csv", stringsAsFactors = F)
   waste <- read.csv(file = "./data/waste.csv", stringsAsFactors = F)
@@ -68,7 +65,7 @@ pcEnergy <- round(aggregate(energyTimeSeries, nfrequency=1, FUN=sum)/pcwaste[5:1
 
 energyTarget <- ts(aggregate(energyTimeSeries, nfrequency=1, FUN=mean)*1.0025, frequency=1, start=c(2011, 1))
 
-######  Waste Data  ##### 
+######  Waste Data  #####
 waste$recycle <- as.numeric(format(round(waste$recycle/2000, 2), nsmall=2))
 waste$landfill <-as.numeric(format(round(waste$landfill/2000, 2), nsmall=2))
 waste$compost <- as.numeric(format(round(waste$compost/2000, 2), nsmall=2))
