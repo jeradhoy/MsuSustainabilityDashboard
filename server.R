@@ -197,8 +197,8 @@ shinyServer(function(input, output, session) {
         ~Lon, ~Lat,
         popup = ~paste0("<h3>", Building, " : ", LeedCert, "</h3>",
           "<p> Info </p>",
-          '<a href="http://www.usgbc.org/leed"><p>Leed Certification Info</a>',
-          " - ", '<a href="', ProjectLink, '">Project Info</p></a>')
+          '<a target="_blank" href="http://www.usgbc.org/leed"><p>Leed Certification Info</a>',
+          " - ", '<a target="_blank" href="', ProjectLink, '">Project Info</p></a>')
       )
   })
 
@@ -218,6 +218,9 @@ shinyServer(function(input, output, session) {
   })
   observeEvent(input$openTab5, {
     rv$tabOpen <- 5
+  })
+  observeEvent(input$openTab6, {
+    rv$tabOpen <- 6
   })
 
   observeEvent(rv$tabOpen, {

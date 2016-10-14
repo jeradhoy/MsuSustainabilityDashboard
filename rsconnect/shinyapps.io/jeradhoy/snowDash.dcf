@@ -2,8 +2,9 @@ name: snowDash
 account: jeradhoy
 server: shinyapps.io
 appId: 92018
-bundleId: 586064
+bundleId: 586112
 url: https://jeradhoy.shinyapps.io/snowDash/
-when: 1476401100.08327
+when: 1476407468.29424
 asMultiple: FALSE
 asStatic: FALSE
+ignoredFiles: data/Buildings/msuBuildings.dbf|data/Buildings/msuBuildings.prj|data/Buildings/msuBuildings.qpj|data/Buildings/msuBuildings.shp|data/Buildings/msuBuildings.shx

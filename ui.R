@@ -16,14 +16,22 @@ shinyUI(navbarPage(id="main", title="MSU Sustainability Dashboard",
   includeCSS("styles.css"),
 
   #Start first tab, Info
-  tabPanel(title = "Info", value="tab0", icon=icon("info"),
-    tags$h3("This web app was developed in collaboration with Sustainability Now, the MSU Office of Sustainability, and MSU Facilities Services"),
-    actionButton("openTab1", HTML('<h2>Energy</h2><img src="http://www.prchecker.info/free-icons/128x128/wind_energy_128_px.png">')),
-    actionButton("openTab2", HTML('<h2>Waste</h2><img src="http://www.prchecker.info/free-icons/128x128/wind_energy_128_px.png">')),
-    actionButton("openTab3", HTML('<h2>Climate</h2><img src="http://www.prchecker.info/free-icons/128x128/wind_energy_128_px.png">')),
-    actionButton("openTab4", HTML('<h2>Water</h2><img src="http://www.prchecker.info/free-icons/128x128/wind_energy_128_px.png">')),
-    actionButton("openTab5", HTML('<h2>Green Building and Landscaping</h2><img src="http://www.prchecker.info/free-icons/128x128/wind_energy_128_px.png">')),
-    verbatimTextOutput("energyDebug")
+  tabPanel(title = "Home", value="tab0", icon=icon("home"),
+    tags$div(align="center",
+      tags$h1("Montana State University Sustainability Dashboard"),
+      tags$p("click on an icon to explore metrics, or ",
+        actionLink(inputId="openTab6", label="learn about the Sustustainability Dashboard")),
+      fluidRow(
+        actionButton("openTab1", width="30%", HTML('<h2>Energy</h2><img src="http://www.prchecker.info/free-icons/128x128/wind_energy_128_px.png">')),
+        actionButton("openTab2", width="30%", HTML('<h2>Waste</h2><img src="http://www.prchecker.info/free-icons/128x128/wind_energy_128_px.png">'))
+      ),
+      fluidRow(
+        actionButton("openTab3", width="30%", HTML('<h2>Climate</h2><img src="http://www.prchecker.info/free-icons/128x128/wind_energy_128_px.png">')),
+        actionButton("openTab4", width="30%", HTML('<h2>Water</h2><img src="http://www.prchecker.info/free-icons/128x128/wind_energy_128_px.png">')),
+        actionButton("openTab5", width="30%", HTML('<h2>Green Building and Landscaping</h2><img src="http://www.prchecker.info/free-icons/128x128/wind_energy_128_px.png">'))
+      ),
+      verbatimTextOutput("energyDebug")
+    )
   ),
 
   ########### Energy ################
@@ -151,7 +159,9 @@ shinyUI(navbarPage(id="main", title="MSU Sustainability Dashboard",
 
   ########### About ################
     navbarMenu("About",
-        tabPanel("About"),
+        tabPanel("About", value="tab6",
+          tags$h3("This web app was developed in collaboration with Sustainability Now, the MSU Office of Sustainability, and MSU Facilities Services")
+          ),
         tabPanel("Data Sources")
     )
 ))
