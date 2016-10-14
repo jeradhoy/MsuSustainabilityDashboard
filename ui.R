@@ -29,8 +29,8 @@ shinyUI(navbarPage(id="main", title="MSU Sustainability Dashboard",
         actionButton("openTab3", width="30%", HTML('<h2>Climate</h2><img src="http://www.prchecker.info/free-icons/128x128/wind_energy_128_px.png">')),
         actionButton("openTab4", width="30%", HTML('<h2>Water</h2><img src="http://www.prchecker.info/free-icons/128x128/wind_energy_128_px.png">')),
         actionButton("openTab5", width="30%", HTML('<h2>Green Building and Landscaping</h2><img src="http://www.prchecker.info/free-icons/128x128/wind_energy_128_px.png">'))
-      ),
-      verbatimTextOutput("energyDebug")
+      )
+      #verbatimTextOutput("energyDebug")
     )
   ),
 

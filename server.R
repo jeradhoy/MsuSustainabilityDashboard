@@ -202,30 +202,35 @@ shinyServer(function(input, output, session) {
       )
   })
 
-  rv <- reactiveValues(tabOpen=0)
 
   observeEvent(input$openTab1, {
-    rv$tabOpen <- 1
+    updateNavbarPage(session, "main",
+      selected = "tab1"
+    )
   })
   observeEvent(input$openTab2, {
-    rv$tabOpen <- 2
+    updateNavbarPage(session, "main",
+      selected = "tab2"
+    )
   })
   observeEvent(input$openTab3, {
-    rv$tabOpen <- 3
+    updateNavbarPage(session, "main",
+      selected = "tab3"
+    )
   })
   observeEvent(input$openTab4, {
-    rv$tabOpen <- 4
+    updateNavbarPage(session, "main",
+      selected = "tab4"
+    )
   })
   observeEvent(input$openTab5, {
-    rv$tabOpen <- 5
+    updateNavbarPage(session, "main",
+      selected = "tab5"
+    )
   })
   observeEvent(input$openTab6, {
-    rv$tabOpen <- 6
-  })
-
-  observeEvent(rv$tabOpen, {
     updateNavbarPage(session, "main",
-      selected = paste0("tab", rv$tabOpen)
+      selected = "tab6"
     )
   })
 
