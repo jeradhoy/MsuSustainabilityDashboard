@@ -193,15 +193,6 @@ shinyServer(function(input, output, session) {
       addProviderTiles("Esri.WorldTopoMap",
         options = providerTileOptions(noWrap = TRUE)
       ) %>%
-<<<<<<< HEAD
-      addMarkers(data=leedBuildings, ~Lon, ~Lat, popup = ~paste0("<h3>", Building, ": ", LeedCert, "</h3>", "<p> Info </p>",
-                                                                 '<a href="http://www.usgbc.org/leed"><p>Leed Certification Info</a>'," - ",
-                                                                  '<a href="', ProjectLink, '">Project Info</p></a>')
-                 )                 
-                 
-      })
-})
-=======
       addMarkers(data=leedBuildings,
         ~Lon, ~Lat,
         popup = ~paste0("<h3>", Building, " : ", LeedCert, "</h3>",
@@ -211,33 +202,50 @@ shinyServer(function(input, output, session) {
       )
   })
 
-  rv <- reactiveValues(tabOpen=0)
 
   observeEvent(input$openTab1, {
-    rv$tabOpen <- 1
+    updateNavbarPage(session, "main",
+      selected = "tab1"
+    )
   })
   observeEvent(input$openTab2, {
-    rv$tabOpen <- 2
+    updateNavbarPage(session, "main",
+      selected = "tab2"
+    )
   })
   observeEvent(input$openTab3, {
-    rv$tabOpen <- 3
+    updateNavbarPage(session, "main",
+      selected = "tab3"
+    )
   })
   observeEvent(input$openTab4, {
-    rv$tabOpen <- 4
+    updateNavbarPage(session, "main",
+      selected = "tab4"
+    )
   })
   observeEvent(input$openTab5, {
-    rv$tabOpen <- 5
+    updateNavbarPage(session, "main",
+      selected = "tab5"
+    )
   })
   observeEvent(input$openTab6, {
-    rv$tabOpen <- 6
-  })
-
-  observeEvent(rv$tabOpen, {
     updateNavbarPage(session, "main",
-      selected = paste0("tab", rv$tabOpen)
+      selected = "tab6"
     )
   })
 
+
+  output$dataTable <- renderTable({
+    get(input$dataset)
+  })
+
+  output$downloadData <- downloadHandler(
+    filename = function() {
+      paste(input$dataset, '.csv', sep='')
+    },
+    content = function(file) {
+      write.csv(get(input$dataset), file)
+    }
+  )
 #End of App
 })
->>>>>>> 48330945c2f05511c89507f0a9703dcc70ced9fe
