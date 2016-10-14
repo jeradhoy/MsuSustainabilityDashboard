@@ -234,5 +234,18 @@ shinyServer(function(input, output, session) {
     )
   })
 
+
+  output$dataTable <- renderTable({
+    get(input$dataset)
+  })
+
+  output$downloadData <- downloadHandler(
+    filename = function() {
+      paste(input$dataset, '.csv', sep='')
+    },
+    content = function(file) {
+      write.csv(get(input$dataset), file)
+    }
+  )
 #End of App
 })

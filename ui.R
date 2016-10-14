@@ -162,6 +162,17 @@ shinyUI(navbarPage(id="main", title="MSU Sustainability Dashboard",
         tabPanel("About", value="tab6",
           tags$h3("This web app was developed in collaboration with Sustainability Now, the MSU Office of Sustainability, and MSU Facilities Services")
           ),
-        tabPanel("Data Sources")
+        tabPanel("Data Sources",
+          sidebarLayout(
+            sidebarPanel(
+              selectInput("dataset", "Choose a dataset:",
+                choices = c("Energy" = "energyData", "Leed Buildings" = "leedBuildings", "Per Capita Waste" = "pcwaste", "Waste" = "waste")),
+              downloadButton('downloadData', 'Download')
+            ),
+            mainPanel(
+              tableOutput('dataTable')
+            )
+          )
+        )
     )
 ))
