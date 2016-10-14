@@ -21,18 +21,18 @@ hcoptslang$thousandsSep <- ","
 options(highcharter.lang = hcoptslang)
 
 ######## START Shiny Server ###################
-shinyServer(function(input, output) {
+shinyServer(function(input, output, session) {
 
 ##########################
 # DEBUG OUTPUTS; Remove before deployment
   #Radio button to decide input
   output$energyDebug<- renderPrint({
-    paste(as.numeric(input$usageOrExpendRadio) +1)
+    paste(input$openTab2)
   })
 #########################
 
 
-  ########### Energy Charts ################
+  ########### Energy Usage ################
   output$energyUsage <- renderHighchart({
 
     #If usage
@@ -58,7 +58,7 @@ shinyServer(function(input, output) {
 
       highchart(type="stock") %>%
         hc_title(useHTML=T,
-          text = "<b>MSU Electricity and Gass Usage in Dollars</b>") %>%
+          text = "<b>MSU Electricity and Gas Usage in Dollars</b>") %>%
         hc_legend(enabled=T) %>%
         hc_rangeSelector(inputEnabled=F) %>%
         hc_yAxis(title = list(text = "Expenditure in Dollars"),
@@ -76,7 +76,7 @@ shinyServer(function(input, output) {
   })
 
 
-  ############ Waste Charts ##################
+  ############ Waste Line ##################
   output$MSUwaste  <- renderHighchart({
 
     highchart(type="stock") %>%
@@ -119,6 +119,7 @@ shinyServer(function(input, output) {
     hc_tooltip(valueSuffix=" tons")
 })
 
+  ############ Waste Area ##################
   output$PercentWaste <- renderHighchart({
 
       highchart(type="stock") %>%
@@ -137,6 +138,7 @@ shinyServer(function(input, output) {
         hc_tooltip(valueSuffix=" tons")
   })
 
+  ############ Per Capita Waste Area ##################
   output$PerCapitaWaste <- renderHighchart({
 
     highchart() %>%
@@ -180,11 +182,12 @@ shinyServer(function(input, output) {
         hc_rangeSelector(inputEnabled=F) %>%
         hc_yAxis(title = list(text = "Expenditure in Dollars"), opposite=F) %>%
         hc_add_series_ts(name="Water/Sewer", ts=waterSewerTimeSeries[,2],
-          showInLegend=T, color="blue", visible=T) %>%
+          showInLegend=T, color="green", visible=T) %>%
         hc_tooltip(valuePrefix="$")
     }
   })
 
+  ########### Leed Map ################
   output$leedBuildingMap <- renderLeaflet({
     leaflet() %>%
       addProviderTiles("Esri.WorldTopoMap",
@@ -198,4 +201,30 @@ shinyServer(function(input, output) {
           " - ", '<a href="', ProjectLink, '">Project Info</p></a>')
       )
   })
+
+  rv <- reactiveValues(tabOpen=0)
+
+  observeEvent(input$openTab1, {
+    rv$tabOpen <- 1
+  })
+  observeEvent(input$openTab2, {
+    rv$tabOpen <- 2
+  })
+  observeEvent(input$openTab3, {
+    rv$tabOpen <- 3
+  })
+  observeEvent(input$openTab4, {
+    rv$tabOpen <- 4
+  })
+  observeEvent(input$openTab5, {
+    rv$tabOpen <- 5
+  })
+
+  observeEvent(rv$tabOpen, {
+    updateNavbarPage(session, "main",
+      selected = paste0("tab", rv$tabOpen)
+    )
+  })
+
+#End of App
 })
