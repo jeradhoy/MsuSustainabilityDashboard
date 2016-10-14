@@ -193,15 +193,6 @@ shinyServer(function(input, output, session) {
       addProviderTiles("Esri.WorldTopoMap",
         options = providerTileOptions(noWrap = TRUE)
       ) %>%
-<<<<<<< HEAD
-      addMarkers(data=leedBuildings, ~Lon, ~Lat, popup = ~paste0("<h3>", Building, ": ", LeedCert, "</h3>", "<p> Info </p>",
-                                                                 '<a href="http://www.usgbc.org/leed"><p>Leed Certification Info</a>'," - ",
-                                                                  '<a href="', ProjectLink, '">Project Info</p></a>')
-                 )                 
-                 
-      })
-})
-=======
       addMarkers(data=leedBuildings,
         ~Lon, ~Lat,
         popup = ~paste0("<h3>", Building, " : ", LeedCert, "</h3>",
