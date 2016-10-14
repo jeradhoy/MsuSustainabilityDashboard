@@ -247,5 +247,14 @@ shinyServer(function(input, output, session) {
       write.csv(get(input$dataset), file)
     }
   )
+  #checkbox button for map
+  # function(input, output) {
+  #
+  #   # You can access the values of the widget (as a vector)
+  #   # with input$checkGroup, e.g.
+  #   output$value <- renderPrint({ input$checkGroup })
+  #
+  # }
+
 #End of App
 })

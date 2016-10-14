@@ -148,23 +148,27 @@ shinyUI(navbarPage(id="main", title="MSU Sustainability Dashboard",
 
  #tabPanel(title = "Food", value="tabFood", icon=icon("cutlery")),
 
-  ########### Leed ################
+  ########### MAP ################
   tabPanel(title = "Green Building & Landscaping", value="tab5", icon=icon("home"),
     div(class="outerMap",
       tags$style(type = "text/css",
         "div.outerMap {position: fixed; top: 48px; left: 0; right: 0; bottom: 0; overflow: hidden; padding: 0}"),
       leafletOutput("leedBuildingMap", width="100%", height="100%")
-    )
-  ),
+    ),
 
- #   radioButtons("radio", label = h3("Radio buttons"),
- #                choices = list("Choice 1" = 1, "Choice 2" = 2, "Choice 3" = 3),
- #                selected = 1),
+ # fluidPage(
+ #
+ #   # Copy the chunk below to make a group of checkboxes
+ #   checkboxGroupInput("checkGroup", label = h3("Checkbox group"),
+ #                      choices = list("Choice 1" = 1, "Choice 2" = 2, "Choice 3" = 3),
+ #                      selected = 1),
+ #
  #
  #   hr(),
  #   fluidRow(column(3, verbatimTextOutput("value")))
  #
  # ),
+
   ########### About ################
     navbarMenu("About",
         tabPanel("About", value="tab6",
