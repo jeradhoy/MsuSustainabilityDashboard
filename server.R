@@ -46,7 +46,7 @@ shinyServer(function(input, output, session) {
           opposite= FALSE) %>%
 
         hc_add_series_ts(name="Electricity", ts=energyTimeSeries[,1],
-          showInLegend=T, color="gold", visible=T) %>%
+          showInLegend=T, color="gold", visible=input$elec) %>%
 
         hc_add_series_ts(name="Electricity Trend",
           ts=getTrendSeries(energyTimeSeries[,1]),
