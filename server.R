@@ -228,9 +228,9 @@ shinyServer(function(input, output, session) {
       selected = "tabWaste"
     )
   })
-  observeEvent(input$openTabClimate, {
+  observeEvent(input$openTabGHG, {
     updateNavbarPage(session, "main",
-      selected = "tabClimate"
+      selected = "tabGHG"
     )
   })
   observeEvent(input$openTabWater, {

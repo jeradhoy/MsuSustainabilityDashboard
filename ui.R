@@ -18,27 +18,27 @@ shinyUI(navbarPage(id="main", #title="MSU Sustainability Dashboard",
   ),
 
   #Start first tab, Info
-  tabPanel(title = "Home", value="tabHome", icon=icon("home"),
+  tabPanel(title = "Home", value="tabHome",
     tags$div(align="center",
       tags$h1("Montana State University Sustainability Dashboard"),
       tags$p("click on an icon to explore metrics, or ",
         actionLink(inputId="openTabAbout", label="learn about the Sustustainability Dashboard")),
       fluidRow(
-        actionButton("openTabEnergy", width="30%", HTML('<h2>Energy</h2><img height="100px" width="100px" src="assets/Energy.jpg">')),
-        actionButton("openTabWaste", width="30%", HTML('<h2>Waste</h2><img src="http://www.prchecker.info/free-icons/128x128/wind_energy_128_px.png">')),
-        actionButton("openTabClimate", width="30%", HTML('<h2>Climate</h2><img src="http://www.prchecker.info/free-icons/128x128/wind_energy_128_px.png">'))
+        actionButton("openTabEnergy", width="30%", HTML('<h2>Energy</h2><img height="100px" width="100px" src="assets/Energy.png">')),
+        actionButton("openTabWaste", width="30%", HTML('<h2>Waste</h2><img height="100px" width="100px" src="assets/Waste.png">')),
+        actionButton("openTabGHG", width="30%", HTML('<h2>Greenhouse Gases</h2><img height="100px" width= "100px" src="assets/GHG.png">'))
       ),
       fluidRow(
         actionButton("openTabWater", width="30%", HTML('<h2>Water</h2><img height="100px" width= "100px" src="assets/water.png">')),
-        actionButton("openTabMap", width="30%", HTML('<h2>Buildings & Landscaping</h2><img src="http://www.prchecker.info/free-icons/128x128/wind_energy_128_px.png">')),
-        actionButton("openTabProjects", width="30%", HTML('<h2>Projects</h2><img src="http://www.prchecker.info/free-icons/128x128/wind_energy_128_px.png">'))
+        actionButton("openTabMap", width="30%", HTML('<h2>Buildings & Landscaping</h2><img height="100px" width="100px" src="assets/Buildings.png">')),
+        actionButton("openTabProjects", width="30%", HTML('<h2>Projects</h2><img height="100px" width= "100px" src="assets/Projects.png">'))
       )
       #verbatimTextOutput("energyDebug")
     )
   ),
 
   ########### Energy ################
-  tabPanel(title = "Energy", value="tabEnergy", icon=icon("bolt"),
+  tabPanel(title = "Energy", value="tabEnergy", icon=icon("lightbulb-o"),
     tags$h1("Energy"),
     tags$p("For electricity and natural gas usage, MSU's Climate Action Plan aims to hold these parameters constant with ideally a negative growth trend but a maximum of ",
       tags$b("0.25% growth per year"),
@@ -115,9 +115,9 @@ shinyUI(navbarPage(id="main", #title="MSU Sustainability Dashboard",
     )
   ),
 
-  ########### Climate ################
-  tabPanel(title = "Climate", value="tabClimate", icon=icon("sun-o"),
-    tags$h1("Climate and Greenhouse Gas Emissions"),
+  ########### GHG ################
+  tabPanel(title = "GHG", value="tabGHG", icon=icon("globe"),
+    tags$h1("Greenhouse Gas Emissions"),
     HTML("Climate Action plan")
   ),
 
