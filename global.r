@@ -38,6 +38,7 @@ if(getFromGoogleSheets){
   pcwaste <- as.data.frame(allDataSheet %>% gs_read(ws = "PerCapita"))
   waste <- as.data.frame(allDataSheet %>% gs_read(ws = "Waste"))
   leedBuildings <- as.data.frame(allDataSheet %>% gs_read(ws = "Leed"))
+  edibleLandscaping <- as.data.frame(allDataSheet %>% gs_read(ws = "EdibleLandscaping"))
 
 } else {
 
@@ -45,6 +46,7 @@ if(getFromGoogleSheets){
   pcwaste <- read.csv(file = "./data/pcwaste.csv", stringsAsFactors = F)
   waste <- read.csv(file = "./data/waste.csv", stringsAsFactors = F)
   leedBuildings <- read.csv(file = "./data/leedBuildings.csv", stringsAsFactors = F)
+  edibleLandscaping <- read.csv(file = "./data/edibleLandscaping.csv", stringsAsFactors = F)
 }
 
 #Process energy data, convert to time series, convert dkt to kwh, calculate energy trends

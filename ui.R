@@ -101,7 +101,9 @@ shinyUI(navbarPage(id="main", #title="MSU Sustainability Dashboard",
         radioButtons("totalOrPercapitaRadioWaste",
           label = h5("Total or Per Capita"),
           choices = list("Total" = 1, "Per Capita" = 2),
-          selected = 1)
+          selected = 1),
+        tags$h5("Trend Line"),
+        checkboxInput("wasteTrendLine", label="Waste", value=FALSE)
     ),
 
       mainPanel(
