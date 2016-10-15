@@ -46,11 +46,11 @@ shinyServer(function(input, output, session) {
           opposite= FALSE) %>%
 
         hc_add_series_ts(name="Electricity", ts=energyTimeSeries[,1],
-          showInLegend=T, color="gold", visible=T) %>%
+          showInLegend=T, color="gold", visible=input$elec) %>%
 
         hc_add_series_ts(name="Electricity Trend",
           ts=getTrendSeries(energyTimeSeries[,1]),
-          showInLegend=F, color="gold", visible=input$elecTrendLine, dashStyle="LongDash") %>%
+          showInLegend=F, color="gold", visible=input$elecTrendLine & input$elec, dashStyle="LongDash") %>%
 
         #hc_add_series_ts(name="Electricity Target", ts=energyTarget[,1],
           #showInLegend=T, color="blue",dashStyle="dot", visible=F) %>%
@@ -59,7 +59,7 @@ shinyServer(function(input, output, session) {
 
         hc_add_series_ts(name="Gas Trend",
           ts=getTrendSeries(energyTimeSeries[,2]),
-          showInLegend=F, color="darkorange", visible=input$gasTrendLine, dashStyle="LongDash") %>%
+          showInLegend=F, color="darkorange", visible=input$gasTrendLine & input$gas, dashStyle="LongDash") %>%
 
         #hc_add_series_ts(name="Gas Target", ts=energyTarget[,2],
           #showInLegend=T, color="red", dashStyle="dot", visible=F) %>%
@@ -130,8 +130,9 @@ shinyServer(function(input, output, session) {
     hc_add_series_ts(name="Compost", ts=wastetimeseries[,3],
       color= "orange", type="line") %>%
     hc_add_series_ts(name="Waste Fit", ts=wastefit, color="purple",
-      type="line", showInLegend=F)%>%
+      visible = input$wasteTrendLine, type="line", showInLegend=F)%>%
     hc_tooltip(valueSuffix=" tons")
+    
 })
 
   ############ Waste Area ##################
