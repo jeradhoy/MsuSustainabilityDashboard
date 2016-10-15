@@ -6,7 +6,7 @@ library(leaflet)
 library(shinythemes)
 
 # Define UI for dataset viewer application
-shinyUI(navbarPage(id="main", title="MSU Sustainability Dashboard",
+shinyUI(navbarPage(id="main", #title="MSU Sustainability Dashboard",
   fluid=T,
   position="static-top",
   selected="tab0",
