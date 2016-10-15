@@ -9,7 +9,7 @@ library(shinythemes)
 shinyUI(navbarPage(id="main", title="MSU Sustainability Dashboard",
   fluid=T,
   position="static-top",
-  selected="tab0",
+  selected="tabHome",
   inverse=T, #For dark top
   collapsible = T,
   theme=shinytheme("cerulean"),
@@ -18,18 +18,18 @@ shinyUI(navbarPage(id="main", title="MSU Sustainability Dashboard",
   ),
 
   #Start first tab, Info
-  tabPanel(title = "Home", value="tab0", icon=icon("home"),
+  tabPanel(title = "Home", value="tabHome", icon=icon("home"),
     tags$div(align="center",
       tags$h1("Montana State University Sustainability Dashboard"),
       tags$p("click on an icon to explore metrics, or ",
         actionLink(inputId="openTabAbout", label="learn about the Sustustainability Dashboard")),
       fluidRow(
-        actionButton("openTabEnergy", width="30%", HTML('<h2>Energy</h2><img src="http://www.prchecker.info/free-icons/128x128/wind_energy_128_px.png">')),
+        actionButton("openTabEnergy", width="30%", HTML('<h2>Energy</h2><img height="100px" width="100px" src="assets/Energy.jpg">')),
         actionButton("openTabWaste", width="30%", HTML('<h2>Waste</h2><img src="http://www.prchecker.info/free-icons/128x128/wind_energy_128_px.png">')),
         actionButton("openTabClimate", width="30%", HTML('<h2>Climate</h2><img src="http://www.prchecker.info/free-icons/128x128/wind_energy_128_px.png">'))
       ),
       fluidRow(
-        actionButton("openTabWater", width="30%", HTML('<h2>Water</h2><img src="http://www.prchecker.info/free-icons/128x128/wind_energy_128_px.png">')),
+        actionButton("openTabWater", width="30%", HTML('<h2>Water</h2><img height="100px" width= "100px" src="assets/water.png">')),
         actionButton("openTabMap", width="30%", HTML('<h2>Buildings & Landscaping</h2><img src="http://www.prchecker.info/free-icons/128x128/wind_energy_128_px.png">')),
         actionButton("openTabProjects", width="30%", HTML('<h2>Projects</h2><img src="http://www.prchecker.info/free-icons/128x128/wind_energy_128_px.png">'))
       )
