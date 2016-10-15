@@ -20,22 +20,23 @@ shinyUI(navbarPage(id="main", title="MSU Sustainability Dashboard",
     tags$div(align="center",
       tags$h1("Montana State University Sustainability Dashboard"),
       tags$p("click on an icon to explore metrics, or ",
-        actionLink(inputId="openTab6", label="learn about the Sustustainability Dashboard")),
+        actionLink(inputId="openTabAbout", label="learn about the Sustustainability Dashboard")),
       fluidRow(
-        actionButton("openTab1", width="30%", HTML('<h2>Energy</h2><img src="http://www.prchecker.info/free-icons/128x128/wind_energy_128_px.png">')),
-        actionButton("openTab2", width="30%", HTML('<h2>Waste</h2><img src="http://www.prchecker.info/free-icons/128x128/wind_energy_128_px.png">'))
+        actionButton("openTabEnergy", width="30%", HTML('<h2>Energy</h2><img src="http://www.prchecker.info/free-icons/128x128/wind_energy_128_px.png">')),
+        actionButton("openTabWaste", width="30%", HTML('<h2>Waste</h2><img src="http://www.prchecker.info/free-icons/128x128/wind_energy_128_px.png">')),
+        actionButton("openTabClimate", width="30%", HTML('<h2>Climate</h2><img src="http://www.prchecker.info/free-icons/128x128/wind_energy_128_px.png">'))
       ),
       fluidRow(
-        actionButton("openTab3", width="30%", HTML('<h2>Climate</h2><img src="http://www.prchecker.info/free-icons/128x128/wind_energy_128_px.png">')),
-        actionButton("openTab4", width="30%", HTML('<h2>Water</h2><img src="http://www.prchecker.info/free-icons/128x128/wind_energy_128_px.png">')),
-        actionButton("openTab5", width="30%", HTML('<h2>Green Building and Landscaping</h2><img src="http://www.prchecker.info/free-icons/128x128/wind_energy_128_px.png">'))
+        actionButton("openTabWater", width="30%", HTML('<h2>Water</h2><img src="http://www.prchecker.info/free-icons/128x128/wind_energy_128_px.png">')),
+        actionButton("openTabMap", width="30%", HTML('<h2>Buildings & Landscaping</h2><img src="http://www.prchecker.info/free-icons/128x128/wind_energy_128_px.png">')),
+        actionButton("openTabProjects", width="30%", HTML('<h2>Projects</h2><img src="http://www.prchecker.info/free-icons/128x128/wind_energy_128_px.png">'))
       )
       #verbatimTextOutput("energyDebug")
     )
   ),
 
   ########### Energy ################
-  tabPanel(title = "Energy", value="tab1", icon=icon("bolt"),
+  tabPanel(title = "Energy", value="tabEnergy", icon=icon("bolt"),
     tags$h1("Energy"),
     tags$p("For electricity and natural gas usage, MSU's Climate Action Plan aims to hold these parameters constant with ideally a negative growth trend but a maximum of ",
       tags$b("0.25% growth per year"),
@@ -45,7 +46,7 @@ shinyUI(navbarPage(id="main", title="MSU Sustainability Dashboard",
     sidebarLayout(
       sidebarPanel(
 
-        #tags$h3("Options"),
+        tags$h5("Select Data"),
         #Checkbox Group Input: Choose Electriciy or naturalgas or both
         checkboxInput("elec", label = "Electricity", value = TRUE),
         checkboxInput("gas", label = "Natural Gas", value = TRUE),
@@ -59,15 +60,16 @@ shinyUI(navbarPage(id="main", title="MSU Sustainability Dashboard",
         radioButtons("totalOrPercapitaRadio", label = h5("Total or Per Capita"),
         choices = list("Total" = 1, "Per Capita" = 2),
         selected = 1),
-        checkboxInput("elecTrendLine", label="Show Trend Line", value=FALSE),
-        checkboxInput("gasTrendLine", label="Show Gas Trend Line", value=FALSE)
+        tags$h5("Trend Lines"),
+        checkboxInput("elecTrendLine", label="Electricity", value=FALSE),
+        checkboxInput("gasTrendLine", label="Gas", value=FALSE)
       ),
 
       mainPanel(
         tabsetPanel(
           tabPanel("Line Plot",
 
-            highchartOutput("energyUsage", width="100%")
+            highchartOutput("energyUsage", height = "500px")
             , verbatimTextOutput("energyDebug")
 
           )
@@ -78,7 +80,7 @@ shinyUI(navbarPage(id="main", title="MSU Sustainability Dashboard",
 
 
   ########### Waste ################
-  tabPanel(title = "Waste", value="tab2", icon=icon("trash"),
+  tabPanel(title = "Waste", value="tabWaste", icon=icon("trash"),
 
     tags$h1("Waste"),
     tags$p("In 2009, Montana State University published its first Climate Action Plan (CAP).
@@ -103,22 +105,22 @@ shinyUI(navbarPage(id="main", title="MSU Sustainability Dashboard",
       mainPanel(
         tabsetPanel(
           tabPanel("Area Plot",
-            highchartOutput("PercentWaste")),
+            highchartOutput("PercentWaste", height = "500px")),
           tabPanel("Line Plot",
-            highchartOutput("MSUwaste"))
+            highchartOutput("MSUwaste", height = "500px"))
         )
       )
     )
   ),
 
   ########### Climate ################
-  tabPanel(title = "Climate", value="tab3", icon=icon("sun-o"),
+  tabPanel(title = "Climate", value="tabClimate", icon=icon("sun-o"),
     tags$h1("Climate and Greenhouse Gas Emissions"),
     HTML("Climate Action plan")
   ),
 
   ########### Water ################
-  tabPanel(title = "Water", value="tab4", icon=icon("tint"),
+  tabPanel(title = "Water", value="tabWater", icon=icon("tint"),
     tags$h1("Water"),
     sidebarLayout(
       sidebarPanel(
@@ -139,7 +141,7 @@ shinyUI(navbarPage(id="main", title="MSU Sustainability Dashboard",
         tabsetPanel(
           tabPanel("Line Plot",
 
-            highchartOutput("waterSewer", width="100%")
+            highchartOutput("waterSewer", height = "500px")
             #verbatimTextOutput("energyDebug")
 
           )
@@ -151,7 +153,7 @@ shinyUI(navbarPage(id="main", title="MSU Sustainability Dashboard",
  #tabPanel(title = "Food", value="tabFood", icon=icon("cutlery")),
 
   ########### Leed ################
-  tabPanel(title = "Green Building & Landscaping", value="tab5", icon=icon("home"),
+  tabPanel(title = "Buildings & Landscaping", value="tabMap", icon=icon("home"),
     div(class="outer",
       tags$style(type = "text/css",
         "div.outerMap {position: fixed; top: 48px; left: 0; right: 0; bottom: 0; overflow: hidden; padding: 0}"),
@@ -159,14 +161,18 @@ shinyUI(navbarPage(id="main", title="MSU Sustainability Dashboard",
       absolutePanel(id = "controls", class = "panel panel-default", fixed = TRUE,
         draggable = T, top =100, left = 20, right = "auto", bottom = "auto",
         width = 330, height = "auto",
-       h2("Green Building and Landscaping")
+       h2("Buildings and Landscaping")
       )
     )
   ),
+ ########### Projects ################
+ tabPanel(title = "Projects", value="tabProjects", icon=icon("gears"),
+    tags$h1("Projects")
+ ),
 
   ########### About ################
     navbarMenu("About",
-        tabPanel("About", value="tab6",
+        tabPanel("About", value="tabAbout",
           tags$h3("This web app was developed in collaboration with Sustainability Now, the MSU Office of Sustainability, and MSU Facilities Services")
           ),
         tabPanel("Data Sources",

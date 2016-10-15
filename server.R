@@ -218,34 +218,39 @@ shinyServer(function(input, output, session) {
   })
 
 
-  observeEvent(input$openTab1, {
+  observeEvent(input$openTabEnergy, {
     updateNavbarPage(session, "main",
-      selected = "tab1"
+      selected = "tabEnergy"
     )
   })
-  observeEvent(input$openTab2, {
+  observeEvent(input$openTabWaste, {
     updateNavbarPage(session, "main",
-      selected = "tab2"
+      selected = "tabWaste"
     )
   })
-  observeEvent(input$openTab3, {
+  observeEvent(input$openTabClimate, {
     updateNavbarPage(session, "main",
-      selected = "tab3"
+      selected = "tabClimate"
     )
   })
-  observeEvent(input$openTab4, {
+  observeEvent(input$openTabWater, {
     updateNavbarPage(session, "main",
-      selected = "tab4"
+      selected = "tabWater"
     )
   })
-  observeEvent(input$openTab5, {
+  observeEvent(input$openTabMap, {
     updateNavbarPage(session, "main",
-      selected = "tab5"
+      selected = "tabMap"
     )
   })
-  observeEvent(input$openTab6, {
+  observeEvent(input$openTabAbout, {
     updateNavbarPage(session, "main",
-      selected = "tab6"
+      selected = "tabAbout"
+    )
+  })
+  observeEvent(input$openTabProjects, {
+    updateNavbarPage(session, "main",
+                     selected = "tabProjects"
     )
   })
 
