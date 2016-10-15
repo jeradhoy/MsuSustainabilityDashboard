@@ -58,7 +58,9 @@ shinyUI(navbarPage(id="main", title="MSU Sustainability Dashboard",
         #Radio Button: Choose Total or Per capita
         radioButtons("totalOrPercapitaRadio", label = h5("Total or Per Capita"),
         choices = list("Total" = 1, "Per Capita" = 2),
-        selected = 1)
+        selected = 1),
+        checkboxInput("elecTrendLine", label="Show Trend Line", value=FALSE),
+        checkboxInput("gasTrendLine", label="Show Gas Trend Line", value=FALSE)
       ),
 
       mainPanel(
@@ -66,7 +68,7 @@ shinyUI(navbarPage(id="main", title="MSU Sustainability Dashboard",
           tabPanel("Line Plot",
 
             highchartOutput("energyUsage", width="100%")
-            #verbatimTextOutput("energyDebug")
+            , verbatimTextOutput("energyDebug")
 
           )
         )
@@ -150,10 +152,15 @@ shinyUI(navbarPage(id="main", title="MSU Sustainability Dashboard",
 
   ########### Leed ################
   tabPanel(title = "Green Building & Landscaping", value="tab5", icon=icon("home"),
-    div(class="outerMap",
+    div(class="outer",
       tags$style(type = "text/css",
         "div.outerMap {position: fixed; top: 48px; left: 0; right: 0; bottom: 0; overflow: hidden; padding: 0}"),
-      leafletOutput("leedBuildingMap", width="100%", height="100%")
+      leafletOutput("leedBuildingMap", width="100%", height="100%"),
+      absolutePanel(id = "controls", class = "panel panel-default", fixed = TRUE,
+        draggable = T, top =100, left = 20, right = "auto", bottom = "auto",
+        width = 330, height = "auto",
+       h2("Green Building and Landscaping")
+      )
     )
   ),
 
