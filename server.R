@@ -27,7 +27,7 @@ shinyServer(function(input, output, session) {
 # DEBUG OUTPUTS; Remove before deployment
   #Radio button to decide input
   output$energyDebug<- renderPrint({
-    paste(input$openTab2)
+    paste(input$energyTrendLine)
   })
 #########################
 
@@ -40,16 +40,27 @@ shinyServer(function(input, output, session) {
       highchart(type="stock") %>%
         hc_title(useHTML=T,
           text = "<b>MSU Electricity and Gas Usage in Kilowatt Hours</b>") %>%
-        hc_legend(enabled=T) %>%
+        hc_legend(enabled=T, verticalAlign="bottom", align="center", layout="horizontal") %>%
         hc_rangeSelector(inputEnabled=F) %>%
         hc_yAxis(title = list(text = "Usage in KWH"),
           opposite= FALSE) %>%
+
         hc_add_series_ts(name="Electricity", ts=energyTimeSeries[,1],
-          showInLegend=T, color="gold", visible=input$elec) %>%
+          showInLegend=T, color="gold", visible=T) %>%
+
+        hc_add_series_ts(name="Electricity Trend",
+          ts=getTrendSeries(energyTimeSeries[,1]),
+          showInLegend=F, color="gold", visible=input$elecTrendLine, dashStyle="LongDash") %>%
+
         #hc_add_series_ts(name="Electricity Target", ts=energyTarget[,1],
           #showInLegend=T, color="blue",dashStyle="dot", visible=F) %>%
         hc_add_series_ts(name="Gas", ts=energyTimeSeries[,2],
           color="darkorange", visible=input$gas) %>%
+
+        hc_add_series_ts(name="Gas Trend",
+          ts=getTrendSeries(energyTimeSeries[,2]),
+          showInLegend=F, color="darkorange", visible=input$gasTrendLine, dashStyle="LongDash") %>%
+
         #hc_add_series_ts(name="Gas Target", ts=energyTarget[,2],
           #showInLegend=T, color="red", dashStyle="dot", visible=F) %>%
         hc_tooltip(valueSuffix=" KWH")
@@ -65,10 +76,14 @@ shinyServer(function(input, output, session) {
           opposite= FALSE) %>%
         hc_add_series_ts(name="Electricity", ts=energyTimeSeries[,3],
           showInLegend=T, color="gold", visible=input$elec) %>%
+        hc_add_series_ts(name="Electricity Trend", ts=getTrendSeries(energyTimeSeries[,3]),
+          showInLegend=F, color="gold", visible=input$elecTrendLine) %>%
         #hc_add_series_ts(name="Electricity Target", ts=energyTarget[,1],
           #showInLegend=T, color="blue",dashStyle="dot", visible=F) %>%
         hc_add_series_ts(name="Gas", ts=energyTimeSeries[,4],
           color="darkorange", visible=input$gas) %>%
+        hc_add_series_ts(name="Gas Trend", ts=getTrendSeries(energyTimeSeries[,4]),
+          color="darkorange", visible=input$gasTrendLine, showInLegend=F) %>%
         #hc_add_series_ts(name="Gas Target", ts=energyTarget[,2],
           #showInLegend=T, color="red", dashStyle="dot", visible=F) %>%
         hc_tooltip(valuePrefix="$")
@@ -203,34 +218,39 @@ shinyServer(function(input, output, session) {
   })
 
 
-  observeEvent(input$openTab1, {
+  observeEvent(input$openTabEnergy, {
     updateNavbarPage(session, "main",
-      selected = "tab1"
+      selected = "tabEnergy"
     )
   })
-  observeEvent(input$openTab2, {
+  observeEvent(input$openTabWaste, {
     updateNavbarPage(session, "main",
-      selected = "tab2"
+      selected = "tabWaste"
     )
   })
-  observeEvent(input$openTab3, {
+  observeEvent(input$openTabClimate, {
     updateNavbarPage(session, "main",
-      selected = "tab3"
+      selected = "tabClimate"
     )
   })
-  observeEvent(input$openTab4, {
+  observeEvent(input$openTabWater, {
     updateNavbarPage(session, "main",
-      selected = "tab4"
+      selected = "tabWater"
     )
   })
-  observeEvent(input$openTab5, {
+  observeEvent(input$openTabMap, {
     updateNavbarPage(session, "main",
-      selected = "tab5"
+      selected = "tabMap"
     )
   })
-  observeEvent(input$openTab6, {
+  observeEvent(input$openTabAbout, {
     updateNavbarPage(session, "main",
-      selected = "tab6"
+      selected = "tabAbout"
+    )
+  })
+  observeEvent(input$openTabProjects, {
+    updateNavbarPage(session, "main",
+                     selected = "tabProjects"
     )
   })
 
