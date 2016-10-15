@@ -13,7 +13,9 @@ shinyUI(navbarPage(id="main", title="MSU Sustainability Dashboard",
   inverse=T, #For dark top
   collapsible = T,
   theme=shinytheme("cerulean"),
-  includeCSS("styles.css"),
+  tags$head(
+    tags$link(rel= "stylesheet", type="text/css", href = "styles.css")
+  ),
 
   #Start first tab, Info
   tabPanel(title = "Home", value="tab0", icon=icon("home"),
