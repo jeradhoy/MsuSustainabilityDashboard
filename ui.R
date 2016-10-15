@@ -21,7 +21,7 @@ shinyUI(navbarPage(id="main", #title="MSU Sustainability Dashboard",
   tabPanel(title = "Home", value="tabHome",
     tags$div(align="center",
       tags$h1("Montana State University Sustainability Dashboard"),
-      tags$p("click on an icon to explore metrics, or ",
+      tags$p("click on an icon to explore data, or ",
         actionLink(inputId="openTabAbout", label="learn about the Sustustainability Dashboard")),
       fluidRow(
         actionButton("openTabEnergy", width="30%", HTML('<h2>Energy</h2><img height="100px" width="100px" src="assets/Energy.png">')),
