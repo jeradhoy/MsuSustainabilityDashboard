@@ -132,7 +132,7 @@ shinyServer(function(input, output, session) {
     hc_add_series_ts(name="Waste Fit", ts=wastefit, color="purple",
       visible = input$wasteTrendLine, type="line", showInLegend=F)%>%
     hc_tooltip(valueSuffix=" tons")
-    
+
 })
 
   ############ Waste Area ##################
@@ -215,7 +215,9 @@ shinyServer(function(input, output, session) {
           "<p> Info </p>",
           '<a target="_blank" href="http://www.usgbc.org/leed"><p>Leed Certification Info</a>',
           " - ", '<a target="_blank" href="', ProjectLink, '">Project Info</p></a>')
-      )
+      ) %>%
+    addMarkers(data=edibleLandscaping,
+               ~Lon, ~Lat, icon=list(iconUrl="assets/leaf.png", iconSize=c(24)))
   })
 
 
