@@ -124,14 +124,18 @@ shinyServer(function(input, output, session) {
               value = wasteCAP2050))),
        opposite= FALSE)%>%
     hc_add_series_ts(name="Landfill", ts=wastetimeseries[,2],
-      showInLegend=T, color= "black", type="line") %>%
+      showInLegend=T, color= "black", type="line", visible=input$landfill) %>%
     hc_add_series_ts(name="Recycle", ts=wastetimeseries[,1],
-      color= "green", type="line") %>%
+      color= "green", type="line", visible=input$recycle) %>%
     hc_add_series_ts(name="Compost", ts=wastetimeseries[,3],
-      color= "orange", type="line") %>%
-    hc_add_series_ts(name="Waste Fit", ts=wastefit, color="purple",
-      visible = input$wasteTrendLine, type="line", showInLegend=F)%>%
-    hc_tooltip(valueSuffix=" tons")
+      color= "orange", type="line", visible=input$compost) %>%
+    hc_add_series_ts(name="Lanfill Fit", ts=wastefit, color="purple",
+      visible = input$wasteTrendLine & input$landfill, type="line", showInLegend=F)%>%
+   #hc_add_series_ts(name="Recycle Fit", ts=recyclefit, color="purple",
+   #   visible = input$recycleTrendLine, type="line", showInLegend=F)%>%
+  # hc_add_series_ts(name="Compost Fit", ts=compostfit, color="purple",
+  #   visible = input$compostTrendLine, type="line", showInLegend=F)
+    hc_tooltip(valueSuffix="tons")
 
 })
 
@@ -146,11 +150,11 @@ shinyServer(function(input, output, session) {
           text = "% of Total Waste by Weight"), opposite=FALSE)%>%
         hc_plotOptions(area=list(stacking="percent")) %>%
         hc_add_series_ts(name="Landfill", ts=wastetimeseries[,2],
-          showInLegend=T, color= "black", type="area") %>%
+          showInLegend=T, color= "black", type="area", visible=input$landfill) %>%
         hc_add_series_ts(name="Recycle", ts=wastetimeseries[,1],
-          color= "green", type="area") %>%
+          color= "green", type="area", visible=input$recycle) %>%
         hc_add_series_ts(name="Compost", ts=wastetimeseries[,3],
-          color= "orange", type="area") %>%
+          color= "orange", type="area", visible=input$compost) %>%
         hc_tooltip(valueSuffix=" tons")
   })
 

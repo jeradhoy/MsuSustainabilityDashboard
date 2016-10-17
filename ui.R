@@ -96,14 +96,21 @@ shinyUI(navbarPage(id="main", #title="MSU Sustainability Dashboard",
   It will require envolvement from the whole student body and falculty to reach these ambitious goals."),
     sidebarLayout(
       sidebarPanel(
-        #tags$h3("options"),
+        tags$h5("Select Data"),
+        #Checkbox Group Input: Choose Electriciy or naturalgas or both
+        checkboxInput("landfill", label = "Landfill", value = TRUE),
+        checkboxInput("recycle", label = "Recycle", value = TRUE),
+        checkboxInput("compost", label = "Compost", value = TRUE),
+
         #Radio Button: Choose Total or Per capita
         radioButtons("totalOrPercapitaRadioWaste",
           label = h5("Total or Per Capita"),
           choices = list("Total" = 1, "Per Capita" = 2),
           selected = 1),
         tags$h5("Trend Line"),
-        checkboxInput("wasteTrendLine", label="Waste", value=FALSE)
+        checkboxInput("wasteTrendLine", label="Landfill", value=FALSE),
+        checkboxInput("recycleTrendLine", label="Recycle", value=FALSE),
+        checkboxInput("compostTrendLine", label="Compost", value=FALSE)
     ),
 
       mainPanel(

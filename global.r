@@ -72,6 +72,7 @@ waste$recycle <- as.numeric(format(round(waste$recycle/2000, 2), nsmall=2))
 waste$landfill <-as.numeric(format(round(waste$landfill/2000, 2), nsmall=2))
 waste$compost <- as.numeric(format(round(waste$compost/2000, 2), nsmall=2))
 wastetimeseries <- ts(waste[,-c(1, 2)], frequency=12, start=c(2006, 1))
+recycletimeseries <- ts(waste[,-c(1, 3)], frequency = 12, start = c(2006, 1))
 
 ### Per capita waste data
 pcwaste$FY <- as.numeric(pcwaste$FY)
@@ -80,3 +81,5 @@ pcwaste$pcwaste <- as.numeric(format(round(pcwaste$waste/pcwaste$fallpop, 2), ns
 pcwaste$pccompost <- as.numeric(format(round(pcwaste$compost/pcwaste$fallpop, 2), nsmall=2))
 
 wastefit <- getTrendSeries(wastetimeseries[,2], startTs = c(2006, 1))
+#recyclefit <- getTrendSeries(recycletimeseries[,1], startTs = c(2006,1))
+#compostfit <- getTrendSeries(composttimeseries[,3], startTs = c(2006,1))
