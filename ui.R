@@ -174,12 +174,18 @@ shinyUI(navbarPage(id="main", #title="MSU Sustainability Dashboard",
     div(class="outer",
       #{tags$style(type = "text/css",
        # "div.outerMap {position: fixed; top: 48px; left: 0; right: 0; bottom: 0; overflow: hidden; padding: 0}"),
-      leafletOutput("leedBuildingMap", width="100%", height="100%"),
+      leafletOutput("map", width="100%", height="100%"),
+
       absolutePanel(id = "controls", class = "panel panel-default", fixed = TRUE,
         draggable = T, top =100, left = 20, right = "auto", bottom = "auto",
         width = 330, height = "auto",
-       h2("Buildings and Landscaping")
+        h2("Buildings and Landscaping"),
+        h3("Show Layers:"),
+        checkboxInput("showLeed", label=tags$div(tags$b("LEED Buildings"), tags$img(src="assets/UWIcons/1l0-e0-e0-d-certification-icon.png")), value=T),
+        checkboxInput("showEdible", "Edible Landscaping", value=T)
+
       )
+
     )
   ),
  ########### Projects ################

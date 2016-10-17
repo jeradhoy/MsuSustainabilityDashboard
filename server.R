@@ -215,23 +215,47 @@ shinyServer(function(input, output, session) {
     tree = makeIcon(iconUrl="assets/UWIcons/3brockman-tree-tour-icon.png", iconWidth=mapIconSize, iconHeight = mapIconSize, iconAnchorX=mapIconSize/2, iconAnchorY = mapIconSize)
   )
 
+  leedImages <- list(
+    "LEED Gold" = "assets/UWIcons/leedGold.png",
+    "LEED Silver" = "assets/UWIcons/leedSilver.jpg"
+  )
+
   ########### Leed Map ################
-  output$leedBuildingMap <- renderLeaflet({
+  output$map <- renderLeaflet({
     leaflet() %>%
       addProviderTiles("Esri.WorldTopoMap",
         options = providerTileOptions(noWrap = TRUE)
       ) %>%
-      addMarkers(data=leedBuildings,
+      addMarkers(data=leedBuildings, group="LEED Buildings",
         ~Lon, ~Lat, icon=mapIcons["leed"],
         popup = ~paste0("<h3>", Building, " : ", LeedCert, "</h3>",
           "<p> Info </p>",
+          '<img src="', as.character(leedImages[LeedCert]), '" height="200" width="200">',
           '<a target="_blank" href="http://www.usgbc.org/leed"><p>Leed Certification Info</a>',
           " - ", '<a target="_blank" href="', ProjectLink, '">Project Info</p></a>')
       ) %>%
-    addMarkers(data=edibleLandscaping,
+    addMarkers(data=edibleLandscaping, group="Edible Landscaping",
                ~Lon, ~Lat, icon=mapIcons["tree"])
+    #%>% addLayersControl(overlayGroups = c("LEED Buildings", "Edible Landscaping"))
   })
 
+  observeEvent(input$showLeed, {
+    if(input$showLeed){
+      leafletProxy("map", session) %>% showGroup("LEED Buildings")
+    } else {
+      leafletProxy("map", session) %>% hideGroup("LEED Buildings")
+
+    }
+  })
+
+  observeEvent(input$showEdible, {
+    if(input$showEdible){
+      leafletProxy("map", session) %>% showGroup("Edible Landscaping")
+    } else {
+      leafletProxy("map", session) %>% hideGroup("Edible Landscaping")
+
+    }
+  })
 
   observeEvent(input$openTabEnergy, {
     updateNavbarPage(session, "main",
