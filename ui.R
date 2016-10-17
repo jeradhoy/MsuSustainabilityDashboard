@@ -24,15 +24,21 @@ shinyUI(navbarPage(id="main", #title="MSU Sustainability Dashboard",
       tags$p("click on an icon to explore data, or ",
         actionLink(inputId="openTabAbout", label="learn about the Sustustainability Dashboard")),
       fluidRow(
-        actionButton("openTabEnergy", width="30%", HTML('<h2>Energy</h2><img height="100px" width="100px" src="assets/Energy.png">')),
-        actionButton("openTabWaste", width="30%", HTML('<h2>Waste</h2><img height="100px" width="100px" src="assets/Waste.png">')),
-        actionButton("openTabGHG", width="30%", HTML('<h2>Greenhouse Gases</h2><img height="100px" width= "100px" src="assets/GHG.png">'))
-      ),
+        column(4,
+          actionLink("openTabEnergy", HTML('<h2>Energy</h2><img height="100px" width="100px" src="assets/Energy.png">'))),
+        column(4,
+          actionLink("openTabWaste", HTML('<h2>Waste</h2><img height="100px" width="100px" src="assets/Waste.png">'))),
+        column(4,
+          actionLink("openTabGHG", HTML('<h2>Greenhouse Gases</h2><img height="100px" width= "100px" src="assets/GHG.png">'))
+      )),
       fluidRow(
-        actionButton("openTabWater", width="30%", HTML('<h2>Water</h2><img height="100px" width= "100px" src="assets/water.png">')),
-        actionButton("openTabMap", width="30%", HTML('<h2>Buildings & Landscaping</h2><img height="100px" width="100px" src="assets/Buildings.png">')),
-        actionButton("openTabProjects", width="30%", HTML('<h2>Projects</h2><img height="100px" width= "100px" src="assets/Projects.png">'))
-      )
+        column(4,
+          actionLink("openTabWater", HTML('<h2>Water</h2><img height="100px" width= "100px" src="assets/water.png">'))),
+        column(4,
+          actionLink("openTabMap", HTML('<h2>Buildings & Landscaping</h2><img height="100px" width="100px" src="assets/Buildings.png">'))),
+        column(4,
+          actionLink("openTabProjects", HTML('<h2>Projects</h2><img height="100px" width= "100px" src="assets/Projects.png">'))
+      ))
       #verbatimTextOutput("energyDebug")
     )
   ),
