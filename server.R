@@ -207,6 +207,14 @@ shinyServer(function(input, output, session) {
     }
   })
 
+  mapIconSize <- 40
+  mapIcons <- iconList(
+    leed = makeIcon(iconUrl="assets/UWIcons/1l0-e0-e0-d-certification-icon.png", iconWidth=mapIconSize, iconHeight = mapIconSize, iconAnchorX=mapIconSize/2, iconAnchorY = mapIconSize),
+    solar = makeIcon(iconUrl="assets/UWIcons/1solar-panels-icon.png", iconWidth=mapIconSize, iconHeight = mapIconSize, iconAnchorX=mapIconSize/2, iconAnchorY = mapIconSize),
+    garden = makeIcon(iconUrl="assets/UWIcons/3garden-icon.png", iconWidth=mapIconSize, iconHeight = mapIconSize, iconAnchorX=mapIconSize/2, iconAnchorY = mapIconSize),
+    tree = makeIcon(iconUrl="assets/UWIcons/3brockman-tree-tour-icon.png", iconWidth=mapIconSize, iconHeight = mapIconSize, iconAnchorX=mapIconSize/2, iconAnchorY = mapIconSize)
+  )
+
   ########### Leed Map ################
   output$leedBuildingMap <- renderLeaflet({
     leaflet() %>%
@@ -214,14 +222,14 @@ shinyServer(function(input, output, session) {
         options = providerTileOptions(noWrap = TRUE)
       ) %>%
       addMarkers(data=leedBuildings,
-        ~Lon, ~Lat,
+        ~Lon, ~Lat, icon=mapIcons["leed"],
         popup = ~paste0("<h3>", Building, " : ", LeedCert, "</h3>",
           "<p> Info </p>",
           '<a target="_blank" href="http://www.usgbc.org/leed"><p>Leed Certification Info</a>',
           " - ", '<a target="_blank" href="', ProjectLink, '">Project Info</p></a>')
       ) %>%
     addMarkers(data=edibleLandscaping,
-               ~Lon, ~Lat, icon=list(iconUrl="assets/leaf.png", iconSize=c(24)))
+               ~Lon, ~Lat, icon=mapIcons["tree"])
   })
 
 
