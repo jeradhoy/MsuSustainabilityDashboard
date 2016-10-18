@@ -229,20 +229,18 @@ shinyServer(function(input, output, session) {
       ) %>%
       addMarkers(data=leedBuildings, group="LEED Buildings",
         ~Lon, ~Lat, icon=mapIcons["leed"],
-        popup = ~paste0("<h3>", Building, " : ", LeedCert, "</h3>",
-          "<p> Info </p>",
+        popup = ~paste0("<h3>", Building, " : ", LeedCert, "</h3>","<p>", Description ,"</p>",
           '<img src="', as.character(leedImages[LeedCert]), '" height="150" width="150">',
           '<a target="_blank" href="http://www.usgbc.org/leed"><p>Leed Certification Info</a>',
           " - ", '<a target="_blank" href="', ProjectLink, '">Project Info</p></a>')
       ) %>%
     addMarkers(data=Landscaping, group="Edible Landscaping",
                ~Lon, ~Lat, icon=~mapIcons[Category],
-        popup = ~paste0("<h3>", Description, "</h3>",
+        popup = ~paste0("<h3>", Name , "</h3>",
                         "<p> Info </p>")) %>%
     addMarkers(data=projectMap, group="Projects",
                ~Lon, ~Lat, icon=~mapIcons[Category],
-               popup = ~paste0("<h3>", Description, "</h3>",
-                               "<p> Info </p>"))
+               popup = ~paste0("<h3>", Name , "</h3>", "<p>", Description ,"</p>"))
     #%>% addLayersControl(overlayGroups = c("LEED Buildings", "Edible Landscaping"))
   })
 
