@@ -39,6 +39,7 @@ if(getFromGoogleSheets){
   waste <- as.data.frame(allDataSheet %>% gs_read(ws = "Waste"))
   leedBuildings <- as.data.frame(allDataSheet %>% gs_read(ws = "Leed"))
   edibleLandscaping <- as.data.frame(allDataSheet %>% gs_read(ws = "EdibleLandscaping"))
+  projectMap <- as.data.frame(allDataSheet %>% gs_read(ws = "ProjectMap"))
 
 } else {
 
@@ -47,6 +48,8 @@ if(getFromGoogleSheets){
   waste <- read.csv(file = "./data/waste.csv", stringsAsFactors = F)
   leedBuildings <- read.csv(file = "./data/leedBuildings.csv", stringsAsFactors = F)
   edibleLandscaping <- read.csv(file = "./data/edibleLandscaping.csv", stringsAsFactors = F)
+  projectMap <- read.csv(file = "./data/ProjectMap.csv", stringsAsFactors = F)
+
 }
 
 #Process energy data, convert to time series, convert dkt to kwh, calculate energy trends
@@ -72,7 +75,7 @@ waste$recycle <- as.numeric(format(round(waste$recycle/2000, 2), nsmall=2))
 waste$landfill <-as.numeric(format(round(waste$landfill/2000, 2), nsmall=2))
 waste$compost <- as.numeric(format(round(waste$compost/2000, 2), nsmall=2))
 wastetimeseries <- ts(waste[,-c(1, 2)], frequency=12, start=c(2006, 1))
-recycletimeseries <- ts(waste[,-c(1, 3)], frequency = 12, start = c(2006, 1))
+#recycletimeseries <- ts(waste[,-c(1, 3)], frequency = 12, start = c(2006, 1))
 
 ### Per capita waste data
 pcwaste$FY <- as.numeric(pcwaste$FY)

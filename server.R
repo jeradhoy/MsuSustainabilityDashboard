@@ -83,7 +83,7 @@ shinyServer(function(input, output, session) {
         hc_add_series_ts(name="Gas", ts=energyTimeSeries[,4],
           color="darkorange", visible=input$gas) %>%
         hc_add_series_ts(name="Gas Trend", ts=getTrendSeries(energyTimeSeries[,4]),
-          color="darkorange", visible=input$gasTrendLine, showInLegend=F) %>%
+          color="darkorange", visible=input$gasTrendLine, type="line", showInLegend=F) %>%
         #hc_add_series_ts(name="Gas Target", ts=energyTarget[,2],
           #showInLegend=T, color="red", dashStyle="dot", visible=F) %>%
         hc_tooltip(valuePrefix="$")
@@ -150,11 +150,11 @@ shinyServer(function(input, output, session) {
           text = "% of Total Waste by Weight"), opposite=FALSE)%>%
         hc_plotOptions(area=list(stacking="percent")) %>%
         hc_add_series_ts(name="Landfill", ts=wastetimeseries[,2],
-          showInLegend=T, color= "black", type="area", visible=input$landfill) %>%
+          showInLegend=T, color= "black", type="area") %>%
         hc_add_series_ts(name="Recycle", ts=wastetimeseries[,1],
-          color= "green", type="area", visible=input$recycle) %>%
+          color= "green", type="area") %>%
         hc_add_series_ts(name="Compost", ts=wastetimeseries[,3],
-          color= "orange", type="area", visible=input$compost) %>%
+          color= "orange", type="area") %>%
         hc_tooltip(valueSuffix=" tons")
   })
 
@@ -212,7 +212,8 @@ shinyServer(function(input, output, session) {
     leed = makeIcon(iconUrl="assets/UWIcons/1l0-e0-e0-d-certification-icon.png", iconWidth=mapIconSize, iconHeight = mapIconSize, iconAnchorX=mapIconSize/2, iconAnchorY = mapIconSize),
     solar = makeIcon(iconUrl="assets/UWIcons/1solar-panels-icon.png", iconWidth=mapIconSize, iconHeight = mapIconSize, iconAnchorX=mapIconSize/2, iconAnchorY = mapIconSize),
     garden = makeIcon(iconUrl="assets/UWIcons/3garden-icon.png", iconWidth=mapIconSize, iconHeight = mapIconSize, iconAnchorX=mapIconSize/2, iconAnchorY = mapIconSize),
-    tree = makeIcon(iconUrl="assets/UWIcons/3brockman-tree-tour-icon.png", iconWidth=mapIconSize, iconHeight = mapIconSize, iconAnchorX=mapIconSize/2, iconAnchorY = mapIconSize)
+    tree = makeIcon(iconUrl="assets/UWIcons/3brockman-tree-tour-icon.png", iconWidth=mapIconSize, iconHeight = mapIconSize, iconAnchorX=mapIconSize/2, iconAnchorY = mapIconSize),
+    compost = makeIcon(iconUrl="assets/UWIcons/6on-site-composting-icon.png", iconWidth=mapIconSize, iconHeight = mapIconSize, iconAnchorX=mapIconSize/2, iconAnchorY = mapIconSize)
   )
 
   leedImages <- list(
@@ -230,12 +231,18 @@ shinyServer(function(input, output, session) {
         ~Lon, ~Lat, icon=mapIcons["leed"],
         popup = ~paste0("<h3>", Building, " : ", LeedCert, "</h3>",
           "<p> Info </p>",
-          '<img src="', as.character(leedImages[LeedCert]), '" height="200" width="200">',
+          '<img src="', as.character(leedImages[LeedCert]), '" height="150" width="150">',
           '<a target="_blank" href="http://www.usgbc.org/leed"><p>Leed Certification Info</a>',
           " - ", '<a target="_blank" href="', ProjectLink, '">Project Info</p></a>')
       ) %>%
-    addMarkers(data=edibleLandscaping, group="Edible Landscaping",
-               ~Lon, ~Lat, icon=mapIcons["tree"])
+    addMarkers(data=Landscaping, group="Edible Landscaping",
+               ~Lon, ~Lat, icon=~mapIcons[Category],
+        popup = ~paste0("<h3>", Description, "</h3>",
+                        "<p> Info </p>")) %>%
+    addMarkers(data=projectMap, group="Projects",
+               ~Lon, ~Lat, icon=~mapIcons[Category],
+               popup = ~paste0("<h3>", Description, "</h3>",
+                               "<p> Info </p>"))
     #%>% addLayersControl(overlayGroups = c("LEED Buildings", "Edible Landscaping"))
   })
 
@@ -253,6 +260,15 @@ shinyServer(function(input, output, session) {
       leafletProxy("map", session) %>% showGroup("Edible Landscaping")
     } else {
       leafletProxy("map", session) %>% hideGroup("Edible Landscaping")
+
+    }
+  })
+
+  observeEvent(input$showProject, {
+    if(input$showProject){
+      leafletProxy("map", session) %>% showGroup("Projects")
+    } else {
+      leafletProxy("map", session) %>% hideGroup("Projects")
 
     }
   })

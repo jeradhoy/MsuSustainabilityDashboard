@@ -14,6 +14,8 @@ write.csv(waste, file = "./data/waste.csv", row.names = F)
 leedBuildings <- as.data.frame(allDataSheet %>% gs_read(ws = "Leed"))
 write.csv(leedBuildings, file = "./data/leedBuildings.csv", row.names = F)
 
-edibleLandscaping <- as.data.frame(allDataSheet %>% gs_read(ws = "EdibleLandscaping"))
-write.csv(edibleLandscaping, file = "./data/edibleLandscaping.csv", row.names = F)
+Landscaping <- as.data.frame(allDataSheet %>% gs_read(ws = "Landscaping"))
+write.csv(Landscaping, file = "./data/Landscaping.csv", row.names = F)
 
+ProjectMap  <- as.data.frame(allDataSheet %>% gs_read(ws = "ProjectMap"))
+write.csv(ProjectMap, file = "./data/ProjectMap.csv", row.names = F)
