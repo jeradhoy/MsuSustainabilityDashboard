@@ -182,7 +182,8 @@ shinyUI(navbarPage(id="main", #title="MSU Sustainability Dashboard",
         h2("Buildings and Landscaping"),
         h3("Show Layers:"),
         checkboxInput("showLeed", label=tags$div(tags$b("LEED Buildings"), tags$img(src="assets/UWIcons/1l0-e0-e0-d-certification-icon.png")), value=T),
-        checkboxInput("showEdible", "Edible Landscaping", value=T)
+        checkboxInput("showEdible", label=tags$div(tags$b("Edible Landscaping"), tags$img(src="assets/UWIcons/3brockman-tree-tour-icon.png", tags$img(src="assets/UWIcons/3garden-icon.png"))), value=T),
+        checkboxInput("showProject", label=tags$div(tags$b("Projects"), tags$img(src="assets/UWIcons/6on-site-composting-icon.png"), tags$img(src="assets/UWIcons/1solar-panels-icon.png")), value=T)
 
       )
 
