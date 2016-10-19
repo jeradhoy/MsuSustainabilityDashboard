@@ -1,10 +1,8 @@
 ############ server.R #############
 ##All options and processing that are cheap and can be done each time app launches goes here, otherwise put in global.R
 library(shiny)
-library(rsconnect)
 library(highcharter)
 library(devtools)
-library(googlesheets)
 library(rgdal)
 library(leaflet)
 library(htmltools)
@@ -235,7 +233,7 @@ shinyServer(function(input, output, session) {
           '<a target="_blank" href="http://www.usgbc.org/leed"><p>Leed Certification Info</a>',
           " - ", '<a target="_blank" href="', ProjectLink, '">Project Info</p></a>')
       ) %>%
-    addMarkers(data=Landscaping, group="Edible Landscaping",
+    addMarkers(data=edibleLandscaping, group="Edible Landscaping",
                ~Lon, ~Lat, icon=~mapIcons[Category],
         popup = ~paste0("<h3>", Description, "</h3>",
                         "<p> Info </p>")) %>%

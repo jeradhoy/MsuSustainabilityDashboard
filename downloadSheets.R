@@ -1,4 +1,5 @@
 #Download R data
+library(googlesheets)
 
 ##Read in data from google sheets gs_auth(token = "shiny_app_token.rds")
 allDataSheet <- gs_title("allData")

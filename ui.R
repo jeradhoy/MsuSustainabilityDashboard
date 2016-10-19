@@ -1,5 +1,4 @@
 library(shiny)
-library(rsconnect)
 library(highcharter)
 library(stats)
 library(leaflet)

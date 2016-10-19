@@ -2,7 +2,6 @@
 #### All processing that could be done once goes here, because processing in server.R is done everytime the app loads, and drastically slows it down
 #### Objects created here are also available to both the ui.R script and the server.R script
 
-library(googlesheets)
 library(dplyr)
 
 ####DECLARE ANY FUNCTIONS FOR APPJ
@@ -28,6 +27,8 @@ getTrendSeries <- function(timeSeries, startTs=c(2005, 1)){
 getFromGoogleSheets <- F
 
 if(getFromGoogleSheets){
+
+  library(googlesheets)
 
   ##Read in data from google sheets
   gs_auth(token = "shiny_app_token.rds")
