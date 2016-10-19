@@ -1,6 +1,6 @@
-"Description","Category","Lat","Lon"
-"SUB Edible Garden","garden",45.666775,-111.048031
-"Crabapple Tree","tree",45.666325,-111.049683
-"Edible Planters","garden",45.667125,-111.049343
-"Family and Gradute Housing Gardens","garden",45.667116,-111.062041
-"Crabapple Tree","tree",45.667304,-111.052207
+"Name","Category","Lat","Lon","Description"
+"SUB Edible Garden","garden",45.666775,-111.048031,NA
+"Crabapple Tree","tree",45.666325,-111.049683,NA
+"Edible Planters","garden",45.667125,-111.049343,NA
+"Family and Gradute Housing Gardens","garden",45.667116,-111.062041,NA
+"Crabapple Tree","tree",45.667304,-111.052207,NA
