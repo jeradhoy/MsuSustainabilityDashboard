@@ -65,15 +65,15 @@ shinyUI(navbarPage(id="main", #title="MSU Sustainability Dashboard",
           selected = 0),
 
         #Radio Button: Choose Total or Per capita
-        radioButtons("totalOrPercapitaRadio", label = h5("Total or Per Capita"),
-          choices = list("Total" = 1, "Per Capita" = 2),
-          selected = 1),
+        #radioButtons("totalOrPercapitaRadio", label = h5("Total or Per Capita"),
+        #  choices = list("Total" = 1, "Per Capita" = 2),
+        #  selected = 1),
         tags$h5("Trend Lines"),
         checkboxInput("elecTrendLine", label="Electricity", value=FALSE),
-        checkboxInput("gasTrendLine", label="Gas", value=FALSE),
-        radioButtons("energyTimeStep", label = h5("Total or Per Capita"),
-          choices = list("Monthly" = 1, "Annual" = 2),
-          selected = 1),
+        checkboxInput("gasTrendLine", label="Gas", value=FALSE)
+        #radioButtons("energyTimeStep", label = h5("Total or Per Capita"),
+          #choices = list("Monthly" = 1, "Annual" = 2),
+          #selected = 1)
       ),
 
       mainPanel(
@@ -81,7 +81,7 @@ shinyUI(navbarPage(id="main", #title="MSU Sustainability Dashboard",
           tabPanel("Line Plot",
 
             highchartOutput("energyUsage", height = "500px")
-            , verbatimTextOutput("energyDebug")
+            #, verbatimTextOutput("energyDebug")
 
           )
         )
@@ -112,12 +112,12 @@ shinyUI(navbarPage(id="main", #title="MSU Sustainability Dashboard",
         checkboxInput("compost", label = "Compost", value = TRUE),
 
         #Radio Button: Choose Total or Per capita
-        radioButtons("totalOrPercapitaRadioWaste",
-          label = h5("Total or Per Capita"),
-          choices = list("Total" = 1, "Per Capita" = 2),
-          selected = 1),
+        #radioButtons("totalOrPercapitaRadioWaste",
+        #  label = h5("Total or Per Capita"),
+        #  choices = list("Total" = 1, "Per Capita" = 2),
+        #  selected = 1),
         tags$h5("Trend Line"),
-        checkboxInput("wasteTrendLine", label="Landfill", value=FALSE),
+        checkboxInput("landfillTrendLine", label="Landfill", value=FALSE),
         checkboxInput("recycleTrendLine", label="Recycle", value=FALSE),
         checkboxInput("compostTrendLine", label="Compost", value=FALSE)
     ),
@@ -153,7 +153,9 @@ shinyUI(navbarPage(id="main", #title="MSU Sustainability Dashboard",
         #Radio Button: Choose Total or Per capita
         radioButtons("waterPerCap", label = h5("Total or Per Capita"),
           choices = list("Total" = 1, "Per Capita" = 2),
-          selected = 1)
+          selected = 1),
+        tags$h5("Trend Line"),
+        checkboxInput("waterTrendLine", label="Water", value=FALSE)
       ),
 
       mainPanel(
@@ -180,12 +182,12 @@ shinyUI(navbarPage(id="main", #title="MSU Sustainability Dashboard",
       leafletOutput("map", width="100%", height="100%"),
 
       absolutePanel(id = "controls", class = "panel panel-default", fixed = TRUE,
-        draggable = T, top =100, left = 20, right = "auto", bottom = "auto",
-        width = 330, height = "auto",
+        draggable = T, top =70, left = "auto", right =20, bottom = "auto",
+        width =250, height = "auto",
         h2("Buildings and Landscaping"),
         h3("Show Layers:"),
         checkboxInput("showLeed", label=tags$div(tags$b("LEED Buildings"), tags$img(src="assets/UWIcons/1l0-e0-e0-d-certification-icon.png")), value=T),
-        checkboxInput("showEdible", label=tags$div(tags$b("Edible Landscaping"), tags$img(src="assets/UWIcons/3brockman-tree-tour-icon.png", tags$img(src="assets/UWIcons/3garden-icon.png"))), value=T),
+        checkboxInput("showEdible", label=tags$div(tags$b("Landscaping"), tags$img(src="assets/UWIcons/3brockman-tree-tour-icon.png", tags$img(src="assets/UWIcons/3garden-icon.png"))), value=T),
         checkboxInput("showProject", label=tags$div(tags$b("Projects"), tags$img(src="assets/UWIcons/6on-site-composting-icon.png"), tags$img(src="assets/UWIcons/1solar-panels-icon.png")), value=T)
 
       )
