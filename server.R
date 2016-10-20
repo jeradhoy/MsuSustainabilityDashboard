@@ -18,6 +18,9 @@ hcoptslang <- getOption("highcharter.lang")
 hcoptslang$thousandsSep <- ","
 options(highcharter.lang = hcoptslang)
 
+energyTrends <- getTrendSeries(energyTs, startTs=c(2005, 1), freq=12)
+
+wasteTrends <- getTrendSeries(wasteTs, startTs = c(2006, 1), freq=12)
 ######## START Shiny Server ###################
 shinyServer(function(input, output, session) {
 
@@ -28,9 +31,6 @@ shinyServer(function(input, output, session) {
     paste(input$energyTrendLine)
   })
 #########################
-
-  renderUI <- ({
-            highchartOutput("energyUsage", height = "500px")
 
 
   ########### Energy Usage ################
@@ -73,14 +73,15 @@ shinyServer(function(input, output, session) {
           opposite= FALSE) %>%
         hc_add_series_ts(name="Electricity", ts=energyTs[,"ELEC"],
           showInLegend=T, color="gold", visible=input$elec) %>%
+
         hc_add_series_ts(name="Electricity Trend", ts=energyTrends[,"ELEC"],
-          showInLegend=F, color="gold", visible=input$elecTrendLine) %>%
+          showInLegend=F, color="gold", visible=input$elecTrendLine & input$elec) %>%
         #hc_add_series_ts(name="Electricity Target", ts=energyTarget[,1],
           #showInLegend=T, color="blue",dashStyle="dot", visible=F) %>%
         hc_add_series_ts(name="Gas", ts=energyTs[,"GAS"],
           color="darkorange", visible=input$gas) %>%
         hc_add_series_ts(name="Gas Trend", ts=energyTrends[,"GAS"],
-          color="darkorange", visible=input$gasTrendLine, type="line", showInLegend=F) %>%
+          color="darkorange", visible=input$gasTrendLine & input$gas, type="line", showInLegend=F) %>%
         #hc_add_series_ts(name="Gas Target", ts=energyTarget[,2],
           #showInLegend=T, color="red", dashStyle="dot", visible=F) %>%
         hc_tooltip(valuePrefix="$")
@@ -120,18 +121,22 @@ shinyServer(function(input, output, session) {
               dashStyle= "longdash",
               value = wasteCAP2050))),
        opposite= FALSE)%>%
-    hc_add_series_ts(name="Landfill", ts=wastetimeseries[,2],
-      showInLegend=T, color= "black", type="line", visible=input$landfill) %>%
-    hc_add_series_ts(name="Recycle", ts=wastetimeseries[,1],
-      color= "green", type="line", visible=input$recycle) %>%
-    hc_add_series_ts(name="Compost", ts=wastetimeseries[,3],
-      color= "orange", type="line", visible=input$compost) %>%
-    hc_add_series_ts(name="Lanfill Fit", ts=wastefit, color="purple",
-      visible = input$wasteTrendLine & input$landfill, type="line", showInLegend=F)%>%
-   #hc_add_series_ts(name="Recycle Fit", ts=recyclefit, color="purple",
-   #   visible = input$recycleTrendLine, type="line", showInLegend=F)%>%
-  # hc_add_series_ts(name="Compost Fit", ts=compostfit, color="purple",
-  #   visible = input$compostTrendLine, type="line", showInLegend=F)
+    hc_add_series_ts(name="Landfill", ts=wasteTs[,"landfill"],
+      showInLegend=T, color= "brown", type="line", visible=input$landfill) %>%
+    hc_add_series_ts(name="Recycle", ts=wasteTs[,"recycle"],
+      color= "gold", type="line", visible=input$recycle) %>%
+    hc_add_series_ts(name="Compost", ts=wasteTs[,"compost"],
+      color= "green", type="line", visible=input$compost) %>%
+
+    hc_add_series_ts(name="Landfill Trend", ts=wasteTrends[,"landfill"], color="brown",
+      visible = input$landfillTrendLine & input$landfill, type="line", showInLegend=F)%>%
+
+    hc_add_series_ts(name="Recycling Trend", ts=wasteTrends[,"recycle"], color="gold",
+      visible = input$recycleTrendLine & input$recycle, type="line", showInLegend=F)%>%
+
+    hc_add_series_ts(name="Compost Trend", ts=wasteTrends[,"compost"], color="green",
+      visible = input$compostTrendLine & input$compost, type="line", showInLegend=F)%>%
+
     hc_tooltip(valueSuffix="tons")
 
 })
@@ -146,12 +151,12 @@ shinyServer(function(input, output, session) {
         hc_yAxis(title = list(
           text = "% of Total Waste by Weight"), opposite=FALSE)%>%
         hc_plotOptions(area=list(stacking="percent")) %>%
-        hc_add_series_ts(name="Landfill", ts=wastetimeseries[,2],
-          showInLegend=T, color= "black", type="area") %>%
-        hc_add_series_ts(name="Recycle", ts=wastetimeseries[,1],
+        hc_add_series_ts(name="Landfill", ts=wasteTs[,2],
+          showInLegend=T, color= "brown", type="area") %>%
+        hc_add_series_ts(name="Recycle", ts=wasteTs[,1],
+          color= "gold", type="area") %>%
+        hc_add_series_ts(name="Compost", ts=wasteTs[,3],
           color= "green", type="area") %>%
-        hc_add_series_ts(name="Compost", ts=wastetimeseries[,3],
-          color= "orange", type="area") %>%
         hc_tooltip(valueSuffix=" tons")
   })
 
@@ -165,6 +170,7 @@ shinyServer(function(input, output, session) {
       hc_yAxis(title=list(
         text="Pounds Per Person (lbs)"), opposite=FALSE)%>%
       #hc_plotOptions(column=list(stacking="normal")) %>%
+
       hc_add_series(name="Compost", data=perCapita[,8], color= "orange",
         type="column") %>%
       hc_add_series(name="Recycle", data= perCapita[,6], color= "green",
@@ -186,8 +192,10 @@ shinyServer(function(input, output, session) {
         hc_rangeSelector(inputEnabled=F) %>%
         hc_yAxis(title = list(text = "Usage in Million Cubic Feet (MCF)"),
           opposite=F) %>%
-        hc_add_series_ts(name="Water", ts=waterSewerTimeSeries[,1],
+        hc_add_series_ts(name="Water", ts=energyTs[,"WATER.MCF"],
           showInLegend=T, color="blue", visible=T) %>%
+        hc_add_series_ts(name="Water Trend", ts=energyTrends[,"WATER.MCF"], color="blue",
+          visible = input$waterTrendLine, type="line", showInLegend=F)%>%
         hc_tooltip(valueSuffix=" MCF")
 
     } else {
@@ -198,8 +206,10 @@ shinyServer(function(input, output, session) {
         hc_legend(enabled=T) %>%
         hc_rangeSelector(inputEnabled=F) %>%
         hc_yAxis(title = list(text = "Expenditure in Dollars"), opposite=F) %>%
-        hc_add_series_ts(name="Water/Sewer", ts=waterSewerTimeSeries[,2],
+        hc_add_series_ts(name="Water/Sewer", ts=energyTs[,"Water.Sewer"],
           showInLegend=T, color="green", visible=T) %>%
+        hc_add_series_ts(name="Water Trend", ts=energyTrends[,"Water.Sewer"], color="green",
+          visible = input$waterTrendLine, type="line", showInLegend=F)%>%
         hc_tooltip(valuePrefix="$")
     }
   })
@@ -221,9 +231,13 @@ shinyServer(function(input, output, session) {
   ########### Leed Map ################
   output$map <- renderLeaflet({
     leaflet() %>%
-      addProviderTiles("Esri.WorldTopoMap",
+      addProviderTiles("Esri.WorldTopoMap", group="World Topo",
         options = providerTileOptions(noWrap = TRUE)
       ) %>%
+      addProviderTiles("Esri.WorldImagery", group="World Imagery",
+        options = providerTileOptions(noWrap = TRUE)
+      ) %>%
+      addLayersControl(baseGroups=c("World Topo", "World Imagery"), position="bottomright") %>%
       addMarkers(data=leed, group="LEED Buildings",
         ~Lon, ~Lat, icon=mapIcons["leed"],
         popup = ~paste0("<h3>", Building, " : ", LeedCert, "</h3>","<p>", Description ,"</p>",

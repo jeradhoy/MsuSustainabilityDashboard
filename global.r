@@ -47,9 +47,6 @@ energyTs <- ts(energy[,-c(1,2)], frequency=12, start=c(energy$ACCTYR[1], energy$
 #energyTimeSeries[,2] <- round(energyTimeSeries[,2]/0.0034129563407) #Convert DKT to KWH
 #colnames(energyTimeSeries) <- c("elecKWH", "gasKWH", "elecExpend", "gasExpend") #
 
-
-energyTrends <- getTrendSeries(energyTs, startTs=c(2005, 1), freq=12)
-
 annualEnergyTs <- round(aggregate(energyTs, nfrequency=1, FUN=sum)/perCapita[5:10,2],2)
 
 pcEnergy <- round(aggregate(energyTs, nfrequency=1, FUN=sum)/perCapita[5:10,2],2)
@@ -60,7 +57,7 @@ energyTarget <- ts(aggregate(energyTs, nfrequency=1, FUN=mean)*1.0025, frequency
 waste$recycle <- as.numeric(format(round(waste$recycle/2000, 2), nsmall=2))
 waste$landfill <-as.numeric(format(round(waste$landfill/2000, 2), nsmall=2))
 waste$compost <- as.numeric(format(round(waste$compost/2000, 2), nsmall=2))
-wastetimeseries <- ts(waste[,-c(1, 2)], frequency=12, start=c(2006, 1))
+wasteTs <- ts(waste[,-c(1, 2)], frequency=12, start=c(2006, 1))
 #recycletimeseries <- ts(waste[,-c(1, 3)], frequency = 12, start = c(2006, 1))
 
 ### Per capita waste data
@@ -69,6 +66,5 @@ perCapita$pcrecycle <- as.numeric(format(round(perCapita$recycling/perCapita$fal
 perCapita$pcwaste <- as.numeric(format(round(perCapita$waste/perCapita$fallpop, 2), nsmall=2))
 perCapita$pccompost <- as.numeric(format(round(perCapita$compost/perCapita$fallpop, 2), nsmall=2))
 
-wastefit <- getTrendSeries(wastetimeseries[,2], startTs = c(2006, 1))
 #recyclefit <- getTrendSeries(recycletimeseries[,1], startTs = c(2006,1))
 #compostfit <- getTrendSeries(composttimeseries[,3], startTs = c(2006,1))
