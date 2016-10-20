@@ -61,16 +61,19 @@ shinyUI(navbarPage(id="main", #title="MSU Sustainability Dashboard",
 
         #Radio Button: Choose Usage or expenditure
         radioButtons("usageOrExpendRadio", label = h5("Usage or Expenditure"),
-        choices = list("Usage" = 0, "Expenditure" = 1),
-        selected = 0),
+          choices = list("Usage" = 0, "Expenditure" = 1),
+          selected = 0),
 
         #Radio Button: Choose Total or Per capita
         radioButtons("totalOrPercapitaRadio", label = h5("Total or Per Capita"),
-        choices = list("Total" = 1, "Per Capita" = 2),
-        selected = 1),
+          choices = list("Total" = 1, "Per Capita" = 2),
+          selected = 1),
         tags$h5("Trend Lines"),
         checkboxInput("elecTrendLine", label="Electricity", value=FALSE),
-        checkboxInput("gasTrendLine", label="Gas", value=FALSE)
+        checkboxInput("gasTrendLine", label="Gas", value=FALSE),
+        radioButtons("energyTimeStep", label = h5("Total or Per Capita"),
+          choices = list("Monthly" = 1, "Annual" = 2),
+          selected = 1),
       ),
 
       mainPanel(

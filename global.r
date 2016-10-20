@@ -2,16 +2,18 @@
 #### All processing that could be done once goes here, because processing in server.R is done everytime the app loads, and drastically slows it down
 #### Objects created here are also available to both the ui.R script and the server.R script
 
-library(dplyr)
+library(magrittr)
+dataDir <- "./data/Gdrive/"
 
 ####DECLARE ANY FUNCTIONS FOR APPJ
 #Get trend timeseries for plotting
-getTrendSeries <- function(timeSeries, startTs=c(2005, 1)){
+getTrendSeries <- function(timeSeries, startTs=c(2005, 1), freq=12){
 	ts(as.data.frame(lapply(timeSeries, function(timeSeries){
 		fit <- lm(timeSeries ~ c(1:length(timeSeries)))
 		seq(from=coef(fit)[1], by=coef(fit)[2], length.out=length(timeSeries))
 	})),frequency=12, start=startTs)
 }
+
 
 ##########SETUP Google Sheets
 ## prepare the OAuth token and set up the target sheet:
@@ -24,52 +26,35 @@ getTrendSeries <- function(timeSeries, startTs=c(2005, 1)){
 ## if you version control your app, don't forget to ignore the token file!
 # e.g., put it into .gitignore
 
-getFromGoogleSheets <- F
 
-if(getFromGoogleSheets){
-
-  library(googlesheets)
-
-  ##Read in data from google sheets
-  gs_auth(token = "shiny_app_token.rds")
-
-  allDataSheet <- gs_title("allData")
-
-  energyData <- as.data.frame(allDataSheet %>% gs_read(ws = "Energy"))
-  pcwaste <- as.data.frame(allDataSheet %>% gs_read(ws = "PerCapita"))
-  waste <- as.data.frame(allDataSheet %>% gs_read(ws = "Waste"))
-  leedBuildings <- as.data.frame(allDataSheet %>% gs_read(ws = "Leed"))
-  edibleLandscaping <- as.data.frame(allDataSheet %>% gs_read(ws = "EdibleLandscaping"))
-  projectMap <- as.data.frame(allDataSheet %>% gs_read(ws = "ProjectMap"))
-
-} else {
-
-  energyData <- read.csv(file = "./data/energyData.csv", stringsAsFactors = F)
-  pcwaste <- read.csv(file = "./data/pcwaste.csv", stringsAsFactors = F)
-  waste <- read.csv(file = "./data/waste.csv", stringsAsFactors = F)
-  leedBuildings <- read.csv(file = "./data/leedBuildings.csv", stringsAsFactors = F)
-  edibleLandscaping <- read.csv(file = "./data/edibleLandscaping.csv", stringsAsFactors = F)
-  projectMap <- read.csv(file = "./data/ProjectMap.csv", stringsAsFactors = F)
-
+#Read in data from each file in ./data/Gdrive (dataDir) folder
+for(file in list.files(dataDir)){
+  assign(x=tools::file_path_sans_ext(file), value=read.csv(paste0(dataDir, file), stringsAsFactors=F))
 }
 
 #Process energy data, convert to time series, convert dkt to kwh, calculate energy trends
-energyTimeSeries <- ts(energyData[,-c(1,2,3,6,9)], frequency=12, start=c(2005, 1)) #Convert to time series
-energyTimeSeries[,2] <- round(energyTimeSeries[,2]/0.0034129563407) #Convert DKT to KWH
-colnames(energyTimeSeries) <- c("elecKWH", "gasKWH", "elecExpend", "gasExpend") #
+#energyTimeSeries <- ts(energy[,-c(1,2,3,6,9)], frequency=12, start=c(2005, 1)) #Convert to time series
+energy$GAS.KWH <- round(energy$GAS.DKT.Units/0.0034129563407) #Convert DKT to KWH
 
-waterSewerTimeSeries <- ts(energyData[,c(6,9)], frequency=12, start=c(2005, 1)) #Convert to time series
-colnames(waterSewerTimeSeries) <- c("waterMCF", "waterSewerExpend") #
+energyTs <- ts(energy[,-c(1,2)], frequency=12, start=c(energy$ACCTYR[1], energy$ACCTMO[1])) #Convert to time series
 
-energyTimeSeries <- ts(energyData[,-c(1,2,3,6,9,10,11)], frequency=12, start=c(2005, 1)) #Convert to time series
-energyTimeSeries[,2] <- round(energyTimeSeries[,2]/0.0034129563407) #Convert DKT to KWH
-colnames(energyTimeSeries) <- c("elecKWH", "gasKWH", "elecExpend", "gasExpend") #
+#colnames(energyTimeSeries) <- c("elecKWH", "gasKWH", "elecExpend", "gasExpend") #
+
+#waterSewerTimeSeries <- ts(energy[,c(6,9)], frequency=12, start=c(2005, 1)) #Convert to time series
+#colnames(waterSewerTimeSeries) <- c("waterMCF", "waterSewerExpend") #
+
+#energyTimeSeries <- ts(energy[,-c(1,2,3,6,9,10,11)], frequency=12, start=c(2005, 1)) #Convert to time series
+#energyTimeSeries[,2] <- round(energyTimeSeries[,2]/0.0034129563407) #Convert DKT to KWH
+#colnames(energyTimeSeries) <- c("elecKWH", "gasKWH", "elecExpend", "gasExpend") #
 
 
-energyTrends <- getTrendSeries(energyTimeSeries, startTs=c(2005, 1))
-pcEnergy <- round(aggregate(energyTimeSeries, nfrequency=1, FUN=sum)/pcwaste[5:10,2],2)
+energyTrends <- getTrendSeries(energyTs, startTs=c(2005, 1), freq=12)
 
-energyTarget <- ts(aggregate(energyTimeSeries, nfrequency=1, FUN=mean)*1.0025, frequency=1, start=c(2011, 1))
+annualEnergyTs <- round(aggregate(energyTs, nfrequency=1, FUN=sum)/perCapita[5:10,2],2)
+
+pcEnergy <- round(aggregate(energyTs, nfrequency=1, FUN=sum)/perCapita[5:10,2],2)
+
+energyTarget <- ts(aggregate(energyTs, nfrequency=1, FUN=mean)*1.0025, frequency=1, start=c(2011, 1))
 
 ######  Waste Data  #####
 waste$recycle <- as.numeric(format(round(waste$recycle/2000, 2), nsmall=2))
@@ -79,10 +64,10 @@ wastetimeseries <- ts(waste[,-c(1, 2)], frequency=12, start=c(2006, 1))
 #recycletimeseries <- ts(waste[,-c(1, 3)], frequency = 12, start = c(2006, 1))
 
 ### Per capita waste data
-pcwaste$FY <- as.numeric(pcwaste$FY)
-pcwaste$pcrecycle <- as.numeric(format(round(pcwaste$recycling/pcwaste$fallpop, 2), nsmall=2))
-pcwaste$pcwaste <- as.numeric(format(round(pcwaste$waste/pcwaste$fallpop, 2), nsmall=2))
-pcwaste$pccompost <- as.numeric(format(round(pcwaste$compost/pcwaste$fallpop, 2), nsmall=2))
+perCapita$FY <- as.numeric(perCapita$FY)
+perCapita$pcrecycle <- as.numeric(format(round(perCapita$recycling/perCapita$fallpop, 2), nsmall=2))
+perCapita$pcwaste <- as.numeric(format(round(perCapita$waste/perCapita$fallpop, 2), nsmall=2))
+perCapita$pccompost <- as.numeric(format(round(perCapita$compost/perCapita$fallpop, 2), nsmall=2))
 
 wastefit <- getTrendSeries(wastetimeseries[,2], startTs = c(2006, 1))
 #recyclefit <- getTrendSeries(recycletimeseries[,1], startTs = c(2006,1))

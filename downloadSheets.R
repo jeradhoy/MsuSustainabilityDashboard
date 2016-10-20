@@ -1,23 +1,14 @@
 #Download R data
 library(googlesheets)
+library(magrittr)
 
 ##Read in data from google sheets gs_auth(token = "shiny_app_token.rds")
 allDataSheet <- gs_title("allData")
-energyData <- as.data.frame(allDataSheet %>% gs_read(ws = "Energy"))
-write.csv(energyData, file = "./data/energyData.csv", row.names = F)
+dataDir <- "./data/Gdrive/"
 
-pcwaste <- as.data.frame(allDataSheet %>% gs_read(ws = "PerCapita"))
-write.csv(pcwaste, file = "./data/pcwaste.csv", row.names = F)
+file.remove(paste0(dataDir, list.files(dataDir)))
 
-waste <- as.data.frame(allDataSheet %>% gs_read(ws = "Waste"))
-write.csv(waste, file = "./data/waste.csv", row.names = F)
-
-leedBuildings <- as.data.frame(allDataSheet %>% gs_read(ws = "Leed"))
-write.csv(leedBuildings, file = "./data/leedBuildings.csv", row.names = F)
-
-Landscaping <- as.data.frame(allDataSheet %>% gs_read(ws = "Landscaping"))
-write.csv(Landscaping, file = "./data/Landscaping.csv", row.names = F)
-
-ProjectMap  <- as.data.frame(allDataSheet %>% gs_read(ws = "ProjectMap"))
-write.csv(ProjectMap, file = "./data/ProjectMap.csv", row.names = F)
-
+for(sheet in gs_ws_ls(allDataSheet)){
+  write.csv(as.data.frame(allDataSheet %>% gs_read_csv(ws=sheet)), file=paste0(dataDir, sheet, ".csv"), row.names=F)
+  Sys.sleep(3)
+}

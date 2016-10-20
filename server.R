@@ -29,6 +29,9 @@ shinyServer(function(input, output, session) {
   })
 #########################
 
+  renderUI <- ({
+            highchartOutput("energyUsage", height = "500px")
+
 
   ########### Energy Usage ################
   output$energyUsage <- renderHighchart({
@@ -43,24 +46,20 @@ shinyServer(function(input, output, session) {
         hc_yAxis(title = list(text = "Usage in KWH"),
           opposite= FALSE) %>%
 
-        hc_add_series_ts(name="Electricity", ts=energyTimeSeries[,1],
+        hc_add_series_ts(name="Electricity", ts=energyTs[,"KWH.Units"],
           showInLegend=T, color="gold", visible=input$elec) %>%
 
         hc_add_series_ts(name="Electricity Trend",
-          ts=getTrendSeries(energyTimeSeries[,1]),
+          ts=energyTrends[,"KWH.Units"],
           showInLegend=F, color="gold", visible=input$elecTrendLine & input$elec, dashStyle="LongDash") %>%
 
-        #hc_add_series_ts(name="Electricity Target", ts=energyTarget[,1],
-          #showInLegend=T, color="blue",dashStyle="dot", visible=F) %>%
-        hc_add_series_ts(name="Gas", ts=energyTimeSeries[,2],
+        hc_add_series_ts(name="Gas", ts=energyTs[,"GAS.KWH"],
           color="darkorange", visible=input$gas) %>%
 
         hc_add_series_ts(name="Gas Trend",
-          ts=getTrendSeries(energyTimeSeries[,2]),
+          ts=energyTrends[,"GAS.KWH"],
           showInLegend=F, color="darkorange", visible=input$gasTrendLine & input$gas, dashStyle="LongDash") %>%
 
-        #hc_add_series_ts(name="Gas Target", ts=energyTarget[,2],
-          #showInLegend=T, color="red", dashStyle="dot", visible=F) %>%
         hc_tooltip(valueSuffix=" KWH")
 
     } else {
@@ -72,15 +71,15 @@ shinyServer(function(input, output, session) {
         hc_rangeSelector(inputEnabled=F) %>%
         hc_yAxis(title = list(text = "Expenditure in Dollars"),
           opposite= FALSE) %>%
-        hc_add_series_ts(name="Electricity", ts=energyTimeSeries[,3],
+        hc_add_series_ts(name="Electricity", ts=energyTs[,"ELEC"],
           showInLegend=T, color="gold", visible=input$elec) %>%
-        hc_add_series_ts(name="Electricity Trend", ts=getTrendSeries(energyTimeSeries[,3]),
+        hc_add_series_ts(name="Electricity Trend", ts=energyTrends[,"ELEC"],
           showInLegend=F, color="gold", visible=input$elecTrendLine) %>%
         #hc_add_series_ts(name="Electricity Target", ts=energyTarget[,1],
           #showInLegend=T, color="blue",dashStyle="dot", visible=F) %>%
-        hc_add_series_ts(name="Gas", ts=energyTimeSeries[,4],
+        hc_add_series_ts(name="Gas", ts=energyTs[,"GAS"],
           color="darkorange", visible=input$gas) %>%
-        hc_add_series_ts(name="Gas Trend", ts=getTrendSeries(energyTimeSeries[,4]),
+        hc_add_series_ts(name="Gas Trend", ts=energyTrends[,"GAS"],
           color="darkorange", visible=input$gasTrendLine, type="line", showInLegend=F) %>%
         #hc_add_series_ts(name="Gas Target", ts=energyTarget[,2],
           #showInLegend=T, color="red", dashStyle="dot", visible=F) %>%
@@ -162,15 +161,15 @@ shinyServer(function(input, output, session) {
     highchart() %>%
       hc_title(useHTML=T, text = "<b>Per Capita Waste</b>") %>%
       hc_legend(enabled=T, reversed=T) %>%
-      hc_xAxis(categories= pcwaste$FY, title=list(text="Fiscal Year")) %>%
+      hc_xAxis(categories= perCapita$FY, title=list(text="Fiscal Year")) %>%
       hc_yAxis(title=list(
         text="Pounds Per Person (lbs)"), opposite=FALSE)%>%
       #hc_plotOptions(column=list(stacking="normal")) %>%
-      hc_add_series(name="Compost", data=pcwaste[,8], color= "orange",
+      hc_add_series(name="Compost", data=perCapita[,8], color= "orange",
         type="column") %>%
-      hc_add_series(name="Recycle", data= pcwaste[,6], color= "green",
+      hc_add_series(name="Recycle", data= perCapita[,6], color= "green",
         type = "column") %>%
-      hc_add_series(name="Landfill", data=pcwaste[,7], showInLegend=T,
+      hc_add_series(name="Landfill", data=perCapita[,7], showInLegend=T,
         color= "black", type="column") %>%
       hc_tooltip(valueSuffix="lbs")
   })
@@ -225,16 +224,16 @@ shinyServer(function(input, output, session) {
       addProviderTiles("Esri.WorldTopoMap",
         options = providerTileOptions(noWrap = TRUE)
       ) %>%
-      addMarkers(data=leedBuildings, group="LEED Buildings",
+      addMarkers(data=leed, group="LEED Buildings",
         ~Lon, ~Lat, icon=mapIcons["leed"],
         popup = ~paste0("<h3>", Building, " : ", LeedCert, "</h3>","<p>", Description ,"</p>",
           '<img src="', as.character(leedImages[LeedCert]), '" height="150" width="150">',
           '<a target="_blank" href="http://www.usgbc.org/leed"><p>Leed Certification Info</a>',
           " - ", '<a target="_blank" href="', ProjectLink, '">Project Info</p></a>')
       ) %>%
-    addMarkers(data=edibleLandscaping, group="Edible Landscaping",
+    addMarkers(data=landscaping, group="Edible Landscaping",
                ~Lon, ~Lat, icon=~mapIcons[Category],
-        popup = ~paste0("<h3>", Name , "</h3>",
+        popup=~paste0("<h3>", Name , "</h3>",
                         "<p> Info </p>")) %>%
     addMarkers(data=projectMap, group="Projects",
                ~Lon, ~Lat, icon=~mapIcons[Category],
