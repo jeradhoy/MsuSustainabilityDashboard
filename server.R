@@ -3,7 +3,6 @@
 library(shiny)
 library(highcharter)
 library(devtools)
-library(rgdal)
 library(leaflet)
 library(htmltools)
 

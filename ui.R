@@ -1,6 +1,6 @@
 library(shiny)
 library(highcharter)
-library(stats)
+#library(stats)
 library(leaflet)
 library(shinythemes)
 
@@ -209,7 +209,7 @@ shinyUI(navbarPage(id="main", #title="MSU Sustainability Dashboard",
           sidebarLayout(
             sidebarPanel(
               selectInput("dataset", "Choose a dataset:",
-                choices = c("Energy" = "energyData", "Leed Buildings" = "leedBuildings", "Per Capita Waste" = "pcwaste", "Waste" = "waste")),
+                choices = c("Energy" = "energy", "Leed Buildings" = "leed", "Per Capita Waste" = "perCapita", "Waste" = "waste", "Landscaping" = "landscaping", "Projects" = "projectMap")),
               downloadButton('downloadData', 'Download')
             ),
             mainPanel(
