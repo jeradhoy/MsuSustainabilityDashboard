@@ -151,9 +151,9 @@ shinyUI(navbarPage(id="main", #title="MSU Sustainability Dashboard",
           selected = 0),
 
         #Radio Button: Choose Total or Per capita
-        radioButtons("waterPerCap", label = h5("Total or Per Capita"),
-          choices = list("Total" = 1, "Per Capita" = 2),
-          selected = 1),
+        #radioButtons("waterPerCap", label = h5("Total or Per Capita"),
+        #  choices = list("Total" = 1, "Per Capita" = 2),
+        #  selected = 1),
         tags$h5("Trend Line"),
         checkboxInput("waterTrendLine", label="Water", value=FALSE)
       ),
