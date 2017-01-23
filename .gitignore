@@ -8,3 +8,4 @@
 *.rds
 /rsconnect
 .httr-oauth
+/noSave
