@@ -263,6 +263,44 @@ shinyServer(function(input, output, session) {
     #%>% addLayersControl(overlayGroups = c("LEED Buildings", "Edible Landscaping"))
   })
 
+  output$buildingKwhChart <- renderHighchart({
+
+    data <- subset(buildingUtilities, Bldg.No == input$map_shape_click$id)
+    #data <- subset(buildingUtilities, Bldg.No == 535)
+    KWH_TS <- with(data, ts(data=KWH.QTY, start=c(ACCTYR[1], ACCTMO[1]), frequency=12))
+
+      hc <- highchart(type="stock") %>%
+        hc_title(useHTML=T,
+          text = paste("<b>", data$Building.Name[1], "</b>")) %>%
+        hc_legend(enabled=T) %>%
+        hc_rangeSelector(inputEnabled=F) %>%
+        hc_yAxis(title = list(text = "Usage in KWH"),
+          opposite=F) %>%
+        hc_add_series_ts(name="Electricity", ts=KWH_TS,
+          showInLegend=T, color="gold", visible=T) %>%
+        hc_tooltip(valueSuffix=" KWH")
+
+  })
+
+  output$buildingWaterChart <- renderHighchart({
+
+    data <- subset(buildingUtilities, Bldg.No == input$map_shape_click$id)
+    #data <- subset(buildingUtilities, Bldg.No == 535)
+    Water_TS <- with(data, ts(data=WATER.MCF, start=c(ACCTYR[1], ACCTMO[1]), frequency=12))
+
+      hc <- highchart(type="stock") %>%
+        hc_title(useHTML=T,
+          text = paste("<b>", data$Building.Name[1], "</b>")) %>%
+        hc_legend(enabled=T) %>%
+        hc_rangeSelector(inputEnabled=F) %>%
+        hc_yAxis(title = list(text = "Water Usage in MCF"),
+          opposite=F) %>%
+        hc_add_series_ts(name="Water", ts=Water_TS,
+          showInLegend=T, color="blue", visible=T) %>%
+        hc_tooltip(valueSuffix="MCF")
+
+  })
+
   observeEvent(input$showLeed, {
     if(input$showLeed){
       leafletProxy("map", session) %>% showGroup("LEED Buildings")

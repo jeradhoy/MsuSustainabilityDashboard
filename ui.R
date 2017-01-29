@@ -1,6 +1,5 @@
 library(shiny)
 library(highcharter)
-#library(stats)
 library(leaflet)
 library(shinythemes)
 
@@ -188,16 +187,20 @@ shinyUI(navbarPage(id="main", #title="MSU Sustainability Dashboard",
         h3("Show Layers:"),
         checkboxInput("showLeed", label=tags$div(tags$b("LEED Buildings"), tags$img(src="assets/UWIcons/1l0-e0-e0-d-certification-icon.png")), value=T),
         checkboxInput("showEdible", label=tags$div(tags$b("Landscaping"), tags$img(src="assets/UWIcons/3brockman-tree-tour-icon.png", tags$img(src="assets/UWIcons/3garden-icon.png"))), value=T),
-        checkboxInput("showProject", label=tags$div(tags$b("Projects"), tags$img(src="assets/UWIcons/6on-site-composting-icon.png"), tags$img(src="assets/UWIcons/1solar-panels-icon.png")), value=T)
-      #verbatimTextOutput("mapDebug")
+        checkboxInput("showProject", label=tags$div(tags$b("Projects"), tags$img(src="assets/UWIcons/6on-site-composting-icon.png"), tags$img(src="assets/UWIcons/1solar-panels-icon.png")), value=T),
+      verbatimTextOutput("mapDebug")
 
       ),
       absolutePanel(id = "controls", class = "panel panel-default", fixed = TRUE,
-        draggable = T, bottom =70, left = 70, right = "auto", top = "auto",
-        width =250, height = 300,
-      verbatimTextOutput("mapDebug")
+        draggable = T, bottom = 70, left = 70, right = "auto", top = "auto",
+        width = "80%", height =400,
 
-        #highchartOutput("buildingEnergy", height = "300px")
+        column(width=6,
+          highchartOutput("buildingKwhChart", height = "100%")
+        ),
+        column(width=6,
+          highchartOutput("buildingWaterChart", height = "100%")
+        )
       )
 
     )

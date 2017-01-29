@@ -75,6 +75,9 @@ perCapita$pccompost <- as.numeric(format(round(perCapita$compost/perCapita$fallp
 library(rgdal)
 buildingShapes <- readOGR("./data/Buildings/building.shp", layer="building", verbose=F)
 
-str(buildingUtilities)
-buildingUtilities[,c("KWH.QTY", "TOTAL.GAS..DKT", "WATER.MCF")]
-buildingUtilities$KWH.QTY
+#str(buildingUtilities)
+#buildingUtilities[,c("KWH.QTY", "TOTAL.GAS..DKT", "WATER.MCF")]
+#buildingUtilities$KWH.QTY
+
+buildingUtilities$KWH.QTY <- as.numeric(gsub(",", "", buildingUtilities$KWH.QTY))
+buildingUtilities$WATER.MCF <- as.numeric(buildingUtilities$WATER.MCF)
