@@ -37,9 +37,13 @@ shinyUI(navbarPage(id="main", #title="MSU Sustainability Dashboard",
           actionLink("openTabMap", HTML('<h2>Buildings & Landscaping</h2><i class="fa fa-home fa-5x"></i>'))),
         column(4,
           actionLink("openTabProjects", HTML('<h2>Projects</h2><i class="fa fa-gears fa-5x"></i>'))
+      )),
+     fluidRow(
+       column(4,
+          actionLink("openTabFood", HTML('<h2>Food</h2><i class="fa fa-apple fa-5x"></i>'))
       ))
-    )
-  ),
+     )
+    ),
 
   ########### Energy ################
   tabPanel(title = "Energy", value="tabEnergy", icon=icon("lightbulb-o"),
@@ -208,6 +212,11 @@ shinyUI(navbarPage(id="main", #title="MSU Sustainability Dashboard",
  ########### Projects ################
  tabPanel(title = "Projects", value="tabProjects", icon=icon("gears"),
     tags$h1("Projects")
+ ),
+
+ ########## Food #################
+ tabPanel(title = "Food", value = "tabFood", icon = icon("apple"),
+    tags$h1("Food")
  ),
 
   ########### About ################
