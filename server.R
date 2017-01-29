@@ -404,8 +404,8 @@ shinyServer(function(input, output, session) {
   })
 
 
-  output$dataTable <- renderTable({
-    get(input$dataset)
+  output$dataTable <- DT::renderDataTable({
+    DT::datatable(get(input$dataset))
   })
 
   output$downloadData <- downloadHandler(
