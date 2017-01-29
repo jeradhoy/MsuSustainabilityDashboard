@@ -36,11 +36,11 @@ shinyUI(navbarPage(id="main", #title="MSU Sustainability Dashboard",
         column(4,
           actionLink("openTabMap", HTML('<h2>Buildings & Landscaping</h2><i class="fa fa-home fa-5x"></i>'))),
         column(4,
-          actionLink("openTabProjects", HTML('<h2>Projects</h2><i class="fa fa-gears fa-5x"></i>'))
+          actionLink("openTabFood", HTML('<h2>Food</h2><i class="fa fa-apple fa-5x"></i>'))
       )),
      fluidRow(
        column(4,
-          actionLink("openTabFood", HTML('<h2>Food</h2><i class="fa fa-apple fa-5x"></i>'))
+          actionLink("openTabProjects", HTML('<h2>Projects</h2><i class="fa fa-gears fa-5x"></i>'))
       ))
      )
     ),
@@ -189,34 +189,25 @@ shinyUI(navbarPage(id="main", #title="MSU Sustainability Dashboard",
         width =250, height = "auto",
         h2("Buildings and Landscaping"),
         h3("Show Layers:"),
-        checkboxInput("showLeed", label=tags$div(tags$b("LEED Buildings"), tags$img(src="assets/UWIcons/1l0-e0-e0-d-certification-icon.png")), value=T),
-        checkboxInput("showEdible", label=tags$div(tags$b("Landscaping"), tags$img(src="assets/UWIcons/3brockman-tree-tour-icon.png", tags$img(src="assets/UWIcons/3garden-icon.png"))), value=T),
+          checkboxInput("showLeed", label=tags$div(tags$b("LEED Buildings"), tags$img(src="assets/UWIcons/1l0-e0-e0-d-certification-icon.png")), value=T),
+          checkboxInput("showEdible", label=tags$div(tags$b("Landscaping"), tags$img(src="assets/UWIcons/3brockman-tree-tour-icon.png", tags$img(src="assets/UWIcons/3garden-icon.png"))), value=T),
         checkboxInput("showProject", label=tags$div(tags$b("Projects"), tags$img(src="assets/UWIcons/6on-site-composting-icon.png"), tags$img(src="assets/UWIcons/1solar-panels-icon.png")), value=T),
-      verbatimTextOutput("mapDebug")
 
+        verbatimTextOutput("mapDebug")
       ),
-      absolutePanel(id = "controls", class = "panel panel-default", fixed = TRUE,
-        draggable = T, bottom = 70, left = 70, right = "auto", top = "auto",
-        width = "80%", height =400,
-
-        column(width=6,
-          highchartOutput("buildingKwhChart", height = "100%")
-        ),
-        column(width=6,
-          highchartOutput("buildingWaterChart", height = "100%")
-        )
-      )
+      uiOutput("showBuildingGraphs")
 
     )
   ),
- ########### Projects ################
- tabPanel(title = "Projects", value="tabProjects", icon=icon("gears"),
-    tags$h1("Projects")
- ),
 
  ########## Food #################
  tabPanel(title = "Food", value = "tabFood", icon = icon("apple"),
-    tags$h1("Food")
+          tags$h1("Food")
+ ),
+
+ ########### Projects ################
+ tabPanel(title = "Projects", value="tabProjects", icon=icon("gears"),
+    tags$h1("Projects")
  ),
 
   ########### About ################
