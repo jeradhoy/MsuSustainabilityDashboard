@@ -1,2 +1,2691 @@
-<!DOCTYPE html><html lang="en" ><head><meta name="description" content="Web word processing, presentations and spreadsheets"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0"><link rel="shortcut icon" href="//ssl.gstatic.com/docs/common/drive_favicon1.ico"><title>Too Many Requests</title><link href="//fonts.googleapis.com/css?family=Product+Sans" rel="stylesheet" type="text/css"><style>/* Copyright 2017 Google Inc. All Rights Reserved. */
-.goog-inline-block{position:relative;display:-moz-inline-box;display:inline-block}* html .goog-inline-block{display:inline}*:first-child+html .goog-inline-block{display:inline}#drive-logo{margin:18px 0;position:absolute;white-space:nowrap}.docs-drivelogo-img{background-image:url('//ssl.gstatic.com/images/branding/googlelogo/1x/googlelogo_color_116x41dp.png');background-size:116px 41px;display:inline-block;height:41px;vertical-align:bottom;width:116px}.docs-drivelogo-text{color:#000;display:inline-block;opacity:0.54;text-decoration:none;font-family:'Product Sans',Arial,Helvetica,sans-serif;font-size:32px;text-rendering:optimizeLegibility;position:relative;top:-6px;left:-7px;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}@media (-webkit-min-device-pixel-ratio:1.5),(min-resolution:144dpi){.docs-drivelogo-img{background-image:url('//ssl.gstatic.com/images/branding/googlelogo/2x/googlelogo_color_116x41dp.png')}}</style><style type="text/css">body {background-color: #fff; font-family: Arial,sans-serif; font-size: 13px; margin: 0; padding: 0;}a, a:link, a:visited {color: #112ABB;}</style><style type="text/css">.errorMessage {font-size: 12pt; font-weight: bold; line-height: 150%;}</style></head><body><div id="outerContainer"><div id="innerContainer"><div style="position: absolute; top: -80px;"><div id="drive-logo"><a href="/"><span class="docs-drivelogo-img" title="Google logo"></span><span class="docs-drivelogo-text">&nbsp;Drive</span></a></div></div>Wow, this file is really popular! It might be unavailable until the crowd clears. <a href="">Try again</a>.</div></div></body><style>#outerContainer {margin: auto; max-width: 750px;}#innerContainer {margin-bottom: 20px; margin-left: 40px; margin-right: 40px; margin-top: 80px; position: relative;}</style></html>
+"common_name","genus","species","type","cultivar","date_removed","latitude","longitude"
+"White Oak","Quercus","alba","Deciduous",NA,NA,-111.052,45.66861
+"Cottonwood","Populus","deltoides","Deciduous",NA,"3/8/2016 0:00",-111.049,45.66401
+"Hackberry","Celtis","occidentalis","Deciduous",NA,NA,-111.052,45.66387
+"Apple","Malus",NA,"Deciduous",NA,NA,-111.049,45.66506
+"Flowering Crab Apple","Malus",NA,"Deciduous",NA,NA,-111.05,45.66316
+"Chokecherry","Prunus","virginiana","Deciduous",NA,NA,-111.05,45.66345
+"Flowering Crab Apple","Malus",NA,"Deciduous",NA,NA,-111.05,45.66356
+"Flowering Crab Apple","Malus",NA,"Deciduous",NA,NA,-111.05,45.66355
+"Flowering Crab Apple","Malus",NA,"Deciduous",NA,NA,-111.05,45.66357
+"Cottonwood","Populus","deltoides","Deciduous",NA,NA,-111.048,45.66287
+"Cottonwood","Populus","deltoides","Deciduous",NA,NA,-111.048,45.66285
+"Cottonwood","Populus","deltoides","Deciduous",NA,NA,-111.047,45.66285
+"Cottonwood","Populus","deltoides","Deciduous",NA,NA,-111.047,45.66287
+"Cottonwood","Populus","deltoides","Deciduous",NA,NA,-111.047,45.66286
+"American Elm","Ulmus","americana","Deciduous","Cathredral",NA,-111.047,45.66286
+"Linden","Tilia",NA,"Deciduous",NA,NA,-111.047,45.66312
+"Linden","Tilia",NA,"Deciduous",NA,NA,-111.047,45.66322
+"Linden","Tilia",NA,"Deciduous",NA,NA,-111.047,45.66345
+"Honey Locust","Gleditsia","triacanthos","Deciduous","Inermis","10/5/2015 0:00",-111.047,45.66378
+"Honey Locust","Gleditsia","triacanthos","Deciduous","Inermis","10/5/2015 6:00",-111.047,45.66383
+"Honey Locust","Gleditsia","triacanthos","Deciduous","Inermis","10/7/2015 0:00",-111.047,45.66377
+"Honey Locust","Gleditsia","tricanthos","Deciduous","Inermis","10/5/2015 0:00",-111.047,45.66386
+"Honey Locust","Gleditsia","tricanthos","Deciduous","Inermis","10/5/2015 0:00",-111.047,45.66376
+"Honey Locust","Gleditsia","tricanthos","Deciduous","Inermis","10/5/2015 0:00",-111.047,45.66377
+"Honey Locust","Gleditsia","tricanthos","Deciduous",NA,"10/7/2015 0:00",-111.047,45.66385
+"Honey Locust","Gleditsia","tricanthos","Deciduous","Inermis","10/5/2015 6:00",-111.048,45.66385
+"Honey Locust","Gleditsia","tricanthos","Deciduous","Inermis","10/7/2015 0:00",-111.048,45.66384
+"Bur Oak","Quercus","macrocarpa","Deciduous",NA,NA,-111.048,45.66333
+"Bur Oak","Quercus","macrocarpa","Deciduous",NA,"10/7/2015 0:00",-111.048,45.66337
+"Linden","Tilia","americana","Deciduous",NA,NA,-111.048,45.66363
+"Green Ash","Fraxinus","pensilvanica","Deciduous",NA,"10/5/2015 0:00",-111.048,45.66376
+"Flowering Crab Apple","Malus","x","Deciduous",NA,"10/5/2015 6:00",-111.048,45.66357
+"Linden","Tilia","americana","Deciduous",NA,"10/5/2015 0:00",-111.048,45.66386
+"Maple (Norway)","Acer","platanoides","Deciduous",NA,"8/16/2016 19:18",-111.047,45.66507
+"Amur Cherry","Prunus","maackii","Deciduous",NA,"8/16/2016 19:17",-111.047,45.66508
+"Amur Cherry","Prunus","maackii","Deciduous",NA,"8/16/2016 19:16",-111.048,45.66507
+"Ginnala Maple","Acer","ginnala","Deciduous",NA,"8/16/2016 19:16",-111.048,45.66507
+"Green Ash","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.052,45.66268
+"Green Ash","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.052,45.66249
+"Green Ash","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.052,45.66205
+"Green Ash","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.052,45.66184
+"American Linden","Tilia","americana","Deciduous",NA,NA,-111.052,45.66241
+"American Linden","Tilia","americana","Deciduous",NA,NA,-111.052,45.66216
+"American Linden","Tilia","americana","Deciduous",NA,NA,-111.052,45.66166
+"American Linden","Tilia","americana","Deciduous",NA,NA,-111.052,45.66146
+"American Linden","Tilia","americana","Deciduous",NA,NA,-111.052,45.66121
+"Silver Maple","Acer","saccarinum","Deciduous",NA,NA,-111.052,45.66108
+"Silver Maple","Acer","saccarinum","Deciduous",NA,NA,-111.052,45.66097
+"Silver Maple","Acer","saccarinum","Deciduous",NA,NA,-111.052,45.66083
+"Ginnala Maple","Acer","ginnala","Deciduous",NA,NA,-111.052,45.66064
+"Ginnala Maple","Acer","ginnala","Deciduous",NA,NA,-111.052,45.66063
+"Ginnala Maple","Acer","ginnala","Deciduous",NA,NA,-111.052,45.66061
+"Ginnala Maple","Acer","ginnala","Deciduous",NA,NA,-111.052,45.66062
+"Ginnala Maple","Acer","ginnala","Deciduous",NA,NA,-111.052,45.66058
+"Apple","Malus",NA,"Deciduous",NA,NA,-111.051,45.66363
+"Apple","Malus",NA,"Deciduous",NA,NA,-111.052,45.66361
+"Chokecherry","Prunus","virginiana","Deciduous",NA,NA,-111.052,45.66366
+"Green Ash","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.047,45.66268
+"Green Ash","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.047,45.66258
+"Green Ash","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.047,45.66169
+"Green Ash","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.047,45.66147
+"Green Ash","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.047,45.66104
+"Green Ash","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.047,45.66093
+"Green Ash","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.047,45.66082
+"Green Ash","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.047,45.66062
+"Linden","Tilia","americana","Deciduous",NA,NA,-111.047,45.6618
+"Linden","Tilia","americana","Deciduous","Redmond",NA,-111.047,45.66213
+"Linden","Tilia","americana","Deciduous",NA,NA,-111.047,45.66236
+"Linden","Tilia","americana","Deciduous",NA,NA,-111.047,45.66278
+"Bur Oak","Quercus","macrocarpa","Deciduous",NA,NA,-111.047,45.66245
+"Bur Oak","Quercus","macrocarpa","Deciduous",NA,NA,-111.047,45.66189
+"Cottonwood","Populus","deltoides","Deciduous",NA,NA,-111.047,45.66137
+"Cottonwood","Populus","deltoides","Deciduous",NA,NA,-111.047,45.66125
+"Cottonwood","Populus","deltoides","Deciduous",NA,NA,-111.047,45.66115
+"Cottonwood","Populus","deltoides","Deciduous",NA,NA,-111.051,45.66484
+"Lilac (Japanese)","Syringa","reticulata","Deciduous",NA,NA,-111.049,45.66369
+"Lilac (Japanese)","Syringa","reticulata","Deciduous",NA,NA,-111.049,45.66364
+"Lilac (Japanese)","Syringa","reticulata","Deciduous",NA,NA,-111.049,45.66348
+"Lilac (Japanese)","Syringa","reticulata","Deciduous",NA,NA,-111.049,45.66333
+"Lilac (Japanese)","Syringa","reticulata","Deciduous",NA,NA,-111.049,45.66317
+"Lilac (Japanese)","Syringa","reticulata","Deciduous",NA,NA,-111.049,45.66312
+"American Elm","Ulmus","americana","Deciduous",NA,NA,-111.052,45.66349
+"American Elm","Ulmus","americana","Deciduous",NA,NA,-111.052,45.66341
+"American Elm","Ulmus","americana","Deciduous",NA,NA,-111.052,45.66334
+"American Elm","Ulmus","americana","Deciduous",NA,NA,-111.052,45.66327
+"Linden","Tilia",NA,"Deciduous",NA,NA,-111.052,45.66355
+"Honey Locust","Gleditsia","tricanthos","Deciduous","Inermis",NA,-111.052,45.6635
+"Bur Oak","Quercus","macrocarpa","Deciduous",NA,NA,-111.052,45.66333
+"Maple","Acer",NA,"Deciduous",NA,NA,-111.052,45.66319
+"Bur Oak","Quercus","macrocarpa","Deciduous",NA,NA,-111.052,45.66276
+"Bur Oak","Quercus","macrocarpa","Deciduous",NA,NA,-111.052,45.66277
+"Bur Oak","Quercus","macrocarpa","Deciduous",NA,NA,-111.051,45.66506
+"American Elm","Ulmus","americana","Deciduous",NA,NA,-111.051,45.66506
+"Bur Oak","Quercus","macrocarpa","Deciduous",NA,NA,-111.052,45.66505
+"American Elm","Ulmus","americana","Deciduous",NA,NA,-111.052,45.66505
+"Maple (Norway)","Acer","platanoides","Deciduous",NA,NA,-111.051,45.66409
+"Maple (Norway)","Acer","platanoides","Deciduous",NA,NA,-111.051,45.66416
+"American Elm","Ulmus","americana","Deciduous",NA,NA,-111.052,45.6648
+"American Elm","Ulmus","americana","Deciduous",NA,NA,-111.052,45.66452
+"American Elm","Ulmus","americana","Deciduous",NA,NA,-111.052,45.66422
+"Maple","Acer","ginalla","Deciduous",NA,"8/16/2016 19:15",-111.048,45.66506
+"Cottonwood","Populus","deltoides","Deciduous",NA,NA,-111.049,45.66401
+"Flowering Crab Apple","Malus",NA,"Deciduous",NA,NA,-111.05,45.66213
+"Flowering Crab Apple","Malus",NA,"Deciduous",NA,NA,-111.051,45.66212
+"Flowering Crab Apple","Malus",NA,"Deciduous",NA,NA,-111.051,45.66217
+"Flowering Crab Apple","Malus",NA,"Deciduous",NA,NA,-111.051,45.66213
+"Flowering Crab Apple","Malus",NA,"Deciduous",NA,NA,-111.051,45.66216
+"Flowering Crab Apple","Malus",NA,"Deciduous",NA,NA,-111.052,45.66216
+"Flowering Crab Apple","Malus",NA,"Deciduous",NA,NA,-111.052,45.66213
+"Linden","Tilia","americana","Deciduous","Redmond",NA,-111.051,45.66214
+"Linden","Tilia","americana","Deciduous","Redmond",NA,-111.051,45.66215
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.051,45.66282
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.051,45.66282
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.051,45.66286
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.051,45.66283
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.051,45.66284
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.051,45.66283
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.051,45.66289
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.051,45.66285
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.051,45.66284
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.051,45.66281
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.051,45.66276
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.051,45.66275
+"Bur Oak","Quercus","maccrocarpa","Deciduous",NA,NA,-111.051,45.66277
+"Bur Oak","Quercus","maccrocarpa","Deciduous",NA,NA,-111.051,45.66277
+"Flowering Crab Apple","Malus",NA,"Deciduous","Spring Snow",NA,-111.051,45.66278
+"Flowering Crab Apple","Malus",NA,"Deciduous","Spring Snow",NA,-111.051,45.66276
+"Flowering Crab Apple","Malus",NA,"Deciduous","Spring Snow",NA,-111.051,45.66276
+"Flowering Crab Apple","Malus",NA,"Deciduous","Spring Snow",NA,-111.051,45.66275
+"Flowering Crab Apple","Malus",NA,"Deciduous","Spring Snow",NA,-111.05,45.66276
+"Flowering Crab Apple","Malus",NA,"Deciduous","Spring Snow",NA,-111.05,45.6627
+"Flowering Crab Apple","Malus",NA,"Deciduous","Spring Snow",NA,-111.051,45.66269
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.05,45.66277
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.05,45.6628
+"Linden (Redmond)","Tilia","americana","Deciduous",NA,NA,-111.05,45.66504
+"Linden (Redmond)","Tilia","americana","Deciduous",NA,NA,-111.05,45.665
+"Linden (Redmond)","Tilia","americana","Deciduous","Redmond",NA,-111.05,45.66491
+"Linden (Redmond)","Tilia","americana","Deciduous","Redmond",NA,-111.051,45.66471
+"Lilac (Japanese)","Syringa","reticulata","Deciduous",NA,NA,-111.05,45.66482
+"Oak (Bur)","Quercus","maccrocarpa","Deciduous",NA,NA,-111.05,45.66486
+"Maple (Norway)","Acer","platanoides","Deciduous",NA,NA,-111.048,45.66321
+"Mongolian Linden","Tilia","mongolica","Deciduous","Harvest Gold",NA,-111.048,45.66311
+"Hackberry","Celtis","occidentalis","Deciduous",NA,NA,-111.052,45.66156
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.061,45.66502
+"Plum","Prunus",NA,"Deciduous",NA,NA,-111.061,45.66537
+"Plum","Prunus",NA,"Deciduous",NA,NA,-111.061,45.6654
+"Plum","Prunus",NA,"Deciduous",NA,NA,-111.061,45.66542
+"Plum","Prunus",NA,"Deciduous",NA,NA,-111.061,45.66542
+"Plum","Prunus",NA,"Deciduous",NA,NA,-111.061,45.66544
+"Plum","Prunus",NA,"Deciduous",NA,NA,-111.061,45.66545
+"Plum","Prunus",NA,"Deciduous",NA,NA,-111.061,45.66546
+"Plum","Prunus",NA,"Deciduous",NA,NA,-111.061,45.66547
+"Hawthorne","Crataegus","x mordenensis","Deciduous","Toba",NA,-111.061,45.66566
+"Hawthorne","Crataegus","x mordenensis","Deciduous","Toba",NA,-111.061,45.66567
+"Birch (Paper)","Betula","papyrifera","Deciduous",NA,NA,-111.061,45.66579
+"Birch (Paper)","Betula","papyrifera","Deciduous",NA,NA,-111.061,45.66581
+"Birch (Paper)","Betula","papyrifera","Deciduous",NA,NA,-111.061,45.66579
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.05,45.66015
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.05,45.66014
+"Aspen","Populus","tremuloides","Deciduous",NA,"7/27/2015 0:00",-111.05,45.66014
+"Aspen","Populus","tremuloides","Deciduous",NA,"7/27/2015 0:00",-111.05,45.66015
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.05,45.66001
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.05,45.66002
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.05,45.66002
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.05,45.66001
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.05,45.65993
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.05,45.65997
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.05,45.65995
+"Linden","Tilia","americana","Deciduous",NA,NA,-111.05,45.65969
+"Linden","Tilia","americana","Deciduous",NA,NA,-111.051,45.65945
+"Honey Locust","Gleditsia","triacanthos","Deciduous","Inermis",NA,-111.05,45.65971
+"Honey Locust","Gleditsia","triacanthos","Deciduous","Inermis","10/5/2015 0:00",-111.051,45.6596
+"Honey Locust","Gleditsia","triacanthos","Deciduous","Inermis",NA,-111.051,45.6592
+"Honey Locust","Gleditsia","triacanthos","Deciduous","Inermis",NA,-111.05,45.65835
+"Honey Locust","Gleditsia","triacanthos","Deciduous","Inermis",NA,-111.05,45.65831
+"Honey Locust","Gleditsia","triacanthos","Deciduous","Inermis",NA,-111.049,45.65945
+"Honey Locust","Gleditsia","triacanthos","Deciduous","Inermis",NA,-111.049,45.65936
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.055,45.6662
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.049,45.65953
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.049,45.65952
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.049,45.65933
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.049,45.6593
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.049,45.65928
+"Honey Locust","Gleditsia","triacanthos","Deciduous","Inermis",NA,-111.05,45.65967
+"Honey Locust","Gleditsia","triacanthos","Deciduous","Inermis",NA,-111.05,45.65961
+"Honey Locust","Gleditsia","triacanthos","Deciduous","Inermis",NA,-111.05,45.65945
+"Honey Locust","Gleditsia","triacanthos","Deciduous",NA,NA,-111.051,45.6594
+"Apple (Flower Crab)","Malus","ioensis","Deciduous","Bechtel's",NA,-111.051,45.66307
+"Honey Locust","Gleditsia","triacanthos","Deciduous","Inermis",NA,-111.05,45.65863
+"Elm (American)","Ulmus","americana","Deciduous","Brandon",NA,-111.051,45.66478
+"Oakleaf Mountain Ash","Sorbus","x thuringiaca","Deciduous",NA,NA,-111.051,45.66465
+"Cottonwood","Populus",NA,"Deciduous",NA,NA,-111.049,45.65754
+"Cottonwood","Populus",NA,"Deciduous",NA,NA,-111.049,45.6576
+"Cottonwood","Populus",NA,"Deciduous",NA,NA,-111.049,45.65765
+"Maple","Acer","ginnala","Deciduous",NA,NA,-111.048,45.65715
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.049,45.65722
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.049,45.65719
+"Russian Olive","Elaeagnus","angustifolia","Deciduous",NA,NA,-111.049,45.65732
+"Russian Olive","Elaeagnus","angustifolia","Deciduous",NA,NA,-111.049,45.65735
+"Russian Olive","Elaeagnus","angustifolia","Deciduous",NA,NA,-111.049,45.65719
+"Apple (Flower Crab)","Malus",NA,"Deciduous",NA,NA,-111.049,45.65751
+"Apple (Flower Crab)","Malus",NA,"Deciduous",NA,NA,-111.047,45.65839
+"Apple (Flower Crab)","Malus",NA,"Deciduous",NA,NA,-111.048,45.65872
+"Birch (Paper)","Betula","papyrifera","Deciduous",NA,NA,-111.047,45.65849
+"Maple (Norway)","Acer","platanoides","Deciduous",NA,NA,-111.048,45.65887
+"Maple (Norway)","Acer","platanoides","Deciduous",NA,NA,-111.048,45.65892
+"Maple (Norway)","Acer","platanoides","Deciduous",NA,NA,-111.048,45.65897
+"Maple (Norway)","Acer","platanoides","Deciduous",NA,NA,-111.048,45.65882
+"Apple (Flower Crab)","Malus",NA,"Deciduous",NA,NA,-111.047,45.65839
+"Apple (Flower Crab)","Malus",NA,"Deciduous",NA,NA,-111.048,45.6587
+"Apple (Flower Crab)","Malus",NA,"Deciduous",NA,NA,-111.049,45.65727
+"Maple (Norway)","Acer","acer","Deciduous",NA,NA,-111.049,45.66396
+"Maple (Norway)","Acer","platanoides","Deciduous",NA,NA,-111.049,45.66378
+"Linden","Tilia","cordata","Deciduous","Greenspire",NA,-111.052,45.66228
+"White Ash","Fraxinus","americana","Deciduous","Calypso",NA,-111.047,45.66203
+"White Ash","Fraxinus","americana","Deciduous","Calypso","6/13/2016 6:00",-111.047,45.66355
+"White Ash","Fraxinus","americana","Deciduous","Calypso",NA,-111.052,45.66175
+"White Ash","Fraxinus","americana","Deciduous","Calypso",NA,-111.052,45.66437
+"White Ash","Fraxinus","americana","Deciduous","Calypso",NA,-111.052,45.66466
+"White Ash","Fraxinus","americana","Deciduous","Calypso",NA,-111.047,45.66159
+"White Ash","Fraxinus","americana","Deciduous","Calypso",NA,-111.052,45.66355
+"White Ash","Fraxinus","americana","Deciduous","Calypso",NA,-111.052,45.66407
+"Hackberry","Celtis","occidentalis","Deciduous",NA,NA,-111.05,45.66504
+"Honey Locust","Gleditsia","triacanthos","Deciduous","Inermis",NA,-111.05,45.66492
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.052,45.66339
+"Linden","Tilia","cordata","Deciduous","Greenspire",NA,-111.047,45.66333
+"Buckeye","Aesculus","glabra","Deciduous",NA,NA,-111.047,45.667
+"Crabapple","Malus",NA,"Deciduous",NA,NA,-111.048,45.66828
+"Oak (Bur)","Quercus","macrocarpa","Deciduous",NA,NA,-111.046,45.66661
+"Lilac (Japanese)","Syringa","reticulata","Deciduous",NA,NA,-111.047,45.66665
+"Lilac (Japanese)","Syringa","reticulata","Deciduous",NA,NA,-111.046,45.66673
+"White Ash","Fraxinus","americana","Deciduous","Calypso",NA,-111.051,45.66944
+"White Ash","Fraxinus","americana","Deciduous","Calypso",NA,-111.053,45.66598
+"White Ash","Fraxinus","americana","Deciduous","Calypso",NA,-111.054,45.67095
+"Linden (American)","Tilia","americana","Deciduous",NA,NA,-111.047,45.66777
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.05,45.66843
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.051,45.66847
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.051,45.66855
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.05,45.6685
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.05,45.66837
+"Hackberry","Celtis","occidentalis","Deciduous",NA,NA,-111.05,45.66855
+"Buckeye","Aesculus","glabra","Deciduous",NA,NA,-111.05,45.66853
+"Amur Maple","Acer","ginnala","Deciduous",NA,NA,-111.05,45.66854
+"Amur Maple","Acer","ginnala","Deciduous",NA,NA,-111.05,45.66852
+"Amur Maple","Acer","ginnala","Deciduous",NA,NA,-111.05,45.66847
+"Amur Maple","Acer","ginnala","Deciduous",NA,NA,-111.05,45.66849
+"Amur Maple","Acer","ginnala","Deciduous",NA,NA,-111.05,45.66848
+"Amur Maple","Acer","ginnala","Deciduous",NA,NA,-111.05,45.66848
+"Amur Maple","Acer","ginnala","Deciduous",NA,NA,-111.05,45.66851
+"Apple (Flower Crab)","Malus",NA,"Deciduous",NA,NA,-111.05,45.66863
+"Apple (Flower Crab)","Malus",NA,"Deciduous",NA,NA,-111.05,45.66863
+"Apple (Flower Crab)","Malus",NA,"Deciduous",NA,NA,-111.05,45.66856
+"Apple (Flower Crab)","Malus",NA,"Deciduous",NA,NA,-111.049,45.66841
+"Apple (Flower Crab)","Malus",NA,"Deciduous","Donald Wyman",NA,-111.049,45.66863
+"Apple (Flower Crab)","Malus",NA,"Deciduous","Donald Wyman",NA,-111.049,45.66862
+"Apple (Flower Crab)","Malus",NA,"Deciduous","Donald Wyman",NA,-111.049,45.66866
+"Mayday Tree","Prunus","padas","Deciduous",NA,NA,-111.05,45.66846
+"Mayday Tree","Prunus","padas","Deciduous",NA,NA,-111.05,45.66848
+"Mayday Tree","Prunus","padas","Deciduous",NA,NA,-111.05,45.6685
+"Mayday Tree","Prunus","padas","Deciduous",NA,NA,-111.05,45.6685
+"Mayday Tree","Prunus","padas","Deciduous",NA,NA,-111.05,45.6685
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.05,45.66769
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.05,45.66768
+"Amur Maple","Acer","ginnala","Deciduous",NA,NA,-111.05,45.66767
+"Honey Locust","Gleditsia","triacanthos","Deciduous","Inermis",NA,-111.05,45.66822
+"Japanese Tree Lilac","Syringa","reticulata","Deciduous",NA,NA,-111.046,45.66689
+"Japanese Tree Lilac","Syringa","reticulata","Deciduous",NA,NA,-111.046,45.6668
+"Japanese Tree Lilac","Syringa","reticulata","Deciduous","Ivory Silk",NA,-111.046,45.66696
+"Japanese Tree Lilac","Syringa","reticulata","Deciduous","Ivory Silk",NA,-111.046,45.66696
+"Maple (Norway)","Acer","platanoides","Deciduous",NA,NA,-111.046,45.66702
+"Maple (Norway)","Acer","platanoides","Deciduous",NA,NA,-111.046,45.66703
+"Mountain Ash","Sorbus","decora","Deciduous",NA,NA,-111.046,45.66698
+"Mountain Ash","Sorbus","decora","Deciduous",NA,NA,-111.046,45.66699
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.045,45.66669
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.046,45.66674
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.046,45.66679
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.046,45.66699
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.045,45.6668
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.045,45.66691
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.045,45.66701
+"Japanese Tree Lilac","Syringa","reticulata","Deciduous",NA,NA,-111.046,45.6672
+"Japanese Tree Lilac","Syringa","reticulata","Deciduous",NA,NA,-111.046,45.6672
+"Japanese Tree Lilac","Syringa","reticulata","Deciduous",NA,NA,-111.046,45.6672
+"Japanese Tree Lilac","Syringa","reticulata","Deciduous",NA,NA,-111.046,45.6672
+"Hot Wings Maple","Acer","tataricum","Deciduous","Hot Wings",NA,-111.046,45.6672
+"Hot Wings Maple","Acer","tataricum","Deciduous","Hot Wings",NA,-111.046,45.6672
+"Chokecherry","Prunus","virginiana","Deciduous",NA,NA,-111.046,45.66715
+"Chokecherry","Prunus","virginiana","Deciduous",NA,NA,-111.046,45.66715
+"Chokecherry","Prunus","virginiana","Deciduous",NA,NA,-111.046,45.66724
+"Chokecherry","Prunus","virginiana","Deciduous",NA,NA,-111.046,45.66724
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.05,45.66595
+"Maple (Silver)","Acer","saccharinum","Deciduous",NA,NA,-111.053,45.66454
+"Elm (American)","Ulmus","americana","Deciduous",NA,NA,-111.055,45.66938
+"Elm (American)","Ulmus","americana","Deciduous",NA,NA,-111.055,45.66938
+"Elm (American)","Ulmus","americana","Deciduous",NA,NA,-111.055,45.66955
+"Elm (American)","Ulmus","americana","Deciduous",NA,NA,-111.055,45.66967
+"Elm (American)","Ulmus","americana","Deciduous",NA,NA,-111.055,45.66974
+"Elm (American)","Ulmus","americana","Deciduous",NA,NA,-111.055,45.66982
+"Elm (American)","Ulmus","americana","Deciduous",NA,NA,-111.055,45.67002
+"Apple (Flower Crab)","Malus",NA,"Deciduous",NA,NA,-111.055,45.67004
+"Apple (Flower Crab)","Malus",NA,"Deciduous",NA,NA,-111.055,45.67006
+"Oak (Bur)","Quercus","macrocarpa","Deciduous",NA,NA,-111.055,45.67006
+"Oak (Bur)","Quercus","macrocarpa","Deciduous",NA,NA,-111.054,45.67007
+"Buckeye","Aesculus","glabra","Deciduous",NA,NA,-111.054,45.67007
+"Elm (American)","Ulmus","americana","Deciduous",NA,NA,-111.054,45.67003
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.054,45.66671
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.054,45.66662
+"Mayday Tree","Prunus","padus","Deciduous",NA,NA,-111.054,45.66673
+"Mayday Tree","Prunus","padus","Deciduous",NA,NA,-111.053,45.66671
+"Lilac (Japanese)","Syringa","reticulata","Deciduous",NA,NA,-111.053,45.66668
+"Lilac (Japanese)","Syringa","reticulata","Deciduous",NA,NA,-111.053,45.66671
+"Lilac (Japanese)","Syringa","reticulata","Deciduous",NA,NA,-111.053,45.66673
+"Ginnala Maple","Acer","ginnala","Deciduous",NA,"7/27/2015 0:00",-111.052,45.66662
+"Lilac (Japanese)","Syringa","reticulata","Deciduous",NA,NA,-111.052,45.66665
+"Lilac (Japanese)","Syringa","reticulata","Deciduous",NA,NA,-111.052,45.66661
+"Apple","Malus",NA,"Deciduous",NA,NA,-111.052,45.66696
+"Apple (Flower Crab)","Malus",NA,"Deciduous","Dolgo",NA,-111.052,45.66708
+"Apple (Flower Crab)","Malus",NA,"Deciduous","Dolgo",NA,-111.052,45.66712
+"Apple (Flower Crab)","Malus",NA,"Deciduous","Dolgo",NA,-111.052,45.66716
+"Apple (Flower Crab)","Malus",NA,"Deciduous","Dolgo",NA,-111.052,45.66726
+"Apple (Flower Crab)","Malus",NA,"Deciduous","Dolgo",NA,-111.052,45.66729
+"Apple (Flower Crab)","Malus",NA,"Deciduous","Dolgo",NA,-111.052,45.66733
+"Oak (Bur)","Quercus","macrocarpa","Deciduous",NA,NA,-111.053,45.66719
+"Chokecherry","Prunus","virginiania","Deciduous",NA,NA,-111.053,45.66719
+"Chokecherry","Prunus","virginiania","Deciduous",NA,NA,-111.053,45.66721
+"Oak (Bur)","Quercus","macrocarpa","Deciduous",NA,NA,-111.053,45.66719
+"Chokecherry","Prunus","virginiania","Deciduous",NA,NA,-111.053,45.6672
+"Maple (Norway)","Acer","platanoides","Deciduous",NA,NA,-111.053,45.66746
+"Maple (Norway)","Acer","platanoides","Deciduous",NA,NA,-111.052,45.66739
+"Linden","Tilia",NA,"Deciduous",NA,NA,-111.052,45.66711
+"Linden","Tilia",NA,"Deciduous",NA,NA,-111.052,45.66713
+"Linden","Tilia",NA,"Deciduous",NA,NA,-111.052,45.66716
+"Linden","Tilia",NA,"Deciduous",NA,NA,-111.052,45.66719
+"Linden","Tilia",NA,"Deciduous",NA,NA,-111.052,45.66725
+"Linden","Tilia",NA,"Deciduous",NA,NA,-111.052,45.66727
+"Linden","Tilia",NA,"Deciduous",NA,NA,-111.052,45.66752
+"Linden","Tilia",NA,"Deciduous",NA,NA,-111.052,45.6676
+"Linden","Tilia",NA,"Deciduous",NA,NA,-111.052,45.66768
+"Cottonwood","Populus",NA,"Deciduous",NA,NA,-111.052,45.66766
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.054,45.66685
+"Ash (Black)","Fraxinus","nigra","Deciduous",NA,"8/5/2015 0:00",-111.053,45.6667
+"Maple (Norway)","Acer","platanoides","Deciduous",NA,NA,-111.053,45.66598
+"Maple (Norway)","Acer","platanoides","Deciduous",NA,NA,-111.053,45.66598
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.053,45.66598
+"Selkirk Crabapple","Malus",NA,"Deciduous","Selkirk",NA,-111.053,45.66593
+"Selkirk Crabapple","Malus",NA,"Deciduous","Selkirk",NA,-111.053,45.66588
+"Selkirk Crabapple","Malus",NA,"Deciduous","Selkirk",NA,-111.053,45.66585
+"Selkirk Crabapple","Malus",NA,"Deciduous","Selkirk",NA,-111.053,45.66579
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.053,45.66639
+"Linden (American)","Tilia","americana","Deciduous",NA,NA,-111.053,45.66655
+"Linden (American)","Tilia","americana","Deciduous",NA,NA,-111.053,45.66656
+"Linden (American)","Tilia","americana","Deciduous",NA,NA,-111.052,45.66655
+"Linden (American)","Tilia","americana","Deciduous",NA,NA,-111.052,45.66655
+"Apple","Malus",NA,"Deciduous",NA,NA,-111.052,45.66636
+"Apple (Flower Crab)","Malus",NA,"Deciduous",NA,NA,-111.052,45.66622
+"Hawthorne","Crataegus","x mordenensis","Deciduous","Toba",NA,-111.052,45.66621
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.052,45.66609
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.05,45.66881
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.05,45.6688
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.05,45.66881
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.05,45.66882
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.05,45.66877
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.05,45.66881
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.05,45.66879
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.05,45.66882
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.05,45.66877
+"Selkirk Crabapple","Malus",NA,"Deciduous","Selkirk","6/27/2016 16:50",-111.049,45.66906
+"Selkirk Crabapple","Malus",NA,"Deciduous","Selkirk","6/27/2016 16:52",-111.049,45.66912
+"Selkirk Crabapple","Malus",NA,"Deciduous","Selkirk","6/27/2016 16:54",-111.049,45.66919
+"Selkirk Crabapple","Malus",NA,"Deciduous","Selkirk","6/27/2016 16:53",-111.049,45.66927
+"Selkirk Crabapple","Malus",NA,"Deciduous","Selkirk","6/27/2016 16:55",-111.049,45.66934
+"Mountain Ash","Sorbus","decora","Deciduous",NA,NA,-111.051,45.66669
+"Ure Pear","Pyrus","ussuriensis","Deciduous","Ure",NA,-111.051,45.66674
+"Birch (Paper)","Betula","papyrifera","Deciduous",NA,NA,-111.051,45.66707
+"Birch (Paper)","Betula","papyrifera","Deciduous",NA,NA,-111.051,45.66709
+"Mountain Ash","Sorbus","x thuringiaca","Deciduous",NA,NA,-111.051,45.66701
+"Lilac (Japanese)","Syringa","reticulata","Deciduous",NA,NA,-111.052,45.66687
+"Lilac (Japanese)","Syringa","reticulata","Deciduous",NA,NA,-111.052,45.66693
+"Apple (Flower Crab)","Malus",NA,"Deciduous",NA,NA,-111.05,45.66663
+"Oak (Bur)","Quercus","macrocarpa","Deciduous",NA,NA,-111.05,45.6665
+"Red Oak","Quercus","rubra","Deciduous",NA,NA,-111.052,45.66616
+"Ginnala Maple","Acer","ginnala","Deciduous",NA,"8/11/2016 20:11",-111.052,45.66622
+"Tatarian Maple","Acer","tataricum","Deciduous",NA,NA,-111.052,45.66606
+"Tatarian Maple","Acer","tataricum","Deciduous",NA,NA,-111.052,45.66606
+"Tatarian Maple","Acer","tataricum","Deciduous",NA,NA,-111.052,45.66606
+"Tatarian Maple","Acer","tataricum","Deciduous",NA,NA,-111.051,45.66606
+"Tatarian Maple","Acer","tataricum","Deciduous",NA,NA,-111.051,45.66606
+"Tatarian Maple","Acer","tataricum","Deciduous",NA,NA,-111.051,45.66606
+"Tatarian Maple","Acer","tataricum","Deciduous",NA,NA,-111.051,45.66606
+"Mountain Maple","Acer","spicatum","Deciduous",NA,NA,-111.052,45.66616
+"Mountain Ash","Sorbus","acuparia","Deciduous",NA,NA,-111.052,45.66632
+"Ginnala Maple","Acer","ginnala","Deciduous",NA,NA,-111.051,45.66616
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.051,45.66624
+"Lilac (Japanese)","Syringa","reticulata","Deciduous",NA,NA,-111.051,45.66612
+"Buckeye","Aesculus","glabra","Deciduous",NA,NA,-111.051,45.66623
+"Buckeye","Aesculus","glabra","Deciduous",NA,NA,-111.051,45.66651
+"Apple (Flower Crab)","Malus",NA,"Deciduous",NA,NA,-111.052,45.66655
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.051,45.66645
+"Hawthorne","Crataegus","x mordenensis","Deciduous","Toba",NA,-111.047,45.66573
+"Hawthorne","Crataegus","x mordenensis","Deciduous","Toba",NA,-111.047,45.66585
+"Apple (Flower Crab)","Malus",NA,"Deciduous",NA,NA,-111.047,45.66584
+"Ginalla Maple","Acer","ginnala","Deciduous",NA,NA,-111.047,45.6658
+"Mountain Ash","Sorbus","decora","Deciduous",NA,NA,-111.047,45.66584
+"Mountain Ash","Sorbus","decora","Deciduous",NA,NA,-111.047,45.66563
+"Honey Locust","Gleditsia","triacanthos","Deciduous","Inermis",NA,-111.047,45.66532
+"Maple (Norway)","Acer","platanoides","Deciduous",NA,NA,-111.047,45.66586
+"Maple (Norway)","Acer","platanoides","Deciduous",NA,NA,-111.047,45.66553
+"Maple (Norway)","Acer","platanoides","Deciduous",NA,NA,-111.046,45.66549
+"Maple (Norway)","Acer","platanoides","Deciduous",NA,NA,-111.046,45.66546
+"Maple (Norway)","Acer","platanoides","Deciduous",NA,NA,-111.046,45.66544
+"Elm (American)","Ulmus","americana","Deciduous","Brandon",NA,-111.047,45.66548
+"Linden","Tilia","mongolica","Deciduous","Harvest Gold",NA,-111.047,45.66542
+"Mountain Ash","Sorbus","decora","Deciduous",NA,NA,-111.047,45.66537
+"Linden","Tilia",NA,"Deciduous",NA,NA,-111.046,45.66533
+"Linden","Tilia",NA,"Deciduous",NA,NA,-111.046,45.66533
+"Linden","Tilia",NA,"Deciduous",NA,NA,-111.046,45.66532
+"Linden","Tilia",NA,"Deciduous",NA,NA,-111.046,45.66531
+"Linden","Tilia",NA,"Deciduous",NA,NA,-111.046,45.6656
+"Linden","Tilia",NA,"Deciduous",NA,NA,-111.046,45.6658
+"Apple (Flower Crab)","Malus",NA,"Deciduous",NA,NA,-111.046,45.66628
+"Apple (Flower Crab)","Malus",NA,"Deciduous",NA,NA,-111.046,45.66604
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.047,45.66742
+"Linden","Tilia",NA,"Deciduous",NA,NA,-111.047,45.66729
+"Linden","Tilia",NA,"Deciduous",NA,NA,-111.047,45.66728
+"Linden","Tilia",NA,"Deciduous",NA,NA,-111.047,45.66728
+"Linden","Tilia",NA,"Deciduous",NA,NA,-111.047,45.66728
+"Linden","Tilia",NA,"Deciduous",NA,NA,-111.047,45.66729
+"Linden","Tilia",NA,"Deciduous",NA,NA,-111.048,45.6671
+"Linden","Tilia",NA,"Deciduous",NA,NA,-111.048,45.66712
+"Linden","Tilia",NA,"Deciduous",NA,NA,-111.048,45.66707
+"Linden","Tilia",NA,"Deciduous",NA,NA,-111.048,45.6671
+"Linden","Tilia",NA,"Deciduous",NA,NA,-111.048,45.66704
+"Linden","Tilia",NA,"Deciduous",NA,NA,-111.048,45.66707
+"Linden","Tilia",NA,"Deciduous",NA,NA,-111.048,45.66706
+"Apple (Flower Crab)","Malus",NA,"Deciduous","Dolgo",NA,-111.048,45.66692
+"Apple (Flower Crab)","Malus",NA,"Deciduous","Dolgo",NA,-111.047,45.66696
+"Chokecherry","Prunus","virginiana","Deciduous",NA,NA,-111.047,45.66693
+"Honey Locust","Gleditsia","triacanthos","Deciduous","Inermis",NA,-111.047,45.66669
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.047,45.66661
+"Linden","Tilia","mongolica","Deciduous","Harvest Gold",NA,-111.046,45.66646
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.047,45.66589
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.047,45.66577
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.047,45.66564
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.047,45.66564
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.048,45.66564
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.048,45.66564
+"Honey Locust","Gleditsia","triacanthos","Deciduous","Inermis",NA,-111.048,45.6656
+"Honey Locust","Gleditsia","triacanthos","Deciduous",NA,NA,-111.048,45.6656
+"Honey Locust","Gleditsia","triacanthos","Deciduous","Inermis",NA,-111.048,45.66565
+"Honey Locust","Gleditsia","triacanthos","Deciduous","Inermis",NA,-111.048,45.66564
+"Linden","Tilia","cordata","Deciduous","Greenspire",NA,-111.048,45.66544
+"Linden","Tilia","cordata","Deciduous","Greenspire",NA,-111.048,45.66537
+"Linden","Tilia","cordata","Deciduous","Greenspire",NA,-111.048,45.66531
+"Linden","Tilia","cordata","Deciduous","Greenspire",NA,-111.048,45.66544
+"Linden","Tilia","cordata","Deciduous","Greenspire",NA,-111.048,45.66531
+"Linden","Tilia","cordata","Deciduous","Greenspire",NA,-111.048,45.66544
+"Linden","Tilia","cordata","Deciduous","Greenspire",NA,-111.047,45.66531
+"Linden","Tilia","cordata","Deciduous","Greenspire",NA,-111.047,45.66545
+"Linden","Tilia","cordata","Deciduous","Greenspire",NA,-111.047,45.66538
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.047,45.66753
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.047,45.66762
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.047,45.66776
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.047,45.66765
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.049,45.66783
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.049,45.66784
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.048,45.66783
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.048,45.66783
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.048,45.66783
+"Mountain Ash","Sorbus","decora","Deciduous",NA,NA,-111.048,45.66792
+"Oakleaf Mountain Ash","Sorbus","x hybrida","Deciduous",NA,NA,-111.048,45.66774
+"Oakleaf Mountain Ash","Sorbus","x hybrida","Deciduous",NA,NA,-111.048,45.66774
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous","Patmore",NA,-111.049,45.66795
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous","Patmore",NA,-111.048,45.66828
+"Mayday Tree","Prunus","padus","Deciduous",NA,NA,-111.048,45.66814
+"Apple (Flower Crab)","Malus",NA,"Deciduous",NA,NA,-111.048,45.66809
+"Lilac (Japanese)","Syringa","reticulata","Deciduous",NA,NA,-111.048,45.66808
+"Mountain Ash","Sorbus","ocuparia","Deciduous",NA,NA,-111.049,45.668
+"Apple (Flower Crab)","Malus",NA,"Deciduous",NA,NA,-111.049,45.66533
+"Apple (Flower Crab)","Malus",NA,"Deciduous",NA,NA,-111.049,45.66541
+"Birch (Weeping)","Betula","pendula","Deciduous",NA,NA,-111.049,45.66575
+"Apple (Flower Crab)","Malus",NA,"Deciduous",NA,NA,-111.049,45.66584
+"Apple","Malus",NA,"Deciduous",NA,NA,-111.049,45.66547
+"Buckeye","Aesculus","glabra","Deciduous",NA,NA,-111.049,45.66553
+"Apple (Flower Crab)","Malus",NA,"Deciduous",NA,NA,-111.049,45.66541
+"Buckeye","Aesculus","glabra","Deciduous",NA,NA,-111.049,45.66547
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.049,45.66552
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.049,45.6656
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.049,45.66551
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.049,45.66548
+"Hackberry","Celtis","occidentalis","Deciduous",NA,NA,-111.049,45.6654
+"Buckeye","Aesculus","glabra","Deciduous",NA,NA,-111.049,45.66575
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.049,45.66573
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.049,45.66562
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.049,45.66562
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.049,45.66579
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.049,45.66584
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.049,45.66603
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.049,45.66624
+"Linden (American)","Tilia","americana","Deciduous",NA,NA,-111.049,45.66594
+"Apple (Flower Crab)","Malus",NA,"Deciduous",NA,NA,-111.049,45.66587
+"Apple (Flower Crab)","Malus",NA,"Deciduous",NA,NA,-111.049,45.66596
+"Apple (Flower Crab)","Malus",NA,"Deciduous",NA,NA,-111.049,45.66591
+"Apple (Flower Crab)","Malus",NA,"Deciduous",NA,NA,-111.049,45.66625
+"Apple (Flower Crab)","Malus",NA,"Deciduous",NA,NA,-111.049,45.66631
+"Apple (Flower Crab)","Malus",NA,"Deciduous",NA,NA,-111.049,45.66633
+"Maple (Norway)","Acer","platenoides","Deciduous",NA,NA,-111.049,45.66582
+"Oak (Bur)","Quercus","macrocarpa","Deciduous",NA,NA,-111.049,45.66586
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.05,45.66578
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.05,45.66583
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.05,45.66602
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.05,45.66614
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.05,45.66624
+"Apple (Flower Crab)","Malus",NA,"Deciduous",NA,NA,-111.05,45.66592
+"Apple (Flower Crab)","Malus",NA,"Deciduous",NA,NA,-111.05,45.66597
+"Apple (Flower Crab)","Malus",NA,"Deciduous",NA,NA,-111.05,45.66595
+"Apple (Flower Crab)","Malus",NA,"Deciduous",NA,NA,-111.05,45.66627
+"Apple (Flower Crab)","Malus",NA,"Deciduous",NA,NA,-111.05,45.66633
+"Apple (Flower Crab)","Malus",NA,"Deciduous",NA,NA,-111.049,45.66633
+"Maple (Norway)","Acer","platenoides","Deciduous",NA,NA,-111.05,45.66586
+"Maple (Norway)","Acer","platenoides","Deciduous",NA,NA,-111.05,45.66607
+"Oak (Bur)","Quercus","macrocarpa","Deciduous",NA,NA,-111.05,45.66584
+"Oak (Bur)","Quercus","macrocarpa","Deciduous",NA,NA,-111.05,45.66593
+"Linden (American)","Tilia","americana","Deciduous",NA,NA,-111.05,45.66534
+"Linden (American)","Tilia","americana","Deciduous",NA,NA,-111.05,45.66543
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.05,45.66551
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.05,45.66548
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.05,45.66557
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.05,45.66563
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.05,45.66563
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.05,45.66573
+"Oak (Bur)","Quercus","macrocarpa","Deciduous",NA,NA,-111.05,45.66558
+"Maple (Norway)","Acer","platenoides","Deciduous",NA,NA,-111.05,45.66575
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.05,45.66582
+"Honey Locust","Gleditsia","triacanthos","Deciduous",NA,NA,-111.05,45.66594
+"Honey Locust","Gleditsia","triacanthos","Deciduous",NA,NA,-111.05,45.66592
+"Honey Locust","Gleditsia","triacanthos","Deciduous",NA,NA,-111.05,45.66597
+"Serviceberry Tree","Amelanchier","canadensis","Deciduous",NA,NA,-111.05,45.66588
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.05,45.66606
+"Linden (American)","Tilia","americana","Deciduous",NA,NA,-111.05,45.66622
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.05,45.66616
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.05,45.66628
+"Elm (American)","Ulmus","americana","Deciduous","Brandon",NA,-111.05,45.6666
+"Ginalla Maple","Acer","ginnala","Deciduous",NA,NA,-111.05,45.66655
+"Birch (Weeping)","Betula","pendula","Deciduous",NA,NA,-111.05,45.66645
+"Apple (Flower Crab)","Malus",NA,"Deciduous",NA,NA,-111.05,45.66649
+"Apple (Flower Crab)","Malus",NA,"Deciduous",NA,NA,-111.049,45.66647
+"Apple (Flower Crab)","Malus",NA,"Deciduous",NA,NA,-111.049,45.66667
+"Apple (Flower Crab)","Malus",NA,"Deciduous",NA,NA,-111.049,45.66665
+"Apple (Flower Crab)","Malus",NA,"Deciduous",NA,NA,-111.049,45.66647
+"Apple (Flower Crab)","Malus",NA,"Deciduous",NA,NA,-111.049,45.6665
+"Apple (Flower Crab)","Malus",NA,"Deciduous",NA,NA,-111.049,45.66653
+"Birch (Weeping)","Betula","pendula","Deciduous",NA,NA,-111.049,45.66645
+"Elm (American)","Ulmus","americana","Deciduous","Brandon","5/19/2016 16:25",-111.049,45.66668
+"Apple (Flower Crab)","Malus",NA,"Deciduous",NA,NA,-111.049,45.66667
+"Apple (Flower Crab)","Malus",NA,"Deciduous",NA,NA,-111.049,45.66679
+"Apple (Flower Crab)","Malus",NA,"Deciduous",NA,NA,-111.049,45.66678
+"Apple (Flower Crab)","Malus",NA,"Deciduous",NA,NA,-111.049,45.66691
+"Elm (American)","Ulmus","americana","Deciduous",NA,NA,-111.049,45.66684
+"Lilac (Japanese)","Syringa","reticulata","Deciduous",NA,NA,-111.05,45.66696
+"Apple (Flower Crab)","Malus",NA,"Deciduous",NA,NA,-111.05,45.66697
+"Ash (Green)","Fraxinus","pennslvanica","Deciduous",NA,NA,-111.051,45.66699
+"Birch (Weeping)","Betula","pendula","Deciduous",NA,NA,-111.05,45.667
+"Oak (Bur)","Quercus","macrocarpa","Deciduous",NA,NA,-111.05,45.66704
+"Oak (Bur)","Quercus","macrocarpa","Deciduous",NA,NA,-111.05,45.66711
+"Oak (Bur)","Quercus","macrocarpa","Deciduous",NA,NA,-111.05,45.66709
+"Linden (American)","Tilia","americana","Deciduous",NA,NA,-111.05,45.66711
+"Linden (American)","Tilia","americana","Deciduous",NA,NA,-111.05,45.66712
+"Linden (American)","Tilia","americana","Deciduous",NA,NA,-111.05,45.66708
+"Linden (American)","Tilia","americana","Deciduous",NA,NA,-111.05,45.6671
+"Linden (American)","Tilia","americana","Deciduous",NA,NA,-111.05,45.66708
+"Cottonwood","Populus",NA,"Deciduous",NA,NA,-111.05,45.66729
+"Cottonwood","Populus",NA,"Deciduous",NA,NA,-111.05,45.66737
+"Cottonwood","Populus",NA,"Deciduous",NA,NA,-111.05,45.66737
+"Cottonwood","Populus",NA,"Deciduous",NA,NA,-111.05,45.66737
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.05,45.6673
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.05,45.66732
+"Birch (Paper)","Betula","papyrifera","Deciduous",NA,NA,-111.05,45.66733
+"Linden","Tilia","mongolica","Deciduous","Harvest Gold",NA,-111.05,45.66735
+"Mountain Ash","Sorbus","decora","Deciduous",NA,NA,-111.05,45.66736
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.05,45.66738
+"Elm (American)","Ulmus","americana","Deciduous","Brandon",NA,-111.05,45.66738
+"Lilac (Japanese)","Syringa","reticulata","Deciduous",NA,NA,-111.05,45.66762
+"Lilac (Japanese)","Syringa","reticulata","Deciduous",NA,NA,-111.05,45.66757
+"Princess Kay Plum","Prunus","nigra","Deciduous",NA,NA,-111.05,45.66775
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.049,45.66736
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.049,45.66738
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.049,45.66737
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.049,45.66739
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.049,45.66736
+"Mountain Ash","Sorbus","decora","Deciduous",NA,NA,-111.049,45.66732
+"Birch (Paper)","Betula","papyrifera","Deciduous",NA,NA,-111.05,45.66732
+"Birch (Paper)","Betula","papyrifera","Deciduous",NA,NA,-111.05,45.66729
+"Birch (Paper)","Betula","papyrifera","Deciduous",NA,NA,-111.049,45.6673
+"Birch (Paper)","Betula","papyrifera","Deciduous",NA,NA,-111.049,45.66727
+"Birch (Paper)","Betula","papyrifera","Deciduous",NA,NA,-111.049,45.66727
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous","Patmore",NA,-111.051,45.66793
+"Maple (Norway)","Acer","platanoides","Deciduous",NA,NA,-111.05,45.66797
+"Maple (Norway)","Acer","platanoides","Deciduous",NA,NA,-111.05,45.66783
+"Chokecherry","Prunus","virginiana","Deciduous",NA,NA,-111.05,45.66784
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.05,45.66783
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.05,45.66783
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.049,45.66783
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.049,45.66783
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.049,45.66783
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.049,45.66823
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.049,45.66839
+"Purple Frost Birch","Betula","platyphylla","Deciduous","Szechuanica x Pendula","6/7/2016 6:00",-111.049,45.66813
+"Apple (Flower Crab)","Malus",NA,"Deciduous",NA,NA,-111.049,45.66838
+"Apple (Flower Crab)","Malus",NA,"Deciduous",NA,NA,-111.049,45.66824
+"Apple (Flower Crab)","Malus",NA,"Deciduous",NA,NA,-111.049,45.66806
+"Maple (Norway)","Acer","platanoides","Deciduous",NA,NA,-111.051,45.66859
+"Buckeye","Aesculus","glabra","Deciduous",NA,NA,-111.051,45.66873
+"Elm (American)","Ulmus","americana","Deciduous",NA,NA,-111.051,45.66904
+"Apple (Flower Crab)","Malus",NA,"Deciduous",NA,NA,-111.051,45.66875
+"Apple (Flower Crab)","Malus",NA,"Deciduous",NA,NA,-111.051,45.66865
+"Apple","Malus",NA,"Deciduous",NA,NA,-111.051,45.66837
+"Oak (Bur)","Quercus","macrocarpa","Deciduous",NA,NA,-111.051,45.66906
+"Oak (Bur)","Quercus","macrocarpa","Deciduous",NA,NA,-111.051,45.66905
+"Elm (American)","Ulmus","americana","Deciduous",NA,NA,-111.051,45.66907
+"Apple (Flower Crab)","Malus","Hopa'","Deciduous",NA,NA,-111.052,45.66842
+"Birch (Weeping)","Betula","pendula","Deciduous",NA,NA,-111.052,45.66857
+"Oak (Bur)","Quercus","macrocarpa","Deciduous",NA,NA,-111.052,45.66868
+"Buckeye","Aesculus","glabra","Deciduous",NA,NA,-111.052,45.6687
+"Oak","Quercus","bicolor","Deciduous","Swamp White Oak",NA,-111.052,45.66893
+"Elm (American)","Ulmus","americana","Deciduous",NA,NA,-111.052,45.66815
+"Maple (Norway)","Acer","platanoides","Deciduous",NA,NA,-111.052,45.66924
+"Maple (Norway)","Acer","platanoides","Deciduous",NA,NA,-111.052,45.66924
+"Maple (Sugar)","Acer","saccharum","Deciduous",NA,NA,-111.052,45.66923
+"Maple (Norway)","Acer","platanoides","Deciduous",NA,NA,-111.051,45.66925
+"Maple (Norway)","Acer","platanoides","Deciduous",NA,NA,-111.051,45.66924
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.051,45.66956
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.051,45.66966
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.051,45.66977
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.051,45.66989
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.049,45.67002
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.05,45.67002
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.05,45.67001
+"Apple","Malus",NA,"Deciduous",NA,NA,-111.049,45.66861
+"Oak (Bur)","Quercus","macrocarpa","Deciduous",NA,NA,-111.048,45.66863
+"Apple (Flower Crab)","Malus",NA,"Deciduous",NA,NA,-111.048,45.66859
+"Apple (Flower Crab)","Malus",NA,"Deciduous",NA,NA,-111.048,45.66883
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.048,45.66869
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.048,45.66866
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.048,45.66877
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.048,45.66888
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.048,45.66898
+"Apple (Flower Crab)","Malus",NA,"Deciduous","Donald Wyman",NA,-111.049,45.66857
+"Donald Wyman Crab","Malus",NA,"Deciduous","Donald Wyman",NA,-111.049,45.66862
+"Donald Wyman Crab","Malus",NA,"Deciduous","Donald Wyman",NA,-111.049,45.66867
+"Donald Wyman Crab","Malus",NA,"Deciduous",NA,NA,-111.049,45.66863
+"Rocky Mountain Maple","Acer","glabrum","Deciduous",NA,NA,-111.049,45.66866
+"Rocky Mountain Maple","Acer","glabrum","Deciduous",NA,NA,-111.049,45.66866
+"Chokecherry","Prunus","virginiana","Deciduous",NA,NA,-111.051,45.6707
+"Chokecherry","Prunus","virginiana","Deciduous",NA,NA,-111.051,45.67069
+"Chokecherry","Prunus","virginiana","Deciduous",NA,NA,-111.052,45.6707
+"Chokecherry","Prunus","virginiana","Deciduous",NA,NA,-111.052,45.6707
+"Chokecherry","Prunus","virginiana","Deciduous",NA,NA,-111.052,45.67071
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.052,45.67084
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.052,45.67084
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.052,45.67082
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.052,45.67085
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.052,45.67084
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.052,45.67081
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.052,45.67082
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.052,45.67083
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.052,45.67081
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.052,45.67082
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.052,45.6708
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.052,45.67081
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.052,45.6708
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.052,45.67079
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.052,45.67077
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.052,45.67078
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.052,45.67079
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.052,45.67078
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.052,45.67078
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.052,45.67079
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.052,45.67077
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.052,45.67076
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.052,45.67074
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.052,45.67078
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.052,45.67078
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.052,45.67081
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.051,45.6708
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.052,45.67081
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.052,45.67081
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.052,45.67082
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.052,45.67081
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.052,45.6708
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.052,45.67082
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.052,45.67082
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.052,45.6708
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.052,45.6708
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.052,45.67082
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.052,45.67085
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.052,45.67084
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.052,45.67085
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.052,45.67084
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.052,45.67084
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.052,45.67085
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.052,45.67085
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.052,45.67087
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.052,45.67086
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.052,45.67088
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.052,45.67089
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.052,45.6709
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.052,45.67102
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.052,45.67101
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.052,45.67103
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.052,45.67103
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.052,45.67105
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.052,45.67105
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.052,45.67103
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.052,45.67102
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.052,45.67101
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.052,45.67101
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.052,45.671
+"Willow","Salix",NA,"Deciduous",NA,NA,-111.052,45.67104
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.052,45.67103
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.045,45.66844
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.045,45.66793
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.045,45.6678
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.045,45.66767
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.045,45.66738
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.046,45.66762
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.046,45.66762
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.046,45.66768
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.046,45.66792
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.046,45.66801
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.046,45.66809
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.046,45.66793
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.046,45.66792
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.046,45.66782
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.046,45.66792
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.047,45.66776
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.046,45.66755
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.047,45.66751
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.046,45.6675
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.047,45.66746
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.046,45.66746
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.046,45.66743
+"Birch (Weeping)","Betula","pendula","Deciduous",NA,NA,-111.046,45.66819
+"Birch (Weeping)","Betula","pendula","Deciduous",NA,NA,-111.046,45.66804
+"Maple (Norway)","Acer","platanoides","Deciduous",NA,NA,-111.046,45.66809
+"Maple (Norway)","Acer","platanoides","Deciduous",NA,NA,-111.046,45.66792
+"Hackberry","Celtis","occidentalis","Deciduous",NA,NA,-111.046,45.66768
+"Elm (Siberian)","Ulmus","pumila","Deciduous",NA,NA,-111.046,45.6676
+"Cherry","Prunus","amur","Deciduous",NA,NA,-111.046,45.66758
+"Cherry","Prunus","amur","Deciduous",NA,NA,-111.046,45.66749
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.046,45.66749
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.046,45.66746
+"Apple (Flower Crab)","Malus",NA,"Deciduous",NA,NA,-111.046,45.6674
+"Apple","Malus",NA,"Deciduous",NA,NA,-111.046,45.66741
+"Apple (Flower Crab)","Malus",NA,"Deciduous",NA,NA,-111.046,45.66743
+"Apple (Flower Crab)","Malus",NA,"Deciduous",NA,NA,-111.046,45.66819
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.047,45.6682
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.047,45.66809
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.047,45.66811
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.046,45.66809
+"Cherry","Prunus","amur","Deciduous",NA,NA,-111.046,45.66751
+"Elm (American)","Ulmus","americana","Deciduous",NA,NA,-111.046,45.66742
+"Honey Locust","Gleditsia","triacanthos","Deciduous","Inermis",NA,-111.05,45.66699
+"Honey Locust","Gleditsia","triacanthos","Deciduous","Inermis",NA,-111.05,45.66822
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.05,45.67002
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.052,45.6711
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.052,45.67112
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.052,45.67114
+"Apple","Malus",NA,"Deciduous",NA,NA,-111.048,45.66889
+"Purple Frost Birch","Betula","platyphylla","Deciduous","Szechuanica x Pendula",NA,-111.048,45.66904
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.047,45.66894
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.047,45.66883
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.047,45.66879
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.047,45.66875
+"Linden","Tilia","americana","Deciduous",NA,NA,-111.047,45.66874
+"Linden","Tilia","americana","Deciduous",NA,NA,-111.047,45.66885
+"Linden","Tilia","americana","Deciduous",NA,NA,-111.047,45.66866
+"Linden","Tilia","americana","Deciduous",NA,NA,-111.047,45.66856
+"Linden","Tilia","americana","Deciduous",NA,NA,-111.047,45.66855
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.047,45.66855
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.047,45.66841
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.047,45.66837
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.047,45.66829
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.047,45.66829
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.047,45.66824
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.047,45.6682
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.047,45.66817
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.047,45.66807
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.047,45.6681
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.047,45.66799
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.047,45.66808
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.047,45.66793
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.047,45.66786
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.047,45.66784
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.047,45.66784
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.047,45.66784
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.048,45.66784
+"Apple (Flower Crab)","Malus",NA,"Deciduous",NA,NA,-111.047,45.66812
+"Mountain Ash","Sorbus","acuparia","Deciduous",NA,NA,-111.048,45.66801
+"Apple","Malus",NA,"Deciduous",NA,NA,-111.048,45.66817
+"Oak (Bur)","Quercus","macrocarpa","Deciduous",NA,NA,-111.047,45.6683
+"Oak (Bur)","Quercus","macrocarpa","Deciduous",NA,NA,-111.048,45.6686
+"Lilac (Japanese)","Syringa","reticulata","Deciduous",NA,NA,-111.048,45.6684
+"Tatarian Maple","Acer","tatarian","Deciduous",NA,NA,-111.048,45.66846
+"Tatarian Maple","Acer","tatarian","Deciduous",NA,NA,-111.048,45.66849
+"Tatarian Maple","Acer","tatarian","Deciduous",NA,NA,-111.048,45.66852
+"Hawthorne","Crataegus","crus-galli","Deciduous","Inermis",NA,-111.048,45.66864
+"Apple (Flower Crab)","Malus",NA,"Deciduous",NA,NA,-111.048,45.66866
+"Hawthorne","Crataegus","crus-galli","Deciduous","Inermis",NA,-111.048,45.66877
+"Apple (Flower Crab)","Malus",NA,"Deciduous",NA,NA,-111.047,45.66849
+"Birch (Paper)","Betula","papyrifera","Deciduous",NA,NA,-111.049,45.66769
+"Linden","Tilia",NA,"Deciduous",NA,NA,-111.048,45.66705
+"Linden","Tilia",NA,"Deciduous",NA,NA,-111.048,45.66706
+"Linden","Tilia",NA,"Deciduous",NA,NA,-111.048,45.66707
+"Linden","Tilia",NA,"Deciduous",NA,NA,-111.048,45.6671
+"Linden","Tilia",NA,"Deciduous",NA,NA,-111.048,45.66712
+"Linden","Tilia",NA,"Deciduous",NA,NA,-111.048,45.6671
+"Linden","Tilia",NA,"Deciduous",NA,NA,-111.048,45.66707
+"Linden","Tilia",NA,"Deciduous",NA,NA,-111.049,45.66711
+"Linden","Tilia",NA,"Deciduous",NA,NA,-111.049,45.66712
+"Linden","Tilia",NA,"Deciduous",NA,NA,-111.049,45.66709
+"Linden","Tilia",NA,"Deciduous",NA,NA,-111.049,45.66711
+"Linden","Tilia",NA,"Deciduous",NA,NA,-111.049,45.66708
+"Linden","Tilia",NA,"Deciduous",NA,NA,-111.049,45.66708
+"Birch (Paper)","Betula","papyrifera","Deciduous",NA,NA,-111.049,45.66709
+"Honey Locust","Gleditsia","triacanthos","Deciduous","Inermis",NA,-111.048,45.66592
+"Maple (Norway)","Acer","platanoides","Deciduous",NA,NA,-111.048,45.66624
+"Maple (Norway)","Acer","platanoides","Deciduous",NA,NA,-111.049,45.66624
+"Honey Locust","Gleditsia","triacanthos","Deciduous","Inermis",NA,-111.048,45.66642
+"Honey Locust","Gleditsia","triacanthos","Deciduous","Inermis",NA,-111.048,45.66652
+"Honey Locust","Gleditsia","triacanthos","Deciduous","Inermis",NA,-111.048,45.66657
+"Honey Locust","Gleditsia","triacanthos","Deciduous","Inermis",NA,-111.048,45.66662
+"Lilac (Japanese)","Syringa","reticulata","Deciduous",NA,NA,-111.048,45.66669
+"Linden","Tilia","americana","Deciduous",NA,NA,-111.049,45.66634
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.049,45.66634
+"Mountain Ash","Sorbus","aucuparia","Deciduous",NA,NA,-111.048,45.66667
+"Mountain Ash","Sorbus","aucuparia","Deciduous",NA,NA,-111.048,45.66672
+"Birch (Weeping)","Betula","pendula","Deciduous",NA,NA,-111.049,45.66642
+"Apple (Flower Crab)","Malus",NA,"Deciduous","Hopa",NA,-111.051,45.66735
+"Apple (Flower Crab)","Malus",NA,"Deciduous","Hopa",NA,-111.051,45.66735
+"Elm (American)","Ulmus","americana","Deciduous","Brandon",NA,-111.051,45.66733
+"Elm (American)","Ulmus","americana","Deciduous","Brandon",NA,-111.051,45.66734
+"Elm (American)","Ulmus","americana","Deciduous",NA,NA,-111.051,45.66728
+"Chokecherry","Prunus","virginiana","Deciduous",NA,NA,-111.051,45.66727
+"Ginalla Maple","Acer","ginnala","Deciduous",NA,NA,-111.051,45.66729
+"Birch (Paper)","Betula","papryifera","Deciduous",NA,NA,-111.051,45.6673
+"Birch (Paper)","Betula","papryifera","Deciduous",NA,NA,-111.051,45.66727
+"Birch (Paper)","Betula","papryifera","Deciduous",NA,NA,-111.051,45.66725
+"Apple (Flower Crab)","Malus",NA,"Deciduous","Hopa",NA,-111.051,45.66754
+"Apple (Flower Crab)","Malus",NA,"Deciduous","Hopa",NA,-111.051,45.66744
+"Apple (Flower Crab)","Malus",NA,"Deciduous","Hopa",NA,-111.051,45.66743
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.053,45.66592
+"Elm (American)","Ulmus","americana","Deciduous",NA,NA,-111.052,45.66559
+"Russian Olive","Elaeagnus","angustifolia","Deciduous",NA,NA,-111.052,45.66535
+"Elm (American)","Ulmus","americana","Deciduous",NA,NA,-111.053,45.66529
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.053,45.6653
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.053,45.66543
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.054,45.66831
+"Maple","Acer","ginnala","Deciduous",NA,NA,-111.053,45.66788
+"Maple","Acer","ginnala","Deciduous",NA,NA,-111.053,45.6679
+"Maple","Acer","ginnala","Deciduous",NA,NA,-111.053,45.66793
+"Elm (American)","Ulmus","americana","Deciduous",NA,NA,-111.052,45.66787
+"Elm (American)","Ulmus","americana","Deciduous","Brandon","4/8/2016 17:10",-111.052,45.66797
+"Elm (American)","Ulmus","americana","Deciduous",NA,NA,-111.052,45.66819
+"Elm (American)","Ulmus","americana","Deciduous",NA,NA,-111.052,45.66827
+"Elm (American)","Ulmus","americana","Deciduous",NA,NA,-111.052,45.66836
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.046,45.66474
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.046,45.66479
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.046,45.66486
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.046,45.66499
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.046,45.66476
+"Birch (Paper)","Betula","papyrifera","Deciduous",NA,NA,-111.046,45.66502
+"Linden","Tilia",NA,"Deciduous",NA,NA,-111.046,45.66508
+"Linden","Tilia",NA,"Deciduous",NA,NA,-111.046,45.66502
+"Linden","Tilia",NA,"Deciduous",NA,NA,-111.046,45.66507
+"Linden","Tilia",NA,"Deciduous",NA,NA,-111.046,45.66506
+"Birch (Weeping)","Betula","pendula","Deciduous",NA,NA,-111.046,45.66501
+"Oak (Bur)","Quercus","macrocarpa","Deciduous",NA,NA,-111.047,45.66484
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.046,45.66463
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.046,45.66461
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.046,45.66462
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.046,45.66451
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.046,45.66449
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.046,45.66448
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.046,45.66449
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.046,45.66448
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.046,45.66435
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.046,45.66434
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.046,45.66436
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.046,45.66436
+"Apple","Malus",NA,"Deciduous",NA,NA,-111.046,45.66456
+"Chokecherry","Prunus","virginiana","Deciduous",NA,NA,-111.046,45.66413
+"Buckeye","Aesculus","glabra","Deciduous",NA,NA,-111.046,45.66404
+"Chokecherry","Prunus","virginiana","Deciduous",NA,NA,-111.046,45.66387
+"Lilac (Japanese)","Syringa","reticulata","Deciduous",NA,NA,-111.046,45.6638
+"Elm (American)","Ulmus","americana","Deciduous",NA,NA,-111.053,45.66506
+"Oak (Bur)","Quercus","macrocarpa","Deciduous",NA,NA,-111.053,45.66505
+"Oak (Bur)","Quercus","macrocarpa","Deciduous",NA,NA,-111.053,45.66506
+"Elm (American)","Ulmus","americana","Deciduous",NA,NA,-111.053,45.66506
+"Oak (Bur)","Quercus","macrocarpa","Deciduous",NA,NA,-111.052,45.66506
+"Oak (Bur)","Quercus","macrocarpa","Deciduous",NA,NA,-111.052,45.66478
+"Elm (American)","Ulmus","americana","Deciduous",NA,NA,-111.052,45.66467
+"Oak (Bur)","Quercus","macrocarpa","Deciduous",NA,NA,-111.052,45.6641
+"Maple (Norway)","Acer","platanoides","Deciduous",NA,NA,-111.053,45.6641
+"Elm (American)","Ulmus","americana","Deciduous",NA,NA,-111.053,45.6641
+"Oak (Bur)","Quercus","macrocarpa","Deciduous",NA,NA,-111.053,45.6641
+"Maple (Norway)","Acer","platanoides","Deciduous",NA,NA,-111.053,45.6641
+"Linden","Tilia",NA,"Deciduous",NA,NA,-111.053,45.66416
+"Ash (Black)","Fraxinus","nigra","Deciduous",NA,NA,-111.053,45.66427
+"Elm (American)","Ulmus","americana","Deciduous",NA,NA,-111.053,45.66438
+"Elm (American)","Ulmus","americana","Deciduous",NA,NA,-111.053,45.66472
+"Linden","Tilia",NA,"Deciduous",NA,NA,-111.053,45.66483
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.049,45.66613
+"Honey Locust","Gleditsia","triacanthos","Deciduous","Inermis",NA,-111.051,45.66898
+"Honey Locust","Gleditsia","triacanthos","Deciduous","Inermis",NA,-111.051,45.66899
+"Maple (Norway)","Acer","platanoides","Deciduous","Emerald Lustre",NA,-111.05,45.66789
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.053,45.67095
+"Apple (Flower Crab)","Malus",NA,"Deciduous",NA,NA,-111.051,45.6653
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.052,45.66549
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.052,45.66549
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.052,45.66549
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.052,45.6655
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.052,45.6655
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.052,45.6655
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.052,45.6655
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.052,45.66532
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.052,45.66532
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.052,45.66534
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.052,45.66532
+"Maple","Acer","ginnala","Deciduous",NA,NA,-111.052,45.66535
+"Maple (Norway)","Acer","platanoides","Deciduous",NA,"7/27/2015 0:00",-111.052,45.66538
+"Maple (Norway)","Acer","platanoides","Deciduous",NA,NA,-111.052,45.66547
+"Maple (Norway)","Acer","platanoides","Deciduous",NA,NA,-111.052,45.66554
+"Maple (Norway)","Acer","platanoides","Deciduous",NA,NA,-111.052,45.66571
+"Maple (Norway)","Acer","platanoides","Deciduous",NA,NA,-111.052,45.66581
+"Maple (Norway)","Acer","platanoides","Deciduous",NA,NA,-111.052,45.66589
+"Lilac (Japanese)","Syringa","reticulata","Deciduous",NA,NA,-111.052,45.66598
+"Maple","Acer","ginnala","Deciduous",NA,NA,-111.052,45.66592
+"Maple","Acer","ginnala","Deciduous",NA,NA,-111.052,45.66595
+"Maple","Acer","ginnala","Deciduous",NA,NA,-111.051,45.66577
+"Maple","Acer","ginnala","Deciduous",NA,"8/6/2015 0:00",-111.051,45.66578
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.051,45.66577
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.051,45.66576
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.051,45.66578
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.052,45.66576
+"Honey Locust","Gleditsia","triacanthos","Deciduous","Inermis",NA,-111.051,45.66598
+"Honey Locust","Gleditsia","triacanthos","Deciduous","Inermis",NA,-111.051,45.66595
+"Honey Locust","Gleditsia","triacanthos","Deciduous","Skycole",NA,-111.051,45.66596
+"Honey Locust","Gleditsia","triacanthos","Deciduous","Skycole",NA,-111.051,45.66599
+"Honey Locust","Gleditsia","triacanthos","Deciduous","Skycole",NA,-111.051,45.66599
+"Hotwings Maple","Acer","tataricum","Deciduous","GarAnn",NA,-111.051,45.6653
+"Maple","Acer","x freemanii","Deciduous","Autum Blaze",NA,-111.049,45.66876
+"Linden","Tilia",NA,"Deciduous",NA,NA,-111.049,45.66875
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.049,45.66921
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.049,45.66921
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.049,45.66921
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.049,45.66921
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.048,45.66921
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.048,45.6692
+"Japanese Tree Lilac","Syringa","reticluata","Deciduous",NA,NA,-111.048,45.66943
+"Japanese Tree Lilac","Syringa","reticluata","Deciduous",NA,NA,-111.048,45.66954
+"Japanese Tree Lilac","Syringa","reticluata","Deciduous",NA,NA,-111.048,45.66962
+"Japanese Tree Lilac","Syringa","reticluata","Deciduous",NA,NA,-111.048,45.66973
+"Japanese Tree Lilac","Syringa","reticluata","Deciduous",NA,NA,-111.048,45.66983
+"Japanese Tree Lilac","Syringa","reticluata","Deciduous",NA,NA,-111.048,45.66996
+"Elm","Ulmus","americana","Deciduous",NA,NA,-111.048,45.66934
+"Elm","Ulmus","americana","Deciduous",NA,NA,-111.048,45.66942
+"Elm","Ulmus","americana","Deciduous",NA,NA,-111.048,45.66951
+"Elm","Ulmus","americana","Deciduous",NA,NA,-111.048,45.66959
+"Elm","Ulmus","americana","Deciduous",NA,NA,-111.048,45.66968
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.048,45.66977
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.048,45.66981
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.048,45.66997
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.048,45.66997
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.048,45.67003
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.048,45.67002
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.049,45.67002
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.049,45.67002
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.049,45.67002
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.049,45.67002
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.048,45.66901
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.048,45.66905
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.048,45.66905
+"Accolade Elm","Ulmus","x","Deciduous","Accolade",NA,-111.048,45.66933
+"Accolade Elm","Ulmus","x","Deciduous","Accolade",NA,-111.048,45.66952
+"Green Mtn. Maple","Acer","saccharum","Deciduous","Green Mountain",NA,-111.048,45.66941
+"Green Mtn. Maple","Acer","saccharum","Deciduous","Green Mountain",NA,-111.048,45.66962
+"Green Mtn. Maple","Acer","saccharum","Deciduous","Green Mountain",NA,-111.048,45.66985
+"Accolade Elm","Ulmus","x","Deciduous","Accolade",NA,-111.048,45.66996
+"Accolade Elm","Ulmus","x","Deciduous","Accolade",NA,-111.048,45.66973
+"Crabapple","Malus",NA,"Deciduous",NA,NA,-111.049,45.6653
+"White Ash","Fraxinus","americana","Deciduous","Calypso",NA,-111.052,45.66587
+"White Ash","Fraxinus","americana","Deciduous","Calypso",NA,-111.047,45.66827
+"Meteor Cherry","Prunus","cerasus","Deciduous","Meteor",NA,-111.053,45.67043
+"Meteor Cherry","Prunus","cerasus","Deciduous","Meteor",NA,-111.053,45.67045
+"Mount Royal Plumb","Prunus","domestica","Deciduous","Mount Royal",NA,-111.053,45.67056
+"Elm (American)","Ulmus","americana","Deciduous",NA,NA,-111.053,45.67017
+"Elm (American)","Ulmus","americana","Deciduous",NA,NA,-111.053,45.66998
+"Elm (American)","Ulmus","americana","Deciduous",NA,NA,-111.053,45.66987
+"Elm (American)","Ulmus","americana","Deciduous",NA,NA,-111.053,45.66982
+"Elm (American)","Ulmus","americana","Deciduous",NA,NA,-111.053,45.66958
+"Elm (American)","Ulmus","americana","Deciduous",NA,NA,-111.054,45.66959
+"Elm (American)","Ulmus","americana","Deciduous",NA,NA,-111.054,45.66968
+"Elm (American)","Ulmus","americana","Deciduous",NA,NA,-111.053,45.66965
+"Elm (American)","Ulmus","americana","Deciduous",NA,NA,-111.054,45.67066
+"Elm (American)","Ulmus","americana","Deciduous",NA,NA,-111.054,45.67084
+"Elm (American)","Ulmus","americana","Deciduous",NA,NA,-111.054,45.6709
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.053,45.66978
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.053,45.67006
+"Hawthorne","Crataegus","oxycantha","Deciduous","Toba",NA,-111.053,45.66974
+"Hawthorne","Crataegus","oxycantha","Deciduous","Toba",NA,-111.053,45.66978
+"Hawthorne","Crataegus","oxycantha","Deciduous","Toba",NA,-111.053,45.66979
+"Mountain Ash","Sorbus","decora","Deciduous",NA,NA,-111.053,45.67014
+"Elm (American)","Ulmus","americana","Deciduous",NA,NA,-111.053,45.67014
+"Willow","Salix","alba","Deciduous","Vitellina",NA,-111.054,45.6699
+"Willow","Salix","alba","Deciduous","Golden Rod",NA,-111.053,45.67031
+"Cottonwood","Populus","deltoides","Deciduous",NA,NA,-111.053,45.67073
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.053,45.671
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.053,45.67098
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.053,45.67098
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.053,45.67097
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.053,45.67096
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.053,45.67099
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.053,45.67096
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.053,45.67094
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.053,45.67093
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.053,45.67095
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.053,45.67098
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.053,45.67097
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.053,45.67097
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.053,45.67098
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.053,45.67101
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.053,45.67101
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.053,45.67103
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.053,45.671
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.053,45.67053
+"Apple (Flower Crab)","Malus",NA,"Deciduous",NA,NA,-111.053,45.6707
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.052,45.67066
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.052,45.67089
+"Honey Locust","Gleditsia","triacanthos","Deciduous","Inermis",NA,-111.053,45.66873
+"Honey Locust","Gleditsia","triacanthos","Deciduous","Inermis",NA,-111.053,45.66897
+"Freeman Maple","Acer","x freemanii","Deciduous",NA,NA,-111.054,45.66878
+"Maple (Silver)","Acer","saccharinum","Deciduous",NA,NA,-111.054,45.66876
+"Radiant Crabapple","Malus",NA,"Deciduous","Radiant",NA,-111.054,45.66873
+"Crabapple","Malus",NA,"Deciduous",NA,NA,-111.053,45.66922
+"Crabapple","Malus",NA,"Deciduous",NA,NA,-111.053,45.66933
+"Elm (American)","Ulmus","americana","Deciduous",NA,NA,-111.052,45.66956
+"Elm (American)","Ulmus","americana","Deciduous",NA,NA,-111.052,45.66968
+"Elm (American)","Ulmus","americana","Deciduous",NA,NA,-111.052,45.66981
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.054,45.66939
+"Aspen","Populus","tremuloides","Deciduous",NA,"7/27/2015 0:00",-111.054,45.66937
+"Aspen","Populus","tremuloides","Deciduous",NA,"7/27/2015 0:00",-111.054,45.66936
+"Boxelder","Acer","negundo","Deciduous",NA,NA,-111.054,45.66932
+"Willow","Salix",NA,"Deciduous",NA,NA,-111.054,45.66919
+"Cottonwood","Populus","x acuminata","Deciduous",NA,NA,-111.054,45.66892
+"Cottonwood","Populus","x acuminata","Deciduous",NA,NA,-111.054,45.669
+"Willow","Salix",NA,"Deciduous",NA,NA,-111.054,45.66906
+"Willow","Salix",NA,"Deciduous",NA,NA,-111.054,45.66907
+"Willow","Salix",NA,"Deciduous",NA,NA,-111.054,45.66914
+"Willow","Salix",NA,"Deciduous",NA,NA,-111.054,45.66917
+"Willow","Salix",NA,"Deciduous",NA,NA,-111.054,45.66919
+"Hackberry","Celtis","occidentalis","Deciduous",NA,NA,-111.054,45.66936
+"Maple","Acer","tataricum","Deciduous","Hot WIngs",NA,-111.054,45.66934
+"Elm (American)","Ulmus","americana","Deciduous",NA,NA,-111.054,45.66935
+"Elm (American)","Ulmus","americana","Deciduous",NA,NA,-111.054,45.66926
+"Plum","Prunus","nigra","Deciduous",NA,NA,-111.051,45.66748
+"Elm (American)","Ulmus","americana","Deciduous",NA,NA,-111.052,45.66754
+"Maple (Norway)","Acer","plantinoides","Deciduous",NA,NA,-111.052,45.66773
+"Linden (American)","Tilia",NA,"Deciduous",NA,NA,-111.052,45.668
+"Elm (American)","Ulmus","americana","Deciduous",NA,NA,-111.052,45.67002
+"Elm (American)","Ulmus","americana","Deciduous",NA,NA,-111.052,45.67016
+"Elm (Siberian)","Ulmus","pumila","Deciduous",NA,NA,-111.055,45.67087
+"Elm (Siberian)","Ulmus","pumila","Deciduous",NA,NA,-111.055,45.67091
+"Elm (Siberian)","Ulmus","pumila","Deciduous",NA,NA,-111.055,45.67094
+"Elm (Siberian)","Ulmus","pumila","Deciduous",NA,NA,-111.055,45.67098
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.056,45.67099
+"Maple","Acer","saccharinum","Deciduous",NA,NA,-111.056,45.67099
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.056,45.67099
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.056,45.67099
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.056,45.67099
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.056,45.67099
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.057,45.67099
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.057,45.67099
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.057,45.67099
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.057,45.671
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.056,45.67069
+"Apple","Malus","baccata","Deciduous",NA,NA,-111.055,45.67067
+"Apple","Malus","baccata","Deciduous",NA,NA,-111.056,45.66994
+"Apple","Malus","baccata","Deciduous",NA,NA,-111.056,45.67008
+"Apple","Malus","baccata","Deciduous",NA,NA,-111.057,45.66995
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.056,45.67038
+"Maple (Norway)","Acer","platanoides","Deciduous",NA,"4/7/2016 0:00",-111.049,45.66382
+"Maple (Norway)","Acer","platanoides","Deciduous",NA,"4/7/2016 0:00",-111.049,45.66386
+"Maple (Norway)","Acer","platanoides","Deciduous",NA,NA,-111.049,45.66393
+"Maple (Norway)","Acer","platanoides","Deciduous",NA,NA,-111.049,45.66409
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.05,45.66752
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.05,45.66753
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.05,45.66754
+"Mountain Ash","Sorbus","aucuparia","Deciduous","Black Hawk",NA,-111.051,45.66691
+"Mountain Ash","Sorbus","aucuparia","Deciduous","Black Hawk",NA,-111.051,45.66693
+"Princess Kay Plum","Prunus","nigra","Deciduous","Princess Kay",NA,-111.052,45.66844
+"Princess Kay Plum","Prunus","nigra","Deciduous","Princess Kay",NA,-111.052,45.66857
+"Princess Kay Plum","Prunus","nigra","Deciduous","Princess Kay",NA,-111.052,45.66853
+"Linden","Tilia","americana","Deciduous",NA,NA,-111.052,45.6686
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.051,45.66196
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.051,45.66196
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.051,45.66196
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.051,45.66196
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.051,45.66196
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.051,45.66196
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.051,45.66196
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.051,45.66196
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.051,45.66196
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.051,45.66196
+"Elm (American)","Ulmus","americana","Deciduous","Brandon",NA,-111.05,45.66157
+"Elm (American)","Ulmus","americana","Deciduous","Brandon",NA,-111.05,45.66157
+"Elm (American)","Ulmus","americana","Deciduous","Brandon",NA,-111.051,45.66157
+"Elm (American)","Ulmus","americana","Deciduous","Brandon",NA,-111.052,45.66157
+"Elm (American)","Ulmus","americana","Deciduous","Brandon",NA,-111.052,45.66099
+"Honey Locust","Gleditsia","triacanthos","Deciduous","Inermis SkyLine",NA,-111.05,45.66099
+"Honey Locust","Gleditsia","triacanthos","Deciduous","Inermis SkyLine",NA,-111.051,45.66099
+"Honey Locust","Gleditsia","triacanthos","Deciduous","Inermis SkyLine",NA,-111.051,45.66157
+"Honey Locust","Gleditsia","triacanthos","Deciduous","Inermis SkyLine",NA,-111.051,45.66157
+"Honey Locust","Gleditsia","triacanthos","Deciduous","Inermis SkyLine",NA,-111.051,45.66157
+"Calypso Ash","Fraxinus","americana","Deciduous","Calypso",NA,-111.05,45.66152
+"Calypso Ash","Fraxinus","americana","Deciduous","Calypso",NA,-111.05,45.66161
+"Prairie SpireAsh (Green)","Fraxinus","pennsylvanica","Deciduous","Rugby",NA,-111.051,45.66157
+"Prairie SpireAsh (Green)","Fraxinus","pennsylvanica","Deciduous","Rugby",NA,-111.051,45.66157
+"Prairie SpireAsh (Green)","Fraxinus","pennsylvanica","Deciduous","Rugby",NA,-111.051,45.66099
+"Calypso Ash","Fraxinus","americana","Deciduous","Calypso",NA,-111.051,45.66099
+"Calypso Ash","Fraxinus","americana","Deciduous","Calypso",NA,-111.051,45.66099
+"Calypso Ash","Fraxinus","americana","Deciduous","Calypso",NA,-111.051,45.66099
+"Calypso Ash","Fraxinus","americana","Deciduous","Calypso",NA,-111.05,45.66095
+"Calypso Ash","Fraxinus","americana","Deciduous","Calypso",NA,-111.05,45.66103
+"Prairie SpireAsh (Green)","Fraxinus","pennsylvanica","Deciduous","Rugby",NA,-111.052,45.66215
+"Calypso Ash","Fraxinus","americana","Deciduous","Calypso",NA,-111.052,45.66215
+"Apple (Flower Crab)","Malus",NA,"Deciduous","Selkirk",NA,-111.049,45.66547
+"Apple (Flower Crab)","Malus",NA,"Deciduous","Selkirk",NA,-111.046,45.66818
+"Apple (Flower Crab)","Malus",NA,"Deciduous","Selkirk",NA,-111.046,45.66817
+"Apple (Flower Crab)","Malus",NA,"Deciduous","Selkirk",NA,-111.046,45.66821
+"Apple (Flower Crab)","Malus",NA,"Deciduous","Selkirk",NA,-111.046,45.66819
+"Maple","Acer","rubrum","Deciduous",NA,NA,-111.05,45.66858
+"Apple (Flower Crab)","Malus",NA,"Deciduous",NA,NA,-111.046,45.66807
+"Elm (American)","Ulmus","americana","Deciduous","Brandon",NA,-111.05,45.66042
+"Elm (American)","Ulmus","americana","Deciduous","Brandon",NA,-111.049,45.66042
+"Elm (American)","Ulmus","americana","Deciduous","Brandon",NA,-111.047,45.66044
+"Elm (American)","Ulmus","americana","Deciduous","Brandon",NA,-111.047,45.66043
+"Prairie SpireAsh (Green)","Fraxinus","pennsylvanica","Deciduous","Rugby",NA,-111.047,45.66043
+"Prairie SpireAsh (Green)","Fraxinus","pennsylvanica","Deciduous","Rugby",NA,-111.048,45.66043
+"Prairie SpireAsh (Green)","Fraxinus","pennsylvanica","Deciduous","Rugby",NA,-111.048,45.66043
+"Prairie SpireAsh (Green)","Fraxinus","pennsylvanica","Deciduous","Rugby",NA,-111.048,45.66043
+"Prairie SpireAsh (Green)","Fraxinus","pennsylvanica","Deciduous","Rugby",NA,-111.048,45.66043
+"Prairie SpireAsh (Green)","Fraxinus","pennsylvanica","Deciduous","Rugby",NA,-111.049,45.66042
+"Prairie SpireAsh (Green)","Fraxinus","pennsylvanica","Deciduous","Rugby",NA,-111.049,45.66042
+"Prairie SpireAsh (Green)","Fraxinus","pennsylvanica","Deciduous","Rugby",NA,-111.049,45.66042
+"Honey Locust","Gleditsia","triacanthos","Deciduous","Inermis SkyLine",NA,-111.051,45.66598
+"Hot Wings Maple","Acer","tataricum","Deciduous",NA,NA,-111.051,45.66612
+"Elm (American)","Ulmus","americana","Deciduous",NA,NA,-111.054,45.67007
+"Elm (American)","Ulmus","americana","Deciduous",NA,NA,-111.054,45.67008
+"Honey Locust","Gleditsia","triacanthos","Deciduous","Inermis SkyLine",NA,-111.051,45.67026
+"Honey Locust","Gleditsia","triacanthos","Deciduous","Inermis SkyLine",NA,-111.052,45.67028
+"Crimson King","Acer","platanoides","Deciduous","Crimson King",NA,-111.05,45.66841
+"Apple (Flower Crab)","Malus",NA,"Deciduous",NA,NA,-111.048,45.66826
+"Chokecherry","Prunus","padus","Deciduous",NA,NA,-111.051,45.66878
+"Oakleaf Mtn. Ash","Sorbus","x hybrida","Deciduous",NA,NA,-111.052,45.6709
+"Oakleaf Mtn. Ash","Sorbus",NA,"Deciduous",NA,NA,-111.052,45.67093
+"Oakleaf Mtn. Ash","Sorbus","x hybrida","Deciduous",NA,NA,-111.052,45.67095
+"Northern Flare Maple","Acer","saccharum","Deciduous",NA,NA,-111.052,45.66079
+"Northern Flare Maple","Acer","saccharum","Deciduous",NA,NA,-111.052,45.66067
+"Elm (American)","Ulmus","americana","Deciduous",NA,NA,-111.052,45.66053
+"Elm (American)","Ulmus","americana","Deciduous",NA,NA,-111.051,45.66041
+"Elm (American)","Ulmus","americana","Deciduous",NA,NA,-111.05,45.66041
+"Elm (American)","Ulmus","americana","Deciduous",NA,NA,-111.05,45.66041
+"Ash (Green)","Fraxinus","americana","Deciduous",NA,NA,-111.051,45.66041
+"Ash (Green)","Fraxinus","americana","Deciduous",NA,NA,-111.051,45.66041
+"Ash (Green)","Fraxinus","americana","Deciduous",NA,NA,-111.051,45.66041
+"Ash (Green)","Fraxinus","americana","Deciduous",NA,NA,-111.051,45.66041
+"Black, Walnut","Juglans","nigra","Deciduous",NA,NA,-111.052,45.66789
+"Lilac (Japanese)","Syringa","reticulata","Deciduous",NA,NA,-111.05,45.67104
+"Hawthorne","Crataegus","oxycantha","Deciduous","Toba",NA,-111.05,45.67094
+"Hawthorne","Crataegus","oxycantha","Deciduous","Toba",NA,-111.05,45.67036
+"Ginnala Maple","Acer","ginnala","Deciduous",NA,NA,-111.05,45.67046
+"Flowering Crabapple","Malus",NA,"Deciduous",NA,NA,-111.05,45.67087
+"Birch (Weeping)","Betula","pendula","Deciduous",NA,NA,-111.05,45.67027
+"Birch (Weeping)","Betula","pendula","Deciduous",NA,NA,-111.049,45.67025
+"European Mtn. Ash","Sorbus","aucuparia","Deciduous",NA,NA,-111.048,45.67049
+"European Mtn. Ash","Sorbus","aucuparia","Deciduous",NA,NA,-111.048,45.67064
+"Showy Mtn. Ash","Sorbus","decora","Deciduous",NA,NA,-111.048,45.67067
+"Flowering Crabapple","Malus",NA,"Deciduous",NA,NA,-111.048,45.67059
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.048,45.67098
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.049,45.67104
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.048,45.67027
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.048,45.67038
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.048,45.67049
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.048,45.67061
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.048,45.67071
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.048,45.67079
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.048,45.67086
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.048,45.67095
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.048,45.67103
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.048,45.67112
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.049,45.67087
+"Maple (Norway)","Acer","platanoides","Deciduous",NA,NA,-111.049,45.67088
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.049,45.67107
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.049,45.67111
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.049,45.67105
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.049,45.67102
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.049,45.67084
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.049,45.67085
+"Maple (Norway)","Acer","platanoides","Deciduous",NA,NA,-111.049,45.67109
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.049,45.67092
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.05,45.67107
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.046,45.6701
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.045,45.67005
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.045,45.66996
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.045,45.66988
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,"1/5/2016 0:00",-111.045,45.6698
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.045,45.66971
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.045,45.66961
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.045,45.66933
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,"7/18/2016 14:21",-111.045,45.66928
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.046,45.66923
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.046,45.66923
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.046,45.66923
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.046,45.66922
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.046,45.66923
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.046,45.66923
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.046,45.66923
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.047,45.66922
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.047,45.66927
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.047,45.66935
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.047,45.66945
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.047,45.66952
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.047,45.66962
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.047,45.66988
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.047,45.66995
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.047,45.67004
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.047,45.6701
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.046,45.6701
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.046,45.6701
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.046,45.6701
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.046,45.6701
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.046,45.67011
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.046,45.67011
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.046,45.6701
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.046,45.6701
+"Maple (Norway)","Acer","platanoides","Deciduous",NA,NA,-111.047,45.66979
+"Apple (Flower Crab)","Malus",NA,"Deciduous",NA,NA,-111.046,45.6699
+"Apple (Flower Crab)","Malus",NA,"Deciduous",NA,NA,-111.046,45.66981
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.046,45.67002
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.047,45.67002
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.046,45.6699
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.046,45.66979
+"Apple (Flower Crab)","Malus",NA,"Deciduous",NA,"1/1/2015 0:00",-111.047,45.66991
+"Apple (Flower Crab)","Malus",NA,"Deciduous",NA,NA,-111.047,45.67004
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.047,45.66989
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.047,45.66982
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.047,45.66973
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.047,45.66964
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.047,45.66936
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.047,45.66928
+"Apple (Flower Crab)","Malus",NA,"Deciduous",NA,NA,-111.047,45.66972
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.047,45.66923
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.047,45.66923
+"Maple","Acer","tataricum","Deciduous",NA,NA,-111.047,45.66928
+"Chokecherry","Prunus","virginiana","Deciduous",NA,NA,-111.047,45.66943
+"Tatarian Maple","Acer","tataricum","Deciduous",NA,NA,-111.048,45.66929
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.047,45.66923
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.047,45.66923
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.047,45.66922
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.048,45.66922
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.048,45.66931
+"Lilac (Japanese)","Syringa","reticulata","Deciduous",NA,NA,-111.048,45.66943
+"Lilac (Japanese)","Syringa","reticulata","Deciduous",NA,NA,-111.048,45.66954
+"Lilac (Japanese)","Syringa","reticulata","Deciduous",NA,NA,-111.048,45.66963
+"Lilac (Japanese)","Syringa","reticulata","Deciduous",NA,NA,-111.048,45.66975
+"Lilac (Japanese)","Syringa","reticulata","Deciduous",NA,NA,-111.048,45.66985
+"Lilac (Japanese)","Syringa","reticulata","Deciduous",NA,NA,-111.048,45.66995
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.048,45.67005
+"Apple (Flower Crab)","Malus",NA,"Deciduous",NA,NA,-111.047,45.6693
+"Maple (Norway)","Acer","platanoides","Deciduous",NA,NA,-111.051,45.67041
+"Maple (Norway)","Acer","platanoides","Deciduous",NA,NA,-111.051,45.67042
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.051,45.67065
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.051,45.67065
+"Mountain Ash","Sorbus","aucuparia","Deciduous",NA,NA,-111.051,45.67064
+"Mountain Ash","Sorbus","aucuparia","Deciduous",NA,NA,-111.05,45.67108
+"Maple (Norway)","Acer","platanoides","Deciduous",NA,NA,-111.051,45.67104
+"Chokecherry","Prunus","virginiana","Deciduous",NA,"1/1/2015 0:00",-111.05,45.67088
+"Honey Locust","Gleditsia","tricanthos","Deciduous","Inermis",NA,-111.05,45.67066
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.046,45.66912
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.046,45.66913
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.046,45.66913
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.046,45.66912
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.046,45.66912
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.046,45.66912
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.046,45.66912
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.046,45.66912
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.047,45.66912
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.047,45.66908
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.047,45.66898
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.047,45.66897
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.046,45.66901
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.046,45.66904
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.046,45.66903
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.046,45.669
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.046,45.66893
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.046,45.66886
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.045,45.66868
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.045,45.6688
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.045,45.66894
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.045,45.66909
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.047,45.66876
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.047,45.66855
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.047,45.66844
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.047,45.66833
+"Elm (American)","Ulmus","americana","Deciduous",NA,NA,-111.046,45.66906
+"Elm (American)","Ulmus","americana","Deciduous",NA,NA,-111.046,45.66905
+"Elm (American)","Ulmus","americana","Deciduous",NA,NA,-111.046,45.66906
+"Birch (Weeping)","Betula","pendula","Deciduous",NA,NA,-111.046,45.66888
+"Birch (Weeping)","Betula","pendula","Deciduous",NA,NA,-111.047,45.66854
+"Birch (Weeping)","Betula","pendula","Deciduous",NA,NA,-111.046,45.66849
+"Birch (Weeping)","Betula","pendula","Deciduous",NA,NA,-111.047,45.66844
+"Apple (Flower Crab)","Malus",NA,"Deciduous",NA,NA,-111.046,45.66887
+"Mountain Ash","Sorbus","aucuparia","Deciduous",NA,NA,-111.046,45.66851
+"Linden","Tilia",NA,"Deciduous","Linden",NA,-111.048,45.66948
+"Crabapple","Malus","x","Deciduous","Spring Snow",NA,-111.047,45.6695
+"Crabapple","Malus","x","Deciduous","Spring Snow",NA,-111.047,45.6695
+"Crabapple","Malus","x","Deciduous","Spring Snow",NA,-111.047,45.66951
+"Honey Locust","Gleditsia","triacanthos","Deciduous","Inermis",NA,-111.05,45.6706
+"Linden","Tilia",NA,"Deciduous",NA,NA,-111.05,45.67061
+"Linden","Tilia",NA,"Deciduous",NA,NA,-111.05,45.67076
+"Linden","Tilia",NA,"Deciduous",NA,NA,-111.05,45.6707
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.045,45.66953
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.045,45.66944
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.055,45.66578
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.054,45.6656
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.054,45.66551
+"Cottonwood","Populus","deltoides","Deciduous",NA,NA,-111.055,45.66568
+"Cottonwood","Populus","deltoides","Deciduous",NA,NA,-111.055,45.66564
+"Cottonwood","Populus","deltoides","Deciduous",NA,NA,-111.055,45.66549
+"Cottonwood","Populus","deltoides","Deciduous",NA,NA,-111.055,45.66549
+"Cottonwood","Populus","deltoides","Deciduous",NA,NA,-111.055,45.66546
+"Chokecherry","Prunus","virginiana","Deciduous",NA,NA,-111.055,45.66527
+"Chokecherry","Prunus","virginiana","Deciduous",NA,NA,-111.055,45.66526
+"Oak (Bur)","Quercus","macrocarpa","Deciduous",NA,NA,-111.053,45.66409
+"Maple (Norway)","Acer","platanoides","Deciduous",NA,NA,-111.054,45.66409
+"Elm (American)","Ulmus","americana","Deciduous",NA,NA,-111.054,45.66409
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.054,45.66409
+"Oak (Bur)","Quercus","macrocarpa","Deciduous",NA,NA,-111.054,45.66409
+"Maple (Norway)","Acer","platanoides","Deciduous",NA,NA,-111.054,45.66409
+"Elm (American)","Ulmus","americana","Deciduous",NA,NA,-111.055,45.66409
+"Oak (Bur)","Quercus","macrocarpa","Deciduous",NA,NA,-111.055,45.66409
+"Elm (American)","Acer","platanoides","Deciduous",NA,NA,-111.055,45.66408
+"Elm (American)","Ulmus","americana","Deciduous",NA,NA,-111.055,45.66409
+"Cottonwood","Populus","deltoides","Deciduous",NA,NA,-111.055,45.66525
+"Cottonwood","Populus","deltoides","Deciduous",NA,NA,-111.055,45.66534
+"Cottonwood","Populus","deltoides","Deciduous",NA,NA,-111.055,45.66531
+"Cottonwood","Populus","deltoides","Deciduous",NA,NA,-111.055,45.66554
+"Cottonwood","Populus","deltoides","Deciduous",NA,NA,-111.055,45.66559
+"Cottonwood","Populus","deltoides","Deciduous",NA,NA,-111.055,45.66567
+"Cottonwood","Populus","deltoides","Deciduous",NA,NA,-111.055,45.66577
+"Maple (Silver)","Acer","saccharinum","Deciduous",NA,NA,-111.055,45.6654
+"Maple (Silver)","Acer","saccharinum","Deciduous",NA,NA,-111.055,45.66548
+"Maple (Norway)","Acer","platanoides","Deciduous",NA,NA,-111.055,45.66542
+"Pacific Sunset Maple","Acer","truncatum x A. platanoides","Deciduous","Warrenred",NA,-111.05,45.67023
+"Maple (Norway)","Acer","platanoides","Deciduous","Deborah",NA,-111.05,45.67024
+"Maple (Norway)","Acer","platanoides","Deciduous","Deborah",NA,-111.05,45.67023
+"Honey Locust","Gleditsia","triacanthos","Deciduous","Skycole",NA,-111.05,45.67033
+"Honey Locust","Gleditsia","triacanthos","Deciduous","Skycole",NA,-111.05,45.67033
+"Maple (Norway)","Acer","platanoides","Deciduous","Homestead",NA,-111.055,45.66561
+"Maple (Norway)","Acer","platanoides","Deciduous","Homestead",NA,-111.055,45.66558
+"Maple (Norway)","Acer","platanoides","Deciduous","Homestead",NA,-111.055,45.66571
+"Maple (Norway)","Acer","platanoides","Deciduous","Homestead",NA,-111.055,45.66545
+"Maple (Norway)","Acer","platanoides","Deciduous","Homestead",NA,-111.055,45.6654
+"Maple (Norway)","Acer","platanoides","Deciduous","Homestead",NA,-111.055,45.66536
+"Maple (Norway)","Acer","platanoides","Deciduous",NA,NA,-111.046,45.66889
+"Maple (Norway)","Acer","platanoides","Deciduous",NA,NA,-111.048,45.67067
+"Maple (Norway)","Acer","platanoides","Deciduous",NA,NA,-111.049,45.67109
+"Emerald Lustre Maple","Acer","platanoides","Deciduous","Pond",NA,-111.051,45.67036
+"Autumn Blaze Maple","Acer","freemanii","Deciduous","Jeffsred",NA,-111.051,45.67031
+"Prairie SpireAsh (Green)","Fraxinus","pennsylvanica","Deciduous","Rugby",NA,-111.056,45.66554
+"Prairie SpireAsh (Green)","Fraxinus","pennsylvanica","Deciduous","Rugby",NA,-111.055,45.66541
+"Prairie SpireAsh (Green)","Fraxinus","pennsylvanica","Deciduous","Rugby",NA,-111.055,45.66526
+"Hawthorne","Crataegus","x mordensis","Deciduous","Toba",NA,-111.054,45.66587
+"Elm (American)","Ulmus","americana","Deciduous","Brandon",NA,-111.054,45.66521
+"Elm (American)","Ulmus","americana","Deciduous","Brandon",NA,-111.054,45.66524
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.053,45.6653
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.054,45.66535
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.054,45.66533
+"Mountain Ash","Sorbus","decora","Deciduous",NA,NA,-111.054,45.66539
+"Russian Olive","Elaeagnus","angustifolia","Deciduous",NA,NA,-111.053,45.66545
+"Russian Olive","Elaeagnus","angustifolia","Deciduous",NA,NA,-111.053,45.66544
+"Russian Olive","Elaeagnus","angustifolia","Deciduous",NA,NA,-111.054,45.66547
+"Mountain Ash","Sorbus","decora","Deciduous",NA,NA,-111.054,45.66569
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.053,45.66575
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.054,45.66572
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.054,45.66576
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.054,45.66579
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.054,45.66639
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.054,45.6664
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.054,45.66635
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.054,45.66626
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.053,45.66613
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.053,45.666
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.053,45.66588
+"Apple (Flower Crab)","Malus",NA,"Deciduous",NA,NA,-111.054,45.66589
+"Lilac (Japanese)","Syringa","reticulata","Deciduous",NA,NA,-111.05,45.6703
+"Lilac (Japanese)","Syringa","reticulata","Deciduous",NA,NA,-111.051,45.6703
+"Colorado Blue Spruce","Picea","pungens","Coniferous",NA,NA,-111.049,45.66501
+"Colorado Blue Spruce","Picea","pungens","Coniferous",NA,NA,-111.049,45.66501
+"Colorado Blue Spruce","Picea","pungens","Coniferous",NA,NA,-111.049,45.66501
+"Rocky MTN Juniper","Juniperus","scopulorum","Coniferous",NA,"8/16/2016 19:15",-111.048,45.66506
+"Rocky MTN Juniper","Juniperus","scopulorum","Coniferous",NA,"8/16/2016 19:14",-111.048,45.66507
+"Rocky MTN Juniper","Juniperus","scopulorum","Coniferous",NA,"8/16/2016 19:15",-111.048,45.66506
+"Colorado Blue Spruce","Picea","pungens","Coniferous",NA,NA,-111.049,45.66501
+"Black Hills Spruce","Picea","glauca","Coniferous","Densata",NA,-111.049,45.66503
+"Black Hills Spruce","Picea","glauca","Coniferous","Densata",NA,-111.049,45.66506
+"Black Hills Spruce","Picea","glauca","Coniferous","Densata",NA,-111.049,45.66506
+"Colorado Blue Spruce","Picea","pungens","Coniferous",NA,NA,-111.05,45.66313
+"Colorado Blue Spruce","Picea","pungens","Coniferous",NA,NA,-111.05,45.66322
+"Colorado Blue Spruce","Picea","pungens","Coniferous",NA,NA,-111.05,45.66422
+"Colorado Blue Spruce","Picea","pungens","Coniferous",NA,NA,-111.048,45.66286
+"Austrian Pine","Pinus","nigra","Coniferous",NA,NA,-111.047,45.66287
+"Colorado Blue Spruce","Picea","pungens","Coniferous",NA,NA,-111.047,45.66287
+"Colorado Blue Spruce","Picea","pungens","Coniferous",NA,NA,-111.047,45.66289
+"Colorado Blue Spruce","Picea","pungens","Coniferous",NA,NA,-111.048,45.66285
+"Colorado Blue Spruce","Picea","pungens","Coniferous",NA,NA,-111.052,45.66364
+"Colorado Blue Spruce","Picea","pungens","Coniferous",NA,NA,-111.052,45.66362
+"Colorado Blue Spruce","Picea","pungens","Coniferous",NA,NA,-111.05,45.66501
+"Ponderosa Pine","Pinus","ponderosa","Coniferous",NA,NA,-111.051,45.66497
+"Austrian Pine","Pinus","nigra","Coniferous",NA,NA,-111.051,45.66463
+"Black Hills Spruce","Picea","glauca","Coniferous","Densata",NA,-111.051,45.66464
+"Colorado Blue Spruce","Picea","pungens","Coniferous",NA,NA,-111.051,45.66457
+"Mugo Pine","Pinus","mugo","Coniferous",NA,NA,-111.052,45.66321
+"Norway Spruce","Picea","abies","Coniferous",NA,NA,-111.052,45.66316
+"Norway Spruce","Picea","abies","Coniferous",NA,NA,-111.052,45.66309
+"Norway Spruce","Picea","abies","Coniferous",NA,NA,-111.052,45.66303
+"Colorado Blue Spruce","Picea","pungens","Coniferous",NA,NA,-111.052,45.66305
+"Norway Spruce","Picea","abies","Coniferous",NA,NA,-111.052,45.66282
+"Norway Spruce","Picea","abies","Coniferous",NA,NA,-111.052,45.66279
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.061,45.66585
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.061,45.66589
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.061,45.6656
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.061,45.66553
+"Bristlecone Pine","Pinus","longaeva","Coniferous",NA,NA,-111.052,45.66045
+"Rocky MTN Juniper","Juniperus","scopulorum","Coniferous",NA,NA,-111.052,45.66055
+"Scotch Pine","Pinus","sylvestris","Coniferous",NA,NA,-111.052,45.66077
+"Scotch Pine","Pinus","sylvestris","Coniferous",NA,NA,-111.052,45.66073
+"Scotch Pine","Pinus","sylvestris","Coniferous",NA,NA,-111.052,45.6607
+"Black Hills Spruce","Picea","glauca","Coniferous","Densata",NA,-111.052,45.66061
+"Black Hills Spruce","Picea","glauca","Coniferous","Densata",NA,-111.052,45.6606
+"Colorado Blue Spruce","Picea","pungens","Coniferous",NA,NA,-111.05,45.66215
+"Colorado Blue Spruce","Picea","pungens","Coniferous",NA,NA,-111.05,45.66215
+"Colorado Blue Spruce","Picea","pungens","Coniferous",NA,NA,-111.051,45.66214
+"Colorado Blue Spruce","Picea","pungens","Coniferous",NA,NA,-111.051,45.66216
+"Colorado Blue Spruce","Pinus","glauca","Coniferous","Nigra",NA,-111.051,45.66214
+"Colorado Blue Spruce","Picea","pungens","Coniferous","Glauca Seste",NA,-111.051,45.66368
+"Ponderosa Pine","Pinus","ponderosa","Coniferous",NA,NA,-111.051,45.66295
+"Ponderosa Pine","Pinus","ponderosa","Coniferous",NA,NA,-111.051,45.66296
+"Ponderosa Pine","Pinus","ponderosa","Coniferous",NA,NA,-111.051,45.66292
+"Colorado Blue Spruce","Picea","pungens","Coniferous",NA,NA,-111.051,45.66393
+"Colorado Blue Spruce","Picea","pungens","Coniferous",NA,NA,-111.052,45.66394
+"Colorado Blue Spruce","Picea","pungens","Coniferous",NA,NA,-111.051,45.66384
+"Colorado Blue Spruce","Picea","pungens","Coniferous",NA,NA,-111.052,45.6639
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.05,45.6601
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.051,45.66003
+"Douglas-fir","Pseudotsuga","menziesii","Coniferous",NA,NA,-111.051,45.65997
+"Pine (Ponderosa)","Pinus","ponderosa","Coniferous",NA,NA,-111.05,45.65991
+"Douglas-fir","Pseudotsuga","menziesii","Coniferous",NA,NA,-111.05,45.66003
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.051,45.65884
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.051,45.65873
+"Pine (Scott)","Pinus","sylvestris","Coniferous",NA,NA,-111.047,45.65848
+"Pine (Scott)","Pinus","sylvestris","Coniferous",NA,NA,-111.047,45.65852
+"Pine (Scott)","Pinus","sylvestris","Coniferous",NA,NA,-111.047,45.65854
+"Pine (Scott)","Pinus","sylvestris","Coniferous",NA,NA,-111.047,45.65858
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.047,45.65843
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.047,45.65845
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.047,45.65848
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.047,45.65851
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.047,45.65854
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.047,45.65857
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.047,45.6586
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.047,45.6586
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.047,45.65863
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.047,45.65862
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.047,45.65866
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.047,45.65866
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.047,45.65868
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.047,45.65869
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.047,45.65871
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.049,45.65725
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.049,45.65717
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.049,45.65717
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.049,45.6572
+"Pine (Austrian)","Pinus","nigra","Coniferous",NA,NA,-111.049,45.65722
+"Pine (Ponderosa)","Pinus","ponderosa","Coniferous",NA,NA,-111.047,45.65835
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.047,45.65842
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.047,45.65866
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.047,45.65868
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.048,45.65872
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.048,45.65714
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.048,45.65717
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.048,45.65722
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.048,45.65726
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.048,45.65728
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.048,45.65727
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.048,45.65735
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.048,45.65735
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.048,45.65737
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.048,45.6574
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.048,45.65742
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.048,45.65745
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.048,45.65749
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.048,45.65751
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.048,45.65752
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.048,45.65754
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.048,45.65758
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.048,45.65756
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.048,45.6576
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.048,45.65761
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.048,45.65758
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.048,45.65767
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.047,45.6577
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.047,45.65778
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.047,45.65783
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.047,45.65791
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.047,45.65792
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.047,45.65788
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.047,45.65795
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.047,45.65791
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.047,45.65794
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.047,45.65797
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.047,45.65801
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.047,45.65806
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.047,45.65804
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.047,45.65813
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.047,45.65808
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.047,45.65801
+"Douglas-fir","Pseudotsuga","menziesii","Coniferous",NA,NA,-111.048,45.6577
+"Pine (Ponderosa)","Pinus","ponderosa","Coniferous",NA,NA,-111.048,45.65767
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.049,45.65716
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.049,45.65717
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.049,45.65719
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.049,45.6572
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.049,45.65723
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.049,45.65725
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.049,45.65728
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.049,45.65727
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.049,45.65732
+"Pine (Scott)","Pinus","sylvestris","Coniferous",NA,NA,-111.047,45.65797
+"Pine (Scott)","Pinus","sylvestris","Coniferous",NA,NA,-111.047,45.65786
+"Pine (Scott)","Pinus","sylvestris","Coniferous",NA,NA,-111.047,45.65783
+"Pine (Scott)","Pinus","sylvestris","Coniferous",NA,NA,-111.047,45.65783
+"Pine (Scott)","Pinus","sylvestris","Coniferous",NA,NA,-111.047,45.6578
+"Pine (Scott)","Pinus","sylvestris","Coniferous",NA,NA,-111.047,45.65781
+"Pine (Scott)","Pinus","sylvestris","Coniferous",NA,NA,-111.047,45.65775
+"Pine (Scott)","Pinus","sylvestris","Coniferous",NA,NA,-111.048,45.65776
+"Pine (Scott)","Pinus","sylvestris","Coniferous",NA,NA,-111.048,45.65775
+"Pine (Scott)","Pinus","sylvestris","Coniferous",NA,NA,-111.048,45.65771
+"Pine (Scott)","Pinus","sylvestris","Coniferous",NA,NA,-111.048,45.65761
+"Pine (Scott)","Pinus","sylvestris","Coniferous",NA,NA,-111.048,45.65748
+"Pine (Scott)","Pinus","sylvestris","Coniferous",NA,NA,-111.048,45.65726
+"Pine (Scott)","Pinus","sylvestris","Coniferous",NA,NA,-111.048,45.6572
+"Spruce","Picea","pungens","Coniferous",NA,NA,-111.049,45.6567
+"Spruce","Picea","pungens","Coniferous",NA,NA,-111.049,45.6567
+"Spruce","Picea","pungens","Coniferous",NA,NA,-111.049,45.65675
+"Spruce","Picea","pungens","Coniferous",NA,NA,-111.049,45.65675
+"Spruce","Picea","pungens","Coniferous",NA,NA,-111.049,45.65676
+"Spruce","Picea","pungens","Coniferous",NA,NA,-111.049,45.65677
+"Spruce","Picea","pungens","Coniferous",NA,NA,-111.049,45.65676
+"Spruce","Picea","pungens","Coniferous",NA,NA,-111.049,45.65677
+"Spruce","Picea","pungens","Coniferous",NA,NA,-111.049,45.65677
+"Spruce","Picea","pungens","Coniferous",NA,NA,-111.048,45.65717
+"Spruce","Picea","pungens","Coniferous",NA,NA,-111.049,45.65721
+"Spruce","Picea","pungens","Coniferous",NA,NA,-111.049,45.65717
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.05,45.66857
+"Pine (Scott)","Pinus","sylvestris","Coniferous",NA,NA,-111.05,45.66841
+"Spruce","Picea","pungens","Coniferous","Iseli Fastigiata","6/8/2015 0:00",-111.05,45.66783
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.05,45.66839
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.051,45.6684
+"Pine (Scott)","Pinus","sylvestris","Coniferous",NA,NA,-111.05,45.66859
+"Pine (Scott)","Pinus","sylvestris","Coniferous",NA,NA,-111.05,45.66856
+"Pine","Pinus","nigra","Coniferous",NA,NA,-111.05,45.66851
+"Spruce","Picea","glauca","Coniferous",NA,NA,-111.05,45.66846
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.05,45.66844
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.05,45.66852
+"Spruce","Picea","glauca","Coniferous",NA,NA,-111.05,45.66854
+"Spruce","Picea","glauca","Coniferous",NA,NA,-111.05,45.66863
+"Spruce","Picea","pungens","Coniferous",NA,NA,-111.05,45.66864
+"Spruce","Picea","pungens","Coniferous",NA,NA,-111.05,45.66822
+"Douglas-fir","Pseudotsuga","menziesii","Coniferous",NA,NA,-111.05,45.66824
+"Spruce","Picea","pungens","Coniferous",NA,NA,-111.05,45.6683
+"Spruce","Picea","pungens","Coniferous",NA,NA,-111.046,45.66496
+"Spruce","Picea","pungens","Coniferous",NA,NA,-111.046,45.66495
+"Spruce","Picea","pungens","Coniferous",NA,NA,-111.046,45.665
+"Spruce","Picea","pungens","Coniferous",NA,NA,-111.045,45.66513
+"Spruce","Picea","pungens","Coniferous",NA,NA,-111.045,45.66512
+"Spruce","Picea","glauca","Coniferous",NA,NA,-111.046,45.66466
+"Spruce","Picea","pungens","Coniferous",NA,NA,-111.046,45.66459
+"Spruce","Picea","pungens","Coniferous",NA,NA,-111.046,45.66437
+"Spruce","Picea","glauca","Coniferous",NA,NA,-111.046,45.66445
+"Spruce","Picea","pungens","Coniferous",NA,NA,-111.047,45.66418
+"Spruce","Picea","pungens","Coniferous",NA,NA,-111.044,45.66381
+"Spruce","Picea","pungens","Coniferous",NA,NA,-111.044,45.66381
+"Spruce","Picea","pungens","Coniferous",NA,NA,-111.044,45.66378
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.054,45.66792
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.054,45.66784
+"Pine (Austrian)","Pinus","nigra","Coniferous",NA,NA,-111.054,45.66766
+"Pine (Austrian)","Pinus","nigra","Coniferous",NA,NA,-111.054,45.66769
+"Pine (Austrian)","Pinus","nigra","Coniferous",NA,NA,-111.053,45.66778
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.053,45.66777
+"Spruce (Norway)","Picea","abies","Coniferous",NA,NA,-111.053,45.66784
+"Pine (Mugo)","Pinus","mugo","Coniferous",NA,NA,-111.053,45.66803
+"Spruce","Picea","pungens","Coniferous",NA,NA,-111.052,45.66843
+"Spruce","Picea","pungens","Coniferous",NA,NA,-111.052,45.66845
+"Spruce","Picea","pungens","Coniferous",NA,NA,-111.052,45.6685
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.052,45.66853
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.052,45.66858
+"Arborvitae","Thuja","occidentalis","Coniferous","Techny",NA,-111.052,45.66563
+"Juniper (Rocky Mtn)","Juniperus","scopulorum","Coniferous",NA,NA,-111.052,45.66562
+"Pine (Ponderosa)","Pinus","ponderosa","Coniferous",NA,NA,-111.053,45.66549
+"Pine (Ponderosa)","Pinus","ponderosa","Coniferous",NA,NA,-111.053,45.66537
+"Spruce","Picea","pungens","Coniferous",NA,NA,-111.049,45.66876
+"Spruce","Picea","pungens","Coniferous",NA,NA,-111.049,45.66876
+"Douglas-fir","Pseudotsuga","menziesii","Coniferous",NA,NA,-111.048,45.669
+"Douglas-fir","Pseudotsuga","menziesii","Coniferous",NA,NA,-111.048,45.66897
+"Douglas-fir","Pseudotsuga","menziesii","Coniferous",NA,NA,-111.048,45.66895
+"Spruce","Picea","pungens","Coniferous",NA,NA,-111.048,45.66982
+"Spruce","Picea","pungens","Coniferous",NA,NA,-111.048,45.66989
+"Spruce","Picea","pungens","Coniferous",NA,NA,-111.048,45.66995
+"Spruce","Picea","pungens","Coniferous",NA,NA,-111.048,45.66994
+"Juniper (Rocky Mtn)","Juniperus","scopulorum","Coniferous","Welchi",NA,-111.051,45.66727
+"Juniper (Rocky Mtn)","Juniperus","scopulorum","Coniferous","Welchi",NA,-111.051,45.66731
+"Juniper (Rocky Mtn)","Juniperus","scopulorum","Coniferous","Welchi",NA,-111.051,45.66736
+"Juniper (Rocky Mtn)","Juniperus","scopulorum","Coniferous","Welchi",NA,-111.051,45.66735
+"Juniper (Rocky Mtn)","Juniperus","scopulorum","Coniferous","Welchi",NA,-111.051,45.66735
+"Spruce","Picea","pungens","Coniferous",NA,NA,-111.051,45.66745
+"Spruce","Picea","pungens","Coniferous",NA,NA,-111.051,45.66746
+"Spruce","Picea","pungens","Coniferous",NA,NA,-111.051,45.66748
+"Spruce","Picea","pungens","Coniferous",NA,NA,-111.051,45.66746
+"Limber Pine","Picea","glauca","Coniferous",NA,NA,-111.052,45.66613
+"Spruce (white)","Picea","glauca","Coniferous",NA,NA,-111.052,45.6661
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.052,45.66614
+"Spruce (Engelmann)","Picea","engelmannii","Coniferous",NA,NA,-111.052,45.66621
+"Spruce (white)","Picea","glauca","Coniferous",NA,NA,-111.052,45.66615
+"Larch","Larix","decidua","Coniferous",NA,NA,-111.052,45.66621
+"Larch","Larix","decidua","Coniferous",NA,NA,-111.052,45.6661
+"Larch","Larix","decidua","Coniferous",NA,NA,-111.052,45.66612
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.052,45.66628
+"Spruce (Engelmann)","Picea","engelmannii","Coniferous",NA,NA,-111.052,45.66627
+"Spruce (white)","Picea","glauca","Coniferous",NA,NA,-111.052,45.66628
+"Pine (Scott)","Pinus","sylvestris","Coniferous",NA,NA,-111.052,45.66621
+"Pine (Ponderosa)","Pinus","ponderosa","Coniferous",NA,NA,-111.051,45.66622
+"Spruce (white)","Picea","glauca","Coniferous",NA,NA,-111.051,45.66613
+"Spruce","Picea","pungens","Coniferous",NA,NA,-111.051,45.66617
+"Spruce","Picea","pungens","Coniferous",NA,NA,-111.051,45.66612
+"Spruce","Picea","pungens","Coniferous",NA,NA,-111.051,45.66614
+"Spruce","Picea","pungens","Coniferous",NA,NA,-111.051,45.66629
+"Spruce (white)","Picea","glauca","Coniferous",NA,NA,-111.051,45.66631
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.051,45.66607
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.051,45.66609
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.051,45.66613
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.051,45.66618
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.051,45.6663
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.051,45.66634
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.051,45.66666
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.051,45.66659
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.051,45.66655
+"Pine (Bristlecone)","Pinus","aristata","Coniferous",NA,NA,-111.051,45.66661
+"Fir (Concolor)","Abies","concolor","Coniferous",NA,NA,-111.051,45.66662
+"Spruce (white)","Picea","glauca","Coniferous",NA,NA,-111.051,45.66638
+"Pine (Scott)","Pinus","sylvestris","Coniferous",NA,NA,-111.051,45.66637
+"Larch","Larix","decidua","Coniferous",NA,NA,-111.051,45.66637
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.052,45.66651
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.052,45.6664
+"Pine (Bristlecone)","Pinus","aristata","Coniferous",NA,NA,-111.051,45.6665
+"Spruce (white)","Picea","glauca","Coniferous",NA,NA,-111.051,45.66647
+"Spruce (white)","Picea","glauca","Coniferous",NA,NA,-111.051,45.6664
+"Spruce (white)","Picea","glauca","Coniferous",NA,NA,-111.051,45.66658
+"Spruce (white)","Picea","glauca","Coniferous",NA,NA,-111.051,45.66664
+"Spruce (white)","Picea","glauca","Coniferous",NA,NA,-111.051,45.66647
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.051,45.66645
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.051,45.66645
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.051,45.66645
+"Spruce (Engelmann)","Picea","engelmannii","Coniferous",NA,NA,-111.051,45.6664
+"Larch","Larix","decidua","Coniferous",NA,NA,-111.051,45.6665
+"Larch","Larix","decidua","Coniferous",NA,NA,-111.051,45.66661
+"Pine (Scott)","Pinus","sylvestris","Coniferous",NA,NA,-111.051,45.66654
+"Pine (Scott)","Pinus","sylvestris","Coniferous",NA,NA,-111.051,45.66652
+"Arborvitae","Thuja","occidentalis","Coniferous",NA,NA,-111.048,45.66625
+"Arborvitae","Thuja","occidentalis","Coniferous",NA,NA,-111.048,45.66689
+"Arborvitae","Thuja","occidentalis","Coniferous",NA,NA,-111.048,45.66689
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.048,45.66691
+"Spruce","Picea","pungens","Coniferous",NA,NA,-111.048,45.66759
+"Spruce (Engleman)","Picea","englemannii","Coniferous",NA,NA,-111.048,45.66757
+"Spruce","Picea","pungens","Coniferous",NA,NA,-111.048,45.66756
+"Spruce","Picea","pungens","Coniferous",NA,NA,-111.048,45.66751
+"Spruce","Picea","pungens","Coniferous",NA,NA,-111.048,45.6675
+"Spruce","Picea","pungens","Coniferous",NA,NA,-111.048,45.66739
+"Spruce","Picea","pungens","Coniferous",NA,NA,-111.048,45.66741
+"Arborvitae","Thuja","occidentalis","Coniferous",NA,NA,-111.048,45.66692
+"Arborvitae","Thuja","occidentalis","Coniferous",NA,NA,-111.048,45.66692
+"Pine (Scott)","Pinus","sylvestris","Coniferous",NA,NA,-111.048,45.66813
+"Douglas-fir","Pseudotsuga","menziesii","Coniferous",NA,NA,-111.048,45.66799
+"Douglas-fir","Pseudotsuga","menziesii","Coniferous",NA,NA,-111.048,45.66808
+"Douglas-fir","Pseudotsuga","menziesii","Coniferous",NA,NA,-111.048,45.66821
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.048,45.66802
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.048,45.6683
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.048,45.66828
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.048,45.66826
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.049,45.66826
+"Fat Albert Spruce","Pinus","pungens","Coniferous","Fat Albert",NA,-111.052,45.66744
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.052,45.66749
+"Pine (Scott)","Pinus","sylvestris","Coniferous",NA,NA,-111.048,45.66842
+"Pine (Austrian)","Pinus","nigra","Coniferous",NA,NA,-111.051,45.66739
+"Pine (Austrian)","Pinus","nigra","Coniferous",NA,NA,-111.052,45.66743
+"Spruce","Picea","pungens","Coniferous",NA,NA,-111.048,45.66531
+"Spruce","Picea","pungens","Coniferous",NA,NA,-111.049,45.66567
+"Spruce","Picea","pungens","Coniferous",NA,NA,-111.049,45.66563
+"Spruce","Picea","pungens","Coniferous",NA,NA,-111.049,45.66569
+"Spruce","Picea","pungens","Coniferous",NA,NA,-111.049,45.6662
+"Fir (Concolor)","Abies","concolor","Coniferous",NA,NA,-111.05,45.66669
+"Pine (Ponderosa)","Pinus","ponderosa","Coniferous",NA,NA,-111.049,45.66657
+"Spruce (Engelmann)","Picea","engelmannii","Coniferous",NA,NA,-111.049,45.66663
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.049,45.66663
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.049,45.66693
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.05,45.66679
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.05,45.66682
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.05,45.66693
+"Juniper (Rocky Mtn)","Juniperus","scopulorum","Coniferous",NA,NA,-111.05,45.6674
+"Juniper (Rocky Mtn)","Juniperus","scopulorum","Coniferous",NA,NA,-111.05,45.66741
+"Juniper (Rocky Mtn)","Juniperus","scopulorum","Coniferous",NA,NA,-111.05,45.66744
+"Juniper (Rocky Mtn)","Juniperus","scopulorum","Coniferous",NA,NA,-111.05,45.66742
+"Juniper (Rocky Mtn)","Juniperus","scopulorum","Coniferous",NA,NA,-111.05,45.66745
+"Juniper (Rocky Mtn)","Juniperus","scopulorum","Coniferous",NA,NA,-111.05,45.66733
+"Juniper (Rocky Mtn)","Juniperus","scopulorum","Coniferous",NA,NA,-111.049,45.66724
+"Juniper (Rocky Mtn)","Juniperus","scopulorum","Coniferous",NA,NA,-111.049,45.66734
+"Juniper (Rocky Mtn)","Juniperus","scopulorum","Coniferous",NA,NA,-111.049,45.6673
+"Juniper (Rocky Mtn)","Juniperus","scopulorum","Coniferous",NA,NA,-111.049,45.66737
+"Juniper (Rocky Mtn)","Juniperus","scopulorum","Coniferous",NA,NA,-111.049,45.66733
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.051,45.66769
+"Larch","Larix","decidua","Coniferous",NA,NA,-111.051,45.66798
+"Pine (Scott)","Pinus","sylvestris","Coniferous",NA,NA,-111.05,45.66809
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.049,45.6683
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.05,45.66797
+"Columnar Blue Spruce","Picea","pungens","Coniferous","Iseli Fastigate","5/3/2015 0:00",-111.049,45.66794
+"Spruce (white)","Picea","glauca","Coniferous",NA,NA,-111.051,45.66833
+"Spruce (Engleman)","Picea","engelmannii","Coniferous",NA,NA,-111.051,45.66843
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.051,45.66885
+"Douglas-fir","Pseudotsuga","menziesii","Coniferous",NA,NA,-111.051,45.66898
+"Douglas-fir","Pseudotsuga","menziesii","Coniferous",NA,NA,-111.051,45.66817
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.051,45.66817
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.051,45.6682
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.051,45.66818
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.051,45.66818
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.051,45.66904
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.051,45.66903
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.052,45.66886
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.052,45.66892
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.052,45.66887
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.052,45.66897
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.052,45.66878
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.052,45.66901
+"Limber Pine","Pinus","flexilis","Coniferous",NA,NA,-111.052,45.66904
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.052,45.67037
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.052,45.67037
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.052,45.67037
+"Pine (Ponderosa)","Pinus","ponderosa","Coniferous",NA,NA,-111.051,45.67065
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.048,45.66861
+"Pine (Austrian)","Pinus","nigra","Coniferous",NA,NA,-111.048,45.66877
+"Spruce (Engleman)","Picea","englemannii","Coniferous",NA,NA,-111.048,45.6677
+"Spruce","Picea","pungens","Coniferous",NA,NA,-111.048,45.66765
+"Spruce","Picea","pungens","Coniferous",NA,NA,-111.048,45.66769
+"Pine (Ponderosa)","Pinus","ponderosa","Coniferous",NA,NA,-111.052,45.67069
+"Pine (Ponderosa)","Pinus","ponderosa","Coniferous",NA,NA,-111.052,45.67071
+"Pine (Ponderosa)","Pinus","ponderosa","Coniferous",NA,NA,-111.052,45.67071
+"Juniper (Rocky Mtn)","Juniperus","scopulorum","Coniferous",NA,NA,-111.052,45.67084
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.052,45.67075
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.052,45.67088
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.052,45.67096
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.052,45.67097
+"Pine (Scott)","Pinus","sylvestris","Coniferous",NA,NA,-111.052,45.67091
+"Spruce (Engleman)","Picea","engelmannii","Coniferous",NA,NA,-111.046,45.66768
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.046,45.66743
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.046,45.66743
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.046,45.66744
+"Spruce (Engleman)","Picea","engelmannii","Coniferous",NA,NA,-111.046,45.66747
+"Spruce (Engleman)","Picea","engelmannii","Coniferous",NA,NA,-111.046,45.66748
+"Spruce (Engleman)","Picea","engelmannii","Coniferous",NA,NA,-111.046,45.66749
+"Spruce (Engleman)","Picea","engelmannii","Coniferous",NA,NA,-111.046,45.66749
+"Limber Pine","Pinus","flexilis","Coniferous",NA,NA,-111.046,45.66751
+"Limber Pine","Pinus","flexilis","Coniferous",NA,NA,-111.046,45.66753
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.046,45.66816
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.046,45.66817
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.046,45.66816
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.046,45.66818
+"Spruce (Engleman)","Picea","engelmannii","Coniferous",NA,NA,-111.046,45.66824
+"Spruce (Engleman)","Picea","engelmannii","Coniferous",NA,NA,-111.046,45.66805
+"Spruce (Engleman)","Picea","engelmannii","Coniferous",NA,NA,-111.046,45.66802
+"Spruce (Engleman)","Picea","engelmannii","Coniferous",NA,NA,-111.046,45.66798
+"Spruce (Engleman)","Picea","engelmannii","Coniferous",NA,NA,-111.046,45.66805
+"Spruce","Picea","pungens","Coniferous",NA,NA,-111.049,45.66574
+"Spruce","Picea","pungens","Coniferous",NA,NA,-111.049,45.66577
+"Spruce (Engelmann)","Picea","engelmannii","Coniferous",NA,NA,-111.051,45.66597
+"Spruce","Picea","pungens","Coniferous",NA,NA,-111.05,45.6661
+"Bruns Serbian Spruce","Picea","omorika","Coniferous","Bruns",NA,-111.051,45.6659
+"Weeping White Spruce","Picea","glauca","Coniferous","Pendula",NA,-111.051,45.6659
+"Black Hills Spruce","Picea","glauca","Coniferous","Densata",NA,-111.051,45.66592
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.051,45.66589
+"Spruce (Engelmann)","Picea","engelmannii","Coniferous",NA,NA,-111.048,45.66897
+"Spruce (Engelmann)","Picea","engelmannii","Coniferous",NA,NA,-111.048,45.66901
+"Spruce (Engelmann)","Picea","engelmannii","Coniferous",NA,NA,-111.048,45.66899
+"Spruce (Engelmann)","Picea","engelmannii","Coniferous",NA,NA,-111.047,45.66897
+"Spruce (Engelmann)","Picea","engelmannii","Coniferous",NA,NA,-111.047,45.66903
+"Spruce (Engelmann)","Picea","engelmannii","Coniferous",NA,NA,-111.047,45.66896
+"Spruce (Engelmann)","Picea","engelmannii","Coniferous",NA,NA,-111.047,45.669
+"Spruce (Engelmann)","Picea","engelmannii","Coniferous",NA,NA,-111.047,45.66894
+"Pine (Austrian)","Pinus","nigra","Coniferous",NA,NA,-111.047,45.66887
+"Pine (Austrian)","Pinus","nigra","Coniferous",NA,NA,-111.047,45.66891
+"Pine (Austrian)","Pinus","nigra","Coniferous",NA,NA,-111.047,45.66884
+"Douglas-fir","Pseudotsuga","menziesii","Coniferous",NA,NA,-111.047,45.66849
+"Spruce (Engelmann)","Picea","engelmannii","Coniferous",NA,NA,-111.047,45.66824
+"Douglas-fir","Pseudotsuga","menziesii","Coniferous",NA,NA,-111.047,45.66815
+"Douglas-fir","Pseudotsuga","menziesii","Coniferous",NA,NA,-111.047,45.668
+"Douglas-fir","Pseudotsuga","menziesii","Coniferous",NA,NA,-111.047,45.66796
+"Douglas-fir","Pseudotsuga","menziesii","Coniferous",NA,NA,-111.047,45.66803
+"Spruce","Picea","pungens","Coniferous",NA,NA,-111.047,45.66802
+"Douglas-fir","Pseudotsuga","menziesii","Coniferous",NA,NA,-111.047,45.66792
+"Douglas-fir","Pseudotsuga","menziesii","Coniferous",NA,NA,-111.048,45.66795
+"Douglas-fir","Pseudotsuga","menziesii","Coniferous",NA,NA,-111.048,45.668
+"Douglas-fir","Pseudotsuga","menziesii","Coniferous",NA,NA,-111.048,45.66805
+"Douglas-fir","Pseudotsuga","menziesii","Coniferous",NA,NA,-111.047,45.66808
+"Arborvitae","Thuja","occidentalis","Coniferous",NA,NA,-111.047,45.66822
+"Arborvitae","Thuja","occidentalis","Coniferous",NA,NA,-111.047,45.66817
+"Spruce (white)","Picea","glauca","Coniferous",NA,NA,-111.047,45.66833
+"Juniper (Rocky Mtn)","Juniperus","scopulorum","Coniferous",NA,NA,-111.047,45.66816
+"Juniper (Rocky Mtn)","Juniperus","scopulorum","Coniferous",NA,NA,-111.047,45.66818
+"Juniper (Rocky Mtn)","Juniperus","scopulorum","Coniferous",NA,NA,-111.047,45.66816
+"Juniper (Rocky Mtn)","Juniperus","scopulorum","Coniferous",NA,NA,-111.048,45.66815
+"Juniper (Rocky Mtn)","Juniperus","scopulorum","Coniferous",NA,NA,-111.048,45.66813
+"Juniper (Rocky Mtn)","Juniperus","scopulorum","Coniferous",NA,NA,-111.048,45.66816
+"Juniper (Rocky Mtn)","Juniperus","scopulorum","Coniferous",NA,NA,-111.048,45.66816
+"Juniper (Rocky Mtn)","Juniperus","scopulorum","Coniferous",NA,NA,-111.048,45.66815
+"Juniper (Rocky Mtn)","Juniperus","scopulorum","Coniferous",NA,NA,-111.048,45.66815
+"Spruce","Picea","pungens","Coniferous",NA,NA,-111.048,45.66767
+"Spruce","Picea","pungens","Coniferous",NA,NA,-111.048,45.66764
+"Arborvitae","Thuja","occidentalis","Coniferous","Techny",NA,-111.047,45.66671
+"Arborvitae","Thuja","occidentalis","Coniferous","Techny",NA,-111.047,45.6667
+"Arborvitae","Thuja","occidentalis","Coniferous","Techny",NA,-111.047,45.66671
+"Arborvitae","Thuja","occidentalis","Coniferous","Techny",NA,-111.047,45.66671
+"Arborvitae","Thuja","occidentalis","Coniferous","Techny",NA,-111.047,45.66664
+"Arborvitae","Thuja","occidentalis","Coniferous","Techny",NA,-111.047,45.6663
+"Arborvitae","Thuja","occidentalis","Coniferous","Techny",NA,-111.047,45.66625
+"Arborvitae","Thuja","occidentalis","Coniferous","Techny",NA,-111.047,45.66619
+"Arborvitae","Thuja","occidentalis","Coniferous","Techny",NA,-111.047,45.66613
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.048,45.66689
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.047,45.66692
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.047,45.66697
+"Arborvitae","Thuja","occidentalis","Coniferous",NA,NA,-111.047,45.66681
+"Arborvitae","Thuja","occidentalis","Coniferous",NA,NA,-111.047,45.6668
+"Arborvitae","Thuja","occidentalis","Coniferous",NA,NA,-111.047,45.66679
+"Subalpine Fir","Abies","lasiocarpa","Coniferous",NA,NA,-111.047,45.66589
+"Subalpine Fir","Abies","lasiocarpa","Coniferous",NA,NA,-111.047,45.66591
+"Pine (Austrian)","Pinus","nigra","Coniferous",NA,NA,-111.047,45.66556
+"Pine (Austrian)","Pinus","nigra","Coniferous",NA,NA,-111.047,45.66554
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.046,45.66533
+"Pine (Austrian)","Pinus","nigra","Coniferous",NA,NA,-111.046,45.66609
+"Pine (Austrian)","Pinus","nigra","Coniferous",NA,NA,-111.046,45.66612
+"Pine (Austrian)","Pinus","nigra","Coniferous",NA,NA,-111.046,45.66615
+"Pine (Austrian)","Pinus","nigra","Coniferous",NA,NA,-111.046,45.6662
+"Pine (Austrian)","Pinus","nigra","Coniferous",NA,NA,-111.046,45.66623
+"Juniper (Rocky Mtn)","Juniperus","scopulorum","Coniferous",NA,NA,-111.048,45.66692
+"Arborvitae","Thuja","occidentalis","Coniferous",NA,NA,-111.048,45.66692
+"Arborvitae","Thuja","occidentalis","Coniferous",NA,NA,-111.049,45.66711
+"Pine (Scott)","Pinus","sylvestris","Coniferous",NA,NA,-111.052,45.66551
+"Pine (Austrian)","Pinus","nigra","Coniferous",NA,NA,-111.052,45.66579
+"Pine (Austrian)","Pinus","nigra","Coniferous",NA,NA,-111.052,45.66578
+"Pine (Austrian)","Pinus","nigra","Coniferous",NA,NA,-111.051,45.66575
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.051,45.66619
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.05,45.66622
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.05,45.66657
+"Spruce (Blue)","Picea","pungens","Coniferous","Fat Albert",NA,-111.051,45.66672
+"Pine (Scott)","Pinus","sylvestris","Coniferous",NA,NA,-111.051,45.66672
+"Fir (Concolor)","Abies","concolor","Coniferous",NA,NA,-111.051,45.66679
+"Fir (Concolor)","Abies","concolor","Coniferous",NA,NA,-111.052,45.66679
+"Fir (Concolor)","Abies","concolor","Coniferous",NA,NA,-111.052,45.66673
+"Spruce (white)","Picea","glauca","Coniferous",NA,NA,-111.051,45.66699
+"Spruce","Picea","pungens","Coniferous",NA,NA,-111.051,45.66701
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.051,45.66693
+"Spruce","Picea","pungens","Coniferous",NA,NA,-111.051,45.66678
+"Spruce","Picea","pungens","Coniferous",NA,NA,-111.051,45.66669
+"Spruce (Engelmann)","Picea","engelmannii","Coniferous",NA,NA,-111.052,45.66673
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.052,45.66678
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.052,45.66682
+"Spruce (Engelmann)","Picea","engelmannii","Coniferous",NA,NA,-111.052,45.66688
+"Spruce (Engelmann)","Picea","engelmannii","Coniferous",NA,NA,-111.052,45.66694
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.052,45.66699
+"Spruce (white)","Picea","glauca","Coniferous",NA,NA,-111.052,45.66697
+"Spruce (Engelmann)","Picea","engelmannii","Coniferous",NA,NA,-111.052,45.667
+"Pine (Mugo)","Pinus","mugo","Coniferous",NA,NA,-111.052,45.66694
+"Pine (Bristlecone)","Pinus","aristata","Coniferous",NA,NA,-111.052,45.6669
+"Pine (Ponderosa)","Pinus","ponderosa","Coniferous",NA,NA,-111.053,45.66574
+"Pine (Ponderosa)","Pinus","ponderosa","Coniferous",NA,NA,-111.053,45.6658
+"Spruce (Engelmann)","Picea","engelmannii","Coniferous",NA,NA,-111.053,45.66588
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.053,45.66592
+"Spruce (white)","Picea","glauca","Coniferous",NA,NA,-111.053,45.66609
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.053,45.66654
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.053,45.66668
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.053,45.66708
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.053,45.66711
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.053,45.66708
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.053,45.66752
+"Pine (Ponderosa)","Pinus","ponderosa","Coniferous",NA,NA,-111.053,45.66757
+"Pine (Austrian)","Pinus","nigra","Coniferous",NA,NA,-111.053,45.66761
+"Pine (Austrian)","Pinus","nigra","Coniferous",NA,NA,-111.054,45.66752
+"Pine (Scott)","Pinus","sylvestris","Coniferous",NA,NA,-111.054,45.6675
+"Pine (Scott)","Pinus","sylvestris","Coniferous",NA,NA,-111.054,45.66743
+"Spruce (Norway)","Picea","abies","Coniferous",NA,NA,-111.054,45.66734
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.054,45.66738
+"Spruce (white)","Picea","glauca","Coniferous",NA,NA,-111.054,45.66714
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.054,45.66696
+"Limber Pine","Pinus","flexilis","Coniferous",NA,NA,-111.054,45.66712
+"Pine (Austrian)","Pinus","nigra","Coniferous",NA,NA,-111.054,45.66713
+"Pine (Austrian)","Pinus","nigra","Coniferous",NA,NA,-111.054,45.66709
+"Spruce","Picea","pungens","Coniferous",NA,NA,-111.046,45.66496
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.047,45.66789
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.047,45.66809
+"Pine (Limber)","Pinus","flexilis","Coniferous",NA,NA,-111.053,45.67002
+"Pine (Limber)","Pinus","flexilis","Coniferous",NA,NA,-111.053,45.67008
+"Spruce","Picea","pungens","Coniferous",NA,NA,-111.053,45.67024
+"Spruce","Picea","pungens","Coniferous",NA,NA,-111.053,45.67039
+"Spruce (Engelmann)","Picea","engelmannii","Coniferous",NA,NA,-111.053,45.67036
+"Spruce (Engelmann)","Picea","engelmannii","Coniferous",NA,NA,-111.053,45.67042
+"Spruce","Picea","pungens","Coniferous",NA,NA,-111.053,45.67041
+"Spruce","Picea","pungens","Coniferous",NA,NA,-111.053,45.67035
+"Pine (Lodgepole)","Pinus","contorta","Coniferous",NA,NA,-111.053,45.67041
+"Douglas-fir","Pseudotsuga","menziesii","Coniferous",NA,NA,-111.053,45.67041
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.053,45.67097
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.053,45.67098
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.053,45.67092
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.053,45.67087
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.053,45.67082
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.053,45.67084
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.053,45.67091
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.053,45.67094
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.053,45.67086
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.053,45.67085
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.053,45.67067
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.052,45.67055
+"Pine (Scott)","Pinus","sylvestris","Coniferous",NA,NA,-111.052,45.67088
+"Pine (Scott)","Pinus","sylvestris","Coniferous",NA,NA,-111.052,45.67093
+"Spruce","Picea","pungens","Coniferous","Iseli Fastigate",NA,-111.046,45.66697
+"Bristlecone Pine","Pinus","aristata","Coniferous",NA,"6/3/2015 0:00",-111.054,45.66898
+"Rocky Mtn Juniper","Juniperus","scopulorum","Coniferous",NA,NA,-111.053,45.66886
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.052,45.66922
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.053,45.66919
+"Bristlecone Pine","Pinus","aristata","Coniferous",NA,NA,-111.051,45.66753
+"Douglas-fir","Pseudotsuga","menziesii","Coniferous",NA,NA,-111.056,45.67069
+"Douglas-fir","Pseudotsuga","menziesii","Coniferous",NA,NA,-111.056,45.67028
+"Pine (Lodgepole)","Pinus","contorta","Coniferous",NA,NA,-111.057,45.66982
+"Pine (Lodgepole)","Pinus","contorta","Coniferous",NA,NA,-111.057,45.67006
+"Juniper (Rocky Mtn)","Juniperus","scopulorum","Coniferous",NA,NA,-111.057,45.66996
+"Fat Albert Spruce","Picea","pungens","Coniferous","Fat Albert",NA,-111.052,45.67088
+"Pine (Bristlecone)","Pinus","aristata","Coniferous","Sherwood",NA,-111.05,45.66755
+"Pine (Bristlecone)","Pinus","aristata","Coniferous","Sherwood",NA,-111.05,45.66756
+"Sester Spruce","Picea","pungens","Coniferous","Sester Dwarf",NA,-111.05,45.6675
+"Pine (Bristlecone)","Pinus","mugo","Coniferous","Tannenbaum",NA,-111.051,45.66692
+"Pine (Bristlecone)","Pinus","mugo","Coniferous","Tannenbaum",NA,-111.051,45.66695
+"Pine (Ponderosa)","Pinus","ponderosa","Coniferous",NA,NA,-111.051,45.66646
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.048,45.67029
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.048,45.67031
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.048,45.67038
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.048,45.67087
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.048,45.67082
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.048,45.67103
+"Douglas-fir","Pseudotsuga","menziesii","Coniferous",NA,NA,-111.048,45.67092
+"Spruce (Engelmann)","Picea","engelmannii","Coniferous",NA,NA,-111.049,45.67109
+"Spruce (Engelmann)","Picea","engelmannii","Coniferous",NA,NA,-111.049,45.67105
+"Spruce (Engelmann)","Picea","glauca","Coniferous",NA,NA,-111.049,45.67107
+"Spruce (Engelmann)","Picea","engelmannii","Coniferous",NA,NA,-111.049,45.67108
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.047,45.66928
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.046,45.66928
+"Dwarf Spruce","Picea","glauca","Coniferous",NA,NA,-111.046,45.66948
+"Arborvitae","Thuja","occidentalis","Coniferous",NA,NA,-111.046,45.66968
+"Arborvitae","Thuja","occidentalis","Coniferous",NA,NA,-111.046,45.66968
+"Arborvitae","Thuja","occidentalis","Coniferous",NA,NA,-111.046,45.66966
+"Arborvitae","Thuja","occidentalis","Coniferous",NA,NA,-111.046,45.6696
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.046,45.66951
+"Arborvitae","Thuja","occidentalis","Coniferous",NA,NA,-111.046,45.66966
+"Arborvitae","Thuja","occidentalis","Coniferous",NA,NA,-111.046,45.6697
+"Juniper (Rocky Mtn)","Juniperus","scopulorum","Coniferous",NA,NA,-111.046,45.66962
+"Juniper (Rocky Mtn)","Juniperus","scopulorum","Coniferous",NA,NA,-111.046,45.66961
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.046,45.66936
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.046,45.66933
+"Juniper (Rocky Mtn)","Juniperus","scopulorum","Coniferous",NA,NA,-111.046,45.66947
+"Juniper (Rocky Mtn)","Juniperus","scopulorum","Coniferous",NA,NA,-111.046,45.66943
+"Juniper (Rocky Mtn)","Juniperus","scopulorum","Coniferous",NA,NA,-111.046,45.66977
+"Juniper (Rocky Mtn)","Juniperus","scopulorum","Coniferous",NA,NA,-111.046,45.66977
+"Engelmann Spruce","Picea","engelmanni","Coniferous",NA,NA,-111.047,45.66977
+"Juniper (Rocky Mtn)","Juniperus","scopulorum","Coniferous",NA,NA,-111.046,45.66964
+"Juniper (Rocky Mtn)","Juniperus","scopulorum","Coniferous",NA,NA,-111.046,45.66965
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.046,45.66935
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.046,45.66894
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.046,45.66903
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.046,45.66874
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.046,45.66901
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.046,45.66894
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.046,45.66896
+"Spruce (Engelmann)","Picea","engelmannii","Coniferous",NA,NA,-111.046,45.66899
+"Spruce (Engelmann)","Picea","engelmannii","Coniferous",NA,NA,-111.046,45.66898
+"Spruce (Engelmann)","Picea","glauca","Coniferous",NA,NA,-111.046,45.66903
+"Spruce (Engelmann)","Picea","engelmannii","Coniferous",NA,"2/15/2015 0:00",-111.046,45.66903
+"Spruce (Engelmann)","Picea","engelmannii","Coniferous",NA,NA,-111.046,45.66898
+"Spruce (Engelmann)","Picea","engelmannii","Coniferous",NA,NA,-111.046,45.669
+"Spruce (Engelmann)","Picea","engelmannii","Coniferous",NA,NA,-111.046,45.66896
+"Spruce (Engelmann)","Picea","engelmannii","Coniferous",NA,NA,-111.046,45.66859
+"Arborvitae","Thuja","orientalis","Coniferous",NA,NA,-111.046,45.6688
+"Arborvitae","Thuja","orientalis","Coniferous",NA,NA,-111.046,45.6688
+"Arborvitae","Thuja","orientalis","Coniferous",NA,NA,-111.046,45.66876
+"Arborvitae","Thuja","orientalis","Coniferous",NA,NA,-111.046,45.66876
+"Arborvitae","Thuja","orientalis","Coniferous",NA,NA,-111.046,45.66876
+"Arborvitae","Thuja","orientalis","Coniferous",NA,NA,-111.046,45.66873
+"Arborvitae","Thuja","orientalis","Coniferous",NA,NA,-111.046,45.66863
+"Spruce (Blue)","Picea","pungens","Coniferous",NA,NA,-111.048,45.66953
+"Fir (Subalpine)","Abies","lasiocarpa","Coniferous",NA,NA,-111.048,45.6696
+"Spruce","Picea","pungens","Coniferous",NA,NA,-111.047,45.66929
+"Pine (Scott)","Pinus","sylvestris","Coniferous",NA,NA,-111.05,45.67103
+"Pine (Scott)","Pinus","sylvestris","Coniferous",NA,NA,-111.05,45.67104
+"Pine (Scott)","Pinus","sylvestris","Coniferous",NA,NA,-111.05,45.67107
+"Pine (Austrian)","Pinus","nigra","Coniferous",NA,NA,-111.055,45.6659
+"Pine (Austrian)","Pinus","nigra","Coniferous",NA,"10/1/2014 0:00",-111.055,45.66591
+"Pine (Austrian)","Pinus","nigra","Coniferous",NA,NA,-111.055,45.6659
+"Pine (Ponderosa)","Pinus","ponderosa","Coniferous",NA,NA,-111.055,45.666
+"Pine (Austrian)","Pinus","nigra","Coniferous",NA,NA,-111.055,45.66511
+"Spruce","Picea","pungens","Coniferous",NA,NA,-111.054,45.6658
+"Spruce","Picea","pungens","Coniferous",NA,NA,-111.054,45.66552
+"Spruce","Picea","pungens","Coniferous",NA,NA,-111.054,45.66531
+"Spruce","Picea","pungens","Coniferous",NA,NA,-111.054,45.66531
+"Pine (Scott)","Pinus","sylvestris","Coniferous",NA,NA,-111.054,45.66559
+"Pine (Scott)","Pinus","sylvestris","Coniferous",NA,NA,-111.054,45.6653
+"Spruce","Picea","pungens","Coniferous",NA,NA,-111.054,45.66581
+"Pine (Scott)","Pinus","sylvestris","Coniferous",NA,NA,-111.054,45.66595
+"Pine (Scott)","Pinus","sylvestris","Coniferous",NA,NA,-111.054,45.66608
+"Pine (Scott)","Pinus","sylvestris","Coniferous",NA,NA,-111.054,45.66631
+"Spruce","Picea","glauca","Coniferous",NA,NA,-111.054,45.66617
+"Pine (Ponderosa)","Pinus","ponderosa","Coniferous",NA,NA,-111.054,45.66617
+"Mugo Pine """"Tannebaum""""","Pinus",NA,"Coniferous",NA,NA,-111.05,45.66755
+"Mugo Pine """"Tannebaum""""","Pinus",NA,"Coniferous",NA,NA,-111.051,45.66753
+"Austrian Pine","Pinus","nigra","Coniferous",NA,"10/1/2014 0:00",-111.056,45.66583
+"Austrian Pine","Pinus","nigra","Coniferous",NA,"10/1/2014 0:00",-111.056,45.66579
+"Austrian Pine","Pinus","nigra","Coniferous",NA,"10/1/2014 0:00",-111.056,45.66574
+"Austrian Pine","Pinus","nigra","Coniferous",NA,"10/1/2014 0:00",-111.056,45.66569
+"Lilac (Japanese)","Syringa",NA,"Deciduous","Spring Snow",NA,-111.051,45.66275
+"Lilac (Japanese)","Syringa",NA,"Deciduous",NA,NA,-111.05,45.6627
+"Spruce","Picea","pungens","Coniferous",NA,NA,-111.062,45.66656
+"Spruce","Picea","pungens","Coniferous",NA,NA,-111.062,45.66661
+"Spruce","Picea","pungens","Coniferous",NA,NA,-111.062,45.66667
+"Spruce","Picea","pungens","Coniferous",NA,NA,-111.062,45.66672
+"Spruce","Picea","pungens","Coniferous",NA,NA,-111.062,45.66677
+"Spruce","Picea","pungens","Coniferous",NA,NA,-111.062,45.66682
+"Spruce","Picea","pungens","Coniferous",NA,NA,-111.062,45.66688
+"Spruce","Picea","pungens","Coniferous",NA,NA,-111.062,45.66694
+"Spruce","Picea","pungens","Coniferous",NA,NA,-111.062,45.66699
+"Spruce","Picea","pungens","Coniferous",NA,NA,-111.062,45.66705
+"Spruce","Picea","pungens","Coniferous",NA,NA,-111.062,45.6671
+"Spruce","Picea","pungens","Coniferous",NA,NA,-111.062,45.66715
+"Spruce","Picea","pungens","Coniferous",NA,NA,-111.062,45.66721
+"Spruce","Picea","pungens","Coniferous",NA,NA,-111.062,45.66727
+"Spruce","Picea","pungens","Coniferous",NA,NA,-111.062,45.66735
+"Columnar Blue Spruce","Picea","pungens","Coniferous",NA,NA,-111.051,45.66769
+"Japanese Tree Lilac","Syringa","reticulata","Deciduous",NA,NA,-111.046,45.66663
+"Japanese Tree Lilac","Syringa","reticulata","Deciduous",NA,NA,-111.046,45.66643
+"American Elm","Ulmus","americana","Deciduous",NA,NA,-111.046,45.66653
+"Austrian Pine","Pinus","nigra","Coniferous",NA,NA,-111.044,45.66271
+"Austrian Pine","Pinus","nigra","Coniferous",NA,NA,-111.05,45.66881
+"Honey Locust (Prarie Silk)","Gleditsia","triacanthos","Deciduous","Prarie Silk",NA,-111.058,45.66416
+"Honey Locust (Prarie Silk)","Gleditsia","triacanthos","Deciduous","Prarie Silk",NA,-111.058,45.66427
+"Honey Locust (Prarie Silk)","Gleditsia","triacanthos","Deciduous","Prarie Silk",NA,-111.058,45.66441
+"Honey Locust (Prarie Silk)","Gleditsia","triacanthos","Deciduous","Prarie Silk",NA,-111.058,45.66457
+"Honey Locust (Prarie Silk)","Gleditsia","triacanthos","Deciduous","Prarie Silk",NA,-111.058,45.66471
+"Honey Locust (Prarie Silk)","Gleditsia","triacanthos","Deciduous","Prarie Silk",NA,-111.058,45.66485
+"Honey Locust (Prarie Silk)","Gleditsia","triacanthos","Deciduous","Prarie Silk",NA,-111.058,45.66503
+"Maple","Acer","fremanii","Deciduous","Sienna Glen",NA,-111.058,45.66517
+"Maple","Acer","fremanii","Deciduous","Sienna Glen",NA,-111.058,45.66412
+NA,NA,NA,"Deciduous",NA,NA,-111.045,45.66808
+NA,NA,NA,"Deciduous",NA,NA,-111.045,45.66804
+NA,NA,NA,"Deciduous",NA,NA,-111.045,45.66795
+NA,NA,NA,"Deciduous",NA,NA,-111.045,45.66787
+NA,NA,NA,"Deciduous",NA,NA,-111.045,45.66813
+NA,NA,NA,"Deciduous",NA,NA,-111.045,45.66814
+NA,NA,NA,"Deciduous",NA,NA,-111.045,45.66813
+NA,NA,NA,"Deciduous",NA,NA,-111.045,45.66813
+NA,NA,NA,"Coniferous",NA,NA,-111.045,45.66791
+NA,NA,NA,"Coniferous",NA,NA,-111.045,45.66782
+NA,NA,NA,"Deciduous",NA,NA,-111.045,45.66782
+NA,NA,NA,"Deciduous",NA,NA,-111.045,45.66782
+NA,NA,NA,"Deciduous",NA,NA,-111.045,45.66808
+NA,NA,NA,"Deciduous",NA,NA,-111.045,45.66808
+NA,NA,NA,"Deciduous",NA,NA,-111.056,45.66701
+NA,NA,NA,"Deciduous",NA,NA,-111.056,45.66708
+NA,NA,NA,"Deciduous",NA,NA,-111.056,45.66724
+NA,NA,NA,"Deciduous",NA,NA,-111.056,45.66732
+"Spruce","Picea",NA,"Coniferous",NA,NA,-111.055,45.6671
+NA,NA,NA,"Deciduous",NA,NA,-111.056,45.66741
+"Honeylocust","Gleditsia","triacanthos","Deciduous",NA,NA,-111.056,45.66731
+"Honeylocust","Gleditsia","triacanthos","Deciduous",NA,NA,-111.055,45.66731
+"Honeylocust","Gleditsia","triacanthos","Deciduous",NA,NA,-111.055,45.66731
+"Honeylocust","Gleditsia","triacanthos","Deciduous",NA,NA,-111.055,45.66731
+"Spruce","Picea",NA,"Coniferous",NA,NA,-111.055,45.66706
+"Aspen","Populos","tremuloides","Deciduous",NA,NA,-111.055,45.66653
+"Aspen","Populos","tremuloides","Deciduous",NA,NA,-111.055,45.66653
+"Aspen","Populos","tremuloides","Deciduous",NA,NA,-111.055,45.66648
+"Aspen","Populos","tremuloides","Deciduous",NA,NA,-111.055,45.66646
+"Aspen","Populos","tremuloides","Deciduous",NA,NA,-111.055,45.66646
+"Aspen","Populos","tremuloides","Deciduous",NA,NA,-111.055,45.66647
+"Aspen","Populos","tremuloides","Deciduous",NA,NA,-111.055,45.66649
+"Aspen","Populos","tremuloides","Deciduous",NA,NA,-111.055,45.66653
+"Aspen","Populos","tremuloides","Deciduous",NA,NA,-111.055,45.66651
+"Aspen","Populos","tremuloides","Deciduous",NA,NA,-111.055,45.66653
+"Aspen","Populos","tremuloides","Deciduous",NA,NA,-111.056,45.66653
+"Russian Olive","Elaeagnus",NA,"Deciduous",NA,NA,-111.056,45.66682
+"Russian Olive","Elaeagnus",NA,"Deciduous",NA,NA,-111.056,45.66686
+"Honeylocust","Gleditsia","triacanthos","Deciduous",NA,NA,-111.055,45.66698
+"Honeylocust","Gleditsia","triacanthos","Deciduous",NA,NA,-111.055,45.66698
+"Honeylocust","Gleditsia","triacanthos","Deciduous",NA,NA,-111.055,45.66698
+"Honeylocust","Gleditsia","triacanthos","Deciduous",NA,NA,-111.055,45.66698
+"Honeylocust","Gleditsia","triacanthos","Deciduous",NA,NA,-111.055,45.66699
+"Honeylocust","Gleditsia","triacanthos","Deciduous",NA,NA,-111.056,45.667
+"Honeylocust","Gleditsia","triacanthos","Deciduous",NA,NA,-111.056,45.667
+"Cottonwood","Populous",NA,"Deciduous",NA,NA,-111.056,45.66717
+NA,NA,NA,"Coniferous",NA,NA,-111.057,45.66728
+"Pine (Limber)","Pinus","flexilis","Coniferous",NA,NA,-111.055,45.66642
+"Spruce","Picea","pungens","Coniferous",NA,NA,-111.055,45.66645
+NA,"<Null>",NA,"Deciduous",NA,NA,-111.056,45.66747
+NA,"<Null>",NA,"Deciduous",NA,NA,-111.056,45.66747
+NA,"<Null>",NA,"Deciduous",NA,NA,-111.056,45.66747
+NA,"<Null>",NA,"Deciduous",NA,NA,-111.056,45.66747
+NA,"<Null>",NA,"Deciduous",NA,NA,-111.056,45.66747
+NA,"<Null>",NA,"Deciduous",NA,NA,-111.056,45.66747
+NA,"<Null>",NA,"Deciduous",NA,NA,-111.056,45.6677
+NA,"<Null>",NA,"Deciduous",NA,NA,-111.056,45.66769
+NA,"<Null>",NA,"Deciduous",NA,NA,-111.055,45.6677
+NA,"<Null>",NA,"Deciduous",NA,NA,-111.055,45.66776
+NA,"<Null>",NA,"Deciduous",NA,NA,-111.056,45.66777
+NA,"<Null>",NA,"Deciduous",NA,NA,-111.056,45.66777
+NA,"<Null>",NA,"Deciduous",NA,NA,-111.056,45.66788
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.056,45.66791
+NA,"<Null>",NA,"Deciduous",NA,NA,-111.056,45.66788
+NA,"<Null>",NA,"Deciduous",NA,NA,-111.056,45.66775
+NA,"<Null>",NA,"Deciduous",NA,NA,-111.057,45.66777
+NA,"<Null>",NA,"Coniferous",NA,NA,-111.057,45.66772
+NA,"<Null>",NA,"Deciduous",NA,NA,-111.057,45.66792
+NA,"<Null>",NA,"Deciduous",NA,NA,-111.056,45.66816
+NA,"<Null>",NA,"Deciduous",NA,NA,-111.055,45.66808
+NA,"<Null>",NA,"Coniferous",NA,NA,-111.055,45.66817
+NA,"<Null>",NA,"Deciduous",NA,NA,-111.055,45.66803
+NA,"<Null>",NA,"Deciduous",NA,NA,-111.055,45.66803
+NA,"<Null>",NA,"Deciduous",NA,NA,-111.055,45.66765
+"Aspen - DEAD","Populos","tremuloides","Deciduous",NA,NA,-111.055,45.66616
+"Aspen","Populos","tremuloides","Deciduous",NA,NA,-111.055,45.66615
+"Aspen - DEAD","Populos","tremuloides","Deciduous",NA,NA,-111.055,45.66612
+"Aspen","Populos","tremuloides","Deciduous",NA,NA,-111.055,45.66613
+"Aspen","Populos","tremuloides","Deciduous",NA,NA,-111.055,45.66627
+"Aspen","Populos","tremuloides","Deciduous",NA,NA,-111.055,45.6663
+"Aspen","Populos","tremuloides","Deciduous",NA,NA,-111.055,45.66633
+NA,NA,NA,"Coniferous",NA,NA,-111.054,45.66691
+NA,NA,NA,"Coniferous",NA,NA,-111.054,45.66641
+NA,"<Null>",NA,"Coniferous",NA,NA,-111.056,45.66621
+"Aspen x3","<Null>",NA,"Deciduous",NA,NA,-111.056,45.66613
+NA,"<Null>",NA,"Deciduous",NA,NA,-111.055,45.66831
+NA,"<Null>",NA,"Deciduous",NA,NA,-111.055,45.66834
+NA,"<Null>",NA,"Coniferous",NA,NA,-111.056,45.6685
+NA,"<Null>",NA,"Deciduous",NA,NA,-111.055,45.66914
+NA,"<Null>",NA,"Deciduous",NA,NA,-111.056,45.66943
+NA,"<Null>",NA,"Deciduous",NA,NA,-111.056,45.66946
+NA,"<Null>",NA,"Deciduous",NA,NA,-111.056,45.66944
+NA,"<Null>",NA,"Deciduous",NA,NA,-111.057,45.66933
+NA,"<Null>",NA,"Coniferous",NA,NA,-111.057,45.66917
+NA,"<Null>",NA,"Coniferous",NA,NA,-111.056,45.66895
+NA,"<Null>",NA,"Deciduous",NA,NA,-111.056,45.66883
+NA,"<Null>",NA,"Deciduous",NA,NA,-111.057,45.66846
+NA,"<Null>",NA,"Deciduous",NA,NA,-111.057,45.66846
+NA,"<Null>",NA,"Deciduous",NA,NA,-111.056,45.66855
+NA,"<Null>",NA,"Deciduous",NA,NA,-111.056,45.66845
+NA,"<Null>",NA,"Coniferous",NA,NA,-111.056,45.66867
+NA,"<Null>",NA,"Coniferous",NA,NA,-111.056,45.66833
+NA,"<Null>",NA,"Deciduous",NA,NA,-111.057,45.66809
+NA,"<Null>",NA,"Deciduous",NA,NA,-111.057,45.66789
+NA,"<Null>",NA,"Deciduous",NA,NA,-111.057,45.66778
+NA,"<Null>",NA,"Deciduous",NA,NA,-111.058,45.66768
+NA,"<Null>",NA,"Deciduous",NA,NA,-111.058,45.66785
+NA,"<Null>",NA,"Deciduous",NA,NA,-111.058,45.66819
+"Silver Maple","Acer","saccharinum","Deciduous",NA,NA,-111.058,45.66835
+"Silver Maple","Acer","saccharinum","Deciduous",NA,NA,-111.058,45.6686
+"Silver Maple","Acer","saccharinum","Deciduous",NA,NA,-111.058,45.66881
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.058,45.66899
+"Silver Maple","Acer","saccharinum","Deciduous",NA,NA,-111.058,45.66905
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.058,45.66918
+"Black Hills Spruce","Picea","glabra","Coniferous",NA,NA,-111.059,45.66916
+"Colorado Blue Spruce","Picea","pungens","Coniferous","Glauca",NA,-111.058,45.6692
+NA,"<Null>",NA,"Deciduous",NA,NA,-111.059,45.66871
+NA,"<Null>",NA,"Deciduous",NA,NA,-111.058,45.66871
+NA,"<Null>",NA,"Deciduous",NA,NA,-111.058,45.66889
+NA,"<Null>",NA,"Deciduous",NA,NA,-111.058,45.66865
+NA,"<Null>",NA,"Deciduous",NA,NA,-111.058,45.66815
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.058,45.66768
+NA,"<Null>",NA,"Coniferous",NA,NA,-111.055,45.66695
+NA,"<Null>",NA,"Coniferous",NA,NA,-111.055,45.66642
+"Colorado Blue Spruce","Picea","pungens","Coniferous",NA,NA,-111.059,45.66833
+"Colorado Blue Spruce","Picea","pungens","Coniferous",NA,NA,-111.059,45.66829
+NA,"<Null>",NA,"Coniferous",NA,NA,-111.059,45.66826
+"Colorado Blue Spruce","Picea","pungens","Coniferous",NA,NA,-111.059,45.66837
+"Colorado Blue Spruce","Picea","pungens","Coniferous",NA,NA,-111.059,45.66838
+"Colorado Blue Spruce","Picea","pungens","Coniferous",NA,NA,-111.059,45.66817
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.059,45.66807
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.06,45.66807
+"Colorado Blue Spruce","Picea","pungens","Coniferous",NA,NA,-111.06,45.66814
+"Fir (Concolor)","Abies","concolor","Coniferous",NA,NA,-111.06,45.66807
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.06,45.66809
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.06,45.66775
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.06,45.66767
+"Colorado Blue Spruce","Picea","pungens","Deciduous",NA,NA,-111.06,45.66801
+"Colorado Blue Spruce","Picea","pungens","Coniferous",NA,NA,-111.06,45.66804
+"Colorado Blue Spruce","Picea","pungens","Coniferous",NA,NA,-111.06,45.6681
+"Colorado Blue Spruce","Picea","pungens","Coniferous","Glauca",NA,-111.06,45.66809
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.061,45.66793
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.06,45.66858
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.06,45.66867
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.06,45.66869
+"Black Hills Spruce","Picea","glabra","Coniferous",NA,NA,-111.059,45.66894
+"Colorado Blue Spruce","Picea","pungens","Coniferous",NA,NA,-111.059,45.66913
+"Colorado Blue Spruce","Picea","pungens","Coniferous",NA,NA,-111.06,45.66917
+"Silver Maple","Acer","saccharinum","Deciduous",NA,NA,-111.06,45.66925
+NA,"PIC",NA,"Coniferous",NA,NA,-111.061,45.66912
+"Engelmann Spruce","Picea","engelmannii","Coniferous",NA,NA,-111.061,45.66904
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.061,45.66864
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.061,45.66876
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.061,45.66865
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.061,45.66831
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.061,45.66822
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.061,45.66807
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.061,45.66795
+"Silver Maple","Acer","saccharinum","Deciduous",NA,NA,-111.061,45.66764
+"Silver Maple","Acer","saccharinum","Deciduous",NA,NA,-111.059,45.66765
+NA,NA,NA,"Coniferous",NA,NA,-111.059,45.66801
+NA,NA,NA,"Coniferous",NA,NA,-111.059,45.66805
+NA,NA,NA,"Coniferous",NA,NA,-111.059,45.66808
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.058,45.66977
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.058,45.66987
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.058,45.67004
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.058,45.67013
+"Elm (American)","Sorbus","acuparia","Deciduous",NA,NA,-111.058,45.67047
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.058,45.67066
+"Engelmann Spruce","Picea","engelmannii","Coniferous",NA,NA,-111.058,45.67096
+"Crabapple","Malus",NA,"Deciduous",NA,NA,-111.058,45.67093
+"Pine (Lodgepole)","Pinus","contorta","Coniferous",NA,NA,-111.058,45.67078
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.058,45.67069
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.058,45.6705
+"Elm (American)","Sorbus","acuparia","Deciduous",NA,NA,-111.058,45.67065
+"Elm (American)","Sorbus","acuparia","Deciduous",NA,NA,-111.058,45.67065
+"Elm (American)","Sorbus","acuparia","Deciduous",NA,NA,-111.058,45.6708
+"Elm (American)","Sorbus","acuparia","Deciduous",NA,NA,-111.058,45.67078
+"Hawthorne","Crataegus","oxycantha","Deciduous",NA,NA,-111.058,45.67098
+"Hawthorne","Crataegus","oxycantha","Deciduous",NA,NA,-111.058,45.6709
+"Hawthorne","Crataegus","oxycantha","Deciduous",NA,NA,-111.058,45.67086
+"Chokecherry","Prunus","maackii","Deciduous",NA,NA,-111.059,45.67098
+"Colorado Blue Spruce","Picea","pungens","Coniferous",NA,NA,-111.059,45.67075
+"Willow","Salix",NA,"Deciduous",NA,NA,-111.059,45.67075
+"Willow","Salix",NA,"Deciduous",NA,NA,-111.059,45.67068
+"Willow","Salix",NA,"Deciduous",NA,NA,-111.059,45.67069
+"Willow","Salix",NA,"Deciduous",NA,NA,-111.059,45.67044
+"Willow","Salix",NA,"Deciduous",NA,NA,-111.059,45.67036
+"Colorado Blue Spruce","Picea","pungens","Coniferous",NA,NA,-111.059,45.67038
+"Elm (American)","Sorbus","acuparia","Deciduous",NA,NA,-111.059,45.67041
+"Silver Maple","Acer","saccharinum","Deciduous",NA,NA,-111.059,45.6702
+"Pine (Lodgepole)","PIN","contorta","Coniferous",NA,NA,-111.058,45.67051
+"Birch (Weeping)","Betula","pendula","Deciduous",NA,NA,-111.058,45.67034
+"Ponderosa Pine","Pinus","ponderosa","Coniferous",NA,NA,-111.059,45.66978
+"Engelmann Spruce","Picea","engelmannii","Coniferous",NA,NA,-111.058,45.66982
+"Elm (American)","Sorbus","acuparia","Deciduous",NA,NA,-111.058,45.66998
+"Ponderosa Pine","Pinus","ponderosa","Coniferous",NA,NA,-111.059,45.66943
+"Colorado Blue Spruce","Picea","pungens","Coniferous",NA,NA,-111.058,45.66945
+"Silver Maple","Acer","saccharinum","Deciduous",NA,NA,-111.061,45.67066
+"Silver Maple","Acer","saccharinum","Deciduous",NA,NA,-111.061,45.67075
+"Silver Maple","Acer","saccharinum","Deciduous",NA,NA,-111.06,45.67099
+"Willow","Salix",NA,"Deciduous",NA,NA,-111.06,45.67069
+"Scotch Pine","Pinus","sylvestris","Coniferous",NA,NA,-111.06,45.67064
+"Austrian Pine","Pinus","nigra","Coniferous",NA,NA,-111.06,45.67025
+"Austrian Pine","Pinus","nigra","Coniferous",NA,NA,-111.06,45.67021
+"Austrian Pine","Pinus","nigra","Coniferous",NA,NA,-111.06,45.67031
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.06,45.66996
+"Engelmann Spruce","Picea","engelmannii","Coniferous",NA,NA,-111.06,45.6698
+"Colorado Blue Spruce","Picea","pungens","Coniferous",NA,NA,-111.061,45.66774
+"Flowering Crabapple","Malus",NA,"Deciduous",NA,NA,-111.062,45.66775
+"Honey Locust","Gleditsia","triacanthos","Deciduous",NA,NA,-111.062,45.66771
+"Ash (Green)","Fraxinus","pennsylvanica","Coniferous",NA,NA,-111.062,45.66776
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.062,45.66793
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.062,45.66799
+"Colorado Blue Spruce","Picea","pungens","Coniferous",NA,NA,-111.062,45.66817
+"Colorado Blue Spruce","Picea","pungens","Coniferous",NA,NA,-111.062,45.66818
+"Ponderosa Pine","Pinus","ponderosa","Coniferous",NA,NA,-111.062,45.66828
+"Ponderosa Pine","Pinus","ponderosa","Coniferous",NA,NA,-111.062,45.66833
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.062,45.66862
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.062,45.66857
+"Silver Maple","Acer","saccharinum","Deciduous",NA,NA,-111.062,45.66865
+"Silver Maple","Acer","saccharinum","Deciduous",NA,NA,-111.062,45.6683
+"Colorado Blue Spruce","Picea","pungens","Coniferous",NA,NA,-111.062,45.66823
+"Silver Maple","Acer","saccharinum","Deciduous",NA,NA,-111.062,45.66885
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.062,45.66888
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.061,45.66811
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.061,45.66831
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.061,45.66861
+"Silver Maple","Acer","saccharinum","Deciduous",NA,NA,-111.061,45.66872
+"Silver Maple","Acer","saccharinum","Deciduous",NA,NA,-111.061,45.669
+"Chokecherry","Prunus","virginiana","Deciduous",NA,NA,-111.061,45.66933
+"Engelmann Spruce","Picea","engelmannii","Coniferous",NA,NA,-111.062,45.66927
+"Colorado Blue Spruce","Picea","pungens","Coniferous","Glauca",NA,-111.061,45.66941
+NA,NA,NA,"Deciduous",NA,NA,-111.061,45.66751
+NA,NA,NA,"Deciduous",NA,NA,-111.061,45.66751
+NA,NA,NA,"Coniferous",NA,NA,-111.062,45.66736
+NA,NA,NA,"Coniferous",NA,NA,-111.062,45.66719
+NA,NA,NA,"Coniferous",NA,NA,-111.062,45.66699
+NA,NA,NA,"Coniferous",NA,NA,-111.062,45.6674
+NA,NA,NA,"Coniferous",NA,NA,-111.062,45.66747
+NA,NA,NA,"Coniferous",NA,NA,-111.062,45.6675
+NA,NA,NA,"Coniferous",NA,NA,-111.062,45.66745
+NA,NA,NA,"Deciduous",NA,NA,-111.062,45.66737
+NA,NA,NA,"Deciduous",NA,NA,-111.061,45.66733
+NA,NA,NA,"Deciduous",NA,NA,-111.061,45.66722
+NA,NA,NA,"Deciduous",NA,NA,-111.061,45.66718
+NA,NA,NA,"Deciduous",NA,NA,-111.061,45.66713
+NA,NA,NA,"Deciduous",NA,NA,-111.062,45.66694
+NA,NA,NA,"Deciduous",NA,NA,-111.062,45.66689
+NA,NA,NA,"Deciduous",NA,NA,-111.062,45.66685
+NA,NA,NA,"Deciduous",NA,NA,-111.061,45.66669
+NA,NA,NA,"Deciduous",NA,NA,-111.061,45.66667
+NA,NA,NA,"Deciduous",NA,NA,-111.061,45.6667
+NA,NA,NA,"Deciduous",NA,NA,-111.061,45.66674
+NA,NA,NA,"Deciduous",NA,NA,-111.061,45.66691
+NA,NA,NA,"Deciduous",NA,NA,-111.061,45.66694
+NA,NA,NA,"Deciduous",NA,NA,-111.061,45.66698
+NA,NA,NA,"Deciduous",NA,NA,-111.061,45.66702
+NA,NA,NA,"Deciduous",NA,NA,-111.061,45.66721
+NA,NA,NA,"Deciduous",NA,NA,-111.061,45.66724
+NA,NA,NA,"Deciduous",NA,NA,-111.061,45.66732
+NA,NA,NA,"Deciduous",NA,NA,-111.061,45.66735
+NA,NA,NA,"Deciduous",NA,NA,-111.061,45.66731
+NA,NA,NA,"Deciduous",NA,NA,-111.06,45.66727
+NA,NA,NA,"Deciduous",NA,NA,-111.061,45.66695
+NA,NA,NA,"Deciduous",NA,NA,-111.061,45.66694
+NA,NA,NA,"Deciduous",NA,NA,-111.06,45.66693
+NA,NA,NA,"Deciduous",NA,NA,-111.06,45.66694
+NA,NA,NA,"Deciduous",NA,NA,-111.06,45.66674
+NA,NA,NA,"Deciduous",NA,NA,-111.06,45.66668
+NA,NA,NA,"Deciduous",NA,NA,-111.06,45.66674
+NA,NA,NA,"Deciduous",NA,NA,-111.06,45.66669
+NA,NA,NA,"Deciduous",NA,NA,-111.06,45.6667
+NA,NA,NA,"Deciduous",NA,NA,-111.06,45.66671
+NA,NA,NA,"Deciduous",NA,NA,-111.06,45.66674
+NA,NA,NA,"Deciduous",NA,NA,-111.06,45.66671
+NA,NA,NA,"Deciduous",NA,NA,-111.06,45.66693
+NA,NA,NA,"Deciduous",NA,NA,-111.06,45.6669
+NA,NA,NA,"Coniferous",NA,NA,-111.06,45.667
+NA,NA,NA,"Coniferous",NA,NA,-111.06,45.66706
+NA,NA,NA,"Coniferous",NA,NA,-111.06,45.66701
+NA,NA,NA,"Coniferous",NA,NA,-111.06,45.66702
+NA,NA,NA,"Deciduous",NA,NA,-111.06,45.66737
+NA,NA,NA,"Coniferous",NA,NA,-111.06,45.6674
+NA,NA,NA,"Coniferous",NA,NA,-111.06,45.66741
+NA,NA,NA,"Coniferous",NA,NA,-111.06,45.66745
+NA,NA,NA,"Deciduous",NA,NA,-111.06,45.66749
+NA,NA,NA,"Deciduous",NA,NA,-111.06,45.66749
+NA,NA,NA,"Deciduous",NA,NA,-111.06,45.66733
+NA,NA,NA,"Deciduous",NA,NA,-111.06,45.66724
+NA,NA,NA,"Deciduous",NA,NA,-111.06,45.6672
+NA,NA,NA,"Deciduous",NA,NA,-111.059,45.66703
+NA,NA,NA,"Deciduous",NA,NA,-111.059,45.66674
+NA,NA,NA,"Deciduous",NA,NA,-111.059,45.66666
+NA,NA,NA,"Deciduous",NA,NA,-111.059,45.66671
+NA,NA,NA,"Deciduous",NA,NA,-111.059,45.66666
+NA,NA,NA,"Deciduous",NA,NA,-111.059,45.6667
+NA,NA,NA,"Deciduous",NA,NA,-111.059,45.66673
+NA,NA,NA,"Deciduous",NA,NA,-111.058,45.66673
+NA,NA,NA,"Deciduous",NA,NA,-111.058,45.66673
+NA,NA,NA,"Coniferous",NA,NA,-111.06,45.66746
+NA,NA,NA,"Coniferous",NA,NA,-111.061,45.66747
+NA,NA,NA,"Coniferous",NA,NA,-111.06,45.66744
+NA,NA,NA,"Coniferous",NA,NA,-111.061,45.66749
+NA,NA,NA,"Coniferous",NA,NA,-111.061,45.66749
+NA,NA,NA,"Deciduous",NA,NA,-111.061,45.66749
+NA,NA,NA,"Deciduous",NA,NA,-111.061,45.6675
+NA,NA,NA,"Deciduous",NA,NA,-111.061,45.6675
+NA,NA,NA,"Deciduous",NA,NA,-111.059,45.66748
+NA,NA,NA,"Deciduous",NA,NA,-111.059,45.66748
+NA,NA,NA,"Deciduous",NA,NA,-111.059,45.66731
+NA,NA,NA,"Deciduous",NA,NA,-111.059,45.66693
+NA,NA,NA,"Deciduous",NA,NA,-111.059,45.66694
+NA,NA,NA,"Deciduous",NA,NA,-111.059,45.66693
+NA,NA,NA,"Deciduous",NA,NA,-111.059,45.66691
+NA,NA,NA,"Deciduous",NA,NA,-111.059,45.66693
+NA,NA,NA,"Deciduous",NA,NA,-111.059,45.66693
+"Colorado Blue Spruce","Picea","pungens","Coniferous",NA,NA,-111.061,45.67019
+"Silver Maple","Acer","saccharinum","Deciduous",NA,NA,-111.061,45.67011
+"Chokecherry","Prunus","virginiana","Deciduous",NA,NA,-111.061,45.67005
+"Chokecherry","Prunus","virginiana","Deciduous",NA,NA,-111.061,45.66998
+"Chokecherry","Prunus","virginiana","Deciduous",NA,NA,-111.061,45.66993
+"Silver Maple","Acer","saccharinum","Deciduous",NA,NA,-111.061,45.66985
+"Silver Maple","Acer","saccharinum","Deciduous",NA,NA,-111.061,45.6698
+"Silver Maple","Acer","saccharinum","Deciduous",NA,NA,-111.061,45.66974
+"Chokecherry","Prunus","virginiana","Deciduous",NA,NA,-111.061,45.66985
+"Chokecherry","Prunus","virginiana","Deciduous","Canadian red",NA,-111.061,45.66972
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.061,45.66947
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.061,45.66947
+"Colorado Blue Spruce","Picea","pungens","Coniferous","Glauca",NA,-111.061,45.66947
+"Chokecherry","Prunus","virginiana","Deciduous",NA,NA,-111.061,45.66959
+"Chokecherry","Prunus","virginiana","Deciduous",NA,NA,-111.061,45.66955
+"Chokecherry","Prunus","virginiana","Deciduous",NA,NA,-111.061,45.66949
+"Chokecherry","Prunus","virginiana","Deciduous",NA,NA,-111.061,45.66947
+"Silver Maple","Acer","saccharinum","Deciduous",NA,NA,-111.062,45.66959
+"Elm (American)","Sorbus","acuparia","Deciduous",NA,NA,-111.062,45.66964
+"Chokecherry","Prunus","virginiana","Deciduous",NA,NA,-111.062,45.66979
+"Chokecherry","Prunus","virginiana","Deciduous",NA,NA,-111.062,45.66984
+"Colorado Blue Spruce","Picea","pungens","Coniferous","Glauca",NA,-111.061,45.66981
+"Colorado Blue Spruce","Picea","pungens","Coniferous",NA,NA,-111.061,45.66982
+"Silver Maple","Acer","saccharinum","Deciduous",NA,NA,-111.061,45.66989
+"Chokecherry","Prunus","virginiana","Deciduous",NA,NA,-111.061,45.6699
+"Chokecherry","Prunus","virginiana","Deciduous",NA,NA,-111.061,45.66997
+"Colorado Blue Spruce","Picea","pungens","Coniferous","Glauca",NA,-111.061,45.67002
+"Chokecherry","Prunus","virginiana","Deciduous",NA,NA,-111.061,45.67004
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.061,45.67007
+"Colorado Blue Spruce","Picea","pungens","Coniferous","Glauca",NA,-111.061,45.67013
+"Chokecherry","Prunus","virginiana","Deciduous","Canadian red",NA,-111.061,45.67015
+"Chokecherry","Prunus","virginiana","Deciduous","Canadian red",NA,-111.061,45.67015
+"Colorado Blue Spruce","Picea","pungens","Coniferous",NA,NA,-111.061,45.67023
+"Colorado Blue Spruce","Picea","pungens","Coniferous",NA,NA,-111.061,45.67028
+"Colorado Blue Spruce","Picea","pungens","Coniferous",NA,NA,-111.061,45.67032
+"Chokecherry","Prunus","virginiana","Deciduous",NA,NA,-111.061,45.67047
+"Chokecherry","Prunus","virginiana","Deciduous",NA,NA,-111.062,45.67048
+"Chokecherry","Prunus","virginiana","Deciduous","canadian red",NA,-111.062,45.67039
+"Chokecherry","Prunus","virginiana","Deciduous",NA,NA,-111.062,45.67018
+"Chokecherry","Prunus","virginiana","Deciduous",NA,NA,-111.062,45.66997
+"Chokecherry","Prunus","virginiana","Deciduous",NA,NA,-111.062,45.66991
+"Colorado Blue Spruce","Picea","pungens","Coniferous",NA,NA,-111.062,45.66975
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.062,45.66979
+"Colorado Blue Spruce","Picea","pungens","Coniferous","Glauca",NA,-111.062,45.6698
+"Colorado Blue Spruce","Picea","pungens","Coniferous","Glauca",NA,-111.062,45.66938
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.062,45.66936
+"Colorado Blue Spruce","Picea","pungens","Coniferous",NA,NA,-111.062,45.66942
+"Colorado Blue Spruce","Picea","pungens","Coniferous",NA,NA,-111.062,45.66947
+"Silver Maple","Acer","saccharinum","Deciduous",NA,NA,-111.062,45.66952
+"Columnar Blue Spruce","Picea","pungens","Coniferous",NA,NA,-111.062,45.66957
+"Silver Maple","Acer","saccharinum","Deciduous",NA,NA,-111.062,45.66963
+"Colorado Blue Spruce","Picea","pungens","Coniferous","Glauca",NA,-111.062,45.66964
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.062,45.66969
+"Chokecherry","Prunus","virginiana","Deciduous",NA,NA,-111.062,45.66993
+"Chokecherry","Prunus","virginiana","Deciduous",NA,NA,-111.062,45.67005
+"Chokecherry","Prunus","virginiana","Deciduous",NA,NA,-111.062,45.6701
+"Chokecherry","Prunus","virginiana","Deciduous",NA,NA,-111.062,45.67015
+"Colorado Blue Spruce","Picea","pungens","Coniferous","Glauca",NA,-111.062,45.67028
+"Colorado Blue Spruce","Picea","pungens","Coniferous","Glauca",NA,-111.062,45.67033
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.062,45.67032
+"Colorado Blue Spruce","Picea","pungens","Coniferous",NA,NA,-111.062,45.6704
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.062,45.67045
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.062,45.67045
+"Chokecherry","Prunus","virginiana","Deciduous",NA,NA,-111.062,45.67053
+"Colorado Blue Spruce","Picea","pungens","Coniferous","Glauca",NA,-111.062,45.6706
+"Colorado Blue Spruce","Picea","pungens","Coniferous","Glauca",NA,-111.062,45.67063
+"Chokecherry","Prunus","virginiana","Deciduous",NA,NA,-111.062,45.67071
+"Chokecherry","Prunus","virginiana","Deciduous",NA,NA,-111.062,45.6707
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.062,45.67087
+"Colorado Blue Spruce","Picea","pungens","Coniferous",NA,NA,-111.062,45.67089
+"Willow","Salix",NA,"Deciduous",NA,NA,-111.062,45.67087
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.062,45.67089
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.062,45.67078
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.062,45.67076
+"Colorado Blue Spruce","Picea","pungens","Coniferous",NA,NA,-111.062,45.67073
+"Colorado Blue Spruce","Picea","pungens","Coniferous",NA,NA,-111.062,45.67068
+"Colorado Blue Spruce","Picea","pungens","Coniferous",NA,NA,-111.062,45.67064
+"Colorado Blue Spruce","Picea","pungens","Coniferous","Glauca",NA,-111.062,45.67059
+"Colorado Blue Spruce","Picea","pungens","Coniferous","Glauca",NA,-111.062,45.67055
+"Tatarian Maple","Acer","tataricum","Deciduous",NA,NA,-111.062,45.67043
+"Colorado Blue Spruce","Picea","pungens","Coniferous",NA,NA,-111.062,45.67076
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.062,45.67074
+"Colorado Blue Spruce","Picea","pungens","Coniferous","Glauca",NA,-111.061,45.67091
+"Colorado Blue Spruce","Picea","pungens","Coniferous","Glauca",NA,-111.061,45.67085
+"Colorado Blue Spruce","Picea","pungens","Coniferous","Glauca",NA,-111.061,45.67084
+"Colorado Blue Spruce","Picea","pungens","Coniferous","Glauca",NA,-111.061,45.67089
+"Chokecherry","Prunus","virginiana","Deciduous",NA,NA,-111.062,45.66968
+"Chokecherry","Prunus","virginiana","Deciduous",NA,NA,-111.062,45.66961
+"Chokecherry","Prunus","virginiana","Deciduous",NA,NA,-111.062,45.66949
+"Chokecherry","Prunus","virginiana","Deciduous",NA,NA,-111.062,45.66944
+"Colorado Blue Spruce","Picea","pungens","Coniferous",NA,NA,-111.062,45.66937
+"Colorado Blue Spruce","Picea","pungens","Coniferous","Glauca",NA,-111.062,45.67048
+"Chokecherry","Prunus","virginiana","Deciduous",NA,NA,-111.062,45.6706
+NA,NA,NA,"Deciduous",NA,NA,-111.058,45.66693
+NA,NA,NA,"Deciduous",NA,NA,-111.058,45.66694
+NA,NA,NA,"Deciduous",NA,NA,-111.058,45.66705
+NA,NA,NA,"Deciduous",NA,NA,-111.058,45.66707
+NA,NA,NA,"Deciduous",NA,NA,-111.058,45.6671
+NA,NA,NA,"Coniferous",NA,NA,-111.058,45.6671
+NA,NA,NA,"Coniferous",NA,NA,-111.058,45.66714
+NA,NA,NA,"Coniferous",NA,NA,-111.058,45.66717
+NA,NA,NA,"Coniferous",NA,NA,-111.058,45.66713
+NA,NA,NA,"Coniferous",NA,NA,-111.058,45.66716
+NA,NA,NA,"Coniferous",NA,NA,-111.058,45.66713
+NA,NA,NA,"Coniferous",NA,NA,-111.057,45.66714
+NA,NA,NA,"Deciduous",NA,NA,-111.058,45.66724
+NA,NA,NA,"Deciduous",NA,NA,-111.058,45.66723
+NA,NA,NA,"Deciduous",NA,NA,-111.057,45.66748
+NA,NA,NA,"Deciduous",NA,NA,-111.058,45.66748
+NA,NA,NA,"Deciduous",NA,NA,-111.059,45.66747
+NA,NA,NA,"Deciduous",NA,NA,-111.059,45.66743
+NA,NA,NA,"Deciduous",NA,NA,-111.058,45.66727
+NA,NA,NA,"Deciduous",NA,NA,-111.058,45.66728
+NA,NA,NA,"Deciduous",NA,NA,-111.058,45.6672
+NA,NA,NA,"Deciduous",NA,NA,-111.058,45.66721
+NA,NA,NA,"Deciduous",NA,NA,-111.058,45.66722
+NA,NA,NA,"Deciduous",NA,NA,-111.058,45.66728
+NA,NA,NA,"Deciduous",NA,NA,-111.058,45.66729
+NA,NA,NA,"Deciduous",NA,NA,-111.058,45.66728
+NA,NA,NA,"Deciduous",NA,NA,-111.058,45.66727
+NA,NA,NA,"Deciduous",NA,NA,-111.058,45.66727
+NA,NA,NA,"Deciduous",NA,NA,-111.058,45.66726
+NA,NA,NA,"Coniferous",NA,NA,-111.047,45.66173
+NA,NA,NA,"Coniferous",NA,NA,-111.046,45.66173
+NA,NA,NA,"Coniferous",NA,NA,-111.046,45.66173
+NA,NA,NA,"Coniferous",NA,NA,-111.046,45.66173
+NA,NA,NA,"Coniferous",NA,NA,-111.046,45.66174
+NA,NA,NA,"Coniferous",NA,NA,-111.046,45.66174
+NA,NA,NA,"Coniferous",NA,NA,-111.046,45.66174
+NA,NA,NA,"Coniferous",NA,NA,-111.046,45.66174
+NA,NA,NA,"Coniferous",NA,NA,-111.046,45.66174
+NA,NA,NA,"Coniferous",NA,NA,-111.046,45.66174
+NA,NA,NA,"Coniferous",NA,NA,-111.046,45.66174
+NA,NA,NA,"Coniferous",NA,NA,-111.046,45.66174
+NA,NA,NA,"Coniferous",NA,NA,-111.046,45.66173
+NA,NA,NA,"Coniferous",NA,NA,-111.046,45.66173
+NA,NA,NA,"Coniferous",NA,NA,-111.046,45.66174
+NA,NA,NA,"Coniferous",NA,NA,-111.046,45.66174
+NA,NA,NA,"Coniferous",NA,NA,-111.046,45.66174
+NA,NA,NA,"Coniferous",NA,NA,-111.046,45.66174
+NA,NA,NA,"Coniferous",NA,NA,-111.046,45.66174
+NA,NA,NA,"Coniferous",NA,NA,-111.046,45.66174
+NA,NA,NA,"Coniferous",NA,NA,-111.046,45.66174
+NA,NA,NA,"Coniferous",NA,NA,-111.046,45.66174
+NA,NA,NA,"Coniferous",NA,NA,-111.046,45.66174
+NA,NA,NA,"Coniferous",NA,NA,-111.046,45.66174
+NA,NA,NA,"Coniferous",NA,NA,-111.046,45.66174
+NA,NA,NA,"Coniferous",NA,NA,-111.046,45.66174
+NA,NA,NA,"Coniferous",NA,NA,-111.047,45.66173
+NA,NA,NA,"Coniferous",NA,NA,-111.046,45.66173
+NA,NA,NA,"Coniferous",NA,NA,-111.046,45.66173
+NA,NA,NA,"Coniferous",NA,NA,-111.046,45.66173
+NA,NA,NA,"Coniferous",NA,NA,-111.046,45.66174
+NA,NA,NA,"Coniferous",NA,NA,-111.046,45.66174
+NA,NA,NA,"Coniferous",NA,NA,-111.046,45.66174
+NA,NA,NA,"Coniferous",NA,NA,-111.046,45.66174
+NA,NA,NA,"Coniferous",NA,NA,-111.046,45.66174
+NA,NA,NA,"Coniferous",NA,NA,-111.046,45.66174
+NA,NA,NA,"Coniferous",NA,NA,-111.046,45.66174
+NA,NA,NA,"Coniferous",NA,NA,-111.046,45.66174
+NA,NA,NA,"Coniferous",NA,NA,-111.046,45.66173
+NA,NA,NA,"Coniferous",NA,NA,-111.046,45.66173
+NA,NA,NA,"Coniferous",NA,NA,-111.046,45.66174
+NA,NA,NA,"Coniferous",NA,NA,-111.046,45.66174
+NA,NA,NA,"Coniferous",NA,NA,-111.046,45.66174
+NA,NA,NA,"Coniferous",NA,NA,-111.046,45.66174
+NA,NA,NA,"Coniferous",NA,NA,-111.046,45.66174
+NA,NA,NA,"Coniferous",NA,NA,-111.046,45.66174
+NA,NA,NA,"Coniferous",NA,NA,-111.046,45.66174
+NA,NA,NA,"Coniferous",NA,NA,-111.046,45.66174
+NA,NA,NA,"Coniferous",NA,NA,-111.046,45.66174
+NA,NA,NA,"Coniferous",NA,NA,-111.046,45.66174
+NA,NA,NA,"Coniferous",NA,NA,-111.046,45.66174
+NA,NA,NA,"Coniferous",NA,NA,-111.046,45.66174
+NA,NA,NA,"Deciduous",NA,NA,-111.047,45.6616
+NA,NA,NA,"Deciduous",NA,NA,-111.047,45.66148
+"Bur Oak","Quercus","maccrocarpa","Deciduous",NA,NA,-111.047,45.66138
+"Bur Oak","Quercus","maccrocarpa","Deciduous",NA,NA,-111.047,45.6613
+NA,NA,NA,"Deciduous",NA,NA,-111.047,45.66106
+NA,NA,NA,"Deciduous",NA,NA,-111.047,45.66099
+"Bur Oak","Quercus","maccrocarpa","Deciduous",NA,NA,-111.047,45.6609
+"Bur Oak","Quercus","maccrocarpa","Deciduous",NA,NA,-111.047,45.66072
+"Bur Oak","Quercus","maccrocarpa","Deciduous",NA,NA,-111.047,45.66061
+"Bur Oak","Quercus","maccrocarpa","Deciduous",NA,NA,-111.047,45.6605
+NA,NA,NA,"Coniferous",NA,NA,-111.046,45.6606
+NA,NA,NA,"Coniferous",NA,NA,-111.046,45.66051
+NA,NA,NA,"Deciduous",NA,NA,-111.046,45.66111
+NA,NA,NA,"Deciduous",NA,NA,-111.046,45.66111
+NA,NA,NA,"Deciduous",NA,NA,-111.046,45.66111
+NA,NA,NA,"Deciduous",NA,NA,-111.046,45.66111
+NA,NA,NA,"Deciduous",NA,NA,-111.046,45.66111
+NA,NA,NA,"Coniferous",NA,NA,-111.045,45.66174
+NA,NA,NA,"Coniferous",NA,NA,-111.045,45.66174
+NA,NA,NA,"Coniferous",NA,NA,-111.045,45.66174
+NA,NA,NA,"Coniferous",NA,NA,-111.045,45.66174
+NA,NA,NA,"Coniferous",NA,NA,-111.045,45.66174
+NA,NA,NA,"Coniferous",NA,NA,-111.045,45.66174
+NA,NA,NA,"Coniferous",NA,NA,-111.045,45.66174
+NA,NA,NA,"Coniferous",NA,NA,-111.045,45.66174
+NA,NA,NA,"Coniferous",NA,NA,-111.045,45.66174
+NA,NA,NA,"Coniferous",NA,NA,-111.045,45.66174
+NA,NA,NA,"Coniferous",NA,NA,-111.045,45.66174
+NA,NA,NA,"Coniferous",NA,NA,-111.046,45.66174
+NA,NA,NA,"Coniferous",NA,NA,-111.046,45.66174
+NA,NA,NA,"Coniferous",NA,NA,-111.046,45.66174
+NA,NA,NA,"Coniferous",NA,NA,-111.046,45.66174
+NA,NA,NA,"Coniferous",NA,NA,-111.046,45.66174
+NA,NA,NA,"Coniferous",NA,NA,-111.046,45.66174
+NA,NA,NA,"Coniferous",NA,NA,-111.046,45.66174
+NA,NA,NA,"Coniferous",NA,NA,-111.046,45.66174
+NA,NA,NA,"Coniferous",NA,NA,-111.046,45.66174
+NA,NA,NA,"Coniferous",NA,NA,-111.046,45.66174
+NA,NA,NA,"Coniferous",NA,NA,-111.046,45.66174
+NA,NA,NA,"Coniferous",NA,NA,-111.046,45.66174
+NA,NA,NA,"Coniferous",NA,NA,-111.046,45.66174
+NA,NA,NA,"Coniferous",NA,NA,-111.046,45.66174
+NA,NA,NA,"Coniferous",NA,NA,-111.046,45.66174
+NA,"<Null>",NA,"Coniferous",NA,NA,-111.046,45.66174
+NA,"<Null>",NA,"Coniferous",NA,NA,-111.046,45.66055
+NA,"<Null>",NA,"Coniferous",NA,NA,-111.046,45.66053
+NA,"<Null>",NA,"Coniferous",NA,NA,-111.046,45.66061
+NA,"<Null>",NA,"Coniferous",NA,NA,-111.046,45.66174
+"Honey Locust","Gleditsia",NA,"Deciduous",NA,NA,-111.072,45.66333
+"Maple","Acer",NA,"Deciduous",NA,NA,-111.072,45.66329
+"Chokecherry","Prunus",NA,"Deciduous",NA,NA,-111.072,45.66327
+"Chokecherry","Prunus",NA,"Deciduous",NA,NA,-111.072,45.66341
+"Honey Locust","Gleditsia","tricanthos","Deciduous",NA,NA,-111.051,45.6596
+"Honey Locust","Gleditsia","triacanthos","Deciduous","Shade Master",NA,-111.047,45.66615
+"Honey Locust","Gleditsia","triacanthos","Deciduous","Shade Master",NA,-111.047,45.66599
+"Honey Locust","Gleditsia","triacanthos","Deciduous","Shade Master",NA,-111.047,45.66697
+"Honey Locust","Gleditsia","triacanthos","Deciduous","Shade Master",NA,-111.047,45.66684
+"Honey Locust","Gleditsia","triacanthos","Deciduous","Shade Master",NA,-111.047,45.66935
+"Honey Locust","Gleditsia","triacanthos","Deciduous","Shade Master",NA,-111.046,45.66995
+"Honey Locust","Gleditsia","tricanthos","Deciduous",NA,NA,-111.046,45.67004
+"Green Ash","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.047,45.66607
+"Honey Locust","Gleditsia","triacanthos","Deciduous",NA,NA,-111.046,45.66981
+"Bur Oak","Quercus","macrocarpa","Deciduous",NA,NA,-111.048,45.66351
+"Maple (Norway)","Acer","platanoides","Deciduous",NA,NA,-111.049,45.67105
+"Maple (Norway)","Acer","platanoides","Deciduous",NA,NA,-111.051,45.67089
+"Maple (Norway)","Acer","platanoides","Deciduous",NA,NA,-111.05,45.668
+"Flowering Crab","Malus","x","Deciduous",NA,NA,-111.045,45.66809
+"Mountain Ash","Sorbus","rosaceae","Deciduous",NA,NA,-111.045,45.66811
+"Spruce","Picea","pungens","Coniferous",NA,NA,-111.051,45.66765
+"Green Ash","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.045,45.6681
+"Green Ash","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.045,45.6681
+"Japenese Tree Lilac","Syringa","reticulata","Deciduous",NA,NA,-111.048,45.66898
+"Japenese Tree Lilac","Syringa","reticulata","Deciduous",NA,NA,-111.048,45.66893
+"Chokecherry","Prunus","virginiana","Deciduous","Mayday",NA,-111.051,45.65887
+NA,"Picea","pungens","Coniferous",NA,NA,-111.048,45.66891
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.062,45.67046
+"Elm (American)","Sorbus","acuparia","Deciduous",NA,NA,-111.061,45.67003
+"Elm (American)","Sorbus","acuparia","Deciduous",NA,NA,-111.061,45.67002
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.063,45.66936
+"Aspen","Populus","tremuloides","Deciduous",NA,NA,-111.062,45.66937
+"Silver Maple","Acer","saccharinum","Deciduous",NA,NA,-111.062,45.66946
+"Austrian Pine","Pinus","nigra","Coniferous",NA,NA,-111.06,45.67045
+"Willow","Salix",NA,"Deciduous",NA,NA,-111.059,45.67044
+"Elm (American)","Sorbus","acuparia","Deciduous",NA,NA,-111.059,45.6704
+"Elm (American)","Sorbus","acuparia","Deciduous",NA,NA,-111.058,45.67048
+"Elm (American)","Sorbus","acuparia","Deciduous",NA,NA,-111.058,45.67047
+"Elm (American)","Sorbus","acuparia","Deciduous",NA,NA,-111.058,45.67066
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.058,45.67034
+"Chokecherry","Prunus","maackii","Deciduous",NA,NA,-111.059,45.67099
+"Silver Maple","Acer","saccharinum","Deciduous",NA,NA,-111.06,45.66772
+"Colorado Blue Spruce","Picea","pungens","Coniferous",NA,NA,-111.062,45.66803
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.062,45.66794
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.062,45.66788
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.062,45.66788
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.062,45.66788
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.061,45.66811
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.061,45.66811
+"Ash (Green)","Fraxinus","pennsylvanica","Deciduous",NA,NA,-111.061,45.66811
+"Cottonwood","Populus","deltoides","Deciduous",NA,NA,-111.061,45.66751
+"Cottonwood","Populus","deltoides","Deciduous",NA,NA,-111.061,45.66751
+"Pine","Pinus",NA,NA,"Western White Pine","7/5/2016 6:00",-111.046,45.66301
+NA,"Prunus",NA,"Deciduous","Scout' Apricot",NA,-111.046,45.66631
+NA,"Prunus",NA,"Deciduous","Scout' Apricot",NA,-111.046,45.66631
+NA,"Prunus",NA,"Deciduous","Scout' Apricot",NA,-111.046,45.66656
+NA,NA,NA,"Deciduous",NA,NA,-111.055,45.66517
+NA,NA,NA,"Deciduous",NA,NA,-111.055,45.66511
+NA,NA,NA,"Deciduous",NA,NA,-111.055,45.66511
+NA,NA,NA,"Coniferous",NA,NA,-111.055,45.66508
+NA,NA,NA,"Coniferous",NA,NA,-111.055,45.66504
+NA,NA,NA,"Coniferous",NA,NA,-111.055,45.66509
+NA,NA,NA,"Coniferous",NA,NA,-111.055,45.66503
+NA,NA,NA,NA,NA,NA,-111.055,45.66504
+NA,NA,NA,"Deciduous",NA,NA,-111.055,45.66515
+NA,NA,NA,NA,NA,NA,-111.055,45.66528
+NA,"Populus","tremuloides","Deciduous",NA,NA,-111.052,45.66059
+NA,"Populus","tremuloides","Deciduous",NA,NA,-111.052,45.66058

@@ -6,7 +6,9 @@ library(magrittr)
 allDataSheet <- gs_title("allData")
 dataDir <- "./data/Gdrive/"
 
+file.remove(paste0(dataDir, list.files(dataDir)))
+
 for(sheet in gs_ws_ls(allDataSheet)){
-  #write.csv(as.data.frame(allDataSheet %>% gs_read_csv(ws=sheet)), file=paste0(dataDir, sheet, ".csv"), row.names=F)
-  gs_download(from=allDataSheet, ws=sheet, to=paste0(dataDir, sheet, ".csv"), overwrite=T)
+  write.csv(as.data.frame(allDataSheet %>% gs_read_csv(ws=sheet)), file=paste0(dataDir, sheet, ".csv"), row.names=F)
+  Sys.sleep(10)
 }
