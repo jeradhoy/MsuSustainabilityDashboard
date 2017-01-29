@@ -4,6 +4,7 @@ library(highcharter)
 library(leaflet)
 library(shinythemes)
 
+ ######## Home ########
 # Define UI for dataset viewer application
 shinyUI(navbarPage(id="main", #title="MSU Sustainability Dashboard",
   fluid=T,
@@ -24,19 +25,19 @@ shinyUI(navbarPage(id="main", #title="MSU Sustainability Dashboard",
         actionLink(inputId="openTabAbout", label="learn about the Sustustainability Dashboard")),
       fluidRow(
         column(4,
-          actionLink("openTabEnergy", HTML('<h2>Energy</h2><img height="100px" width="100px" src="assets/Energy.png">'))),
+          actionLink("openTabEnergy", HTML('<h2>Energy</h2><i class="fa fa-lightbulb-o fa-5x"></i>'))),
         column(4,
-          actionLink("openTabWaste", HTML('<h2>Waste</h2><img height="100px" width="100px" src="assets/Waste.png">'))),
+          actionLink("openTabWaste", HTML('<h2>Waste</h2><i class="fa fa-trash fa-5x"></i>'))),
         column(4,
-          actionLink("openTabGHG", HTML('<h2>Greenhouse Gases</h2><img height="100px" width= "100px" src="assets/GHG.png">'))
+          actionLink("openTabGHG", HTML('<h2>Greenhouse Gases</h2><i class="fa fa-globe fa-5x"></i>'))
       )),
       fluidRow(
         column(4,
-          actionLink("openTabWater", HTML('<h2>Water</h2><img height="100px" width= "100px" src="assets/water.png">'))),
+          actionLink("openTabWater", HTML('<h2>Water</h2><i class="fa fa-tint fa-5x"></i>'))),
         column(4,
-          actionLink("openTabMap", HTML('<h2>Buildings & Landscaping</h2><img height="100px" width="100px" src="assets/Buildings.png">'))),
+          actionLink("openTabMap", HTML('<h2>Buildings & Landscaping</h2><i class="fa fa-home fa-5x"></i>'))),
         column(4,
-          actionLink("openTabProjects", HTML('<h2>Projects</h2><img height="100px" width= "100px" src="assets/Projects.png">'))
+          actionLink("openTabProjects", HTML('<h2>Projects</h2><i class="fa fa-gears fa-5x"></i>'))
       ))
     )
   ),
