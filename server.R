@@ -364,6 +364,11 @@ shinyServer(function(input, output, session) {
                      selected = "tabProjects"
     )
   })
+  observeEvent(input$openTabFood, {
+    updateNavbarPage(session, "main",
+                     selected = "tabFood"
+    )
+  })
 
 
   output$dataTable <- renderTable({
