@@ -227,9 +227,14 @@ shinyServer(function(input, output, session) {
     "LEED Silver" = "assets/UWIcons/leedSilver.jpg"
   )
 
+  output$mapDebug <- renderPrint({
+    input$map_shape_click
+  })
+
   ########### Leed Map ################
   output$map <- renderLeaflet({
     leaflet() %>%
+      setView(lat=45.6675, lng=-111.053, zoom=16) %>%
       addProviderTiles("Esri.WorldTopoMap", group="World Topo",
         options = providerTileOptions(noWrap = TRUE)
       ) %>%
@@ -250,7 +255,11 @@ shinyServer(function(input, output, session) {
                         "<p> Info </p>")) %>%
     addMarkers(data=projectMap, group="Projects",
                ~Lon, ~Lat, icon=~mapIcons[Category],
-               popup = ~paste0("<h3>", Name , "</h3>", "<p>", Description ,"</p>"))
+               popup = ~paste0("<h3>", Name , "</h3>", "<p>", Description ,"</p>")) %>%
+
+      addPolygons(data=buildingShapes, weight=2, layerId=buildingShapes$BLGNUM,
+        highlightOptions = highlightOptions(weight=4,opacity=2, fillOpacity=0.5, bringToFront=T, sendToBack=T))
+
     #%>% addLayersControl(overlayGroups = c("LEED Buildings", "Edible Landscaping"))
   })
 
@@ -306,6 +315,7 @@ shinyServer(function(input, output, session) {
       selected = "tabMap"
     )
   })
+
   observeEvent(input$openTabAbout, {
     updateNavbarPage(session, "main",
       selected = "tabAbout"
@@ -330,6 +340,7 @@ shinyServer(function(input, output, session) {
       write.csv(get(input$dataset), file)
     }
   )
+
   #checkbox button for map
   # function(input, output) {
   #

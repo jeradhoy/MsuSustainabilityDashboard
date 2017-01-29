@@ -3,6 +3,7 @@
 #### Objects created here are also available to both the ui.R script and the server.R script
 
 library(magrittr)
+library(tidyverse)
 dataDir <- "./data/Gdrive/"
 
 ####DECLARE ANY FUNCTIONS FOR APPJ
@@ -30,6 +31,7 @@ getTrendSeries <- function(timeSeries, startTs=c(2005, 1), freq=12){
 #Read in data from each file in ./data/Gdrive (dataDir) folder
 for(file in list.files(dataDir)){
   assign(x=tools::file_path_sans_ext(file), value=read.csv(paste0(dataDir, file), stringsAsFactors=F))
+  #assign(x=tools::file_path_sans_ext(file), value=read_csv(paste0(dataDir, file)))
 }
 
 #Process energy data, convert to time series, convert dkt to kwh, calculate energy trends
@@ -68,3 +70,11 @@ perCapita$pccompost <- as.numeric(format(round(perCapita$compost/perCapita$fallp
 
 #recyclefit <- getTrendSeries(recycletimeseries[,1], startTs = c(2006,1))
 #compostfit <- getTrendSeries(composttimeseries[,3], startTs = c(2006,1))
+
+
+library(rgdal)
+buildingShapes <- readOGR("./data/Buildings/building.shp", layer="building", verbose=F)
+
+str(buildingUtilities)
+buildingUtilities[,c("KWH.QTY", "TOTAL.GAS..DKT", "WATER.MCF")]
+buildingUtilities$KWH.QTY
