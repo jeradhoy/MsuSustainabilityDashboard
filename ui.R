@@ -220,11 +220,11 @@ shinyUI(navbarPage(id="main", #title="MSU Sustainability Dashboard",
           sidebarLayout(
             sidebarPanel(
               selectInput("dataset", "Choose a dataset:",
-                choices = c("Energy" = "energy", "Leed Buildings" = "leed", "Per Capita Waste" = "perCapita", "Waste" = "waste", "Landscaping" = "landscaping", "Projects" = "projectMap")),
+                choices = c("Energy" = "energy", "Leed Buildings" = "leed", "Per Capita Waste" = "perCapita", "Waste" = "waste", "Landscaping" = "landscaping", "Projects" = "projectMap", "Building Data" = "buildingUtilities")),
               downloadButton('downloadData', 'Download')
             ),
             mainPanel(
-              tableOutput('dataTable')
+              DT::dataTableOutput('dataTable')
             )
           )
         )
