@@ -261,9 +261,14 @@ shinyServer(function(input, output, session) {
   })
 
   ########### Food ##############
-  #output$montanaMade <- renderHighchart(
-    # Data
+  output$montanaMade <- renderHighchart({
 
+
+    highchart()%>%
+      hc_title(useHTML=T,
+               text = "<b>Made in Montana Food</b>")%>%
+      hc_add_series(Food$MTMade,  hcaes(name = Food$X1, y = percent), name = "Percent")
+  })
 
   ########### Leed Map ################
   output$map <- renderLeaflet({

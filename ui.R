@@ -207,7 +207,8 @@ shinyUI(navbarPage(id="main", #title="MSU Sustainability Dashboard",
 
  ########### Projects ################
  tabPanel(title = "Projects", value="tabProjects", icon=icon("gears"),
-    tags$h1("Projects")
+    tags$h1("Projects"),
+    highchartOutput("montanaMade", height = "500px")
  ),
 
   ########### About ################
