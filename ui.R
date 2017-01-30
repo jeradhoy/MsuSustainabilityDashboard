@@ -16,6 +16,8 @@ shinyUI(navbarPage(id="main", #title="MSU Sustainability Dashboard",
     tags$link(rel= "stylesheet", type="text/css", href = "styles.css")
   ),
 
+  shinyjs::useShinyjs(),
+
   #Start first tab, Info
   tabPanel(title = "Home", value="tabHome",
     tags$div(align="center",
@@ -195,10 +197,32 @@ shinyUI(navbarPage(id="main", #title="MSU Sustainability Dashboard",
 
         verbatimTextOutput("mapDebug")
       ),
-      uiOutput("showBuildingGraphs")
+      shinyjs::hidden(
+      absolutePanel(
+        id = "buildingGraphs", class = "panel panel-default", fixed = TRUE,
+        draggable = F, bottom = 70, left = 70, right = "auto", top = "auto",
+        width = "40%", height = "auto",
+        fluidRow(
+          column(12, align="center",
+               highchartOutput("buildingKwhChart", height = "100%")
+          )
+        ),
 
+        fluidRow(
+          column(12, align="center",
+               highchartOutput("buildingWaterChart", height = "100%")
+          )
+        ),
+        fluidRow(
+          column(12, align="right",
+            actionButton("showBuildingGraphsButton", label="Close")
+          )
+        )
+      )
+    )
     )
   ),
+
 
  ########## Food #################
  tabPanel(title = "Food", value = "tabFood", icon = icon("apple"),

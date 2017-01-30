@@ -228,37 +228,18 @@ shinyServer(function(input, output, session) {
   )
 
   output$mapDebug <- renderPrint({
-    input$map_shape_click
-    #input$showBuildingGraphsButton %% 2
+    print(input$map_shape_click)
+    print(length(input$showBuildingGraphsButton))
   })
 
-  closeGraphs <- reactive({
-    if(input$showBuildingGraphsButton %% 2 == 1){
-      F
-    }else {
-      T
-    }
+  observeEvent(input$showBuildingGraphsButton, {
+    shinyjs::hide("buildingGraphs", anim=T)
   })
 
-
-  output$showBuildingGraphs <- renderUI({
-    if(!is.null(input$map_shape_click)){
-      tagList(
-        absolutePanel(
-          id = "controls", class = "panel panel-default", fixed = TRUE,
-          draggable = F, bottom = 70, left = 70, right = "auto", top = "auto",
-          width = "80%", height =400,
-          column(width=6,
-                 highchartOutput("buildingKwhChart", height = "100%")
-          ),
-          column(width=6,
-                 highchartOutput("buildingWaterChart", height = "100%")
-          ),
-          actionButton("showBuildingGraphsButton", label="Close")
-        )
-      )
-    }
+  observeEvent(input$map_shape_click, {
+    shinyjs::show("buildingGraphs", anim=T, animType="slide")
   })
+
 
   ########### Food ##############
   #output$montanaMade <- renderHighchart(
