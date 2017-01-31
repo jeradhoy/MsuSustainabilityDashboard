@@ -242,8 +242,7 @@ shinyUI(navbarPage(id="main", #title="MSU Sustainability Dashboard",
   ),
 
  ########## Food #################
-<<<<<<< HEAD
- tabPanel(title = "Food", value = "tabFood", icon = icon("apple"),
+ tabPanel(title = "Food", value = "tabFood", icon = icon("cutlery"),
           tags$h1("Food"),
 
  mainPanel(
@@ -255,10 +254,6 @@ shinyUI(navbarPage(id="main", #title="MSU Sustainability Dashboard",
           #leafletOutput("foodMap")
    )
   )
-=======
- tabPanel(title = "Food", value = "tabFood", icon = icon("cutlery"),
-          tags$h1("Food")
->>>>>>> 0fa0b8eb3adaf31ef8b7b5172909e797d6842e77
  ),
 
  ########### Projects ################
