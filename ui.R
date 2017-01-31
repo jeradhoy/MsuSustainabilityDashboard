@@ -125,7 +125,7 @@ shinyUI(navbarPage(id="main", #title="MSU Sustainability Dashboard",
     tags$p("The Waste Reduction goals are as follows: reduce the total weight of waste to ",
       tags$b("25% of 2009 levels by 2020, 50% by 2030, 65% by 2040, and 80% by 2050."),
     "In order to meet these goals, MSU started a recycling program in 2009, started recycling E-waste in 2012, and is currently developing a composting program.
-  It will require envolvement from the whole student body and falculty to reach these ambitious goals."),
+  It will require involvement from the whole student body and falculty to reach these ambitious goals."),
     sidebarLayout(
       sidebarPanel(
         tags$h5("Select Data"),
@@ -246,9 +246,8 @@ shinyUI(navbarPage(id="main", #title="MSU Sustainability Dashboard",
 
  sidebarLayout(
   sidebarPanel(
-    tags$h5("Select Data"),
     #Radio Button: Choose Usage or expenditure
-    radioButtons("mtMadeOption", label = h5("Choose Graph"),
+    radioButtons("mtMadeOption", label = h5("Select Data"),
                  choices = list("MT Made" = 0, "Total" = 1),
                  selected = 0)
  ),

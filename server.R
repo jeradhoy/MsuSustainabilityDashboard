@@ -249,9 +249,9 @@ shinyServer(function(input, output, session) {
   if(input$mtMadeOption == "0"){
     highchart()%>%
       hc_title(useHTML=T,
-               text = "<b>Made in Montana Food</b>")%>%
+               text = "<b>Montana Made Food</b>")%>%
       #hc_add_series(name = "MTMade", data = Food$MTMade[1:7], type ="pie")%>%
-      hc_add_series(name = "Montana Made", data = food$MTMade[1:7], type = "column")%>%
+      hc_add_series(name = "Total", data = food$MTMade[1:7], type = "column")%>%
       hc_plotOptions(
         series = list(
           colorByPoint =T
@@ -272,18 +272,16 @@ shinyServer(function(input, output, session) {
       highchart()%>%
         hc_title(useHTML=T,
                  text = "<b>MSU Food Purchases</b>")%>%
-        hc_add_series(name="Food Purchases", data = c(food$NonMTMade[8], food$MTMade[8]), type = "bar")%>%
+        hc_add_series(name="Total", data = c(food$MTMade[8], food$NonMTMade[8]), type = "bar")%>%
         hc_plotOptions(
           series = list(
-            colorByPoint = TRUE,
-            stacking= 'normal'),
+            colorByPoint = TRUE),
           bar = list(
-            stacking = 'normal',
-            dataLabels = list(
-              enabled = TRUE,
-              allowOverlap = TRUE
-            )
-          )
+            stacking = 'normal')
+            # dataLabels = list(
+            #   enabled = TRUE,
+            #   allowOverlap = TRUE
+            # )
         )%>%
         hc_legend(F)%>%
         hc_yAxis(
@@ -292,7 +290,7 @@ shinyServer(function(input, output, session) {
         )%>%
         hc_xAxis(
           title = list( text = "Category"),
-          categories = c("Total Purcahses", "MT Made Purchases")
+          categories = c("MT Made Purchases", "Total Purcahses")
         )
     }
   })
