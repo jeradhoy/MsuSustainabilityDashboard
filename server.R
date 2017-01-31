@@ -121,7 +121,7 @@ shinyServer(function(input, output, session) {
               value = wasteCAP2050))),
        opposite= FALSE)%>%
     hc_add_series_ts(name="Landfill", ts=wasteTs[,"landfill"],
-      showInLegend=T, color= "brown", type="line", visible=input$landfill) %>%
+      showInLegend=T, color= "black", type="line", visible=input$landfill) %>%
     hc_add_series_ts(name="Recycle", ts=wasteTs[,"recycle"],
       color= "gold", type="line", visible=input$recycle) %>%
     hc_add_series_ts(name="Compost", ts=wasteTs[,"compost"],
@@ -151,7 +151,7 @@ shinyServer(function(input, output, session) {
           text = "% of Total Waste by Weight"), opposite=FALSE)%>%
         hc_plotOptions(area=list(stacking="percent")) %>%
         hc_add_series_ts(name="Landfill", ts=wasteTs[,2],
-          showInLegend=T, color= "brown", type="area") %>%
+          showInLegend=T, color= "black", type="area") %>%
         hc_add_series_ts(name="Recycle", ts=wasteTs[,1],
           color= "gold", type="area") %>%
         hc_add_series_ts(name="Compost", ts=wasteTs[,3],
