@@ -164,7 +164,6 @@ shinyUI(navbarPage(id="main", #title="MSU Sustainability Dashboard",
       ),
 
       mainPanel(
-
         tabsetPanel(
           tabPanel("Line Plot",
 
@@ -224,13 +223,21 @@ shinyUI(navbarPage(id="main", #title="MSU Sustainability Dashboard",
     )
   ),
 
-
  ########## Food #################
  tabPanel(title = "Food", value = "tabFood", icon = icon("apple"),
           tags$h1("Food"),
-          highchartOutput("montanaMade", height = "500px")
+
+ mainPanel(
+   tabsetPanel(
+     tabPanel(title = "Purchases",
+          highchartOutput("montanaMade", height = "auto", width = "auto")
+     ),
+     tabPanel(title = "Map")
+          #leafletOutput("foodMap")
+   )
+  )
  ),
- tabPanel(title="Map"),
+
  ########### Projects ################
  tabPanel(title = "Projects", value="tabProjects", icon=icon("gears"),
     tags$h1("Projects")

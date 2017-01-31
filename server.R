@@ -259,6 +259,11 @@ shinyServer(function(input, output, session) {
         categories = strsplit(Food$X1, split = "\n")
       )
   })
+  #
+  # output$foodMap <- renderLeaflet({
+  #   leaflet()%>%
+  #     addProviderTiles("")
+  # })
 
   ########### Leed Map ################
   output$map <- renderLeaflet({
