@@ -21,8 +21,8 @@ getTrendSeries <- function(timeSeries, startTs=c(2005, 1), freq=12){
 ##  - do this interactively
 ##  - do this EXACTLY ONCE
 
-# shiny_token <- gs_auth() # authenticate w/ your desired Google identity here
-# saveRDS(shiny_token, "shiny_app_token.rds")
+#shiny_token <- gs_auth() # authenticate w/ your desired Google identity here
+#saveRDS(shiny_token, "shiny_app_token.rds")
 
 ## if you version control your app, don't forget to ignore the token file!
 # e.g., put it into .gitignore

@@ -244,11 +244,20 @@ shinyServer(function(input, output, session) {
   ########### Food ##############
   output$montanaMade <- renderHighchart({
 
-
     highchart()%>%
       hc_title(useHTML=T,
                text = "<b>Made in Montana Food</b>")%>%
-      hc_add_series(Food$MTMade,  hcaes(name = Food$X1, y = percent), name = "Percent")
+      #hc_add_series(name = "MTMade", data = Food$MTMade[1:7], type ="pie")%>%
+      hc_add_series(name = "Montana Made", data = Food$MTMade[1:7], type = "column")%>%
+      hc_legend(F)%>%
+      hc_yAxis(
+        title = list(text = "Dollars ($)"),
+        endOnTick = T
+      )%>%
+      hc_xAxis(
+        title = list( text = "Category"),
+        categories = strsplit(Food$X1, split = "\n")
+      )
   })
 
   ########### Leed Map ################
@@ -287,7 +296,6 @@ shinyServer(function(input, output, session) {
   output$buildingKwhChart <- renderHighchart({
 
     data <- subset(buildingUtilities, Bldg.No == input$map_shape_click$id)
-    #data <- subset(buildingUtilities, Bldg.No == 535)
     KWH_TS <- with(data, ts(data=KWH.QTY, start=c(ACCTYR[1], ACCTMO[1]), frequency=12))
 
       hc <- highchart(type="stock") %>%

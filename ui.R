@@ -198,6 +198,7 @@ shinyUI(navbarPage(id="main", #title="MSU Sustainability Dashboard",
         verbatimTextOutput("mapDebug")
       ),
       shinyjs::hidden(
+
       absolutePanel(
         id = "buildingGraphs", class = "panel panel-default", fixed = TRUE,
         draggable = F, bottom = 70, left = 70, right = "auto", top = "auto",
@@ -226,13 +227,13 @@ shinyUI(navbarPage(id="main", #title="MSU Sustainability Dashboard",
 
  ########## Food #################
  tabPanel(title = "Food", value = "tabFood", icon = icon("apple"),
-          tags$h1("Food")
+          tags$h1("Food"),
+          highchartOutput("montanaMade", height = "500px")
  ),
-
+ tabPanel(title="Map"),
  ########### Projects ################
  tabPanel(title = "Projects", value="tabProjects", icon=icon("gears"),
-    tags$h1("Projects"),
-    highchartOutput("montanaMade", height = "500px")
+    tags$h1("Projects")
  ),
 
   ########### About ################
