@@ -8,7 +8,7 @@ library(shinythemes)
 shinyUI(navbarPage(id="main", #title="MSU Sustainability Dashboard",
   fluid=T,
   position="static-top",
-  selected="tabMap",
+  selected="tabHome",
   inverse=T, #For dark top
   collapsible = T,
   theme=shinytheme("cerulean"),
@@ -18,6 +18,25 @@ shinyUI(navbarPage(id="main", #title="MSU Sustainability Dashboard",
 
   shinyjs::useShinyjs(),
 
+  tags$div(style="position: absolute; z-index:1000",
+    absolutePanel(id = "shareLink", fixed = TRUE,
+      draggable = F, top = "auto", left = 10, right = "auto", bottom = 10,
+      width = "auto", height = "auto",
+      bookmarkButton(label="Share Link")
+    )
+  ),
+
+  tags$footer("Created by Montana State University Sustainability Now Club", align = "center", style = "
+    position:absolute;
+    bottom:0;
+    width:95%;
+    height:30px;   /* Height of the footer */
+    color: black;
+    padding: 10px;
+    background-color: transparent;
+    z-index: 1000;"
+  ),
+
   #Start first tab, Info
   tabPanel(title = "Home", value="tabHome",
     tags$div(align="center",
@@ -25,32 +44,31 @@ shinyUI(navbarPage(id="main", #title="MSU Sustainability Dashboard",
       tags$p("click on an icon to explore data, or ",
         actionLink(inputId="openTabAbout", label="learn about the Sustustainability Dashboard")),
       fluidRow(
-        column(4,
-          actionLink("openTabEnergy", HTML('<h2>Energy</h2><i class="fa fa-lightbulb-o fa-5x"></i>'))),
-        column(4,
-          actionLink("openTabWaste", HTML('<h2>Waste</h2><i class="fa fa-trash fa-5x"></i>'))),
-        column(4,
-          actionLink("openTabGHG", HTML('<h2>Greenhouse Gases</h2><i class="fa fa-globe fa-5x"></i>'))
-      )),
+        column(3,
+          actionLink("openTabEnergy", HTML('<h2>Energy</h2><i class="fa fa-lightbulb-o home-icon"></i>'))),
+        column(3,
+          actionLink("openTabWaste", HTML('<h2>Waste</h2><i class="fa fa-trash home-icon"></i>'))),
+        column(3,
+          actionLink("openTabGHG", HTML('<h2>Greenhouse Gases</h2><i class="fa fa-globe home-icon"></i>'))),
+        column(3,
+          actionLink("openTabWater", HTML('<h2>Water</h2><i class="fa fa-tint home-icon"></i>')))
+      ),
       fluidRow(
         column(4,
-          actionLink("openTabWater", HTML('<h2>Water</h2><i class="fa fa-tint fa-5x"></i>'))),
+          actionLink("openTabMap", HTML('<h2>Buildings & Landscaping</h2><i class="fa fa-home home-icon"></i>'))),
         column(4,
-          actionLink("openTabMap", HTML('<h2>Buildings & Landscaping</h2><i class="fa fa-home fa-5x"></i>'))),
-        column(4,
-          actionLink("openTabFood", HTML('<h2>Food</h2><i class="fa fa-apple fa-5x"></i>'))
-      )),
-     fluidRow(
+          actionLink("openTabFood", HTML('<h2>Food</h2><i class="fa fa-cutlery home-icon"></i>'))),
        column(4,
-          actionLink("openTabProjects", HTML('<h2>Projects</h2><i class="fa fa-gears fa-5x"></i>'))
-      ))
-     )
-    ),
+          actionLink("openTabProjects", HTML('<h2>Projects</h2><i class="fa fa-gears home-icon"></i>'))
+        ))
+      )),
 
   ########### Energy ################
   tabPanel(title = "Energy", value="tabEnergy", icon=icon("lightbulb-o"),
     tags$h1("Energy"),
-    tags$p("For electricity and natural gas usage, MSU's Climate Action Plan aims to hold these parameters constant with ideally a negative growth trend but a maximum of ",
+    tags$p("For electricity and natural gas usage, MSU's ",
+    tags$a(href="http://www.montana.edu/sustainability/projectsandinitiatives/climateactionplan.html", "Climate Action Plan"),
+    " aims to hold these parameters constant with ideally a negative growth trend but a maximum of ",
       tags$b("0.25% growth per year"),
       ". To put this in perspective, in 2009 electricity consumption was growing at a rate of 1.6% and natural gas was growing at a rate of 1.3%."),
     tags$p("In 2009, purchased electricity accounted for 27% MSU’s net emissions and was responsible for 20,564 MT of CO2 equivalents. Combusting fossil fuels such as gas and coal accounted for an additional 27% of emissions and was responsible for 21,099 MT of CO2 equivalents. The average Montanan in 2013 caused about 31.3 MT of energy-related CO2 emissions, while the national average was 16.7 MT of CO2 equivalent."),
@@ -176,7 +194,6 @@ shinyUI(navbarPage(id="main", #title="MSU Sustainability Dashboard",
   )
   ),
 
- #tabPanel(title = "Food", value="tabFood", icon=icon("cutlery")),
 
   ########### Leed ################
   tabPanel(title = "Buildings & Landscaping", value="tabMap", icon=icon("home"),
@@ -192,25 +209,25 @@ shinyUI(navbarPage(id="main", #title="MSU Sustainability Dashboard",
         h3("Show Layers:"),
           checkboxInput("showLeed", label=tags$div(tags$b("LEED Buildings"), tags$img(src="assets/UWIcons/1l0-e0-e0-d-certification-icon.png")), value=T),
           checkboxInput("showEdible", label=tags$div(tags$b("Landscaping"), tags$img(src="assets/UWIcons/3brockman-tree-tour-icon.png", tags$img(src="assets/UWIcons/3garden-icon.png"))), value=T),
-        checkboxInput("showProject", label=tags$div(tags$b("Projects"), tags$img(src="assets/UWIcons/6on-site-composting-icon.png"), tags$img(src="assets/UWIcons/1solar-panels-icon.png")), value=T),
+        checkboxInput("showProject", label=tags$div(tags$b("Projects"), tags$img(src="assets/UWIcons/6on-site-composting-icon.png"), tags$img(src="assets/UWIcons/1solar-panels-icon.png")), value=T)
 
-        verbatimTextOutput("mapDebug")
+        #,verbatimTextOutput("mapDebug")
       ),
       shinyjs::hidden(
 
       absolutePanel(
         id = "buildingGraphs", class = "panel panel-default", fixed = TRUE,
-        draggable = F, bottom = 70, left = 70, right = "auto", top = "auto",
-        width = "40%", height = "auto",
+        draggable = F, top = 70, left = 20, right = "auto", bottom = "auto",
+        width = "30%", height = "auto",
         fluidRow(
           column(12, align="center",
-               highchartOutput("buildingKwhChart", height = "100%")
+               highchartOutput("buildingKwhChart", height = "100%", width="95%")
           )
         ),
 
         fluidRow(
           column(12, align="center",
-               highchartOutput("buildingWaterChart", height = "100%")
+               highchartOutput("buildingWaterChart", height = "100%", width="98%")
           )
         ),
         fluidRow(
@@ -224,6 +241,7 @@ shinyUI(navbarPage(id="main", #title="MSU Sustainability Dashboard",
   ),
 
  ########## Food #################
+<<<<<<< HEAD
  tabPanel(title = "Food", value = "tabFood", icon = icon("apple"),
           tags$h1("Food"),
 
@@ -236,6 +254,10 @@ shinyUI(navbarPage(id="main", #title="MSU Sustainability Dashboard",
           #leafletOutput("foodMap")
    )
   )
+=======
+ tabPanel(title = "Food", value = "tabFood", icon = icon("cutlery"),
+          tags$h1("Food")
+>>>>>>> 0fa0b8eb3adaf31ef8b7b5172909e797d6842e77
  ),
 
  ########### Projects ################

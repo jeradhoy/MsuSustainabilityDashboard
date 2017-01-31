@@ -6,6 +6,8 @@ library(magrittr)
 library(tidyverse)
 dataDir <- "./data/Gdrive/"
 
+enableBookmarking(store="url")
+
 ####DECLARE ANY FUNCTIONS FOR APPJ
 #Get trend timeseries for plotting
 getTrendSeries <- function(timeSeries, startTs=c(2005, 1), freq=12){
