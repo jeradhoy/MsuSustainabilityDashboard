@@ -241,9 +241,17 @@ shinyUI(navbarPage(id="main", #title="MSU Sustainability Dashboard",
   ),
 
  ########## Food #################
-<<<<<<< HEAD
- tabPanel(title = "Food", value = "tabFood", icon = icon("apple"),
+ tabPanel(title = "Food", value = "tabFood", icon = icon("cutlery"),
           tags$h1("Food"),
+
+ sidebarLayout(
+  sidebarPanel(
+    tags$h5("Select Data"),
+    #Radio Button: Choose Usage or expenditure
+    radioButtons("mtMadeOption", label = h5("Choose Graph"),
+                 choices = list("MT Made" = 0, "Total" = 1),
+                 selected = 0)
+ ),
 
  mainPanel(
    tabsetPanel(
@@ -252,12 +260,9 @@ shinyUI(navbarPage(id="main", #title="MSU Sustainability Dashboard",
      ),
      tabPanel(title = "Map")
           #leafletOutput("foodMap")
+    )
    )
   )
-=======
- tabPanel(title = "Food", value = "tabFood", icon = icon("cutlery"),
-          tags$h1("Food")
->>>>>>> 0fa0b8eb3adaf31ef8b7b5172909e797d6842e77
  ),
 
  ########### Projects ################
@@ -285,3 +290,4 @@ shinyUI(navbarPage(id="main", #title="MSU Sustainability Dashboard",
         )
     )
 ))
+

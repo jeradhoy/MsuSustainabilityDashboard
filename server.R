@@ -242,13 +242,21 @@ shinyServer(function(input, output, session) {
 
 
   ########### Food ##############
+
   output$montanaMade <- renderHighchart({
 
+
+  if(input$mtMadeOption == "0"){
     highchart()%>%
       hc_title(useHTML=T,
                text = "<b>Made in Montana Food</b>")%>%
       #hc_add_series(name = "MTMade", data = Food$MTMade[1:7], type ="pie")%>%
-      hc_add_series(name = "Montana Made", data = Food$MTMade[1:7], type = "column")%>%
+      hc_add_series(name = "Montana Made", data = food$MTMade[1:7], type = "column")%>%
+      hc_plotOptions(
+        series = list(
+          colorByPoint =T
+        )
+      )%>%
       hc_legend(F)%>%
       hc_yAxis(
         title = list(text = "Dollars ($)"),
@@ -256,8 +264,37 @@ shinyServer(function(input, output, session) {
       )%>%
       hc_xAxis(
         title = list( text = "Category"),
-        categories = strsplit(Food$X1, split = "\n")
+        categories = strsplit(food$X1, split = "\n")
       )
+    }
+
+    else{
+      highchart()%>%
+        hc_title(useHTML=T,
+                 text = "<b>MSU Food Purchases</b>")%>%
+        hc_add_series(name="Food Purchases", data = c(food$NonMTMade[8], food$MTMade[8]), type = "bar")%>%
+        hc_plotOptions(
+          series = list(
+            colorByPoint = TRUE,
+            stacking= 'normal'),
+          bar = list(
+            stacking = 'normal',
+            dataLabels = list(
+              enabled = TRUE,
+              allowOverlap = TRUE
+            )
+          )
+        )%>%
+        hc_legend(F)%>%
+        hc_yAxis(
+          title = list(text = "Dollars ($)"),
+          endOnTick = T
+        )%>%
+        hc_xAxis(
+          title = list( text = "Category"),
+          categories = c("Total Purcahses", "MT Made Purchases")
+        )
+    }
   })
   #
   # output$foodMap <- renderLeaflet({
