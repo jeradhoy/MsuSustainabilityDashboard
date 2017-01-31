@@ -61,6 +61,7 @@ shinyUI(navbarPage(id="main", #title="MSU Sustainability Dashboard",
        column(4,
           actionLink("openTabProjects", HTML('<h2>Projects</h2><i class="fa fa-gears home-icon"></i>'))
         ))
+      #,verbatimTextOutput("debug1")
       )),
 
   ########### Energy ################
@@ -117,7 +118,9 @@ shinyUI(navbarPage(id="main", #title="MSU Sustainability Dashboard",
   tabPanel(title = "Waste", value="tabWaste", icon=icon("trash"),
 
     tags$h1("Waste"),
-    tags$p("In 2009, Montana State University published its first Climate Action Plan (CAP).
+    tags$p("In 2009, Montana State University published its first ",
+    tags$a(href="http://www.montana.edu/sustainability/projectsandinitiatives/climateactionplan.html", "Climate Action Plan"),
+    " (CAP).
     This document outlines goals and objectives for reducing MSU's climate impact.
     Baseline data for 2009 found that solid waste accounted for 3% of MSU's net
     emissions totaling 2,132 MT of carbon dioxide equivalents per year."),
@@ -230,10 +233,8 @@ shinyUI(navbarPage(id="main", #title="MSU Sustainability Dashboard",
                highchartOutput("buildingWaterChart", height = "100%", width="98%")
           )
         ),
-        fluidRow(
-          column(12, align="right",
+        fluidRow(align="center",
             actionButton("showBuildingGraphsButton", label="Close")
-          )
         )
       )
     )

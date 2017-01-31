@@ -6,6 +6,8 @@ library(devtools)
 library(leaflet)
 library(htmltools)
 
+options(shiny.port=5555)
+
 #Set waste goals
 wasteCAP2020 <- (3933386*.75)/(2000*12)
 wasteCAP2030 <- (3933386*.5)/(2000*12)
@@ -31,6 +33,9 @@ shinyServer(function(input, output, session) {
   })
 #########################
 
+  output$debug1 <- renderPrint({
+    input$openTabEnergy
+  })
 
   ########### Energy Usage ################
   output$energyUsage <- renderHighchart({
