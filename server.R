@@ -254,7 +254,8 @@ shinyServer(function(input, output, session) {
       hc_add_series(name = "Total", data = food$MTMade[1:7], type = "column")%>%
       hc_plotOptions(
         series = list(
-          colorByPoint =T
+          colorByPoint =T,
+          stacking = "normal"
         )
       )%>%
       hc_legend(F)%>%
