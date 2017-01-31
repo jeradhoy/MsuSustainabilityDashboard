@@ -259,8 +259,7 @@ shinyServer(function(input, output, session) {
       hc_add_series(name = "Total", data = food$MTMade[1:7], type = "column")%>%
       hc_plotOptions(
         series = list(
-          colorByPoint =T,
-          stacking = "normal"
+          colorByPoint =T
         )
       )%>%
       hc_legend(F)%>%
@@ -281,13 +280,8 @@ shinyServer(function(input, output, session) {
         hc_add_series(name="Total", data = c(food$MTMade[8], food$NonMTMade[8]), type = "bar")%>%
         hc_plotOptions(
           series = list(
-            colorByPoint = TRUE),
-          bar = list(
-            stacking = 'normal')
-            # dataLabels = list(
-            #   enabled = TRUE,
-            #   allowOverlap = TRUE
-            # )
+            colorByPoint = TRUE,
+            stacking = "normal")
         )%>%
         hc_legend(F)%>%
         hc_yAxis(
