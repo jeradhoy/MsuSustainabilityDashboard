@@ -8,6 +8,7 @@ dataDir <- "./data/Gdrive/"
 
 enableBookmarking(store="url")
 
+
 ####DECLARE ANY FUNCTIONS FOR APPJ
 #Get trend timeseries for plotting
 getTrendSeries <- function(timeSeries, startTs=c(2005, 1), freq=12){
@@ -81,5 +82,23 @@ buildingShapes <- readOGR("./data/Buildings/building.shp", layer="building", ver
 #buildingUtilities[,c("KWH.QTY", "TOTAL.GAS..DKT", "WATER.MCF")]
 #buildingUtilities$KWH.QTY
 
-buildingUtilities$KWH.QTY <- as.numeric(gsub(",", "", buildingUtilities$KWH.QTY))
-buildingUtilities$WATER.MCF <- as.numeric(buildingUtilities$WATER.MCF)
+#buildingUtilities$KWH.QTY <- as.numeric(gsub(",", "", buildingUtilities$KWH.QTY))
+#buildingUtilities$WATER.MCF <- as.numeric(buildingUtilities$WATER.MCF)
+
+#buildingShapes <- SpatialPolygonsDataFrame(buildingShapes, as.data.frame(buildingShapes))
+
+#buildingShapes$BLGNUM %in% unique(buildingUtilities$Bldg.No)
+
+#buildingShapes[,1]
+
+#buildingNoData <- subset(buildingShapes, subset=!(BLGNUM %in% unique(buildingUtilities$Bldg.No)))
+
+
+#buildingNoData <- data.frame(Bldg.No=buildingNoData$BLGNUM, Building.Name=buildingNoData$Name)
+#buildingUtilities <- plyr::rbind.fill(buildingUtilities, buildingNoData)
+#tail(buildingUtilities)
+
+
+#str(buildingUtilities)
+#buildingShapes$Name
+

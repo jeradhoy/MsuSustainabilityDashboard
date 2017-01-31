@@ -1,0 +1,328 @@
+//----------------------------
+// RecycleMania Widget
+//----------------------------
+
+/* Overall Widget Style */
+    .profile_widget {
+      width:700px;
+      font-size:12px;     
+      color: #333333;     
+      }
+
+/* Main Header */      
+    .profile_widget h3 {
+      color: #1975ae;    
+      font-size: 18px;    
+      }
+
+/* Sub Header */      
+    .profile_widget h4 {
+      color: #1975ae;    
+      font-size: 12px;   
+      }  
+
+/* Link Style */
+    .profile_widget a {
+      font-size:inherit;
+      color:inherit;
+      }      
+      
+      
+      
+      
+/* School Listing Area */    
+    .membersViewList {
+      border: solid 1px #cccccc; 
+      background:#ffffff;  
+      } 
+
+    /* Info Area */
+        .membersInfo {
+          background:#f2f2f2; 
+          border:solid 1px #cccccc;  
+          }    
+
+    /* Horizontal Rule */      
+        .membersViewList hr {
+          border-bottom: dashed 1px #cccccc;  
+          }
+		  
+.membersViewList li {
+	line-height: 20px;
+	margin: 0;
+}
+      
+.membersViewList li a {
+	font-size: 12px;
+}
+
+/* School Listing - School Name */
+      
+    /* School Name Hover - Container */  
+    .membersViewList li:hover {
+      background:#fff8d5;  
+      border: #eeb879 solid 1px;  
+      }
+    
+    /* School Name - Text */ 
+    .membersViewList li a {
+      color:inherit;
+      }
+  
+    /* School Name Hover - Text */ 
+    .membersViewList li a:hover {
+      color:#8a5a22; 
+      }
+    
+/* Table Styles */  
+    .profile_widget table {
+      background: #fefefe;    
+      }
+	  
+/* Table TH Styles */
+
+.profile_hor_table th {
+	padding-left: 0;
+}
+      
+    /* Table Cell */  
+    .profile_widget td {
+      border: solid 1px #cccccc;    
+      }
+      
+    /* Table Cell Hover */
+    table.profile_hor_table tr:hover {
+      background: #fff8d5;     
+      }  
+
+    /* Label Cell */   
+    td.profile_label {
+      background:#76777a;     
+      color:#ffffff;      
+      font-weight:bold;     
+      font-size:11px;     
+      }
+      
+    /* Label Cell Hover */  
+    table.profile_hor_table tr:hover td.profile_label {
+      background: #696a6d;     
+      }
+
+    /* Label Cell Link */  
+    td.profile_label a {
+      color: #99e3ff;    
+      }
+    
+/* Collapsable Element */
+  
+     /* Collapseable Header */
+     .collapse_header {
+      background:#f2f2f2;  
+      border:solid 1px #cccccc; 
+      }  
+
+    /* Collapseable Header and Body Seperator */  
+    .collapse_header.expanded {
+      border-bottom:dashed 1px #cccccc; 
+      }  
+     
+    /* Collapseable Body */ 
+    .collapse_body {
+      background:#f2f2f2; 
+      border:solid 1px #cccccc; 
+      }
+      
+    /* Collapseable Body List Item */  
+    .collapse_body ul li{
+      list-style-type:disc;  /* Content List Style */
+      font-size:11px; /* Content List Font Size */
+      }  
+
+      
+/* Report Widget */      
+
+    /* Report Widget Container */
+    .reportWidget {
+      background: #F4F4F4;
+      border: solid 1px #E4E4E4;
+	  width: 95%;
+}
+
+#node-193 .reportWidget {	
+	  width: 95%;
+      }
+      
+    /* Widget Header */
+    .reportWidget h2 {
+      border-bottom: 1px solid #E4E4E4;
+      color: #1975ae;
+      font-family: Trebuchet MS;
+      font-size: 24px;
+      letter-spacing: 0;
+      padding: 0 0 15px;
+      }
+	  
+	  h2 {
+		color: #1975ae;  
+	  }
+        
+    #reportDescription {
+      font-size:11px;
+      }
+        
+    #report_title {
+      font-family: Verdana;
+      font-size: 14px;
+      color: #333;
+      }
+          
+    .reportFilterLabel h3 {
+      font-family: Trebuchet MS;
+      font-size: 14px;
+      }
+    
+    /* Report Table */
+    table.htmlReport {
+      border: solid #e6e6e6 1px;
+      }
+
+    /* Table Cell */
+    table.htmlReport td {
+      padding: .75em;
+      vertical-align: top;
+    }
+    
+    /* Header Row */
+    tr.header {
+      border-top: 4px double #A2B0B5;
+      border-bottom: 4px double #A2B0B5;
+      font-size: 10px;
+      background-color: #c5d5e2;
+    }
+
+    /* Header Link */
+    tr.header th a {
+      text-decoration: underline;
+    }
+
+    /* Grouping Header Row*/
+    tr.sectionHeader {
+      border-top: 4px double #A2B0B5;
+      border-bottom: 4px double #A2B0B5;
+      font-size: 10px;
+    }
+
+    /* Grouping Header Cell */
+    tr.sectionHeader th {
+      padding: 5px;
+      min-width: 145px;
+      text-align: left;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-style: italic;
+      color: #333;
+    }
+
+    /* Table Footer */
+    tr.sectionFooter {
+      border-top: 4px double #A2B0B5;
+      border-bottom: 4px double #A2B0B5;
+      background: #cae2e0;
+      font-weight: bold;
+    }
+
+    /* Data Row */
+    tr.dataRow {
+      border-bottom: solid 1px #d4d4d4;
+    }
+
+    /* Data Row Hover */
+    tr.dataRow:hover {
+      background: #f4f4f4;
+    }
+
+    /* Label Cell */
+    td.rowHeader {
+      background-color: white;
+      background-image: none; /* Replace With your own vertically repeating image if you'd like */ 
+      background-repeat: repeat-y;
+      background-position: right;
+      padding-right: 10px;
+      text-align: left;
+    }
+
+    /* Value Cell */
+    td.rowValue {
+      border-left: solid 1px #d4d4d4;
+      text-align: right;
+      background: #e2eaf0;
+    }
+
+    /* Value Cell */
+    tr.dataRow:hover td.rowValue {
+      background: #c5d5e2;
+    }
+
+body, ol, ul, h1, h2, h3, h4, h5, p, li, span, div {
+	font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;  
+}
+
+h1, h2, h3 {
+	margin: 0;	
+}
+
+.reportFilter,
+#reportFilter {
+	margin-bottom: 15px;	
+}
+
+.filterItem {
+	margin: 5px 0px 5px;	
+}
+
+a#genBtn {
+	border-top: 1px solid #96d1f8;
+	background: #65a9d7;
+	background: -webkit-gradient(linear, left top, left bottom, from(#3e779d), to(#65a9d7));
+	background: -webkit-linear-gradient(top, #3e779d, #65a9d7);
+	background: -moz-linear-gradient(top, #3e779d, #65a9d7);
+	background: -ms-linear-gradient(top, #3e779d, #65a9d7);
+	background: -o-linear-gradient(top, #3e779d, #65a9d7);
+	padding: 5px 10px;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+	-webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+	-moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+	box-shadow: rgba(0,0,0,1) 0 1px 0;
+	text-shadow: rgba(0,0,0,.4) 0 1px 0;
+	color: white;
+	cursor:pointer;
+}
+
+a:hover#genBtn {
+	text-decoration: none;
+}
+
+#reportContainer {
+	margin-top: 30px;
+}
+
+#node-193 #reportContainer {
+	margin-top: 10px;
+}
+
+#report_header {
+	font-weight: bold;
+	margin-bottom: 10px;	
+}
+
+h3 a.custom-widget-link {
+	color: #ddad15;
+	font-size: 16px;
+	Font-weight: bold;	
+}
+
+input, select, textarea {
+	padding: 0;	
+}

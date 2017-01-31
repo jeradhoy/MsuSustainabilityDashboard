@@ -1,0 +1,19 @@
+a{color:#000; text-decoration:none}
+body{margin:0px auto; padding:0px; color:#000; font-family:Arial,Helvetica,sans-serif}
+pre{white-space:pre-wrap; color:#111; display:block; padding:0.5em 1em; background-color:#faf8f0; border:1px solid #bebab0; margin:2px 0px 2px 0px}
+table{margin:auto}
+pagetitle.h1, h1, h2, h3, h4, h5, h6{color:#000}
+.printheader{display:block; text-align:left; font-size:11px; padding:3px 0px 0px 0px}
+.noprint, #left, #widgetcontainer, #navigation, .search, header, #crumbnav{display:none}
+#rightpane{width:100%}
+.credits{font-size:1.1em; font-style:italic; padding:5px 0px 10px 0px}
+.printhr{display:inline; padding:5px 0}
+.footerhr{display:none}
+footer{text-align:left; font-size:11px; padding:8px 0px 8px 0px; width:100%; z-index:1; border:0px; margin:auto; clear:both}
+footer a{text-decoration:none}
+footer li{visibility:hidden; list-style:none}
+footer li.msucopy{visibility:visible !important}
+ 
+  a[href]:after {
+    content: none !important;
+  } 
