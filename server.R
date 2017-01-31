@@ -270,28 +270,33 @@ shinyServer(function(input, output, session) {
       hc_xAxis(
         title = list( text = "Category"),
         categories = strsplit(food$X1, split = "\n")
-      )
+      )%>%
+      hc_tooltip(valuePrefix="$")
     }
 
     else{
       highchart()%>%
         hc_title(useHTML=T,
                  text = "<b>MSU Food Purchases</b>")%>%
-        hc_add_series(name="Total", data = c(food$MTMade[8], food$NonMTMade[8]), type = "bar")%>%
+        #hc_legend(enabled=T, verticalAlign="bottom", align="center", layout="horizontal")%>%
+        hc_add_series(name="Total", data = food$NonMTMade[8], type = "bar", color = "grey")%>%
+        hc_add_series(name = "MTMade", data = food$MTMade[8], type = "bar", color = "green")%>%
         hc_plotOptions(
           series = list(
-            colorByPoint = TRUE,
-            stacking = "normal")
+            colorByPoint = F,
+            stacking = "normal",
+            showInLegend = T,
+          dataLabels = list(
+            enabled = F
+            )
+          )
         )%>%
         hc_legend(F)%>%
         hc_yAxis(
           title = list(text = "Dollars ($)"),
           endOnTick = T
         )%>%
-        hc_xAxis(
-          title = list( text = "Category"),
-          categories = c("MT Made Purchases", "Total Purcahses")
-        )
+        hc_tooltip(valuePrefix="$")
     }
   })
   #
