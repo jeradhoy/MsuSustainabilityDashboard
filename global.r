@@ -3,7 +3,7 @@
 #### Objects created here are also available to both the ui.R script and the server.R script
 
 library(magrittr)
-library(tidyverse)
+#library(tidyverse)
 dataDir <- "./data/Gdrive/"
 
 enableBookmarking(store="url")
@@ -75,8 +75,7 @@ perCapita$pccompost <- as.numeric(format(round(perCapita$compost/perCapita$fallp
 #compostfit <- getTrendSeries(composttimeseries[,3], startTs = c(2006,1))
 
 
-library(rgdal)
-buildingShapes <- readOGR("./data/Buildings/building.shp", layer="building", verbose=F)
+buildingShapes <- rgdal::readOGR("./data/Buildings/building.shp", layer="building", verbose=F)
 
 #str(buildingUtilities)
 #buildingUtilities[,c("KWH.QTY", "TOTAL.GAS..DKT", "WATER.MCF")]
