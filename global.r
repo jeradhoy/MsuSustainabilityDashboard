@@ -13,7 +13,7 @@ library(shinythemes)
 
 #source("Modules/wasteModule.R")
 #source("Modules/energyModule.R")
-#source("Modules/homeModule.R")
+source("modules.R")
 
 # Set thousands seperator in highcharts graph
 hcoptslang <- getOption("highcharter.lang")

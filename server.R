@@ -1,10 +1,6 @@
 ############ server.R #############
 ##All options and processing that are cheap and can be done each time app launches goes here, otherwise put in global.R
-library(shiny)
-library(highcharter)
-library(devtools)
-library(leaflet)
-library(htmltools)
+  source("modules.R")
 
 options(shiny.port=5555)
 
@@ -30,6 +26,11 @@ shinyServer(function(input, output, session) {
   output$debug1 <- renderPrint({
     input$openTabEnergy
   })
+
+  callModule(highLinePlot, "energyUsage", dataTs=appData$energyTs[,c("KWH.Units", "GAS.KWH")], trends=appData$energyTrends[,c("KWH.Units", "GAS.KWH")], plotTitle="<b>MSU Electricity and Gas Usage in Kilowatt Hours</b>", tsNames=c("Electricity", "Natural Gas"), ylab="Usage in KWH", colors=c("gold", "darkorange"), toolSuffix=" KWH", toolPrefix=NULL)
+
+  callModule(highLinePlot, "energyExpend", dataTs=appData$energyTs[,c("ELEC", "GAS")], trends=NULL, plotTitle="<b>MSU Electricity and Gas Expenditure</b>", tsNames=c("Electricity", "Natural Gas"), ylab="Expenditure in Dollars", colors=c("gold", "darkorange"), toolSuffix=" KWH", toolPrefix="$")
+
 
   ########### Energy Usage ################
   output$energyUsage <- renderHighchart({

@@ -1,7 +1,3 @@
-library(shiny)
-library(highcharter)
-library(leaflet)
-library(shinythemes)
 
  ######## Home ########
 # Define UI for dataset viewer application
@@ -66,50 +62,36 @@ shinyUI(navbarPage(id="main", #title="MSU Sustainability Dashboard",
 
   ########### Energy ################
   tabPanel(title = "Energy", value="tabEnergy", icon=icon("lightbulb-o"),
-    tags$h1("Energy"),
-    tags$p("For electricity and natural gas usage, MSU's ",
-    tags$a(href="http://www.montana.edu/sustainability/projectsandinitiatives/climateactionplan.html", "Climate Action Plan"),
-    " aims to hold these parameters constant with ideally a negative growth trend but a maximum of ",
-      tags$b("0.25% growth per year"),
-      ". To put this in perspective, in 2009 electricity consumption was growing at a rate of 1.6% and natural gas was growing at a rate of 1.3%."),
-    tags$p("In 2009, purchased electricity accounted for 27% MSU’s net emissions and was responsible for 20,564 MT of CO2 equivalents. Combusting fossil fuels such as gas and coal accounted for an additional 27% of emissions and was responsible for 21,099 MT of CO2 equivalents. The average Montanan in 2013 caused about 31.3 MT of energy-related CO2 emissions, while the national average was 16.7 MT of CO2 equivalent."),
+    fluidRow(column(10, offset=1,
+      tags$h1("Energy"),
+      tags$p("For electricity and natural gas usage, MSU's ",
+      tags$a(href="http://www.montana.edu/sustainability/projectsandinitiatives/climateactionplan.html", "Climate Action Plan"),
+      " aims to hold these parameters constant with ideally a negative growth trend but a maximum of ",
+        tags$b("0.25% growth per year"),
+        ". To put this in perspective, in 2009 electricity consumption was growing at a rate of 1.6% and natural gas was growing at a rate of 1.3%."),
+      tags$p("In 2009, purchased electricity accounted for 27% MSU’s net emissions and was responsible for 20,564 MT of CO2 equivalents. Combusting fossil fuels such as gas and coal accounted for an additional 27% of emissions and was responsible for 21,099 MT of CO2 equivalents. The average Montanan in 2013 caused about 31.3 MT of energy-related CO2 emissions, while the national average was 16.7 MT of CO2 equivalent."),
 
 
-    sidebarLayout(
-      sidebarPanel(
+      tabsetPanel(
+        tabPanel("Usage",
 
-        tags$h5("Select Data"),
-        #Checkbox Group Input: Choose Electriciy or naturalgas or both
-        checkboxInput("elec", label = "Electricity", value = TRUE),
-        checkboxInput("gas", label = "Natural Gas", value = TRUE),
+                 highLinePlotOutput("energyUsage")
 
-        #Radio Button: Choose Usage or expenditure
-        radioButtons("usageOrExpendRadio", label = h5("Usage or Expenditure"),
-          choices = list("Usage" = 0, "Expenditure" = 1),
-          selected = 0),
+        ),
+        tabPanel("Expenditure",
 
-        #Radio Button: Choose Total or Per capita
-        #radioButtons("totalOrPercapitaRadio", label = h5("Total or Per Capita"),
-        #  choices = list("Total" = 1, "Per Capita" = 2),
-        #  selected = 1),
-        tags$h5("Trend Lines"),
-        checkboxInput("elecTrendLine", label="Electricity", value=FALSE),
-        checkboxInput("gasTrendLine", label="Gas", value=FALSE)
-        #radioButtons("energyTimeStep", label = h5("Total or Per Capita"),
-          #choices = list("Monthly" = 1, "Annual" = 2),
-          #selected = 1)
-      ),
+                 highLinePlotOutput("energyExpend")
 
-      mainPanel(
-        tabsetPanel(
-          tabPanel("Line Plot",
-
-            highchartOutput("energyUsage", height = "500px")
-            #, verbatimTextOutput("energyDebug")
-
-          )
         )
+
+        #tabPanel("Line Plot",
+
+          #highchartOutput("energyUsage", height = "500px")
+          #, verbatimTextOutput("energyDebug")
+
+        #)
       )
+    )
     )
   ),
 
