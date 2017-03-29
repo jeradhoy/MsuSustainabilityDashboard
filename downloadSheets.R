@@ -64,6 +64,7 @@ appData$wasteTs <- ts(appData$waste[,-c(1, 2)], frequency=12, start=c(2006, 1))
 
 
 appData$energyTrends <- getTrendSeries(appData$energyTs, startTs=c(2005, 1), freq=12)
+appData$wasteTrends <- getTrendSeries(appData$wasteTs, startTs = c(2006, 1), freq=12)
 
 appData$buildingShapes <- rgdal::readOGR("./data/Buildings/building.shp", layer="building", verbose=F)
 

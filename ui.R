@@ -99,6 +99,7 @@ shinyUI(navbarPage(id="main", #title="MSU Sustainability Dashboard",
   ########### Waste ################
   tabPanel(title = "Waste", value="tabWaste", icon=icon("trash"),
 
+    fluidRow(column(10, offset=1,
     tags$h1("Waste"),
     tags$p("In 2009, Montana State University published its first ",
     tags$a(href="http://www.montana.edu/sustainability/projectsandinitiatives/climateactionplan.html", "Climate Action Plan"),
@@ -111,31 +112,14 @@ shinyUI(navbarPage(id="main", #title="MSU Sustainability Dashboard",
       tags$b("25% of 2009 levels by 2020, 50% by 2030, 65% by 2040, and 80% by 2050."),
     "In order to meet these goals, MSU started a recycling program in 2009, started recycling E-waste in 2012, and is currently developing a composting program.
   It will require involvement from the whole student body and falculty to reach these ambitious goals."),
-    sidebarLayout(
-      sidebarPanel(
-        tags$h5("Select Data"),
-        #Checkbox Group Input: Choose Electriciy or naturalgas or both
-        checkboxInput("landfill", label = "Landfill", value = TRUE),
-        checkboxInput("recycle", label = "Recycle", value = TRUE),
-        checkboxInput("compost", label = "Compost", value = TRUE),
 
-        #Radio Button: Choose Total or Per capita
-        #radioButtons("totalOrPercapitaRadioWaste",
-        #  label = h5("Total or Per Capita"),
-        #  choices = list("Total" = 1, "Per Capita" = 2),
-        #  selected = 1),
-        tags$h5("Trend Line"),
-        checkboxInput("landfillTrendLine", label="Landfill", value=FALSE),
-        checkboxInput("recycleTrendLine", label="Recycle", value=FALSE),
-        checkboxInput("compostTrendLine", label="Compost", value=FALSE)
-    ),
-
-      mainPanel(
         tabsetPanel(
           tabPanel("Area Plot",
-            highchartOutput("PercentWaste", height = "500px")),
+            highAreaPlotOutput("wasteArea")
+          ),
           tabPanel("Line Plot",
-            highchartOutput("MSUwaste", height = "500px"))
+            highLinePlotOutput("wasteLine")
+          )
         )
       )
     )

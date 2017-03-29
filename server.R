@@ -11,7 +11,6 @@ wasteCAP2040 <- (3933386*.35)/(2000*12)
 wasteCAP2050 <- (3933386*.2)/(2000*12)
 
 
-wasteTrends <- getTrendSeries(appData$wasteTs, startTs = c(2006, 1), freq=12)
 ######## START Shiny Server ###################
 shinyServer(function(input, output, session) {
 
@@ -29,63 +28,13 @@ shinyServer(function(input, output, session) {
 
   callModule(highLinePlot, "energyUsage", dataTs=appData$energyTs[,c("KWH.Units", "GAS.KWH")], trends=appData$energyTrends[,c("KWH.Units", "GAS.KWH")], plotTitle="<b>MSU Electricity and Gas Usage in Kilowatt Hours</b>", tsNames=c("Electricity", "Natural Gas"), ylab="Usage in KWH", colors=c("gold", "darkorange"), toolSuffix=" KWH", toolPrefix=NULL)
 
-  callModule(highLinePlot, "energyExpend", dataTs=appData$energyTs[,c("ELEC", "GAS")], trends=NULL, plotTitle="<b>MSU Electricity and Gas Expenditure</b>", tsNames=c("Electricity", "Natural Gas"), ylab="Expenditure in Dollars", colors=c("gold", "darkorange"), toolSuffix=" KWH", toolPrefix="$")
+  callModule(highLinePlot, "energyExpend", dataTs=appData$energyTs[,c("ELEC", "GAS")], trends=NULL, plotTitle="<b>MSU Electricity and Gas Expenditure</b>", tsNames=c("Electricity", "Natural Gas"), ylab="Expenditure in Dollars", colors=c("gold", "darkorange"), toolSuffix=NULL, toolPrefix="$")
 
 
-  ########### Energy Usage ################
-  output$energyUsage <- renderHighchart({
+  callModule(highLinePlot, "wasteLine", dataTs=appData$wasteTs, trends=appData$wasteTrends, plotTitle="<b>MSU Waste</b>", tsNames=c("Recycling", "Landfill", "Compost"), ylab="Waste in Tons", colors=c("black", "gold", "green"), toolSuffix=" tons", toolPrefix=NULL)
 
-    #If usage
-    if(input$usageOrExpendRadio == "0"){
-      highchart(type="stock") %>%
-        hc_title(useHTML=T,
-          text = "<b>MSU Electricity and Gas Usage in Kilowatt Hours</b>") %>%
-        hc_legend(enabled=T, verticalAlign="bottom", align="center", layout="horizontal") %>%
-        hc_rangeSelector(inputEnabled=F) %>%
-        hc_yAxis(title = list(text = "Usage in KWH"),
-          opposite= FALSE) %>%
+  callModule(highAreaPlot, "wasteArea", dataTs=appData$wasteTs[,c(2,1,3)], plotTitle="<b>Percent of MSU Waste Diverted</b>", tsNames=c("Recycling", "Landfill", "Compost"), ylab="Waste in Tons", colors=c("black", "gold", "green"), toolSuffix=" tons", toolPrefix=NULL)
 
-        hc_add_series_ts(name="Electricity", ts=appData$energyTs[,"KWH.Units"],
-          showInLegend=T, color="gold", visible=input$elec) %>%
-
-        hc_add_series_ts(name="Electricity Trend",
-          ts=appData$energyTrends[,"KWH.Units"],
-          showInLegend=F, color="gold", visible=input$elecTrendLine & input$elec, dashStyle="LongDash") %>%
-
-        hc_add_series_ts(name="Gas", ts=appData$energyTs[,"GAS.KWH"],
-          color="darkorange", visible=input$gas) %>%
-
-        hc_add_series_ts(name="Gas Trend",
-          ts=appData$energyTrends[,"GAS.KWH"],
-          showInLegend=F, color="darkorange", visible=input$gasTrendLine & input$gas, dashStyle="LongDash") %>%
-
-        hc_tooltip(valueSuffix=" KWH")
-
-    } else {
-
-      highchart(type="stock") %>%
-        hc_title(useHTML=T,
-          text = "<b>MSU Electricity and Gas Usage in Dollars</b>") %>%
-        hc_legend(enabled=T) %>%
-        hc_rangeSelector(inputEnabled=F) %>%
-        hc_yAxis(title = list(text = "Expenditure in Dollars"),
-          opposite= FALSE) %>%
-        hc_add_series_ts(name="Electricity", ts=appData$energyTs[,"ELEC"],
-          showInLegend=T, color="gold", visible=input$elec) %>%
-
-        hc_add_series_ts(name="Electricity Trend", ts=appData$energyTrends[,"ELEC"],
-          showInLegend=F, color="gold", visible=input$elecTrendLine & input$elec) %>%
-        #hc_add_series_ts(name="Electricity Target", ts=energyTarget[,1],
-          #showInLegend=T, color="blue",dashStyle="dot", visible=F) %>%
-        hc_add_series_ts(name="Gas", ts=appData$energyTs[,"GAS"],
-          color="darkorange", visible=input$gas) %>%
-        hc_add_series_ts(name="Gas Trend", ts=appData$energyTrends[,"GAS"],
-          color="darkorange", visible=input$gasTrendLine & input$gas, type="line", showInLegend=F) %>%
-        #hc_add_series_ts(name="Gas Target", ts=energyTarget[,2],
-          #showInLegend=T, color="red", dashStyle="dot", visible=F) %>%
-        hc_tooltip(valuePrefix="$")
-    }
-  })
 
 
   ############ Waste Line ##################
@@ -139,25 +88,6 @@ shinyServer(function(input, output, session) {
     hc_tooltip(valueSuffix="tons")
 
 })
-
-  ############ Waste Area ##################
-  output$PercentWaste <- renderHighchart({
-
-      highchart(type="stock") %>%
-        hc_title(useHTML=T, text = "<b>Percent of MSU Waste Diverted</b>") %>%
-        hc_legend(enabled=T) %>%
-        hc_rangeSelector(inputEnabled=F) %>%
-        hc_yAxis(title = list(
-          text = "% of Total Waste by Weight"), opposite=FALSE)%>%
-        hc_plotOptions(area=list(stacking="percent")) %>%
-        hc_add_series_ts(name="Landfill", ts=appData$wasteTs[,2],
-          showInLegend=T, color= "black", type="area") %>%
-        hc_add_series_ts(name="Recycle", ts=appData$wasteTs[,1],
-          color= "gold", type="area") %>%
-        hc_add_series_ts(name="Compost", ts=appData$wasteTs[,3],
-          color= "green", type="area") %>%
-        hc_tooltip(valueSuffix=" tons")
-  })
 
   ############ Per Capita Waste Area ##################
   output$PerCapitaWaste <- renderHighchart({
