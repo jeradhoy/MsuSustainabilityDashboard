@@ -46,3 +46,32 @@ getTrendSeries <- function(timeSeries, startTs=c(2005, 1), freq=12){
     seq(from=coef(fit)[1], by=coef(fit)[2], length.out=length(timeSeries))
   })),frequency=12, start=startTs)
 }
+
+  mapIconSize <- 40
+
+  mapIcons <- iconList(
+    leed = makeIcon(iconUrl="assets/UWIcons/1l0-e0-e0-d-certification-icon.png",
+                    iconWidth=mapIconSize, iconHeight = mapIconSize,
+                    iconAnchorX=mapIconSize/2, iconAnchorY = mapIconSize),
+
+    solar = makeIcon(iconUrl="assets/UWIcons/1solar-panels-icon.png",
+                     iconWidth=mapIconSize, iconHeight = mapIconSize,
+                     iconAnchorX=mapIconSize/2, iconAnchorY = mapIconSize),
+
+    garden = makeIcon(iconUrl="assets/UWIcons/3garden-icon.png",
+                      iconWidth=mapIconSize, iconHeight = mapIconSize,
+                      iconAnchorX=mapIconSize/2, iconAnchorY = mapIconSize),
+
+    tree = makeIcon(iconUrl="assets/UWIcons/3brockman-tree-tour-icon.png",
+                    iconWidth=mapIconSize, iconHeight = mapIconSize,
+                    iconAnchorX=mapIconSize/2, iconAnchorY = mapIconSize),
+
+    compost = makeIcon(iconUrl="assets/UWIcons/6on-site-composting-icon.png",
+                       iconWidth=mapIconSize, iconHeight = mapIconSize,
+                       iconAnchorX=mapIconSize/2, iconAnchorY = mapIconSize)
+  )
+
+  leedImages <- list(
+    "LEED Gold" = "assets/UWIcons/leedGold.png",
+    "LEED Silver" = "assets/UWIcons/leedSilver.jpg"
+  )

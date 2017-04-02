@@ -4,7 +4,7 @@
 shinyUI(navbarPage(id="main", #title="MSU Sustainability Dashboard",
   fluid=T,
   position="static-top",
-  selected="tabHome",
+  selected="tabMap",
   inverse=T, #For dark top
   collapsible = T,
   theme=shinytheme("cerulean"),
@@ -115,7 +115,7 @@ shinyUI(navbarPage(id="main", #title="MSU Sustainability Dashboard",
 
         tabsetPanel(
           tabPanel("Area Plot",
-            highAreaPlotOutput("wasteArea")
+            highLinePlotOutput("wasteArea")
           ),
           tabPanel("Line Plot",
             highLinePlotOutput("wasteLine")
@@ -152,15 +152,15 @@ shinyUI(navbarPage(id="main", #title="MSU Sustainability Dashboard",
 
       mainPanel(
         tabsetPanel(
-          tabPanel("Line Plot",
-
-            highchartOutput("waterSewer", height = "500px")
-            #verbatimTextOutput("energyDebug")
-
+          tabPanel("Water Use",
+            highAreaPlotOutput("waterUse")
+          ),
+          tabPanel("Expenditure",
+            highLinePlotOutput("waterSewerExpend")
           )
         )
       )
-  )
+    )
   ),
 
 
@@ -169,34 +169,40 @@ shinyUI(navbarPage(id="main", #title="MSU Sustainability Dashboard",
     div(class="outer",
       #{tags$style(type = "text/css",
        # "div.outerMap {position: fixed; top: 48px; left: 0; right: 0; bottom: 0; overflow: hidden; padding: 0}"),
-      leafletOutput("map", width="100%", height="100%"),
+      #leafletOutput("map", width="100%", height="100%"),
+      buildingMapUI("leafletMap"),
 
-      absolutePanel(id = "controls", class = "panel panel-default", fixed = TRUE,
-        draggable = T, top =70, left = "auto", right =20, bottom = "auto",
-        width =250, height = "auto",
-        h2("Buildings and Landscaping"),
-        h3("Show Layers:"),
-          checkboxInput("showLeed", label=tags$div(tags$b("LEED Buildings"), tags$img(src="assets/UWIcons/1l0-e0-e0-d-certification-icon.png")), value=T),
-          checkboxInput("showEdible", label=tags$div(tags$b("Landscaping"), tags$img(src="assets/UWIcons/3brockman-tree-tour-icon.png", tags$img(src="assets/UWIcons/3garden-icon.png"))), value=T),
-        checkboxInput("showProject", label=tags$div(tags$b("Projects"), tags$img(src="assets/UWIcons/6on-site-composting-icon.png"), tags$img(src="assets/UWIcons/1solar-panels-icon.png")), value=T)
+      #absolutePanel(id = "controls", class = "panel panel-default", fixed = TRUE,
+      #  draggable = T, top =70, left = "auto", right =20, bottom = "auto",
+      #  width =250, height = "auto",
+      #  h2("Buildings and Landscaping"),
+      #  h3("Show Layers:"),
+      #    checkboxInput("showLeed", label=tags$div(tags$b("LEED Buildings"), tags$img(src="assets/UWIcons/1l0-e0-e0-d-certification-icon.png")), value=T),
+      #    checkboxInput("showEdible", label=tags$div(tags$b("Landscaping"), tags$img(src="assets/UWIcons/3brockman-tree-tour-icon.png", tags$img(src="assets/UWIcons/3garden-icon.png"))), value=T),
+      #  checkboxInput("showProject", label=tags$div(tags$b("Projects"), tags$img(src="assets/UWIcons/6on-site-composting-icon.png"), tags$img(src="assets/UWIcons/1solar-panels-icon.png")), value=T)
+#
+      #  #,verbatimTextOutput("mapDebug")
+      #),
 
-        #,verbatimTextOutput("mapDebug")
-      ),
       shinyjs::hidden(
 
       absolutePanel(
         id = "buildingGraphs", class = "panel panel-default", fixed = TRUE,
         draggable = F, top = 70, left = 20, right = "auto", bottom = "auto",
         width = "30%", height = "auto",
-        fluidRow(
-          column(12, align="center",
-               highchartOutput("buildingKwhChart", height = "100%", width="95%")
-          )
-        ),
 
-        fluidRow(
-          column(12, align="center",
-               highchartOutput("buildingWaterChart", height = "100%", width="98%")
+        tabsetPanel(
+          tabPanel("Energy",
+               highLinePlotOutput("bldEnergy", plotHeight="100%", plotWidth="95%")
+          ),
+          tabPanel("Gas",
+               highLinePlotOutput("bldGas", plotHeight="100%", plotWidth="95%")
+          ),
+          tabPanel("Water",
+               highLinePlotOutput("bldWater", plotHeight="100%", plotWidth="95%")
+          ),
+          tabPanel("Steam",
+               highLinePlotOutput("bldSteam", plotHeight="100%", plotWidth="95%")
           )
         ),
         fluidRow(align="center",
@@ -207,29 +213,19 @@ shinyUI(navbarPage(id="main", #title="MSU Sustainability Dashboard",
     )
   ),
 
- ########## Food #################
- tabPanel(title = "Food", value = "tabFood", icon = icon("cutlery"),
-          tags$h1("Food"),
+  ########## Food #################
+  tabPanel(title = "Food", value = "tabFood", icon = icon("cutlery"),
+    tags$h1("Food"),
 
- sidebarLayout(
-  sidebarPanel(
-    #Radio Button: Choose Usage or expenditure
-    radioButtons("mtMadeOption", label = h5("Select Data"),
-                 choices = list("MT Made" = 0, "Total" = 1),
-                 selected = 0)
- ),
-
- mainPanel(
-   tabsetPanel(
-     tabPanel(title = "Purchases",
-          highchartOutput("montanaMade", height = "auto", width = "auto")
-     ),
-     tabPanel(title = "Map")
-          #leafletOutput("foodMap")
+    tabsetPanel(
+      tabPanel(title = "Purchases",
+        montanaMadeColumnOutput("montMadePurch")
+      ),
+      tabPanel(title = "Total",
+        montanaMadeBarOutput("montMadeTotal")
+      )
     )
-   )
-  )
- ),
+  ),
 
  ########### Projects ################
  tabPanel(title = "Projects", value="tabProjects", icon=icon("gears"),
@@ -237,23 +233,14 @@ shinyUI(navbarPage(id="main", #title="MSU Sustainability Dashboard",
  ),
 
   ########### About ################
-    navbarMenu("About",
-        tabPanel("About", value="tabAbout",
-          tags$h3("This web app was developed in collaboration with Sustainability Now, the MSU Office of Sustainability, and MSU Facilities Services")
-          ),
-        tabPanel("Data Sources",
-          h2("Data Sources"),
-          sidebarLayout(
-            sidebarPanel(
-              selectInput("dataset", "Choose a dataset:",
-                choices = c("Energy" = "energy", "Leed Buildings" = "leed", "Per Capita Waste" = "perCapita", "Waste" = "waste", "Landscaping" = "landscaping", "Projects" = "projectMap", "Building Data" = "buildingUtilities")),
-              downloadButton('downloadData', 'Download')
-            ),
-            mainPanel(
-              DT::dataTableOutput('dataTable')
-            )
-          )
-        )
-    )
+  navbarMenu("About",
+      tabPanel("About", value="tabAbout",
+        tags$h3("This web app was developed in collaboration with Sustainability Now, the MSU Office of Sustainability, and MSU Facilities Services")
+        ),
+      tabPanel("Data Sources",
+        h2("Data Sources"),
+        dataSourceUI("dataSources")
+      )
+  )
 ))
 

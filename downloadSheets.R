@@ -10,7 +10,7 @@ file.remove(paste0(dataDir, list.files(dataDir)))
 
 for(sheet in gs_ws_ls(allDataSheet)){
   write.csv(as.data.frame(allDataSheet %>% gs_read_csv(ws=sheet)), file=paste0(dataDir, sheet, ".csv"), row.names=F)
-  Sys.sleep(10)
+  Sys.sleep(5)
 }
 
 
@@ -73,7 +73,7 @@ appData$bldTs <- list()
 
 for(num in as.character(na.omit(unique(bld$Bldg.No)))){
   print(num)
-  appData$bldTs[[num]] <- with(subset(bld, Bldg.No == num), ts(data=cbind(KWH.QTY, TOTAL.GAS..DKT, WATER.MCF), start=c(ACCTYR[1], ACCTMO[1]), frequency=12))
+  appData$bldTs[[num]] <- with(subset(bld, Bldg.No == num), ts(data=cbind(KWH.QTY, TOTAL.GAS..DKT, WATER.MCF, STEAM.LBS), start=c(ACCTYR[1], ACCTMO[1]), frequency=12))
 }
 
 save(appData, file="./data/appData.RData")
