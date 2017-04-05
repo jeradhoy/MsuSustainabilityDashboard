@@ -154,50 +154,28 @@ server <- function(input, output, session) {
   })
 
 
+#  lapply(
+#    X = c("Energy", "Waste", "GHG", "Water", "Map", "Projects", "Food", "About"),
+#    FUN = function(i){
+#      observeEvent(input[[paste0("openTab", i)]], {
+#        updateNavbarPage(session, "main",
+#          selected = paste0("tab", i)
+#        )
+#      })
+#    }
+#  )
 
+  values <- reactiveValues(lastSelected=NULL)
 
-
-  observeEvent(input$openTabEnergy, {
-    updateNavbarPage(session, "main",
-      selected = "tabEnergy"
-    )
-  })
-  observeEvent(input$openTabWaste, {
-    updateNavbarPage(session, "main",
-      selected = "tabWaste"
-    )
-  })
-  observeEvent(input$openTabGHG, {
-    updateNavbarPage(session, "main",
-      selected = "tabGHG"
-    )
-  })
-  observeEvent(input$openTabWater, {
-    updateNavbarPage(session, "main",
-      selected = "tabWater"
-    )
-  })
-  observeEvent(input$openTabMap, {
-    updateNavbarPage(session, "main",
-      selected = "tabMap"
-    )
-  })
-
-  observeEvent(input$openTabAbout, {
-    updateNavbarPage(session, "main",
-      selected = "tabAbout"
-    )
-  })
-  observeEvent(input$openTabProjects, {
-    updateNavbarPage(session, "main",
-                     selected = "tabProjects"
-    )
-  })
-  observeEvent(input$openTabFood, {
-    updateNavbarPage(session, "main",
-                     selected = "tabFood"
-    )
-  })
-
+  lapply(
+    X = c("Energy", "Waste", "GHG", "Water", "Map", "Projects", "Food", "About"),
+    FUN = function(i){
+      observeEvent(input[[paste0("openTab", i)]], {
+        shinyjs::hide(values$lastSelected)
+        shinyjs::toggle(paste0("tab", i), anim=T, animType="slide")
+        values$lastSelected <- paste0("tab", i)
+      })
+    }
+  )
 
 }
