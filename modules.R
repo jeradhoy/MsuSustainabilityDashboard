@@ -19,33 +19,26 @@ highLinePlot <- function(input, output, session, dataTs, trends, plotTitle, tsNa
       hc_yAxis(title = list(text = ylab), opposite= FALSE) %>%
       hc_tooltip(valueSuffix=toolSuffix, valuePrefix=toolPrefix)
 
-    if(is.null(dim(dataTs))){
-
-      print("MEOWW")
+    if(is.null(ncol(dataTs))){
         hchart <- hchart %>%
           hc_add_series(dataTs, color=colors, name=tsNames)
-
     } else {
-
       for(i in 1:ncol(dataTs)){
         hchart <- hchart %>%
           hc_add_series(dataTs[, i], color=colors[i], name=tsNames[i])
       }
-
     }
-
 
     if(!is.null(trends)){
       if(is.null(ncol(trends))){
-        hchart <- hchart %>%
-          hc_add_series(trends, color=colors, name=paste(tsNames, "Trend"), showInLegend=T, visible=F)
+          hchart <- hchart %>%
+            hc_add_series(trends, color=colors, name=paste(tsNames, "Trend"), showInLegend=T, visible=F)
+
       } else {
         for(i in 1:ncol(trends)){
-
           hchart <- hchart %>%
             hc_add_series(trends[, i], color=colors[i], name=paste(tsNames[i], "Trend"), showInLegend=T, visible=F)
         }
-
       }
     }
 
@@ -73,9 +66,14 @@ highAreaPlot <- function(input, output, session, dataTs, plotTitle, tsNames, yla
       hc_plotOptions(area=list(stacking="percent")) %>%
       hc_tooltip(valueSuffix=toolSuffix, valuePrefix=toolPrefix)
 
-    for(i in 1:ncol(dataTs)){
-      hchart <- hchart %>%
-        hc_add_series(dataTs[, i], color=colors[i], name=tsNames[i], type="area")
+    if(is.null(ncol(dataTs))){
+        hchart <- hchart %>%
+          hc_add_series(dataTs, color=colors, name=tsNames, type="area")
+    } else {
+      for(i in 1:ncol(dataTs)){
+        hchart <- hchart %>%
+          hc_add_series(dataTs[, i], color=colors[i], name=tsNames[i], type="area")
+      }
     }
 
     return(hchart)
@@ -105,7 +103,6 @@ buildingMap <- function(input, output, session, bldShape, lndScpData, leedImages
       addProviderTiles("Esri.WorldImagery", group="World Imagery",
         options = providerTileOptions(noWrap = TRUE)
       ) %>%
-      addLayersControl(baseGroups=c("World Topo", "World Imagery"), position="bottomright") %>%
 
 
       addMarkers(data=leedBldData, group="LEED Buildings",
@@ -127,9 +124,9 @@ buildingMap <- function(input, output, session, bldShape, lndScpData, leedImages
                  popup = ~paste0("<h3>", Name , "</h3>", "<p>", Description ,"</p>")) %>%
 
       addPolygons(data=bldShape, weight=2, layerId=bldShape$BLGNUM,
-        highlightOptions = highlightOptions(weight=4,opacity=2, fillOpacity=0.5, bringToFront=T, sendToBack=T))
+        highlightOptions = highlightOptions(weight=4,opacity=2, fillOpacity=0.5, bringToFront=T, sendToBack=T)) %>%
 
-    #%>% addLayersControl(overlayGroups = c("LEED Buildings", "Edible Landscaping"))
+      addLayersControl(baseGroups=c("World Topo", "World Imagery"), overlayGroups = c("LEED Buildings", "Edible Landscaping"), position="topright", options = layersControlOptions(collapsed=F))
   })
 
   return(reactive({as.character(input$map_shape_click$id)}))
@@ -161,7 +158,7 @@ montanaMadeColumn <- function(input, output, session, food){
       )%>%
       hc_xAxis(
         title = list( text = "Category"),
-        categories = strsplit(food$X1, split = "\n")
+        categories = strsplit(food$Category, split = "\n")
       )%>%
       hc_tooltip(valuePrefix="$")
   })
@@ -207,7 +204,7 @@ dataSourceUI <- function(id){
 
   tagList(
     sidebarLayout(
-      sidebarPanel(
+      sidebarPanel(width=2,
         selectInput(ns("dataset"), "Choose a dataset:",
                     choices = c("Energy" = "energy", "Leed Buildings" = "leed", "Per Capita Waste" = "perCapita", "Waste" = "waste", "Landscaping" = "landscaping", "Projects" = "projectMap", "Building Data" = "buildingUtilities")),
         downloadButton(ns('downloadData'), 'Download')

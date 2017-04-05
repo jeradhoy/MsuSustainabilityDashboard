@@ -5,11 +5,14 @@
 print("Running global.R...")
 
 library(magrittr)
-
 library(shiny)
 library(highcharter)
 library(leaflet)
 library(shinythemes)
+library(zoo)
+library(sp)
+#library(rgdal)
+#Also depends on shinyjs, DT
 
 #source("Modules/wasteModule.R")
 #source("Modules/energyModule.R")
@@ -37,15 +40,6 @@ enableBookmarking(store="url")
 
 load(file="./data/appData.RData")
 
-
-####DECLARE ANY FUNCTIONS FOR APPJ
-#Get trend timeseries for plotting
-getTrendSeries <- function(timeSeries, startTs=c(2005, 1), freq=12){
-  ts(as.data.frame(lapply(timeSeries, function(timeSeries){
-    fit <- lm(timeSeries ~ c(1:length(timeSeries)))
-    seq(from=coef(fit)[1], by=coef(fit)[2], length.out=length(timeSeries))
-  })),frequency=12, start=startTs)
-}
 
   mapIconSize <- 40
 

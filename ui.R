@@ -133,24 +133,8 @@ shinyUI(navbarPage(id="main", #title="MSU Sustainability Dashboard",
 
   ########### Water ################
   tabPanel(title = "Water", value="tabWater", icon=icon("tint"),
+    fluidRow(column(10, offset=1,
     tags$h1("Water"),
-    sidebarLayout(
-      sidebarPanel(
-
-        #Radio Button: Choose Usage or expenditure
-        radioButtons("waterUsage", label = h5("Usage or Expenditure"),
-          choices = list("Usage" = 0, "Expenditure" = 1),
-          selected = 0),
-
-        #Radio Button: Choose Total or Per capita
-        #radioButtons("waterPerCap", label = h5("Total or Per Capita"),
-        #  choices = list("Total" = 1, "Per Capita" = 2),
-        #  selected = 1),
-        tags$h5("Trend Line"),
-        checkboxInput("waterTrendLine", label="Water", value=FALSE)
-      ),
-
-      mainPanel(
         tabsetPanel(
           tabPanel("Water Use",
             highAreaPlotOutput("waterUse")
@@ -159,7 +143,7 @@ shinyUI(navbarPage(id="main", #title="MSU Sustainability Dashboard",
             highLinePlotOutput("waterSewerExpend")
           )
         )
-      )
+    )
     )
   ),
 
@@ -189,7 +173,7 @@ shinyUI(navbarPage(id="main", #title="MSU Sustainability Dashboard",
       absolutePanel(
         id = "buildingGraphs", class = "panel panel-default", fixed = TRUE,
         draggable = F, top = 70, left = 20, right = "auto", bottom = "auto",
-        width = "30%", height = "auto",
+        width = "40%", height = "auto",
 
         tabsetPanel(
           tabPanel("Energy",
@@ -209,12 +193,13 @@ shinyUI(navbarPage(id="main", #title="MSU Sustainability Dashboard",
             actionButton("showBuildingGraphsButton", label="Close")
         )
       )
-    )
+      )
     )
   ),
 
   ########## Food #################
   tabPanel(title = "Food", value = "tabFood", icon = icon("cutlery"),
+    fluidRow(column(10, offset=1,
     tags$h1("Food"),
 
     tabsetPanel(
@@ -224,6 +209,8 @@ shinyUI(navbarPage(id="main", #title="MSU Sustainability Dashboard",
       tabPanel(title = "Total",
         montanaMadeBarOutput("montMadeTotal")
       )
+    )
+    )
     )
   ),
 
@@ -238,9 +225,11 @@ shinyUI(navbarPage(id="main", #title="MSU Sustainability Dashboard",
         tags$h3("This web app was developed in collaboration with Sustainability Now, the MSU Office of Sustainability, and MSU Facilities Services")
         ),
       tabPanel("Data Sources",
+    fluidRow(column(10, offset=1,
         h2("Data Sources"),
         dataSourceUI("dataSources")
       )
   )
+      ))
 ))
 
