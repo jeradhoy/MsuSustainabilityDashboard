@@ -15,9 +15,6 @@ getTrendSeries <- function(timeSeries){
   )), order.by=index(timeSeries)))
 }
 
-getTrendSeries(appData$energyTs[[1]])
-
-
 ##Read in data from google sheets gs_auth(token = "shiny_app_token.rds")
 allDataSheet <- gs_title("allData")
 appData <- list()
@@ -56,10 +53,6 @@ appData$wasteTs <- as.list(as.ts(zoo(select(appData$waste, Recycle:Compost), ord
 #perCapita$pcwaste <- as.numeric(format(round(perCapita$waste/perCapita$fallpop, 2), nsmall=2))
 #perCapita$pccompost <- as.numeric(format(round(perCapita$compost/perCapita$fallpop, 2), nsmall=2))
 
-
-appData$energyTrends <- getTrendSeries(appData$energyTs)
-
-appData$wasteTrends <- getTrendSeries(appData$wasteTs)
 
 appData$buildingShapes <- rgdal::readOGR("./data/Buildings/building.shp", layer="building", verbose=F)
 
