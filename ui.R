@@ -1,7 +1,6 @@
-
  ######## Home ########
 # Define UI for dataset viewer application
-shinyUI(navbarPage(id="main", #title="MSU Sustainability Dashboard",
+uiPublic <- navbarPage(id="main", #title="MSU Sustainability Dashboard",
   fluid=T,
   position="static-top",
   selected="tabMap",
@@ -151,22 +150,7 @@ shinyUI(navbarPage(id="main", #title="MSU Sustainability Dashboard",
   ########### Leed ################
   tabPanel(title = "Buildings & Landscaping", value="tabMap", icon=icon("home"),
     div(class="outer",
-      #{tags$style(type = "text/css",
-       # "div.outerMap {position: fixed; top: 48px; left: 0; right: 0; bottom: 0; overflow: hidden; padding: 0}"),
-      #leafletOutput("map", width="100%", height="100%"),
       buildingMapUI("leafletMap"),
-
-      #absolutePanel(id = "controls", class = "panel panel-default", fixed = TRUE,
-      #  draggable = T, top =70, left = "auto", right =20, bottom = "auto",
-      #  width =250, height = "auto",
-      #  h2("Buildings and Landscaping"),
-      #  h3("Show Layers:"),
-      #    checkboxInput("showLeed", label=tags$div(tags$b("LEED Buildings"), tags$img(src="assets/UWIcons/1l0-e0-e0-d-certification-icon.png")), value=T),
-      #    checkboxInput("showEdible", label=tags$div(tags$b("Landscaping"), tags$img(src="assets/UWIcons/3brockman-tree-tour-icon.png", tags$img(src="assets/UWIcons/3garden-icon.png"))), value=T),
-      #  checkboxInput("showProject", label=tags$div(tags$b("Projects"), tags$img(src="assets/UWIcons/6on-site-composting-icon.png"), tags$img(src="assets/UWIcons/1solar-panels-icon.png")), value=T)
-#
-      #  #,verbatimTextOutput("mapDebug")
-      #),
 
       shinyjs::hidden(
 
@@ -231,5 +215,4 @@ shinyUI(navbarPage(id="main", #title="MSU Sustainability Dashboard",
       )
   )
       ))
-))
-
+)

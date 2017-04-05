@@ -2,6 +2,17 @@
 #### All processing that could be done once goes here, because processing in server.R is done everytime the app loads, and drastically slows it down
 #### Objects created here are also available to both the ui.R script and the server.R script
 
+####DECLARE ANY FUNCTIONS FOR APP
+#Get trend timeseries for plotting
+getTrendSeries <- function(timeSeries){
+ as.ts(zoo(as.data.frame(
+   lapply(timeSeries, function(timeSeries){
+    fit <- lm(timeSeries ~ c(1:length(timeSeries)))
+    seq(from=coef(fit)[1], by=coef(fit)[2], length.out=length(timeSeries))
+    }
+  )), order.by=index(timeSeries)))
+}
+
 print("Running global.R...")
 
 library(magrittr)

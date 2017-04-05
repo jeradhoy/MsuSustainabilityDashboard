@@ -19,26 +19,15 @@ highLinePlot <- function(input, output, session, dataTs, trends, plotTitle, tsNa
       hc_yAxis(title = list(text = ylab), opposite= FALSE) %>%
       hc_tooltip(valueSuffix=toolSuffix, valuePrefix=toolPrefix)
 
-    if(is.null(ncol(dataTs))){
+      for(i in 1:length(dataTs)){
         hchart <- hchart %>%
-          hc_add_series(dataTs, color=colors, name=tsNames)
-    } else {
-      for(i in 1:ncol(dataTs)){
-        hchart <- hchart %>%
-          hc_add_series(dataTs[, i], color=colors[i], name=tsNames[i])
+          hc_add_series(dataTs[[i]], color=colors[i], name=tsNames[i])
       }
-    }
 
-    if(!is.null(trends)){
-      if(is.null(ncol(trends))){
+    if(trends){
+      for(i in 1:length(dataTs)){
           hchart <- hchart %>%
-            hc_add_series(trends, color=colors, name=paste(tsNames, "Trend"), showInLegend=T, visible=F)
-
-      } else {
-        for(i in 1:ncol(trends)){
-          hchart <- hchart %>%
-            hc_add_series(trends[, i], color=colors[i], name=paste(tsNames[i], "Trend"), showInLegend=T, visible=F)
-        }
+            hc_add_series(getTrendSeries(dataTs[[i]]), color=colors[i], name=paste(tsNames[i], "Trend"), showInLegend=T, visible=F)
       }
     }
 
@@ -66,15 +55,10 @@ highAreaPlot <- function(input, output, session, dataTs, plotTitle, tsNames, yla
       hc_plotOptions(area=list(stacking="percent")) %>%
       hc_tooltip(valueSuffix=toolSuffix, valuePrefix=toolPrefix)
 
-    if(is.null(ncol(dataTs))){
+      for(i in 1:length(dataTs)){
         hchart <- hchart %>%
-          hc_add_series(dataTs, color=colors, name=tsNames, type="area")
-    } else {
-      for(i in 1:ncol(dataTs)){
-        hchart <- hchart %>%
-          hc_add_series(dataTs[, i], color=colors[i], name=tsNames[i], type="area")
+          hc_add_series(dataTs[[i]], color=colors[i], name=tsNames[i], type="area")
       }
-    }
 
     return(hchart)
   })
@@ -91,6 +75,7 @@ buildingMapUI <- function(id, mapHeight="100%", mapWidth="100%"){
 
 buildingMap <- function(input, output, session, bldShape, lndScpData, leedImages, mapIcons, leedBldData, projectData) {
 
+  print("rendering Map")
 
   ########### Leed Map ################
   output$map <- renderLeaflet({

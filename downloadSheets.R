@@ -7,11 +7,16 @@ library(magrittr)
 ####DECLARE ANY FUNCTIONS FOR APP
 #Get trend timeseries for plotting
 getTrendSeries <- function(timeSeries){
- as.ts(zoo(as.data.frame(lapply(timeSeries, function(timeSeries){
+ as.ts(zoo(as.data.frame(
+   lapply(timeSeries, function(timeSeries){
     fit <- lm(timeSeries ~ c(1:length(timeSeries)))
     seq(from=coef(fit)[1], by=coef(fit)[2], length.out=length(timeSeries))
-  })), order.by=index(timeSeries)))
+    }
+  )), order.by=index(timeSeries)))
 }
+
+getTrendSeries(appData$energyTs[[1]])
+
 
 ##Read in data from google sheets gs_auth(token = "shiny_app_token.rds")
 allDataSheet <- gs_title("allData")
@@ -27,7 +32,7 @@ appData$energy$GasKWH <- round(appData$energy$GasDKT/0.0034129563407) #Convert D
 
 appData$energy %<>% mutate(Date = as.yearmon(ACCTYR + (ACCTMO-1)/12))
 
-appData$energyTs <- as.ts(zoo(select(appData$energy, ElecKW:GasKWH), order.by=appData$energy$Date))
+appData$energyTs <- as.list(as.ts(zoo(select(appData$energy, ElecKW:GasKWH), order.by=appData$energy$Date)))
 
 #annualEnergyTs <- round(aggregate(energyTs, nfrequency=1, FUN=sum)/perCapita[5:10,2],2)
 
@@ -43,7 +48,7 @@ appData$waste$Landfill <-as.numeric(format(round(appData$waste$Landfill/2000, 2)
 appData$waste$Compost <- as.numeric(format(round(appData$waste$Compost/2000, 2), nsmall=2))
 
 appData$waste %<>% mutate(Date = as.yearmon(Year + (Month-1)/12))
-appData$wasteTs <- as.ts(zoo(select(appData$waste, Recycle:Compost), order.by=appData$waste$Date))
+appData$wasteTs <- as.list(as.ts(zoo(select(appData$waste, Recycle:Compost), order.by=appData$waste$Date)))
 
 ### Per capita waste data
 #perCapita$FY <- as.numeric(perCapita$FY)
@@ -64,7 +69,7 @@ bld <- appData$buildingUtilities %>% nest(-BldgNo, -BldgName)
 
 bld$data <- lapply(bld$data, function(dat){
   tryCatch({
-    as.ts(zoo(select(dat, ElecKW:WaterMCF), dat$Date))
+    as.list(as.ts(zoo(select(dat, ElecKW:WaterMCF), dat$Date)))
   }, error=function(cond){NULL}
   )
 })

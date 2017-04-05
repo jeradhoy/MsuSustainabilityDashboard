@@ -18,19 +18,19 @@ simpleCap <- function(x) {
 }
 
 ######## START Shiny Server ###################
-shinyServer(function(input, output, session) {
+server <- function(input, output, session) {
 
   callModule(highLinePlot, "energyUsage",
-             dataTs=appData$energyTs[,c("ElecKWH", "GasKWH")],
-             trends=appData$energyTrends[,c("ElecKWH", "GasKWH")],
+             dataTs=appData$energyTs[c("ElecKWH", "GasKWH")],
+             trends=T,
              plotTitle="<b>MSU Electricity and Gas Usage in Kilowatt Hours</b>",
              tsNames=c("Electricity", "Natural Gas"),
              ylab="Usage in KWH", colors=c("gold", "darkorange"),
              toolSuffix=" KWH", toolPrefix=NULL)
 
   callModule(highLinePlot, "energyExpend",
-             dataTs=appData$energyTs[,c("ElecExpend", "GasExpend")],
-             trends=NULL,
+             dataTs=appData$energyTs[c("ElecExpend", "GasExpend")],
+             trends=T,
              plotTitle="<b>MSU Electricity and Gas Expenditure</b>",
              tsNames=c("Electricity", "Natural Gas"),
              ylab="Expenditure in Dollars",
@@ -40,14 +40,14 @@ shinyServer(function(input, output, session) {
 
   callModule(highLinePlot, "wasteLine",
              dataTs=appData$wasteTs,
-             trends=appData$wasteTrends,
+             trends=T,
              plotTitle="<b>MSU Waste</b>",
              tsNames=c("Recycling", "Landfill", "Compost"),
              ylab="Waste in Tons", colors=c("black", "gold", "green"),
              toolSuffix=" tons", toolPrefix=NULL)
 
   callModule(highAreaPlot, "wasteArea",
-             dataTs=appData$wasteTs[,c(2,1,3)],
+             dataTs=appData$wasteTs[c(2,1,3)],
              plotTitle="<b>Percent of MSU Waste Diverted</b>",
              tsNames=c("Recycling", "Landfill", "Compost"),
              ylab="Waste in Tons",
@@ -55,8 +55,8 @@ shinyServer(function(input, output, session) {
              toolSuffix=" tons", toolPrefix=NULL)
 
   callModule(highLinePlot, "waterUse",
-             dataTs=appData$energyTs[,"WaterMCF"],
-             trends=appData$energyTrends[,"WaterMCF"],
+             dataTs=appData$energyTs["WaterMCF"],
+             trends=T,
              plotTitle="<b>MSU Water Usage in Million Cubic Feet per Month</b>",
              tsNames="Water",
              ylab="Usage in Million Cubic Feet (MCF)",
@@ -64,8 +64,8 @@ shinyServer(function(input, output, session) {
              toolSuffix=" MCF", toolPrefix=NULL)
 
   callModule(highLinePlot, "waterSewerExpend",
-             dataTs=appData$energyTs[,"WaterSewerExpend"],
-             trends=appData$energyTrends[,"WaterSewerExpend"],
+             dataTs=appData$energyTs["WaterSewerExpend"],
+             trends=T,
              plotTitle="<b>Msu Water/Sewer Expenditure In Dollars</b>",
              tsNames="Water/Sewer",
              ylab="Expenditure in Dollars",
@@ -95,8 +95,8 @@ shinyServer(function(input, output, session) {
 
     print(bldSelected())
     callModule(highLinePlot, "bldEnergy",
-               dataTs=filter(appData$bld, BldgNo == bldSelected())$data[[1]][,"ElecKWH"],
-               trends=NULL,
+               dataTs=filter(appData$bld, BldgNo == bldSelected())$data[[1]]["ElecKWH"],
+               trends=T,
                plotTitle=paste0("<b>", bldName, " Electricity", " Usage", "</b>"),
                tsNames=c("Electricity"),
                ylab="Usage in KWH",
@@ -104,8 +104,8 @@ shinyServer(function(input, output, session) {
                toolSuffix=" KWH", toolPrefix=NULL)
 
     callModule(highLinePlot, "bldGas",
-               dataTs=filter(appData$bld, BldgNo == bldSelected())$data[[1]][,"TotalGasDKT"],
-               trends=NULL,
+               dataTs=filter(appData$bld, BldgNo == bldSelected())$data[[1]]["TotalGasDKT"],
+               trends=T,
                plotTitle=paste0("<b>", bldName, " Gas", " Usage", "</b>"),
                tsNames="Gas",
                ylab="Usage in DKT",
@@ -113,8 +113,8 @@ shinyServer(function(input, output, session) {
                toolSuffix=" DKT", toolPrefix=NULL)
 
     callModule(highLinePlot, "bldWater",
-               dataTs=filter(appData$bld, BldgNo == bldSelected())$data[[1]][,"WaterMCF"],
-               trends=NULL,
+               dataTs=filter(appData$bld, BldgNo == bldSelected())$data[[1]]["WaterMCF"],
+               trends=T,
                plotTitle=paste0("<b>", bldName, " Water", " Usage", "</b>"),
                tsNames="Water",
                ylab="Usage in MCF",
@@ -122,8 +122,8 @@ shinyServer(function(input, output, session) {
                toolSuffix=" MCF", toolPrefix=NULL)
 
     callModule(highLinePlot, "bldSteam",
-               dataTs=filter(appData$bld, BldgNo == bldSelected())$data[[1]][,"SteamLBS"],
-               trends=NULL,
+               dataTs=filter(appData$bld, BldgNo == bldSelected())$data[[1]]["SteamLBS"],
+               trends=T,
                plotTitle=paste0("<b>", bldName, " Steam", " Usage", "</b>"),
                tsNames="Steam",
                ylab="Usage in lbs",
@@ -200,5 +200,4 @@ shinyServer(function(input, output, session) {
   })
 
 
-})
-
+}
