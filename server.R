@@ -1,21 +1,12 @@
 ############ server.R #############
 ##All options and processing that are cheap and can be done each time app launches goes here, otherwise put in global.R
-source("modules.R")
-library(tidyverse)
-
-options(shiny.port=5555)
 
 #Set waste goals
-wasteCAP2020 <- (3933386*.75)/(2000*12)
-wasteCAP2030 <- (3933386*.5)/(2000*12)
-wasteCAP2040 <- (3933386*.35)/(2000*12)
-wasteCAP2050 <- (3933386*.2)/(2000*12)
+#wasteCAP2020 <- (3933386*.75)/(2000*12)
+#wasteCAP2030 <- (3933386*.5)/(2000*12)
+#wasteCAP2040 <- (3933386*.35)/(2000*12)
+#wasteCAP2050 <- (3933386*.2)/(2000*12)
 
-simpleCap <- function(x) {
-  s <- strsplit(as.character(x), " ")[[1]]
-  paste(toupper(substring(s, 1,1)), tolower(substring(s, 2)),
-        sep="", collapse=" ")
-}
 
 ######## START Shiny Server ###################
 server <- function(input, output, session) {

@@ -32,9 +32,7 @@ appData$energy %<>% mutate(Date = as.yearmon(ACCTYR + (ACCTMO-1)/12))
 appData$energyTs <- as.list(as.ts(zoo(select(appData$energy, ElecKW:GasKWH), order.by=appData$energy$Date)))
 
 #annualEnergyTs <- round(aggregate(energyTs, nfrequency=1, FUN=sum)/perCapita[5:10,2],2)
-
 #pcEnergy <- round(aggregate(energyTs, nfrequency=1, FUN=sum)/perCapita[5:10,2],2)
-
 #energyTarget <- ts(aggregate(energyTs, nfrequency=1, FUN=mean)*1.0025, frequency=1, start=c(2011, 1))
 
 ######  Waste Data  #####
@@ -68,12 +66,5 @@ bld$data <- lapply(bld$data, function(dat){
 })
 
 appData$bld <- bld
-
-#appData$bldTs <- list()
-#
-#for(num in as.character(na.omit(unique(bld$Bldg.No)))){
-#  print(num)
-#  appData$bldTs[[num]] <- with(subset(bld, Bldg.No == num), ts(data=cbind(KWH.QTY, TOTAL.GAS..DKT, WATER.MCF, STEAM.LBS), start=c(ACCTYR[1], ACCTMO[1]), frequency=12))
-#}
 
 save(appData, file="./data/appData.RData")

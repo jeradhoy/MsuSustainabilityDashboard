@@ -13,20 +13,22 @@ getTrendSeries <- function(timeSeries){
   )), order.by=index(timeSeries)))
 }
 
-print("Running global.R...")
+simpleCap <- function(x) {
+  s <- strsplit(as.character(x), " ")[[1]]
+  paste(toupper(substring(s, 1,1)), tolower(substring(s, 2)),
+        sep="", collapse=" ")
+}
 
 library(magrittr)
+library(tidyverse)
 library(shiny)
 library(highcharter)
 library(leaflet)
 library(shinythemes)
 library(zoo)
 library(sp)
-#library(rgdal)
-#Also depends on shinyjs, DT
+#Also depends on shinyjs, DT, shinydashboard
 
-#source("Modules/wasteModule.R")
-#source("Modules/energyModule.R")
 source("modules.R")
 
 # Set thousands seperator in highcharts graph
@@ -34,6 +36,7 @@ hcoptslang <- getOption("highcharter.lang")
 hcoptslang$thousandsSep <- ","
 options(highcharter.lang = hcoptslang)
 
+options(shiny.port=5555)
 
 enableBookmarking(store="url")
 
@@ -52,31 +55,32 @@ enableBookmarking(store="url")
 load(file="./data/appData.RData")
 
 
-  mapIconSize <- 40
+##Creating icons for map
+mapIconSize <- 40
 
-  mapIcons <- iconList(
-    leed = makeIcon(iconUrl="assets/UWIcons/1l0-e0-e0-d-certification-icon.png",
+mapIcons <- iconList(
+  leed = makeIcon(iconUrl="assets/UWIcons/1l0-e0-e0-d-certification-icon.png",
+                  iconWidth=mapIconSize, iconHeight = mapIconSize,
+                  iconAnchorX=mapIconSize/2, iconAnchorY = mapIconSize),
+
+  solar = makeIcon(iconUrl="assets/UWIcons/1solar-panels-icon.png",
+                   iconWidth=mapIconSize, iconHeight = mapIconSize,
+                   iconAnchorX=mapIconSize/2, iconAnchorY = mapIconSize),
+
+  garden = makeIcon(iconUrl="assets/UWIcons/3garden-icon.png",
                     iconWidth=mapIconSize, iconHeight = mapIconSize,
                     iconAnchorX=mapIconSize/2, iconAnchorY = mapIconSize),
 
-    solar = makeIcon(iconUrl="assets/UWIcons/1solar-panels-icon.png",
+  tree = makeIcon(iconUrl="assets/UWIcons/3brockman-tree-tour-icon.png",
+                  iconWidth=mapIconSize, iconHeight = mapIconSize,
+                  iconAnchorX=mapIconSize/2, iconAnchorY = mapIconSize),
+
+  compost = makeIcon(iconUrl="assets/UWIcons/6on-site-composting-icon.png",
                      iconWidth=mapIconSize, iconHeight = mapIconSize,
-                     iconAnchorX=mapIconSize/2, iconAnchorY = mapIconSize),
+                     iconAnchorX=mapIconSize/2, iconAnchorY = mapIconSize)
+)
 
-    garden = makeIcon(iconUrl="assets/UWIcons/3garden-icon.png",
-                      iconWidth=mapIconSize, iconHeight = mapIconSize,
-                      iconAnchorX=mapIconSize/2, iconAnchorY = mapIconSize),
-
-    tree = makeIcon(iconUrl="assets/UWIcons/3brockman-tree-tour-icon.png",
-                    iconWidth=mapIconSize, iconHeight = mapIconSize,
-                    iconAnchorX=mapIconSize/2, iconAnchorY = mapIconSize),
-
-    compost = makeIcon(iconUrl="assets/UWIcons/6on-site-composting-icon.png",
-                       iconWidth=mapIconSize, iconHeight = mapIconSize,
-                       iconAnchorX=mapIconSize/2, iconAnchorY = mapIconSize)
-  )
-
-  leedImages <- list(
-    "LEED Gold" = "assets/UWIcons/leedGold.png",
-    "LEED Silver" = "assets/UWIcons/leedSilver.jpg"
-  )
+leedImages <- list(
+  "LEED Gold" = "assets/UWIcons/leedGold.png",
+  "LEED Silver" = "assets/UWIcons/leedSilver.jpg"
+)

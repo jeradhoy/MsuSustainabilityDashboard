@@ -5,7 +5,7 @@ source("server.R")
 
 dataChange <- lapply(appData$energyTs, function(x){
   tail(diff(aggregate(x, nfrequency=1)), 1)
-  })
+})
 
 uiDash <- dashboardPage(
   dashboardHeader(title = "MSU Sustainability"),
