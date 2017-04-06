@@ -3,6 +3,10 @@ source("global.r")
 source("modules.R")
 source("server.R")
 
+dataChange <- lapply(appData$energyTs, function(x){
+  tail(diff(aggregate(x, nfrequency=1)), 1)
+  })
+
 uiDash <- dashboardPage(
   dashboardHeader(title = "MSU Sustainability"),
   dashboardSidebar(
@@ -11,9 +15,7 @@ uiDash <- dashboardPage(
       menuItem("Dashboard", tabName="dashboard", icon=icon("dashboard")),
       menuItem("Map", tabName="map", icon=icon("map")),
       menuItem("Data", tabName="data", icon=icon("database")),
-      checkboxInput("showTrends", label = "Show Trendlines", value = F),
-      checkboxInput("showPredict", label = "Predict Future Values", value = F)
-
+      checkboxInput("annual", label = "Aggregate to Annual Values", value = F)
 
     )
   ),
@@ -23,6 +25,11 @@ uiDash <- dashboardPage(
 
       tabItem(tabName="dashboard",
         fluidRow(
+          infoBox("Electricity", paste(formatC(round(dataChange$ElecKWH), format="d", big.mark=","), "KWH"), "Change from 2014-2015", icon=icon("lightbulb-o"), color=ifelse(dataChange$ElecKWH > 0, "red", "green"), fill=T),
+          infoBox("Natural Gas", paste(formatC(round(dataChange$GasKWH), format="d", big.mark=","), "KWH"), "Change from 2014-2015", icon=icon("cloud"), color=ifelse(dataChange$GasKWH > 0, "red", "green"), fill=T),
+          infoBox("Water", paste(formatC(round(dataChange$WaterMCF), format="d", big.mark=","), "MCF"), "Change from 2014-2015", icon=icon("tint"), color=ifelse(dataChange$WaterMCF > 0, "red", "green"), fill=T)
+        ),
+        fluidRow(
           tabBox(title="Energy",
             tabPanel("Usage",
               highLinePlotOutput("energyUsage")
@@ -31,17 +38,17 @@ uiDash <- dashboardPage(
               highLinePlotOutput("energyExpend")
             )
           ),
-          tabBox(title="Area",
-            tabPanel("Line",
+          tabBox(title="Waste",
+            tabPanel("Area",
               highLinePlotOutput("wasteArea")
             ),
-            tabPanel("Expenditure",
+            tabPanel("Line",
               highLinePlotOutput("wasteLine")
             )
           )
         ),
         fluidRow(
-          tabBox(title="Water", width=12,
+          tabBox(title="Water", width=8,
             tabPanel("Usage",
               highLinePlotOutput("waterUse")
             ),
@@ -57,11 +64,6 @@ uiDash <- dashboardPage(
         fluidRow(
             box(width=8, solidHeader=T,
               buildingMapUI("leafletMap", mapHeight = 500)
-            ),
-            box(width=4,
-              selectInput("selectBld", label = h3("Select Building"),
-                          choices = appData$bld$BldgName,
-                          selectize = T)
             )
         ),
         fluidRow(
@@ -82,12 +84,13 @@ uiDash <- dashboardPage(
         )
       ),
 
-      tabItem(tabName="data",
-        dataSourceUI("dataSourceTable")
+      tabItem(title="Data Sources", tabName="data",
+
+        dataSourceUI("dataSources")
       )
 
     )
   )
 )
 
-shinyApp(ui, server)
+shinyApp(uiDash, server)

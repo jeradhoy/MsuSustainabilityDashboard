@@ -8,7 +8,7 @@ highLinePlotOutput <- function(id, plotWidth="100%", plotHeight="500px"){
 }
 
 
-highLinePlot <- function(input, output, session, dataTs, trends, plotTitle, tsNames, ylab, colors, toolSuffix, toolPrefix){
+highLinePlot <- function(input, output, session, dataTs, trends, plotTitle, tsNames, ylab, colors, toolSuffix, toolPrefix, aggregYearly){
 
   output$highPlot <- renderHighchart({
     hchart <- highchart(type="stock") %>%
@@ -19,10 +19,17 @@ highLinePlot <- function(input, output, session, dataTs, trends, plotTitle, tsNa
       hc_yAxis(title = list(text = ylab), opposite= FALSE) %>%
       hc_tooltip(valueSuffix=toolSuffix, valuePrefix=toolPrefix)
 
-      for(i in 1:length(dataTs)){
-        hchart <- hchart %>%
-          hc_add_series(dataTs[[i]], color=colors[i], name=tsNames[i])
+
+    if(!is.null(aggregYearly())){
+      if(aggregYearly()){
+        dataTs <- lapply(dataTs, function(x){aggregate(x, nfrequency=1)})
       }
+    }
+
+    for(i in 1:length(dataTs)){
+      hchart <- hchart %>%
+        hc_add_series(dataTs[[i]], color=colors[i], name=tsNames[i])
+    }
 
     if(trends){
       for(i in 1:length(dataTs)){
@@ -44,7 +51,7 @@ highAreaPlotOutput <- function(id){
 
 }
 
-highAreaPlot <- function(input, output, session, dataTs, plotTitle, tsNames, ylab, colors, toolSuffix, toolPrefix){
+highAreaPlot <- function(input, output, session, dataTs, plotTitle, tsNames, ylab, colors, toolSuffix, toolPrefix, aggregYearly){
 
   output$highPlot <- renderHighchart({
     hchart <- highchart(type="stock") %>%
@@ -54,6 +61,12 @@ highAreaPlot <- function(input, output, session, dataTs, plotTitle, tsNames, yla
       hc_yAxis(title = ylab, opposite=FALSE) %>%
       hc_plotOptions(area=list(stacking="percent")) %>%
       hc_tooltip(valueSuffix=toolSuffix, valuePrefix=toolPrefix)
+
+    if(!is.null(aggregYearly())){
+      if(aggregYearly()){
+        dataTs <- lapply(dataTs, function(x){aggregate(x, nfrequency=1)})
+      }
+    }
 
       for(i in 1:length(dataTs)){
         hchart <- hchart %>%
@@ -75,7 +88,6 @@ buildingMapUI <- function(id, mapHeight="100%", mapWidth="100%"){
 
 buildingMap <- function(input, output, session, bldShape, lndScpData, leedImages, mapIcons, leedBldData, projectData) {
 
-  print("rendering Map")
 
   ########### Leed Map ################
   output$map <- renderLeaflet({
@@ -194,7 +206,6 @@ dataSourceUI <- function(id){
                     choices = c("Energy" = "energy", "Leed Buildings" = "leed", "Per Capita Waste" = "perCapita", "Waste" = "waste", "Landscaping" = "landscaping", "Projects" = "projectMap", "Building Data" = "buildingUtilities")),
         downloadButton(ns('downloadData'), 'Download')
       ),
-
       mainPanel(
         DT::dataTableOutput(ns('dataTable'))
       )
