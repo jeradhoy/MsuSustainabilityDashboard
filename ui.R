@@ -3,7 +3,7 @@
 uiPublic <- navbarPage(id="main", #title="MSU Sustainability Dashboard",
   fluid=T,
   position="static-top",
-  selected="tabMap",
+  selected="tabHome",
   inverse=T, #For dark top
   collapsible = T,
   theme=shinytheme("cerulean"),
