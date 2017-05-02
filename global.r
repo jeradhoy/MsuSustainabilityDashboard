@@ -19,7 +19,6 @@ simpleCap <- function(x) {
         sep="", collapse=" ")
 }
 
-library(magrittr)
 library(tidyverse)
 library(shiny)
 library(highcharter)
@@ -29,7 +28,7 @@ library(zoo)
 library(sp)
 #Also depends on shinyjs, DT, shinydashboard
 
-source("modules.R")
+source("modules.r")
 
 # Set thousands seperator in highcharts graph
 hcoptslang <- getOption("highcharter.lang")
@@ -56,6 +55,7 @@ load(file="./data/appData.RData")
 
 
 ##Creating icons for map
+
 mapIconSize <- 40
 
 mapIcons <- iconList(

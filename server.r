@@ -11,13 +11,21 @@
 ######## START Shiny Server ###################
 server <- function(input, output, session) {
 
-  callModule(highLinePlot, "energyUsage",
-             dataTs=appData$energyTs[c("ElecKWH", "GasKWH")],
+  callModule(highLinePlot, "energyUsageElec",
+             dataTs=appData$energyTs[c("ElecKWH")],
              trends=T,
-             plotTitle="<b>MSU Electricity and Gas Usage in Kilowatt Hours</b>",
-             tsNames=c("Electricity", "Natural Gas"),
-             ylab="Usage in KWH", colors=c("gold", "darkorange"),
+             plotTitle="<b>MSU Electricity Usage in Kilowatt Hours</b>",
+             tsNames=c("Electricity"),
+             ylab="Usage in KWH", colors=c("gold"),
              toolSuffix=" KWH", toolPrefix=NULL, aggregYearly=reactive(input$annual))
+
+  callModule(highLinePlot, "energyUsageGas",
+             dataTs=appData$energyTs[c("GasDKT")],
+             trends=T,
+             plotTitle="<b>MSU Natural Gas Usage in Million BTUs</b>",
+             tsNames=c("Natural Gas"),
+             ylab="Usage in MMBTU", colors=c("darkorange"),
+             toolSuffix=" MMBTU", toolPrefix=NULL, aggregYearly=reactive(input$annual))
 
   callModule(highLinePlot, "energyExpend",
              dataTs=appData$energyTs[c("ElecExpend", "GasExpend")],
@@ -30,17 +38,17 @@ server <- function(input, output, session) {
 
 
   callModule(highLinePlot, "wasteLine",
-             dataTs=appData$wasteTs,
+             dataTs=appData$wasteTs[c(2,1,3)],
              trends=T,
-             plotTitle="<b>MSU Waste</b>",
-             tsNames=c("Recycling", "Landfill", "Compost"),
+             plotTitle="<b>MSU Waste in Tons Per Month</b>",
+             tsNames=c("Landfill", "Recycling", "Compost"),
              ylab="Waste in Tons", colors=c("black", "gold", "green"),
              toolSuffix=" tons", toolPrefix=NULL, aggregYearly=reactive(input$annual))
 
   callModule(highAreaPlot, "wasteArea",
              dataTs=appData$wasteTs[c(2,1,3)],
              plotTitle="<b>Percent of MSU Waste Diverted</b>",
-             tsNames=c("Recycling", "Landfill", "Compost"),
+             tsNames=c("Landfill", "Recycling", "Compost"),
              ylab="Waste in Tons",
              colors=c("black", "gold", "green"),
              toolSuffix=" tons", toolPrefix=NULL, aggregYearly=reactive(input$annual))
@@ -92,9 +100,9 @@ server <- function(input, output, session) {
                trends=T,
                plotTitle=paste0("<b>", bldName(), " Gas", " Usage", "</b>"),
                tsNames="Gas",
-               ylab="Usage in DKT",
+               ylab="Usage in MMBTU",
                colors="darkorange",
-               toolSuffix=" DKT", toolPrefix=NULL, aggregYearly=reactive(input$annual))
+               toolSuffix=" MMBTU", toolPrefix=NULL, aggregYearly=reactive(input$annual))
 
     callModule(highLinePlot, "bldWater",
                dataTs=filter(appData$bld, BldgNo == bldSelected())$data[[1]]["WaterMCF"],

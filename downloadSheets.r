@@ -1,8 +1,8 @@
 #Download R data
+library(magrittr)
 library(googlesheets)
 library(tidyverse)
 library(zoo)
-library(magrittr)
 
 ####DECLARE ANY FUNCTIONS FOR APP
 #Get trend timeseries for plotting
@@ -26,10 +26,11 @@ for(sheet in gs_ws_ls(allDataSheet)){
 
 #Process energy data, convert to time series, convert dkt to kwh, calculate energy trends
 appData$energy$GasKWH <- round(appData$energy$GasDKT/0.0034129563407) #Convert DKT to KWH
+appData$energy$GasMMBTU <- round(appData$energy$GasDKT*999761/1e6) #Convert DKT to KWH
 
 appData$energy %<>% mutate(Date = as.yearmon(ACCTYR + (ACCTMO-1)/12))
 
-appData$energyTs <- as.list(as.ts(zoo(select(appData$energy, ElecKW:GasKWH), order.by=appData$energy$Date)))
+appData$energyTs <- as.list(as.ts(zoo(select(appData$energy, ElecKW:GasMMBTU), order.by=appData$energy$Date)))
 
 #annualEnergyTs <- round(aggregate(energyTs, nfrequency=1, FUN=sum)/perCapita[5:10,2],2)
 #pcEnergy <- round(aggregate(energyTs, nfrequency=1, FUN=sum)/perCapita[5:10,2],2)

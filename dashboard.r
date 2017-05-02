@@ -1,7 +1,7 @@
 library(shinydashboard)
 source("global.r")
-source("modules.R")
-source("server.R")
+source("modules.r")
+source("server.r")
 
 dataChange <- lapply(appData$energyTs, function(x){
   tail(diff(aggregate(x, nfrequency=1)), 1)
@@ -26,13 +26,16 @@ uiDash <- dashboardPage(
       tabItem(tabName="dashboard",
         fluidRow(
           infoBox("Electricity", paste(formatC(round(dataChange$ElecKWH), format="d", big.mark=","), "KWH"), "Change from 2014-2015", icon=icon("lightbulb-o"), color=ifelse(dataChange$ElecKWH > 0, "red", "green"), fill=T),
-          infoBox("Natural Gas", paste(formatC(round(dataChange$GasKWH), format="d", big.mark=","), "KWH"), "Change from 2014-2015", icon=icon("cloud"), color=ifelse(dataChange$GasKWH > 0, "red", "green"), fill=T),
+          infoBox("Natural Gas", paste(formatC(round(dataChange$GasDKT), format="d", big.mark=","), "MMBTU"), "Change from 2014-2015", icon=icon("cloud"), color=ifelse(dataChange$GasKWH > 0, "red", "green"), fill=T),
           infoBox("Water", paste(formatC(round(dataChange$WaterMCF), format="d", big.mark=","), "MCF"), "Change from 2014-2015", icon=icon("tint"), color=ifelse(dataChange$WaterMCF > 0, "red", "green"), fill=T)
         ),
         fluidRow(
           tabBox(title="Energy",
-            tabPanel("Usage",
-              highLinePlotOutput("energyUsage")
+            tabPanel("Electricity",
+              highLinePlotOutput("energyUsageElec")
+            ),
+            tabPanel("Natural Gas",
+              highLinePlotOutput("energyUsageGas")
             ),
             tabPanel("Expenditure",
               highLinePlotOutput("energyExpend")
